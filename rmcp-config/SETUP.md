@@ -13,12 +13,14 @@ java -jar stitch-0.6.4+local-all.jar reorderTinyV2 mappings-merged.tiny mapping-
 ```
 3. Download RetroMCP and run setup for Alpha 1.1.2_01 
 
-4. Copy mapping-client-merged-flipped.tiny to the RetroMCP conf folder and rename it to mappings.tiny
+4. Copy mapping-client-merged-flipped.tiny to the RetroMCP folder and rename it to client.tiny
 
-5. Copy all the files in the rmcp-config folder in this repo to the RetroMCP conf folder
+5. Open RetroMCP and run the Merge Mappings task then move the merged.tiny to the conf folder and rename it mappings.tiny
 
-6. In RetroMCP go to Options->Side->Client, then go Options->Recompile->Set a specific source version and change it from -1 to 7, do the same for Options->Recompile->Set a specific target version
+6. Copy all the files in the rmcp-config folder in this repo to the RetroMCP conf folder
 
-7. Download the cypress client copy it to the RetroMCP jars folder and rename it to minecraft.jar 
+7. In RetroMCP go to Options->Side->Client, then go Options->Recompile->Set a specific source version and change it from -1 to 7, do the same for Options->Recompile->Set a specific target version
 
-8. Click decompile
+8. Download the cypress client copy it to the RetroMCP jars folder and rename it to minecraft.jar 
+
+9. Click decompile
