@@ -1953,6 +1953,7 @@ c	net/minecraft/class_1_159	ext/util/Ext1605Utils
 		p	1		byArray
 	m	(FFFF)[F	method_1_910	BlendColor
 	m	(DD)D	method_1_911	AngleDistance
+	m	(Ljava/lang/String;)Ljava/io/InputStream;	method_1_912	readFile
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_290;II)V	method_1_913	fillBlock
 		p	0		world
 		p	1		xYZv
@@ -2675,7 +2676,7 @@ c	net/minecraft/class_1_206	ext/inventory/EssenceClonerInventoryCB
 		p	1		player
 	m	(Lnet/minecraft/class_1_344;)V	method_1_2077	onContentsChanged
 		p	1		inventory
-c	net/minecraft/class_1_207	ext/newblock/EmumVendingMachineUnknownClass2
+c	net/minecraft/class_1_207	ext/newblock/EnumVendingMachineUnknownClass2
 c	net/minecraft/class_1_208	net/minecraft/client/entity/mob/player/RemoteClientPlayerEntity
 	f	D	field_1_1120	lerpZ
 	f	D	field_1_1121	lerpYaw
@@ -2906,6 +2907,8 @@ c	net/minecraft/class_1_216	net/minecraft/item/Item
 		p	3		y
 		p	4		z
 		p	5		face
+	m	(Lnet/minecraft/class_1_803;)Z	method_1_996	
+		p	1	class_1_803	block
 	m	()Z	method_1_997	isHandheld
 	m	()I	method_1_998	getMaxDamage
 	m	()I	method_1_999	getMaxStackSize
@@ -3079,6 +3082,7 @@ c	net/minecraft/class_1_224	ext/newitem/ExtNewItem
 	f	Lnet/minecraft/class_1_216;	field_1_1326	LIQUIFIED_FLAME
 	f	Lnet/minecraft/class_1_216;	field_1_1327	OBSIDAIN_PEAR
 	f	Lnet/minecraft/class_1_216;	field_1_1328	GRANULAR_SALT
+	f	Lnet/minecraft/class_1_216;	field_1_1329	UNUSED_ITEM
 	f	Lnet/minecraft/class_1_216;	field_1_1330	OBSIDIAN_CHESTPLATE
 	f	Lnet/minecraft/class_1_216;	field_1_1331	FLAMEBERGE
 	f	Lnet/minecraft/class_1_216;	field_1_1332	BLUE_DYE
@@ -4116,6 +4120,8 @@ c	net/minecraft/class_1_277	net/minecraft/client/render/texture/TextureManager
 		p	2	class_1_1632	httpImageProcessor
 	m	(Ljava/lang/String;)V	method_1_1195	removeHttpTexture
 		p	1		url
+	m	(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;	method_1_1196	
+		p	1	inputStream	inputStream
 	m	(Ljava/lang/String;)I	method_1_1197	load
 		p	1		path
 	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	method_1_1198	rescale
@@ -4211,7 +4217,7 @@ c	net/minecraft/class_1_284	ext/inventory/EssenceInventoryBlockEntity
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1667	writeNbt
 		p	1		nbt
 c	net/minecraft/class_1_285	ext/world/biome/BiomeUnknownClass1
-c	net/minecraft/class_1_286	ext/newblock/EmumVendingMachineUnknownClass1
+c	net/minecraft/class_1_286	ext/newblock/EnumVendingMachineUnknownClass1
 c	net/minecraft/class_1_287	net/minecraft/entity/FallingBlockEntity
 	f	I	field_1_1573	fallingTicks
 	f	I	field_1_1574	block
@@ -4312,6 +4318,8 @@ c	net/minecraft/class_1_293	ext/network/NetSplitImageDataHandler
 c	net/minecraft/class_1_294	ext/inventory/EssenceCloneResult
 	f	Lnet/minecraft/class_1_206;	field_1_1589	parent
 	f	[Lnet/minecraft/class_1_263;	field_1_1590	stackResult
+	m	(Lnet/minecraft/class_1_206;)V	<init>	
+		p	1	class_1_206	parent
 	m	()Ljava/lang/String;	method_1_1317	getInventoryName
 	m	(II)Lnet/minecraft/class_1_263;	method_1_1318	removeItem
 		p	1		slot
@@ -5558,6 +5566,9 @@ c	net/minecraft/class_1_377	net/minecraft/client/SurvivalInteractionManager
 	m	(Lnet/minecraft/class_1_365;)V	method_1_2172	initPlayer
 		p	1		player
 c	net/minecraft/class_1_378	ext/client/visuals/Visuals1604Extended
+	f	Lnet/minecraft/class_1_801;	field_1_1801	visualsManager
+	m	(Lnet/minecraft/class_1_801;)V	<init>	
+		p	1	class_1_801	visualsManager
 c	net/minecraft/class_1_379	net/minecraft/client/render/world/DirtyChunkSorter
 	f	Lnet/minecraft/class_1_365;	field_1_1802	camera
 	m	(Lnet/minecraft/class_1_365;)V	<init>	
@@ -5941,7 +5952,7 @@ c	net/minecraft/class_1_400	ext/client/gui/screen/GuiPlayer
 		p	1		tickDelta
 c	net/minecraft/class_1_401	ext/util/command/CommandPlaceOnMe
 c	net/minecraft/class_1_402	ext/util/command/CommandWorldEditAccept
-c	net/minecraft/class_1_403	ext/newblock/EmumVendingMachineUnknownClass3
+c	net/minecraft/class_1_403	ext/newblock/EnumVendingMachineUnknownClass3
 c	net/minecraft/class_1_404	ext/client/gui/screen/GuiFrail
 	m	(CI)V	method_1_1474	keyPressed
 		p	1		chr
@@ -6132,10 +6143,16 @@ c	net/minecraft/class_1_415	ext/world/zm/WorldZMSpawnComparator
 c	net/minecraft/class_1_416	ext/util/ResourceLocation
 c	net/minecraft/class_1_417	ext/world/biome/BiomeUnknown2
 c	net/minecraft/class_1_418	ext/world/gen/WorldGenHouseBig
+	f	Lnet/minecraft/class_1_235;	field_1_1895	noiseMap1
+	f	Lnet/minecraft/class_1_235;	field_1_1896	noiseMap2
+	f	Lnet/minecraft/class_1_235;	field_1_1897	noiseMap3
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 	m	(Lnet/minecraft/class_1_134;IIILnet/minecraft/class_1_609;)V	method_1_1429	
 		p	1		world
+		p	2	integer2	x
+		p	3	integer3	y
+		p	4	integer4	z
 	m	(Lnet/minecraft/class_1_134;III)Z	method_1_1431	
 		p	1		world
 		p	2		x
@@ -6147,10 +6164,19 @@ c	net/minecraft/class_1_418	ext/world/gen/WorldGenHouseBig
 		p	1		world
 	m	(Lnet/minecraft/class_1_134;IIIIIILnet/minecraft/class_1_803;I)V	method_1_1435	
 		p	1		world
+		p	2	integer2	x
+		p	3	integer3	y
+		p	4	integer4	z
+		p	8	class_1_803	block
 	m	(Lnet/minecraft/class_1_134;IIII)V	method_1_1436	
 		p	1		world
 	m	(Lnet/minecraft/class_1_134;IIIIIILnet/minecraft/class_1_803;II)V	method_1_1438	
 		p	1		world
+		p	2	integer2	x
+		p	3	integer3	y
+		p	4	integer4	z
+		p	8	class_1_803	block
+		p	9	integer9	metadata
 	m	(Lnet/minecraft/class_1_134;III)V	method_1_1439	
 		p	1		world
 c	net/minecraft/class_1_419	net/minecraft/client/gui/widget/OptionSliderWidget
@@ -6733,6 +6759,8 @@ c	net/minecraft/class_1_451	ext/inventory/InventoryVendingMachine
 		p	2		creative
 	m	(I)V	method_1_738	scrollInHotbar
 		p	1		amount
+	m	(Lnet/minecraft/class_1_421;)Z	method_1_1511	
+		p	1	class_1_421	vendingMachineEnum
 c	net/minecraft/class_1_452	ext/block/ExtLeavesTypeBlock
 	m	(IILnet/minecraft/class_1_243;Z)V	<init>	
 		p	1		id
@@ -6798,171 +6826,171 @@ c	net/minecraft/class_1_458	ext/world/gen/WorldGenHouseBigUnknownClass1
 		p	1		random
 c	net/minecraft/class_1_459	ext/newblock/ExtNewBlock
 	f	Lnet/minecraft/class_1_803;	field_1_2001	SOLAR_PLATE
-	f	Lnet/minecraft/class_1_803;	field_1_2002	SyllablesPlate
-	f	Lnet/minecraft/class_1_803;	field_1_2003	SlatePillar
-	f	Lnet/minecraft/class_1_803;	field_1_2004	BismuthBrick
+	f	Lnet/minecraft/class_1_803;	field_1_2002	SYLLABLES_PLATE
+	f	Lnet/minecraft/class_1_803;	field_1_2003	SLATE_PILLAR
+	f	Lnet/minecraft/class_1_803;	field_1_2004	BISMUTH_BRICK
 	f	Lnet/minecraft/class_1_803;	field_1_2005	LOW_RIVER_GOLD_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2006	WATER_LILY
 	f	Lnet/minecraft/class_1_803;	field_1_2007	StairLadderBlock
-	f	Lnet/minecraft/class_1_803;	field_1_2008	DecorativeBlock2
-	f	Lnet/minecraft/class_1_803;	field_1_2009	ClinohumiteOre
-	f	Lnet/minecraft/class_1_803;	field_1_2010	Bookshelf
+	f	Lnet/minecraft/class_1_803;	field_1_2008	DECORATIVE_BLOCK_2
+	f	Lnet/minecraft/class_1_803;	field_1_2009	CLINOHUMITE_ORE
+	f	Lnet/minecraft/class_1_803;	field_1_2010	BOOKSHELF
 	f	Lnet/minecraft/class_1_803;	field_1_2011	LOW_WART
-	f	Lnet/minecraft/class_1_803;	field_1_2012	GreenstoneBrick
-	f	Lnet/minecraft/class_1_803;	field_1_2013	TeaDoor
+	f	Lnet/minecraft/class_1_803;	field_1_2012	GREENSTONE_BRICK
+	f	Lnet/minecraft/class_1_803;	field_1_2013	TEA_DOOR
 	f	Lnet/minecraft/class_1_803;	field_1_2014	FRIGID_LEAVES
 	f	Lnet/minecraft/class_1_803;	field_1_2015	HIGHWOOD_LEAVES
-	f	Lnet/minecraft/class_1_803;	field_1_2016	PyriteBlock
+	f	Lnet/minecraft/class_1_803;	field_1_2016	PYRITE_BLOCK
 	f	Lnet/minecraft/class_1_803;	field_1_2017	HIGHWOOD_PLANKS
-	f	Lnet/minecraft/class_1_803;	field_1_2018	MyconStem
+	f	Lnet/minecraft/class_1_803;	field_1_2018	MYCON_STEM
 	f	Lnet/minecraft/class_1_803;	field_1_2019	STONE_TILE
-	f	Lnet/minecraft/class_1_803;	field_1_2020	IronBrick
-	f	Lnet/minecraft/class_1_803;	field_1_2021	TeaWood
-	f	Lnet/minecraft/class_1_803;	field_1_2022	MyconPillar
-	f	Lnet/minecraft/class_1_803;	field_1_2023	ClinohumiteBlock
-	f	Lnet/minecraft/class_1_803;	field_1_2024	VendingMachineDashTop
+	f	Lnet/minecraft/class_1_803;	field_1_2020	IRON_BRICK
+	f	Lnet/minecraft/class_1_803;	field_1_2021	TEA_WOOD
+	f	Lnet/minecraft/class_1_803;	field_1_2022	MYCON_PILLAR
+	f	Lnet/minecraft/class_1_803;	field_1_2023	CLINOHUMITE_BLOCK
+	f	Lnet/minecraft/class_1_803;	field_1_2024	VENDING_MACHINE_DASH_TOP
 	f	Lnet/minecraft/class_1_803;	field_1_2025	BLUE_MOJANG_BLOCK
 	f	Lnet/minecraft/class_1_803;	field_1_2026	DOUBLE_WOOD_SLAB
-	f	Lnet/minecraft/class_1_803;	field_1_2027	LoopPlate
+	f	Lnet/minecraft/class_1_803;	field_1_2027	LOOP_PLATE
 	f	Lnet/minecraft/class_1_803;	field_1_2028	PILLAR
 	f	Lnet/minecraft/class_1_803;	field_1_2029	OBSIDIANINFUSED_LILY
 	f	Lnet/minecraft/class_1_803;	field_1_2030	ESSENCE_CACHE
-	f	Lnet/minecraft/class_1_803;	field_1_2031	LichenBricks
-	f	Lnet/minecraft/class_1_803;	field_1_2032	AssociationPlate
-	f	Lnet/minecraft/class_1_803;	field_1_2033	Fern
+	f	Lnet/minecraft/class_1_803;	field_1_2031	LICHEN_BRICKS
+	f	Lnet/minecraft/class_1_803;	field_1_2032	ASSOCIATION_PLATE
+	f	Lnet/minecraft/class_1_803;	field_1_2033	FERN
 	f	Lnet/minecraft/class_1_803;	field_1_2034	CELESTIAL_FLAME
 	f	Lnet/minecraft/class_1_803;	field_1_2035	TUTORIAL_GLOWING_CACHE
 	f	Lnet/minecraft/class_1_803;	field_1_2036	BLUE_CLOTH
-	f	Lnet/minecraft/class_1_803;	field_1_2037	SkyFlameInGlass
+	f	Lnet/minecraft/class_1_803;	field_1_2037	SKY_FLAME_IN_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2038	LOW_RIVER_GREENSTONE_ORE
-	f	Lnet/minecraft/class_1_803;	field_1_2039	DecorativeBlock1
+	f	Lnet/minecraft/class_1_803;	field_1_2039	DECORATIVE_BLOCK_1
 	f	Lnet/minecraft/class_1_803;	field_1_2040	TILE
 	f	Lnet/minecraft/class_1_803;	field_1_2041	GRASS
 	f	Lnet/minecraft/class_1_803;	field_1_2042	SAFE
 	f	Lnet/minecraft/class_1_803;	field_1_2043	unusedBlock1
 	f	Lnet/minecraft/class_1_803;	field_1_2044	ESSENCE_CLONER
 	f	Lnet/minecraft/class_1_803;	field_1_2045	DEBUG_BLOCK_2
-	f	Lnet/minecraft/class_1_803;	field_1_2046	ObsidianBrick
-	f	Lnet/minecraft/class_1_803;	field_1_2047	MalachiteBlock
-	f	Lnet/minecraft/class_1_803;	field_1_2048	LowMycon
-	f	Lnet/minecraft/class_1_803;	field_1_2049	VendingMachineHealthBoostBottom
-	f	Lnet/minecraft/class_1_803;	field_1_2050	MyconWorkbench
+	f	Lnet/minecraft/class_1_803;	field_1_2046	OBSIDAIN_BRICK
+	f	Lnet/minecraft/class_1_803;	field_1_2047	MALACHITE_BLOCK
+	f	Lnet/minecraft/class_1_803;	field_1_2048	LOW_MYCON
+	f	Lnet/minecraft/class_1_803;	field_1_2049	VENDING_MACHINE_HEALTH_BOOST_BOTTOM
+	f	Lnet/minecraft/class_1_803;	field_1_2050	MYCON_WIRKBENCH
 	f	Lnet/minecraft/class_1_803;	field_1_2051	BLACK_GLASS
-	f	Lnet/minecraft/class_1_803;	field_1_2052	VendingMachineQuickReviveBottom
+	f	Lnet/minecraft/class_1_803;	field_1_2052	VENDING_MACHINE_QUICK_REVIVE_BOTTOM
 	f	Lnet/minecraft/class_1_803;	field_1_2053	HIGHWOOD_ROOTS
 	f	Lnet/minecraft/class_1_803;	field_1_2054	SMOOTH_LIMESTONE
 	f	Lnet/minecraft/class_1_803;	field_1_2055	LOW_VINE
 	f	Lnet/minecraft/class_1_803;	field_1_2056	FLAMEINFUSED_LILY
-	f	Lnet/minecraft/class_1_803;	field_1_2057	GoldElderBrick
-	f	Lnet/minecraft/class_1_803;	field_1_2058	SnowBrick
-	f	Lnet/minecraft/class_1_803;	field_1_2059	BismuthPillar
+	f	Lnet/minecraft/class_1_803;	field_1_2057	GOLD_ELDER_BRICK
+	f	Lnet/minecraft/class_1_803;	field_1_2058	SNOW_BRICK
+	f	Lnet/minecraft/class_1_803;	field_1_2059	BISMUTH_PILLAR
 	f	Lnet/minecraft/class_1_803;	field_1_2060	HEATER
 	f	Lnet/minecraft/class_1_803;	field_1_2061	FORTIFIED_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2062	LIMESTONE
-	f	Lnet/minecraft/class_1_803;	field_1_2063	VendingMachineDashBottom
+	f	Lnet/minecraft/class_1_803;	field_1_2063	VENDING_MACHINE_DASH_BOTTOM
 	f	Lnet/minecraft/class_1_803;	field_1_2064	LOW_RIVER_DIAMOND_ORE
-	f	Lnet/minecraft/class_1_803;	field_1_2065	LaceAgateBlock
-	f	Lnet/minecraft/class_1_803;	field_1_2066	ElderSmoothStone
+	f	Lnet/minecraft/class_1_803;	field_1_2065	LACE_AGATE_BLOCK
+	f	Lnet/minecraft/class_1_803;	field_1_2066	ELDER_SMOOTH_STONE
 	f	Lnet/minecraft/class_1_803;	field_1_2067	SALT_BLOCK
-	f	Lnet/minecraft/class_1_803;	field_1_2068	BismuthOre
+	f	Lnet/minecraft/class_1_803;	field_1_2068	BISMUTH_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2069	CRUDE_PILLAR
-	f	Lnet/minecraft/class_1_803;	field_1_2070	WeaponUpgrader
-	f	Lnet/minecraft/class_1_803;	field_1_2071	FirewoodWorkbench
+	f	Lnet/minecraft/class_1_803;	field_1_2070	WEAPON_UPGRADER
+	f	Lnet/minecraft/class_1_803;	field_1_2071	FIREWOOD_WORKBENCH
 	f	Lnet/minecraft/class_1_803;	field_1_2072	BLACK_CLOTH
-	f	Lnet/minecraft/class_1_803;	field_1_2073	TeaPillar
-	f	Lnet/minecraft/class_1_803;	field_1_2074	Lichen
-	f	Lnet/minecraft/class_1_803;	field_1_2075	FlamewoodPillar
-	f	Lnet/minecraft/class_1_803;	field_1_2076	EmptyBookshelf
+	f	Lnet/minecraft/class_1_803;	field_1_2073	TEA_PILLAR
+	f	Lnet/minecraft/class_1_803;	field_1_2074	LICHEN
+	f	Lnet/minecraft/class_1_803;	field_1_2075	FLAMEWOOD_PILLAR
+	f	Lnet/minecraft/class_1_803;	field_1_2076	EMPTY_BOOKSHELF
 	f	Lnet/minecraft/class_1_803;	field_1_2077	FORTIFIED_BLACK_GLASS
-	f	Lnet/minecraft/class_1_803;	field_1_2078	MyconPlank
+	f	Lnet/minecraft/class_1_803;	field_1_2078	MYCON_PLANK
 	f	Lnet/minecraft/class_1_803;	field_1_2079	unusedBlock2
-	f	Lnet/minecraft/class_1_803;	field_1_2080	DenialPlate
+	f	Lnet/minecraft/class_1_803;	field_1_2080	DENIAL_PLATE
 	f	Lnet/minecraft/class_1_803;	field_1_2081	FORTIFIED_BLUE_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2082	FAKE_GRASS
-	f	Lnet/minecraft/class_1_803;	field_1_2083	LaceAgateOre
+	f	Lnet/minecraft/class_1_803;	field_1_2083	LACE_AGATE_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2084	GOLD_INFUSED_LILY
 	f	Lnet/minecraft/class_1_803;	field_1_2085	SMOOTH_STONE
-	f	Lnet/minecraft/class_1_803;	field_1_2086	SaltBricks
+	f	Lnet/minecraft/class_1_803;	field_1_2086	SALT_BRICKS
 	f	Lnet/minecraft/class_1_803;	field_1_2087	FAKE_DIRT
-	f	Lnet/minecraft/class_1_803;	field_1_2088	WeaponGiverGrayGun
+	f	Lnet/minecraft/class_1_803;	field_1_2088	WEAPON_GIVER_GRAY_GUN
 	f	Lnet/minecraft/class_1_803;	field_1_2089	FRIGID_TRUNK
 	f	Lnet/minecraft/class_1_803;	field_1_2090	LOW_RIVER_STONE
-	f	Lnet/minecraft/class_1_803;	field_1_2091	SlateBricks
+	f	Lnet/minecraft/class_1_803;	field_1_2091	SLATE_BRICKS
 	f	Lnet/minecraft/class_1_803;	field_1_2092	BLUE_DIMENSION_TILE
-	f	Lnet/minecraft/class_1_803;	field_1_2093	PartPlate
-	f	Lnet/minecraft/class_1_803;	field_1_2094	BismuthBlock
+	f	Lnet/minecraft/class_1_803;	field_1_2093	PART_PLATE
+	f	Lnet/minecraft/class_1_803;	field_1_2094	BISMUTH_BLOCK
 	f	Lnet/minecraft/class_1_803;	field_1_2095	DEBUG_BLOCK
-	f	Lnet/minecraft/class_1_803;	field_1_2096	PyriteOre
+	f	Lnet/minecraft/class_1_803;	field_1_2096	PYRITE_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2097	ICE_DOOR
 	f	Lnet/minecraft/class_1_803;	field_1_2098	BLUE_GLASS
-	f	Lnet/minecraft/class_1_803;	field_1_2099	ElderDecoratedStone
-	f	Lnet/minecraft/class_1_803;	field_1_2100	VendingMachineArmorTop
+	f	Lnet/minecraft/class_1_803;	field_1_2099	ELDER_DECORATED_STONE
+	f	Lnet/minecraft/class_1_803;	field_1_2100	VENDING_MACHINE_ARMOR_TOP
 	f	Lnet/minecraft/class_1_803;	field_1_2101	FLAMEWOOD
-	f	Lnet/minecraft/class_1_803;	field_1_2102	VendingMachineHealthBoostTop
-	f	Lnet/minecraft/class_1_803;	field_1_2103	GoldBrick
-	f	Lnet/minecraft/class_1_803;	field_1_2104	SwitchPlate
-	f	Lnet/minecraft/class_1_803;	field_1_2105	WorkingFreezer
+	f	Lnet/minecraft/class_1_803;	field_1_2102	VENDING_MACHINE_HEALTH_BOOST_TOP
+	f	Lnet/minecraft/class_1_803;	field_1_2103	GOLD_BRICK
+	f	Lnet/minecraft/class_1_803;	field_1_2104	SWITCH_PLATE
+	f	Lnet/minecraft/class_1_803;	field_1_2105	WORKING_FREEZER
 	f	Lnet/minecraft/class_1_803;	field_1_2106	TILE_WITH_NAME
 	f	Lnet/minecraft/class_1_803;	field_1_2107	GREEN_MOJANG_BLOCK
 	f	Lnet/minecraft/class_1_803;	field_1_2108	FORTIFIED_GREEN_GLASS
-	f	Lnet/minecraft/class_1_803;	field_1_2109	ObsidianFlameInGlass
-	f	Lnet/minecraft/class_1_803;	field_1_2110	HighwoodWorkbench
+	f	Lnet/minecraft/class_1_803;	field_1_2109	OBSIDIAN_FLAME_IN_GLASS
+	f	Lnet/minecraft/class_1_803;	field_1_2110	HIGHWOOD_WORKBENCH
 	f	Lnet/minecraft/class_1_803;	field_1_2111	FAKE_STONE
-	f	Lnet/minecraft/class_1_803;	field_1_2112	Freezer
+	f	Lnet/minecraft/class_1_803;	field_1_2112	FREEZER
 	f	Lnet/minecraft/class_1_803;	field_1_2113	HIGHWOOD_LOG
 	f	Lnet/minecraft/class_1_803;	field_1_2114	COBBLED_LIMESTONE
 	f	Lnet/minecraft/class_1_803;	field_1_2115	targetBlock
-	f	Lnet/minecraft/class_1_803;	field_1_2116	WifiBlock
+	f	Lnet/minecraft/class_1_803;	field_1_2116	WIFI_BLOCK
 	f	Lnet/minecraft/class_1_803;	field_1_2117	MAGENTA_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2118	WHITE_MOJANG_BLOCK
-	f	Lnet/minecraft/class_1_803;	field_1_2119	TeaWorkbench
+	f	Lnet/minecraft/class_1_803;	field_1_2119	TEA_WORKBENCH
 	f	Lnet/minecraft/class_1_803;	field_1_2120	TUTORIAL_GREEN_DIMENSION_FLOOR
-	f	Lnet/minecraft/class_1_803;	field_1_2121	WireframeBlock2
-	f	Lnet/minecraft/class_1_803;	field_1_2122	MalachiteOre
-	f	Lnet/minecraft/class_1_803;	field_1_2123	DiamondBrick
+	f	Lnet/minecraft/class_1_803;	field_1_2121	WIREFRAME_BLOCK_2
+	f	Lnet/minecraft/class_1_803;	field_1_2122	MALACHITE_ORE
+	f	Lnet/minecraft/class_1_803;	field_1_2123	DIAMOND_BRICK
 	f	Lnet/minecraft/class_1_803;	field_1_2124	LOW_RIVER_IRON_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2125	GHOST_BLOCK
 	f	Lnet/minecraft/class_1_803;	field_1_2126	GLOWING_MYCON_CAP
-	f	Lnet/minecraft/class_1_803;	field_1_2127	TeaPlank
+	f	Lnet/minecraft/class_1_803;	field_1_2127	TEA_PLANK
 	f	Lnet/minecraft/class_1_803;	field_1_2128	DIMENSION_WALL
-	f	Lnet/minecraft/class_1_803;	field_1_2129	HighwoodDoor
+	f	Lnet/minecraft/class_1_803;	field_1_2129	HIGHWOOD_DOOR
 	f	Lnet/minecraft/class_1_803;	field_1_2130	DIMENSION_FLOOR
-	f	Lnet/minecraft/class_1_803;	field_1_2131	SlateBeacon
+	f	Lnet/minecraft/class_1_803;	field_1_2131	SLATE_BEACON
 	f	Lnet/minecraft/class_1_803;	field_1_2132	FLAMEWOOD_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2133	GRASS_PATHWAY
-	f	Lnet/minecraft/class_1_803;	field_1_2134	LowFlameInGlass
+	f	Lnet/minecraft/class_1_803;	field_1_2134	LOW_FLAME_IN_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2135	LOW_RIVER_GLOWING_GREENSTONE_ORE
 	f	Lnet/minecraft/class_1_803;	field_1_2136	LOW_RIVERBED
 	f	Lnet/minecraft/class_1_803;	field_1_2137	ESSENCE_FOUNTAIN
 	f	Lnet/minecraft/class_1_803;	field_1_2138	FAKE_SAND
 	f	Lnet/minecraft/class_1_803;	field_1_2139	LOW_RIVER_COAL_ORE
-	f	Lnet/minecraft/class_1_803;	field_1_2140	WireframeBlock
-	f	Lnet/minecraft/class_1_803;	field_1_2141	HighwoodPillar
+	f	Lnet/minecraft/class_1_803;	field_1_2140	WIREFRAME_BLOCK
+	f	Lnet/minecraft/class_1_803;	field_1_2141	HIGHWOOD_PILLAR
 	f	Lnet/minecraft/class_1_803;	field_1_2142	TUTORIAL_ALTERNATIVE_DIMENSION_WALL
 	f	Lnet/minecraft/class_1_803;	field_1_2143	FORTIFIED_MAGENTA_GLASS
-	f	Lnet/minecraft/class_1_803;	field_1_2144	VendingMachineQuickReviveTop
+	f	Lnet/minecraft/class_1_803;	field_1_2144	VENDING_MACHINE_QUICK_REVIVE_TOP
 	f	Lnet/minecraft/class_1_803;	field_1_2145	SINGLE_WOOD_SLAB
-	f	Lnet/minecraft/class_1_803;	field_1_2146	DialectPlate
-	f	Lnet/minecraft/class_1_803;	field_1_2147	MyconDoor
-	f	Lnet/minecraft/class_1_803;	field_1_2148	ElderBrick
+	f	Lnet/minecraft/class_1_803;	field_1_2146	DIALECT_PLATE
+	f	Lnet/minecraft/class_1_803;	field_1_2147	MYCON_DOOR
+	f	Lnet/minecraft/class_1_803;	field_1_2148	ELDER_BRICK
 	f	Lnet/minecraft/class_1_803;	field_1_2149	GREEN_CLOTH
 	f	Lnet/minecraft/class_1_803;	field_1_2150	MYCON_CAP
 	f	Lnet/minecraft/class_1_803;	field_1_2151	FLAMEWOOD_LEAVES
 	f	Lnet/minecraft/class_1_803;	field_1_2152	GREEN_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2153	BlockHubDoor
 	f	Lnet/minecraft/class_1_803;	field_1_2154	LOW_LILY
-	f	Lnet/minecraft/class_1_803;	field_1_2155	GoldFlameInGlass
+	f	Lnet/minecraft/class_1_803;	field_1_2155	GOLD_FLAME_IN_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2156	HYDRANGEA
 	f	Lnet/minecraft/class_1_803;	field_1_2157	TRINITY_PLATE
-	f	Lnet/minecraft/class_1_803;	field_1_2158	TeaBush
-	f	Lnet/minecraft/class_1_803;	field_1_2159	LichenMass
+	f	Lnet/minecraft/class_1_803;	field_1_2158	TEA_BUSH
+	f	Lnet/minecraft/class_1_803;	field_1_2159	LICHEN_MASS
 	f	Lnet/minecraft/class_1_803;	field_1_2160	ESSENCE_TRANSFORMER
-	f	Lnet/minecraft/class_1_803;	field_1_2161	VendingMachineArmorBottom
+	f	Lnet/minecraft/class_1_803;	field_1_2161	VENDING_MACHINE_ARMOR_BOTTOM
 	f	Lnet/minecraft/class_1_803;	field_1_2162	YELLOE_DIMENSION_TILE
-	f	Lnet/minecraft/class_1_803;	field_1_2163	MirrorsPlate
-	f	Lnet/minecraft/class_1_803;	field_1_2164	ElderPillar
+	f	Lnet/minecraft/class_1_803;	field_1_2163	MIRRORS_PLATE
+	f	Lnet/minecraft/class_1_803;	field_1_2164	ELDER_PILLAR
 	f	Lnet/minecraft/class_1_803;	field_1_2165	MAGENTA_CLOTH
-	f	Lnet/minecraft/class_1_803;	field_1_2166	CoalBrick
+	f	Lnet/minecraft/class_1_803;	field_1_2166	COAL_BRICK
 	f	Lnet/minecraft/class_1_803;	field_1_2167	FLAMEWOOD_PLANKS
 	m	()V	method_1_1517	Register
 c	net/minecraft/class_1_460	net/minecraft/item/BowItem
@@ -7051,6 +7079,7 @@ c	net/minecraft/class_1_465	ext/entity/EntitySpearmaster
 	m	()Ljava/lang/String;	method_1_2384	getHurtSound
 	m	()Ljava/lang/String;	method_1_2388	getAmbientSound
 c	net/minecraft/class_1_466	ext/client/ThreadDownloadResourcesUnknownClass1
+	f	Lnet/minecraft/class_1_799;	field_1_2178	resourceDownloader
 	m	(Lnet/minecraft/class_1_799;)V	<init>	
 		p	1		resourceDownloader
 	m	(Ljava/nio/file/Path;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;	method_1_1521	visitFileFailed
@@ -9335,8 +9364,9 @@ c	net/minecraft/class_1_606	ext/client/Visuals
 	m	()Ljava/lang/String;	method_1_1796	getUnlockMethod
 	m	()Ljava/lang/String;	method_1_1797	getPrettyName
 	m	()Ljava/lang/String;	method_1_1798	getUnlockedFileName
+	m	([Ljava/lang/Object;)Z	method_1_1799	unlockMethod
 	m	()V	method_1_1800	unlockVisual
-c	net/minecraft/class_1_607	ext/client/controller/TriggerMode
+c	net/minecraft/class_1_607	ext/client/controller/TriggerModes
 	f	Lnet/minecraft/class_1_607;	field_1_2672	VibrateTrigger
 	f	Lnet/minecraft/class_1_607;	field_1_2673	Bow
 	f	Lnet/minecraft/class_1_607;	field_1_2674	AutomaticGun
@@ -11012,6 +11042,14 @@ c	net/minecraft/class_1_696	ext/world/gen/WorldGenFrigidHighwood
 		p	3		x
 		p	4		y
 		p	5		z
+	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_2081	
+		p	1	class_1_134	world
+		p	2	random	random
+		p	3	integer3	x
+		p	4	integer4	y
+		p	5	integer5	z
+	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)V	method_1_2082	
+		p	1	class_1_134	world
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)V	method_1_2084	
 		p	1		world
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_2085	
@@ -14601,7 +14639,10 @@ c	net/minecraft/class_1_881	net/minecraft/block/entity/ChestBlockEntity
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1667	writeNbt
 		p	1		nbt
 c	net/minecraft/class_1_882	ext/block/InventoryBlockEntity
+	f	Z	field_1_3724	playerWeezed
 	f	[Lnet/minecraft/class_1_263;	field_1_3725	Item
+	f	I	field_1_3727	cookTime
+	f	I	field_1_3728	coolTime
 	m	()Ljava/lang/String;	method_1_1317	getInventoryName
 	m	(II)Lnet/minecraft/class_1_263;	method_1_1318	removeItem
 		p	1		slot
@@ -15018,12 +15059,18 @@ c	net/minecraft/class_1_904	net/minecraft/util/math/BlockPos
 		p	3		z
 c	paulscode/sound/Channel	paulscode/sound/Channel
 	f	Lpaulscode/sound/Source;	attachedSource	attachedSource
+	f	I	channelType	channelType
+	f	Ljava/lang/Class;	libraryType	libraryType
+	f	Lpaulscode/sound/SoundSystemLogger;	logger	logger
 	m	()I	buffersProcessed	buffersProcessed
+	m	()V	cleanup	cleanup
 	m	()V	close	close
 	m	([B)I	feedRawAudioData	feedRawAudioData
 	m	()V	flush	flush
+	m	()Ljava/lang/String;	getClassName	getClassName
 	m	()V	pause	pause
 	m	()Z	playing	playing
+	m	(Ljava/util/LinkedList;)Z	preLoadBuffers	preLoadBuffers
 	m	()Z	processBuffer	processBuffer
 	m	([B)Z	queueBuffer	queueBuffer
 	m	()V	rewind	rewind
@@ -15032,6 +15079,50 @@ c	paulscode/sound/Channel	paulscode/sound/Channel
 c	paulscode/sound/codecs/CodecJOrbis	paulscode/sound/codecs/CodecJOrbis
 c	paulscode/sound/codecs/CodecWav	paulscode/sound/codecs/CodecWav
 c	paulscode/sound/CommandObject	paulscode/sound/CommandObject
+	f	I	ACTIVATE	ACTIVATE
+	f	[Z	boolArgs	boolArgs
+	f	[B	buffer	buffer
+	f	I	CHECK_FADE_VOLUMES	CHECK_FADE_VOLUMES
+	f	[Ljava/lang/Class;	classArgs	classArgs
+	f	I	Command	Command
+	f	I	CULL	CULL
+	f	I	DEQUEUE_SOUND	DEQUEUE_SOUND
+	f	I	FADE_OUT	FADE_OUT
+	f	I	FADE_OUT_IN	FADE_OUT_IN
+	f	I	FEED_RAW_AUDIO_DATA	FEED_RAW_AUDIO_DATA
+	f	[F	floatArgs	floatArgs
+	f	I	FLUSH	FLUSH
+	f	I	INITIALIZE	INITIALIZE
+	f	[I	intArgs	intArgs
+	f	I	LOAD_SOUND	LOAD_SOUND
+	f	[J	longArgs	longArgs
+	f	I	MOVE_LISTENER	MOVE_LISTENER
+	f	I	NEW_LIBRARY	NEW_LIBRARY
+	f	I	NEW_SOURCE	NEW_SOURCE
+	f	[Ljava/lang/Object;	objectArgs	objectArgs
+	f	I	PAUSE	PAUSE
+	f	I	PLAY	PLAY
+	f	I	QUEUE_SOUND	QUEUE_SOUND
+	f	I	QUICK_PLAY	QUICK_PLAY
+	f	I	RAW_DATA_STREAM	RAW_DATA_STREAM
+	f	I	REMOVE_SOURCE	REMOVE_SOURCE
+	f	I	REWIND	REWIND
+	f	I	SET_ATTENUATION	SET_ATTENUATION
+	f	I	SET_DIST_OR_ROLL	SET_DIST_OR_ROLL
+	f	I	SET_LISTENER_ANGLE	SET_LISTENER_ANGLE
+	f	I	SET_LISTENER_ORIENTATION	SET_LISTENER_ORIENTATION
+	f	I	SET_LISTENER_POSITION	SET_LISTENER_POSITION
+	f	I	SET_LOOPING	SET_LOOPING
+	f	I	SET_MASTER_VOLUME	SET_MASTER_VOLUME
+	f	I	SET_PITCH	SET_PITCH
+	f	I	SET_POSITION	SET_POSITION
+	f	I	SET_PRIORITY	SET_PRIORITY
+	f	I	SET_TEMPORARY	SET_TEMPORARY
+	f	I	SET_VOLUME	SET_VOLUME
+	f	I	STOP	STOP
+	f	[Ljava/lang/String;	stringArgs	stringArgs
+	f	I	TURN_LISTENER	TURN_LISTENER
+	f	I	UNLOAD_SOUND	UNLOAD_SOUND
 c	paulscode/sound/CommandThread	paulscode/sound/CommandThread
 c	paulscode/sound/FilenameURL	paulscode/sound/FilenameURL
 	m	()Ljava/lang/String;	getFilename	getFilename
