@@ -1,0 +1,14 @@
+PUBLIC net/minecraft/entity/mob/Entity getEyeHeight ()F
+PUBLIC net/minecraft/entity/mob/player/PlayerEntity field_1_1758
+PUBLIC net/minecraft/client/gui/widget/ButtonWidget width
+PUBLIC ext/util/HandlerPlayDemo field_1_2370
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1680
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1613
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1611
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1609
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1615
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1614
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1608
+PUBLIC ext/util/HandlerPlayDemoUnknownClass2 field_1_1610
+PUBLIC net/minecraft/client/options/GameOptions minecraft
+PUBLIC ext/world/NamedLocation p2invalid
