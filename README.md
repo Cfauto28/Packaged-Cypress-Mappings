@@ -9,4 +9,3 @@ Mappings based on [feather](https://github.com/OrnitheMC/feather) and [FMG793's 
 
 ## Caveats
 - No server mappings (I'm working on them)
-- As of now RetroMCP cannot recompile cypress 

@@ -1,3 +1,25 @@
+--- net/minecraft/entity/decoration/EnumPaintingEntityTypes.java
++++ net/minecraft/entity/decoration/EnumPaintingEntityTypes.java
+@@ -141,10 +141,6 @@
+ 	public final int u;
+ 	public final int v;
+ 
+-	public static EnumPaintingEntityTypes[] method_1_1786() {
+-		return (EnumPaintingEntityTypes[])field_1_2584.clone();
+-	}
+-
+ 	public static EnumPaintingEntityTypes method_1_1785(String var0) {
+ 		return (EnumPaintingEntityTypes)Enum.valueOf(EnumPaintingEntityTypes.class, var0);
+ 	}
+@@ -157,7 +153,7 @@
+ 		this.v = var7;
+ 	}
+ 
+-	private static EnumPaintingEntityTypes[] method_1_1784() {
++	public static EnumPaintingEntityTypes[] method_1_1784() {
+ 		return new EnumPaintingEntityTypes[]{Rock, Phoenix, Hue, Nebula, HellAspect, Duality, Smother, WastelandNight, Silentio, NightGarden, Demo, Reptile, Seek, Town, AutumnSun, SunRiver, Poet, Gradient, Seas, Bird, Cave, Cube, Fog, Quartet, Bull, Shack, DoorsToNexi, FloodedDuality, Sorrow, Yggdrasil, Parallax, DigitalMan, LightBeam, Shrine, Galaxy, DeepseaCoral, Landscape, Fragments, StoneTroll, NightLight, Snow, Salt, Fate, BigSalt, Maze, Darkness, CatOne, Parrot, Hill, HandGuy, Fucker, Bloodfest, Mirror, Atmosphere, Plane, Sky, Apple, Laptop, Plant, Landscaping, BlueShit, RedShit, Ascension, Infiltration, LostParadise, Distant, Smoke, Symbol, BlueGuts, Handdrawn, Blue, Andrei, Distortion, CatBroom, Slain, Galaxia, Hidden, TiledSurface, Sunrise, Cosmos, TreePlain, Shattered, Worrysome, Integrity, Globe, Sailor, Gorey, SeaAnimal, Feline, MonopolyBoard, Moon, Leader, Fighter, Sideview, Hexagon, NightSky, TheTop, DoorThingIdk, Haeven, Jupiter, Weed, Seaside, Stairwell, Event, Erupt, GradedSky, BlackHole, PinkShit, LowRiverSkull, MissingTex, FlippedShape, Company, Game, GayPorn, BigFish, Dreamland, UnseenLand, Fields, Emil, Zombies, Cube2, Cubes, Spirit, Pengo, Rogue, Encounter, FlippedShape2, FlippedShape3, FlippedShape4, CityLicht, waterhall, MirrorMirror, Mall};
+ 	}
+ }
 --- net/minecraft/client/render/world/DirtyChunkSorter.java
 +++ net/minecraft/client/render/world/DirtyChunkSorter.java
 @@ -20,7 +20,8 @@
@@ -9,6 +31,24 @@
 +	@Override
 +	public int compare(RenderChunk var1, RenderChunk var2) {
 +		return this._23jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N(var1, var2);
+ 	}
+ }
+--- net/minecraft/block/RailBlock.java
++++ net/minecraft/block/RailBlock.java
+@@ -88,13 +88,13 @@
+ 		if(var7) {
+ 			this.dropItems(var1, var2, var3, var4, var1.getBlockMetadata(var2, var3, var4));
+ 			var1.setBlock(var2, var3, var4, 0);
+-		} else if(var5 > 0 && Block.BY_ID[var5].isSignalSource() && RailBlock__RailNode.method_1_712(new RailBlock__RailNode(this, var1, var2, var3, var4)) == 3) {
++		} else if(var5 > 0 && Block.BY_ID[var5].isSignalSource()/* && RailBlock__RailNode.method_1_712(new RailBlock__RailNode(this, var1, var2, var3, var4)) == 3*/) {
+ 			this.updateShape(var1, var2, var3, var4);
+ 		}
+ 
+ 	}
+ 
+ 	private void updateShape(World var1, int var2, int var3, int var4) {
+-		(new RailBlock__RailNode(this, var1, var2, var3, var4)).updateState(var1.hasNeighborSignal(var2, var3, var4));
++		//(new RailBlock__RailNode(this, var1, var2, var3, var4)).updateState(var1.hasNeighborSignal(var2, var3, var4));
  	}
  }
 --- ext/entity/SquidGames.java
@@ -30,7 +70,7 @@
 -		this.2jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((Entity)var1, var2, var3, var4, var5, var6);
 +	@Override
 +	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
-+		this._jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((T) var1, var2, var3, var4, var5, var6);
++		this._jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q(var1, var2, var3, var4, var5, var6);
  	}
  }
 --- ext/client/renderer/model/ModelCatBomb.java
@@ -52,9 +92,76 @@
 -		this.07lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((Entity)var1, var2, var3, var4, var5, var6);
 +	@Override
 +	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
-+		this._7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((T) var1, var2, var3, var4, var5, var6);
++		this._7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8(var1, var2, var3, var4, var5, var6);
  	}
  }
+--- ext/world/gen/WorldGenHouseSmall.java
++++ ext/world/gen/WorldGenHouseSmall.java
+@@ -27,7 +27,7 @@
+ 		if(this.field_1_3166.containsKey(var6)) {
+ 			return null;
+ 		} else {
+-			this.field_1_3166.put(var6, (Object)null);
++			this.field_1_3166.put(var6, (BuiltTowerData) null);
+ 			if(var1.getBlock(var3, var4, var5) != 0) {
+ 				return null;
+ 			} else {
+--- net/minecraft/entity/mob/player/PlayerEntity.java
++++ net/minecraft/entity/mob/player/PlayerEntity.java
+@@ -272,7 +272,7 @@
+ 	public void pickUp(Entity var1, int var2) {
+ 	}
+ 
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return this.field_1_1758 ? -0.1F : 0.12F;
+ 	}
+ 
+--- ext/newblock/BlockVendingMachine.java
++++ ext/newblock/BlockVendingMachine.java
+@@ -20,17 +20,17 @@
+ 			int var3 = var1.field_1_1783.method_1_875(this.field_1_795);
+ 			if(var1.vendingMachine.method_1_1513() >= (long)var3) {
+ 				var1.vendingMachine.method_1_1514((long)(-var3));
+-				switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-				case 1:
++				switch(this.field_1_795) {
++				case Armor:
+ 					var1.vendingMachine.field_1_1993 = true;
+ 					break;
+-				case 2:
++				case Dash:
+ 					var1.vendingMachine.field_1_1996 = true;
+ 					break;
+-				case 3:
++				case HealthBoost:
+ 					var1.vendingMachine.field_1_1992 = true;
+ 					break;
+-				case 4:
++				case QuickRevive:
+ 					var1.vendingMachine.field_1_1994 = true;
+ 				}
+ 			} else {
+@@ -45,14 +45,14 @@
+ 		if(var1.vendingMachine.method_1_1511(this.field_1_795)) {
+ 			return "You already have this perk.";
+ 		} else {
+-			switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-			case 1:
++			switch(this.field_1_795) {
++			case Armor:
+ 				return "[" + var3 + "] buy Armor [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 2:
++			case Dash:
+ 				return "[" + var3 + "] buy Dash [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 3:
++			case HealthBoost:
+ 				return "[" + var3 + "] buy Berzerkola [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 4:
++			case QuickRevive:
+ 				return "[" + var3 + "] buy Revive [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+ 			default:
+ 				return "--";
 --- ext/world/zm/ZMWorld.java
 +++ ext/world/zm/ZMWorld.java
 @@ -116,7 +116,7 @@
@@ -66,9 +173,29 @@
  						}
  					});
  					return var2.size() == 0 ? null : (var2.size() == 1 ? (WorldZMSpawn)var2.get(0) : (WorldZMSpawn)var2.get(this.random.nextInt(Math.min(var2.size(), 3))));
+@@ -157,14 +157,14 @@
+ 	}
+ 
+ 	public int method_1_875(EnumVendingMachine var1) {
+-		switch(null.field_1_1572[var1.ordinal()]) {
+-		case 1:
++		switch(var1) {
++		case Armor:
+ 			return 1500;
+-		case 2:
++		case Dash:
+ 			return 7500;
+-		case 3:
++		case HealthBoost:
+ 			return 2500;
+-		case 4:
++		case QuickRevive:
+ 			return 600;
+ 		default:
+ 			return 1;
 --- ext/world/gen/WorldGenHouseBigInterior.java
 +++ ext/world/gen/WorldGenHouseBigInterior.java
-@@ -34,7 +34,7 @@
+@@ -34,14 +34,14 @@
  		this.field_1_2695 = var7;
  	}
  
@@ -76,6 +203,14 @@
 +	public <T extends IHouseBig> T method_1_1806(Class<T> var1) {
  		IHouseBig[] var2 = this.field_1_2698;
  		int var3 = var2.length;
+ 
+ 		for(int var4 = 0; var4 < var3; ++var4) {
+ 			IHouseBig var5 = var2[var4];
+ 			if(var1.isInstance(var5)) {
+-				return (IHouseBig)var1.cast(var5);
++				return (T) var1.cast(var5);
+ 			}
+ 		}
  
 --- ext/entity/EntityUnknownClass1.java
 +++ ext/entity/EntityUnknownClass1.java
@@ -96,9 +231,69 @@
 -		this.16PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((Entity)var1, var2, var3, var4, var5, var6);
 +	@Override
 +	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
-+		this._6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((T) var1, var2, var3, var4, var5, var6);
++		this._6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom(var1, var2, var3, var4, var5, var6);
  	}
  }
+--- ext/inventory/InventoryVendingMachine.java
++++ ext/inventory/InventoryVendingMachine.java
+@@ -59,14 +59,14 @@
+ 	}
+ 
+ 	public boolean method_1_1511(EnumVendingMachine var1) {
+-		switch(null.field_1_1865[var1.ordinal()]) {
+-		case 1:
++		switch(var1) {
++		case Armor:
+ 			return this.field_1_1993;
+-		case 2:
++		case Dash:
+ 			return this.field_1_1996;
+-		case 3:
++		case HealthBoost:
+ 			return this.field_1_1992;
+-		case 4:
++		case QuickRevive:
+ 			return this.field_1_1994;
+ 		default:
+ 			return false;
+--- net/minecraft/client/Minecraft.java
++++ net/minecraft/client/Minecraft.java
+@@ -167,7 +167,7 @@
+ 	public String field_1_553 = "";
+ 	public static boolean conf_bannedPlayer = false;
+ 	public static String field_1_551 = WorldUnknownClass2.method_1_1562(WorldUnknownClass2.field_1_2243);
+-	private final String startupVersionString = "11(NtBreak)/11-023-ship " + (MinecraftUnknownClass1.class.getSimpleName().contains("MinecraftImpl") ? "(non-obf.)" : (MinecraftUnknownClass1.class.getSimpleName().length() < 3 ? "(lv1obf.)" : "(lv2obf.)"));
++	private final String startupVersionString = "11(NtBreak)/11-023-ship (non-obf.)";
+ 	public static int field_1_546 = 0;
+ 	public int field_1_532 = 0;
+ 	public VisualsManager visualsManager = new VisualsManager();
+--- net/minecraft/block/Block.java
++++ net/minecraft/block/Block.java
+@@ -288,9 +288,9 @@
+ 		return this.id;
+ 	}
+ 
+-	public float method_1_1952(PlayerEntity var1) {
++/*	public float method_1_1952(PlayerEntity var1) {
+ 		return this.miningTime < 0.0F ? 0.0F : (!var1.b(this) ? 1.0F / this.miningTime / 100.0F : var1.a(this) / this.miningTime / 30.0F);
+-	}
++	}*/
+ 
+ 	public void dropItems(World var1, int var2, int var3, int var4, int var5) {
+ 		this.dropItems(var1, var2, var3, var4, var5, 1.0F);
+--- net/minecraft/world/LightType.java
++++ net/minecraft/world/LightType.java
+@@ -6,10 +6,6 @@
+ 
+ 	public final int defaultValue;
+ 
+-	public static LightType[] method_1_1742() {
+-		return (LightType[])field_1_2499.clone();
+-	}
+-
+ 	public static LightType method_1_1741(String var0) {
+ 		return (LightType)Enum.valueOf(LightType.class, var0);
+ 	}
 --- net/minecraft/client/render/world/DistanceChunkSorter.java
 +++ net/minecraft/client/render/world/DistanceChunkSorter.java
 @@ -18,7 +18,8 @@
@@ -112,9 +307,42 @@
 +		return this._9t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL(var1, var2);
  	}
  }
+--- ext/phys/Direction.java
++++ ext/phys/Direction.java
+@@ -8,10 +8,6 @@
+ 
+ 	public final int direction;
+ 
+-	public static Direction[] method_1_2185() {
+-		return (Direction[])field_1_3249.clone();
+-	}
+-
+ 	public static Direction method_1_2186(String var0) {
+ 		return (Direction)Enum.valueOf(Direction.class, var0);
+ 	}
+@@ -25,7 +21,7 @@
+ 		for(var2 = (var0.direction + var1) % 4; var2 < 0; var2 += 4) {
+ 		}
+ 
+-		return method_1_2185()[var2];
++		return method_1_2184()[var2];
+ 	}
+ 
+ 	private static Direction[] method_1_2184() {
+--- ext/world/NamedLocation.java
++++ ext/world/NamedLocation.java
+@@ -9,7 +9,7 @@
+ 	public int bx2;
+ 	public int by2;
+ 	public int bz2;
+-	boolean p2Invalid = false;
++	public boolean p2Invalid = false;
+ 	String field_1_1548;
+ 
+ 	public NamedLocation(int var1, int var2, int var3, int var4, int var5, int var6, String var7) {
 --- net/minecraft/crafting/CraftingManager__57536588.java
 +++ net/minecraft/crafting/CraftingManager__57536588.java
-@@ -19,7 +19,8 @@
+@@ -17,7 +17,8 @@
  		return this.method_1_2075(var1, var2);
  	}
  
@@ -125,6 +353,18 @@
 +		return this._G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6(var1, var2);
  	}
  }
+--- net/minecraft/block/PressurePlateBlock__ActivationRule.java
++++ net/minecraft/block/PressurePlateBlock__ActivationRule.java
+@@ -5,9 +5,6 @@
+ 	MOBS,
+ 	PLAYERS;
+ 
+-	public static PressurePlateBlock__ActivationRule[] method_1_1989() {
+-		return (PressurePlateBlock__ActivationRule[])field_1_3020.clone();
+-	}
+ 
+ 	public static PressurePlateBlock__ActivationRule method_1_1988(String var0) {
+ 		return (PressurePlateBlock__ActivationRule)Enum.valueOf(PressurePlateBlock__ActivationRule.class, var0);
 --- net/minecraft/client/resource/ResourceDownloader.java
 +++ net/minecraft/client/resource/ResourceDownloader.java
 @@ -65,15 +65,15 @@
@@ -146,6 +386,105 @@
  			}
  		};
  		Files.walkFileTree(var1, var2);
+--- net/minecraft/isom/IsomPreviewCanvas__OS.java
++++ net/minecraft/isom/IsomPreviewCanvas__OS.java
+@@ -7,10 +7,6 @@
+ 	MACOS,
+ 	UNKNOWN;
+ 
+-	public static IsomPreviewCanvas__OS[] valueOf() {
+-		return (IsomPreviewCanvas__OS[])field_1_2453.clone();
+-	}
+-
+ 	public static IsomPreviewCanvas__OS method_1_1717(String var0) {
+ 		return (IsomPreviewCanvas__OS)Enum.valueOf(IsomPreviewCanvas__OS.class, var0);
+ 	}
+--- ext/modloader/Modloader.java
++++ ext/modloader/Modloader.java
+@@ -168,7 +168,7 @@
+ 		Object var3 = (List)overrides.get(var0);
+ 		if(var3 == null) {
+ 			var3 = new LinkedList();
+-			overrides.put(var0, var3);
++			overrides.put(var0, (List<SimpleEntry<String, Integer>>) var3);
+ 		}
+ 
+ 		((List)var3).add(new SimpleEntry(var1, Integer.valueOf(var2)));
+--- net/minecraft/entity/decoration/PaintingEntity.java
++++ net/minecraft/entity/decoration/PaintingEntity.java
+@@ -37,7 +37,7 @@
+ 		this.blockZ = var4;
+ 		this.field_1_1736 = var5;
+ 		ArrayList var6 = new ArrayList();
+-		EnumPaintingEntityTypes[] var7 = EnumPaintingEntityTypes.method_1_1786();
++		EnumPaintingEntityTypes[] var7 = EnumPaintingEntityTypes.method_1_1784();
+ 		int var8 = var7.length;
+ 
+ 		for(int var9 = 0; var9 < var8; ++var9) {
+@@ -211,7 +211,7 @@
+ 		this.blockY = var1.getInt("TileY");
+ 		this.blockZ = var1.getInt("TileZ");
+ 		String var2 = var1.getString("Motive");
+-		EnumPaintingEntityTypes[] var3 = EnumPaintingEntityTypes.method_1_1786();
++		EnumPaintingEntityTypes[] var3 = EnumPaintingEntityTypes.method_1_1784();
+ 		int var4 = var3.length;
+ 
+ 		for(int var5 = 0; var5 < var4; ++var5) {
+--- ext/phys/XYZv.java
++++ ext/phys/XYZv.java
+@@ -43,14 +43,14 @@
+ 	}
+ 
+ 	public XYZv rotateAroundXP(Direction var1) {
+-		switch(null.field_1_2732[var1.ordinal()]) {
+-		case 1:
++		switch(var1) {
++		case XM:
+ 			return new XYZv(-this.x, this.y, -this.z, this.dir);
+-		case 2:
++		case XP:
+ 			return new XYZv(this.x, this.y, this.z, this.dir);
+-		case 3:
++		case ZM:
+ 			return new XYZv(-this.z, this.y, -this.x, this.dir);
+-		case 4:
++		case ZP:
+ 			return new XYZv(this.z, this.y, this.x, this.dir);
+ 		default:
+ 			return null;
+--- ext/client/controller/DS5InstrTriggerUpdate.java
++++ ext/client/controller/DS5InstrTriggerUpdate.java
+@@ -31,10 +31,6 @@
+ 
+ 		int index;
+ 
+-		public static DS5InstrTriggerUpdate.TriggerIndex[] method_1_1399() {
+-			return (DS5InstrTriggerUpdate.TriggerIndex[])field_1_1819.clone();
+-		}
+-
+ 		public static DS5InstrTriggerUpdate.TriggerIndex method_1_1397(String var0) {
+ 			return (DS5InstrTriggerUpdate.TriggerIndex)Enum.valueOf(DS5InstrTriggerUpdate.TriggerIndex.class, var0);
+ 		}
+@@ -71,9 +67,6 @@
+ 
+ 		int index;
+ 
+-		public static DS5InstrTriggerUpdate.TriggerMode[] method_1_1803() {
+-			return (DS5InstrTriggerUpdate.TriggerMode[])field_1_2692.clone();
+-		}
+ 
+ 		public static DS5InstrTriggerUpdate.TriggerMode method_1_1802(String var0) {
+ 			return (DS5InstrTriggerUpdate.TriggerMode)Enum.valueOf(DS5InstrTriggerUpdate.TriggerMode.class, var0);
+@@ -109,9 +102,6 @@
+ 
+ 		int index;
+ 
+-		public static DS5InstrTriggerUpdate.CustomTriggerValueMode[] method_1_925() {
+-			return (DS5InstrTriggerUpdate.CustomTriggerValueMode[])field_1_1026.clone();
+-		}
+ 
+ 		public static DS5InstrTriggerUpdate.CustomTriggerValueMode method_1_924(String var0) {
+ 			return (DS5InstrTriggerUpdate.CustomTriggerValueMode)Enum.valueOf(DS5InstrTriggerUpdate.CustomTriggerValueMode.class, var0);
 --- ext/entity/EntityUnknownClass2.java
 +++ ext/entity/EntityUnknownClass2.java
 @@ -13,7 +13,7 @@
@@ -165,6 +504,371 @@
 -		this.5u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((Entity)var1, var2, var3, var4, var5, var6);
 +	@Override
 +	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
-+		this._u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((T) var1, var2, var3, var4, var5, var6);
++		this._u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl(var1, var2, var3, var4, var5, var6);
  	}
  }
+--- ext/world/gen/WorldGenHouseBig.java
++++ ext/world/gen/WorldGenHouseBig.java
+@@ -273,8 +273,8 @@
+ 		for(var10 = 0; var10 < 4; ++var10) {
+ 			int var11;
+ 			int var12;
+-			switch(null.field_1_921[var13[var10].ordinal()]) {
+-			case 1:
++			switch(var13[var10]) {
++			case WhiteGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtBlock.GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtBlock.GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtBlock.GLASS, var10);
+@@ -298,7 +298,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 2:
++			case BlueGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.BLUE_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.BLUE_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.BLUE_GLASS, var10);
+@@ -322,7 +322,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 3:
++			case PinkGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.MAGENTA_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.MAGENTA_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.MAGENTA_GLASS, var10);
+@@ -346,7 +346,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 4:
++			case PlateDecor:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.SMOOTH_STONE, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.SMOOTH_STONE, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.SMOOTH_STONE, var10);
+@@ -376,7 +376,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 5:
++			case LimeGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.GREEN_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.GREEN_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.GREEN_GLASS, var10);
+@@ -400,7 +400,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 6:
++			case BlackGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.BLACK_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.BLACK_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.BLACK_GLASS, var10);
+@@ -424,7 +424,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 7:
++			case Door:
+ 				var11 = var10 == 0 ? 1 : (var10 == 2 ? -1 : 0);
+ 				var12 = var10 == 1 ? 1 : (var10 == 3 ? -1 : 0);
+ 				var11 += var2;
+@@ -439,7 +439,7 @@
+ 					this.method_1_1435(var1, var6, var3, var7, 4, -1, 0, ExtNewBlock.SMOOTH_STONE, var10);
+ 					this.method_1_1435(var1, var6, var3, var7, 4, -1, 1, ExtNewBlock.SMOOTH_STONE, var10);
+ 				}
+-			case 8:
++			case Doorless:
+ 				var11 = var10 == 0 ? 1 : (var10 == 2 ? -1 : 0);
+ 				var12 = var10 == 1 ? 1 : (var10 == 3 ? -1 : 0);
+ 				var11 += var2;
+--- ext/newblock/EnumVendingMachine.java
++++ ext/newblock/EnumVendingMachine.java
+@@ -6,10 +6,6 @@
+ 	Dash,
+ 	QuickRevive;
+ 
+-	public static EnumVendingMachine[] method_1_1443() {
+-		return (EnumVendingMachine[])field_1_1903.clone();
+-	}
+-
+ 	private static EnumVendingMachine[] method_1_1441() {
+ 		return new EnumVendingMachine[]{HealthBoost, Armor, Dash, QuickRevive};
+ 	}
+--- ext/world/gen/WorldGenHouseSmall.java
++++ ext/world/gen/WorldGenHouseSmall.java
+@@ -389,9 +389,6 @@
+ 		WINDOW,
+ 		DOOR;
+ 
+-		public static WorldGenHouseSmall.BuiltWallKind[] method_1_2027() {
+-			return (WorldGenHouseSmall.BuiltWallKind[])field_1_3043.clone();
+-		}
+ 
+ 		private static WorldGenHouseSmall.BuiltWallKind[] method_1_2026() {
+ 			return new WorldGenHouseSmall.BuiltWallKind[]{NORMAL, WINDOW, DOOR};
+--- ext/newblock/BlockVendingMachine.java
++++ ext/newblock/BlockVendingMachine.java
+@@ -61,14 +61,14 @@
+ 	}
+ 
+ 	public int method_1_2461() {
+-		switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-		case 1:
++		switch(this.field_1_795) {
++		case Armor:
+ 			return 2;
+-		case 2:
++		case Dash:
+ 			return 3;
+-		case 3:
++		case HealthBoost:
+ 			return 1;
+-		case 4:
++		case QuickRevive:
+ 			return 4;
+ 		default:
+ 			return -1;
+--- net/minecraft/isom/IsomPreviewCanvas__34055559.java
++++ net/minecraft/isom/IsomPreviewCanvas__34055559.java
+@@ -1,7 +1,7 @@
+ package net.minecraft.isom;
+ 
+ class IsomPreviewCanvas__34055559 {
+-	static final int[] field_1_2224 = new int[IsomPreviewCanvas__OS.valueOf().length];
++	static final int[] field_1_2224 = new int[IsomPreviewCanvas__OS.values().length];
+ 
+ 	static {
+ 		try {
+--- ext/world/gen/WorldGenUnknownClass1.java
++++ ext/world/gen/WorldGenUnknownClass1.java
+@@ -73,12 +73,8 @@
+ 		UNDERGROUND,
+ 		LOW_RIVER;
+ 
+-		public static WorldGenUnknownClass1.Layer[] method_1_1557() {
+-			return (WorldGenUnknownClass1.Layer[])field_1_2227.clone();
+-		}
+-
+-		private static WorldGenUnknownClass1.Layer[] method_1_1558() {
++	/*	private static WorldGenUnknownClass1.Layer[] method_1_1558() {
+ 			return new WorldGenUnknownClass1.Layer[]{SURFACE, UNDERGROUND, LOW_RIVER};
+-		}
++		}*/
+ 	}
+ }
+--- net/minecraft/entity/mob/MobEntity.java
++++ net/minecraft/entity/mob/MobEntity.java
+@@ -82,7 +82,7 @@
+ 		return !this.removed;
+ 	}
+ 
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return this.height * 0.85F;
+ 	}
+ 
+--- net/minecraft/entity/Entity.java
++++ net/minecraft/entity/Entity.java
+@@ -505,7 +505,7 @@
+ 		}
+ 	}
+ 
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return 0.0F;
+ 	}
+ 
+--- ext/world/gen/WorldGenHouseBig.java
++++ ext/world/gen/WorldGenHouseBig.java
+@@ -538,10 +538,7 @@
+ 		WhiteGlass,
+ 		Doorless,
+ 		PlateDecor;
+-
+-		public static WorldGenHouseBig.WallDecor[] method_1_756() {
+-			return (WorldGenHouseBig.WallDecor[])field_1_847.clone();
+-		}
++		
+ 
+ 		private static WorldGenHouseBig.WallDecor[] method_1_755() {
+ 			return new WorldGenHouseBig.WallDecor[]{None, Door, PinkGlass, BlueGlass, LimeGlass, BlackGlass, WhiteGlass, Doorless, PlateDecor};
+--- ext/world/gen/WorldGenHouseSmall.java
++++ ext/world/gen/WorldGenHouseSmall.java
+@@ -27,7 +27,7 @@
+ 		if(this.field_1_3166.containsKey(var6)) {
+ 			return null;
+ 		} else {
+-			this.field_1_3166.put(var6, (Object)null);
++			this.field_1_3166.put(var6, (BuiltTowerData) null);
+ 			if(var1.getBlock(var3, var4, var5) != 0) {
+ 				return null;
+ 			} else {
+--- ext/newblock/BlockVendingMachine.java
++++ ext/newblock/BlockVendingMachine.java
+@@ -20,17 +20,17 @@
+ 			int var3 = var1.field_1_1783.method_1_875(this.field_1_795);
+ 			if(var1.vendingMachine.method_1_1513() >= (long)var3) {
+ 				var1.vendingMachine.method_1_1514((long)(-var3));
+-				switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-				case 1:
++				switch(this.field_1_795) {
++				case Armor:
+ 					var1.vendingMachine.field_1_1993 = true;
+ 					break;
+-				case 2:
++				case Dash:
+ 					var1.vendingMachine.field_1_1996 = true;
+ 					break;
+-				case 3:
++				case HealthBoost:
+ 					var1.vendingMachine.field_1_1992 = true;
+ 					break;
+-				case 4:
++				case QuickRevive:
+ 					var1.vendingMachine.field_1_1994 = true;
+ 				}
+ 			} else {
+@@ -45,14 +45,14 @@
+ 		if(var1.vendingMachine.method_1_1511(this.field_1_795)) {
+ 			return "You already have this perk.";
+ 		} else {
+-			switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-			case 1:
++			switch(this.field_1_795) {
++			case Armor:
+ 				return "[" + var3 + "] buy Armor [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 2:
++			case Dash:
+ 				return "[" + var3 + "] buy Dash [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 3:
++			case HealthBoost:
+ 				return "[" + var3 + "] buy Berzerkola [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 4:
++			case QuickRevive:
+ 				return "[" + var3 + "] buy Revive [" + var1.field_1_1783.method_1_875(this.field_1_795) + " points]";
+ 			default:
+ 				return "--";
+--- ext/world/gen/WorldGenHouseBig.java
++++ ext/world/gen/WorldGenHouseBig.java
+@@ -273,8 +273,8 @@
+ 		for(var10 = 0; var10 < 4; ++var10) {
+ 			int var11;
+ 			int var12;
+-			switch(null.field_1_921[var13[var10].ordinal()]) {
+-			case 1:
++			switch(var13[var10]) {
++			case WhiteGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtBlock.GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtBlock.GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtBlock.GLASS, var10);
+@@ -298,7 +298,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 2:
++			case BlueGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.BLUE_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.BLUE_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.BLUE_GLASS, var10);
+@@ -322,7 +322,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 3:
++			case PinkGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.MAGENTA_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.MAGENTA_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.MAGENTA_GLASS, var10);
+@@ -346,7 +346,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 4:
++			case PlateDecor:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.SMOOTH_STONE, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.SMOOTH_STONE, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.SMOOTH_STONE, var10);
+@@ -376,7 +376,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 5:
++			case LimeGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.GREEN_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.GREEN_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.GREEN_GLASS, var10);
+@@ -400,7 +400,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 6:
++			case BlackGlass:
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 1, 0, ExtNewBlock.BLACK_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 2, 0, ExtNewBlock.BLACK_GLASS, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 0, 3, 0, ExtNewBlock.BLACK_GLASS, var10);
+@@ -424,7 +424,7 @@
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				this.method_1_1435(var1, var6, var3, var7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, var10);
+ 				break;
+-			case 7:
++			case Door:
+ 				var11 = var10 == 0 ? 1 : (var10 == 2 ? -1 : 0);
+ 				var12 = var10 == 1 ? 1 : (var10 == 3 ? -1 : 0);
+ 				var11 += var2;
+@@ -439,7 +439,7 @@
+ 					this.method_1_1435(var1, var6, var3, var7, 4, -1, 0, ExtNewBlock.SMOOTH_STONE, var10);
+ 					this.method_1_1435(var1, var6, var3, var7, 4, -1, 1, ExtNewBlock.SMOOTH_STONE, var10);
+ 				}
+-			case 8:
++			case Doorless:
+ 				var11 = var10 == 0 ? 1 : (var10 == 2 ? -1 : 0);
+ 				var12 = var10 == 1 ? 1 : (var10 == 3 ? -1 : 0);
+ 				var11 += var2;
+--- ext/world/gen/WorldGenHouseSmall.java
++++ ext/world/gen/WorldGenHouseSmall.java
+@@ -389,9 +389,6 @@
+ 		WINDOW,
+ 		DOOR;
+ 
+-		public static WorldGenHouseSmall.BuiltWallKind[] method_1_2027() {
+-			return (WorldGenHouseSmall.BuiltWallKind[])field_1_3043.clone();
+-		}
+ 
+ 		private static WorldGenHouseSmall.BuiltWallKind[] method_1_2026() {
+ 			return new WorldGenHouseSmall.BuiltWallKind[]{NORMAL, WINDOW, DOOR};
+--- ext/newblock/BlockVendingMachine.java
++++ ext/newblock/BlockVendingMachine.java
+@@ -61,14 +61,14 @@
+ 	}
+ 
+ 	public int method_1_2461() {
+-		switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-		case 1:
++		switch(this.field_1_795) {
++		case Armor:
+ 			return 2;
+-		case 2:
++		case Dash:
+ 			return 3;
+-		case 3:
++		case HealthBoost:
+ 			return 1;
+-		case 4:
++		case QuickRevive:
+ 			return 4;
+ 		default:
+ 			return -1;
+--- ext/world/gen/WorldGenHouseBig.java
++++ ext/world/gen/WorldGenHouseBig.java
+@@ -539,9 +539,6 @@
+ 		Doorless,
+ 		PlateDecor;
+ 
+-		public static WorldGenHouseBig.WallDecor[] method_1_756() {
+-			return (WorldGenHouseBig.WallDecor[])field_1_847.clone();
+-		}
+ 
+ 		private static WorldGenHouseBig.WallDecor[] method_1_755() {
+ 			return new WorldGenHouseBig.WallDecor[]{None, Door, PinkGlass, BlueGlass, LimeGlass, BlackGlass, WhiteGlass, Doorless, PlateDecor};
