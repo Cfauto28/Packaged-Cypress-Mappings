@@ -1,163 +1,715 @@
 --- net/minecraft/client/render/world/DirtyChunkSorter.java
 +++ net/minecraft/client/render/world/DirtyChunkSorter.java
-@@ -21,6 +21,6 @@
+@@ -20,7 +20,8 @@
+ 		return this.method_1_1383(var1, var2);
  	}
  
- 	public int compare(Object var1, Object var2) {
--		return this.423jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N((RenderChunk)var1, (RenderChunk)var2);
-+		return this._23jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N((RenderChunk)var1, (RenderChunk)var2);
+-	public int compare(Object var1, Object var2) {
+-		return this._23jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N((RenderChunk)var1, (RenderChunk)var2);
++	@Override
++	public int compare(RenderChunk var1, RenderChunk var2) {
++		return this._23jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N(var1, var2);
+ 	}
+ }
+--- net/minecraft/block/RailBlock.java
++++ net/minecraft/block/RailBlock.java
+@@ -88,13 +88,13 @@
+ 		if(var7) {
+ 			this.dropItems(var1, var2, var3, var4, var1.getBlockMetadata(var2, var3, var4));
+ 			var1.setBlock(var2, var3, var4, 0);
+-		} else if(var5 > 0 && Block.BY_ID[var5].isSignalSource() && RailBlock__RailNode.method_1_712(new RailBlock__RailNode(this, var1, var2, var3, var4)) == 3) {
++		} else if(var5 > 0 && Block.BY_ID[var5].isSignalSource() && RailBlock__RailNode__Normal.method_1_712(new RailBlock__RailNode__Normal(this, var1, var2, var3, var4)) == 3) {
+ 			this.updateShape(var1, var2, var3, var4);
+ 		}
+ 
+ 	}
+ 
+ 	private void updateShape(World var1, int var2, int var3, int var4) {
+-		(new RailBlock__RailNode(this, var1, var2, var3, var4)).updateState(var1.hasNeighborSignal(var2, var3, var4));
++		(new RailBlock__RailNode__Normal(this, var1, var2, var3, var4)).updateState(var1.hasNeighborSignal(var2, var3, var4));
  	}
  }
 --- ext/entity/SquidGames.java
 +++ ext/entity/SquidGames.java
-@@ -13,7 +13,7 @@
- import ext.util.ResourceLocation;
- import net.minecraft.entity.Entity;
- 
--public class SquidGames<T extends 4GWFbOIMR3rg69M1Tw7AsIuO5A54yNk6ixz2D7h14bcq6qKB3v03aoGd8614DGBeJF7H1Bel756g1YCxyfkR0pQsk5P6wYjVNy> extends EntityModel<T> {
-+public class SquidGames<T extends Entity> extends EntityModel<T> {
- 	public static final ModelLayerLocation field_1_1713 = new ModelLayerLocation(new ResourceLocation("modid", "kill_squid"), "main");
- 	private final ModelPart bb_main;
- 
-@@ -36,6 +36,6 @@
+@@ -35,7 +35,8 @@
+ 		this.bb_main.render(var1, var2, var3, var4, var5, var6, var7, var8);
  	}
  
- 	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.2jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((Entity)var1, var2, var3, var4, var5, var6);
-+		this._jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((Entity)var1, var2, var3, var4, var5, var6);
+-	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
+-		this._jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((Entity)var1, var2, var3, var4, var5, var6);
++	@Override
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
++		this._jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((T) var1, var2, var3, var4, var5, var6);
  	}
  }
 --- ext/client/renderer/model/ModelCatBomb.java
 +++ ext/client/renderer/model/ModelCatBomb.java
-@@ -14,7 +14,7 @@
- import ext.util.ResourceLocation;
- import net.minecraft.entity.Entity;
- 
--public class ModelCatBomb<T extends 4GWFbOIMR3rg69M1Tw7AsIuO5A54yNk6ixz2D7h14bcq6qKB3v03aoGd8614DGBeJF7H1Bel756g1YCxyfkR0pQsk5P6wYjVNy> extends EntityModel<T> {
-+public class ModelCatBomb<T extends Entity> extends EntityModel<T> {
- 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "catbomb"), "main");
- 	private final ModelPart bb_main;
- 
-@@ -37,6 +37,6 @@
+@@ -36,7 +36,8 @@
+ 		this.bb_main.render(var1, var2, var3, var4, var5, var6, var7, var8);
  	}
  
- 	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.07lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((Entity)var1, var2, var3, var4, var5, var6);
-+		this._7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((Entity)var1, var2, var3, var4, var5, var6);
+-	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
+-		this._7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((Entity)var1, var2, var3, var4, var5, var6);
++	@Override
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
++		this._7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((T) var1, var2, var3, var4, var5, var6);
  	}
  }
---- ext/world/zm/ZMWorld.java
-+++ ext/world/zm/ZMWorld.java
-@@ -116,7 +116,7 @@
- 						}
- 
- 						public int compare(Object var1, Object var2) {
--							return this.65J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p((WorldZMSpawn)var1, (WorldZMSpawn)var2);
-+							return this._5J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p((WorldZMSpawn)var1, (WorldZMSpawn)var2);
- 						}
- 					});
- 					return var2.size() == 0 ? null : (var2.size() == 1 ? (WorldZMSpawn)var2.get(0) : (WorldZMSpawn)var2.get(this.random.nextInt(Math.min(var2.size(), 3))));
---- ext/world/gen/WorldGenHouseBigInterior.java
-+++ ext/world/gen/WorldGenHouseBigInterior.java
-@@ -34,7 +34,7 @@
- 		this.field_1_2695 = var7;
+--- ext/world/gen/WorldGenHouseSmall.java
++++ ext/world/gen/WorldGenHouseSmall.java
+@@ -27,7 +27,7 @@
+ 		if(this.field_1_3166.containsKey(var6)) {
+ 			return null;
+ 		} else {
+-			this.field_1_3166.put(var6, (Object)null);
++			this.field_1_3166.put(var6, (BuiltTowerData) null);
+ 			if(var1.getBlock(var3, var4, var5) != 0) {
+ 				return null;
+ 			} else {
+--- net/minecraft/entity/mob/player/PlayerEntity.java
++++ net/minecraft/entity/mob/player/PlayerEntity.java
+@@ -272,7 +272,7 @@
+ 	public void pickUp(Entity var1, int var2) {
  	}
  
--	public <T extends 8W1WSL13Q4ln33n7y62avj4L856TJi97cz688GPkUp1w7RteH2Xmt1Sz81L5765Ka5FhopL16lf9xj7Suw2rH92Al868XGr7> T method_1_1806(Class<T> var1) {
-+	public <T extends IHouseBig> T method_1_1806(Class<T> var1) {
- 		IHouseBig[] var2 = this.field_1_2698;
- 		int var3 = var2.length;
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return this.field_1_1758 ? -0.1F : 0.12F;
+ 	}
+ 
+--- ext/world/gen/WorldGenHouseBigInterior.java
++++ ext/world/gen/WorldGenHouseBigInterior.java
+@@ -41,7 +41,7 @@
+ 		for(int var4 = 0; var4 < var3; ++var4) {
+ 			IHouseBig var5 = var2[var4];
+ 			if(var1.isInstance(var5)) {
+-				return (IHouseBig)var1.cast(var5);
++				return (T) var1.cast(var5);
+ 			}
+ 		}
  
 --- ext/entity/EntityUnknownClass1.java
 +++ ext/entity/EntityUnknownClass1.java
-@@ -13,7 +13,7 @@
- import ext.util.ResourceLocation;
- import net.minecraft.entity.Entity;
- 
--public class EntityUnknownClass1<T extends 4GWFbOIMR3rg69M1Tw7AsIuO5A54yNk6ixz2D7h14bcq6qKB3v03aoGd8614DGBeJF7H1Bel756g1YCxyfkR0pQsk5P6wYjVNy> extends EntityModel<T> {
-+public class EntityUnknownClass1<T extends Entity> extends EntityModel<T> {
- 	public static final ModelLayerLocation field_1_834 = new ModelLayerLocation(new ResourceLocation("modid", "custom_model"), "main");
- 	private final ModelPart modelHead;
- 	private final ModelPart modelBody;
-@@ -56,6 +56,6 @@
+@@ -55,7 +55,8 @@
+ 		this.modelLeftLeg.render(var1, var2, var3, var4, var5, var6, var7, var8);
  	}
  
- 	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.16PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((Entity)var1, var2, var3, var4, var5, var6);
-+		this._6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((Entity)var1, var2, var3, var4, var5, var6);
+-	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
+-		this._6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((Entity)var1, var2, var3, var4, var5, var6);
++	@Override
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
++		this._6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((T) var1, var2, var3, var4, var5, var6);
  	}
  }
+--- net/minecraft/block/Block.java
++++ net/minecraft/block/Block.java
+@@ -288,10 +288,10 @@
+ 		return this.id;
+ 	}
+ 
+-	public float method_1_1952(PlayerEntity var1) {
++/*	public float method_1_1952(PlayerEntity var1) {
+ 		return this.miningTime < 0.0F ? 0.0F : (!var1.b(this) ? 1.0F / this.miningTime / 100.0F : var1.a(this) / this.miningTime / 30.0F);
+ 	}
+-
++*/
+ 	public void dropItems(World var1, int var2, int var3, int var4, int var5) {
+ 		this.dropItems(var1, var2, var3, var4, var5, 1.0F);
+ 	}
 --- net/minecraft/client/render/world/DistanceChunkSorter.java
 +++ net/minecraft/client/render/world/DistanceChunkSorter.java
-@@ -19,6 +19,6 @@
+@@ -18,7 +18,8 @@
+ 		return this.method_1_1270(var1, var2);
  	}
  
- 	public int compare(Object var1, Object var2) {
--		return this.09t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL((RenderChunk)var1, (RenderChunk)var2);
-+		return this._9t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL((RenderChunk)var1, (RenderChunk)var2);
+-	public int compare(Object var1, Object var2) {
+-		return this._9t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL((RenderChunk)var1, (RenderChunk)var2);
++	@Override
++	public int compare(RenderChunk var1, RenderChunk var2) {
++		return this._9t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL(var1, var2);
  	}
  }
+--- ext/block/InventoryBlockEntity.java
++++ ext/block/InventoryBlockEntity.java
+@@ -8,24 +8,24 @@
+ import java.util.Random;
+ import net.minecraft.block.entity.BlockEntity;
+ import net.minecraft.inventory.Inventory;
+-import net.minecraft.item.Item;
+ import net.minecraft.item.ItemStack;
+ import net.minecraft.nbt.NbtCompound;
+ import net.minecraft.nbt.NbtList;
++import net.minecraft.item.Item;
+ 
+ public class InventoryBlockEntity extends BlockEntity implements Inventory {
+-	private ItemStack[] Item = new ItemStack[3];
++	private ItemStack[] inventoryItem = new ItemStack[3];
+ 	private int field_1_3728 = 0;
+ 	private int field_1_3726 = 0;
+ 	private int field_1_3727 = 0;
+ 	private boolean field_1_3724 = false;
+ 
+ 	public int getSize() {
+-		return this.Item.length;
++		return this.inventoryItem.length;
+ 	}
+ 
+ 	public ItemStack getItem(int var1) {
+-		return this.Item[var1];
++		return this.inventoryItem[var1];
+ 	}
+ 
+ 	public void Dirty() {
+@@ -33,17 +33,17 @@
+ 	}
+ 
+ 	public ItemStack removeItem(int var1, int var2) {
+-		if(this.Item[var1] == null) {
++		if(this.inventoryItem[var1] == null) {
+ 			return null;
+ 		} else {
+ 			ItemStack var3;
+-			if(this.Item[var1].size <= var2) {
+-				var3 = this.Item[var1];
+-				this.Item[var1] = null;
++			if(this.inventoryItem[var1].size <= var2) {
++				var3 = this.inventoryItem[var1];
++				this.inventoryItem[var1] = null;
+ 			} else {
+-				var3 = this.Item[var1].split(var2);
+-				if(this.Item[var1].size == 0) {
+-					this.Item[var1] = null;
++				var3 = this.inventoryItem[var1].split(var2);
++				if(this.inventoryItem[var1].size == 0) {
++					this.inventoryItem[var1] = null;
+ 				}
+ 			}
+ 
+@@ -52,7 +52,7 @@
+ 	}
+ 
+ 	public void setItem(int var1, ItemStack var2) {
+-		this.Item[var1] = var2;
++		this.inventoryItem[var1] = var2;
+ 		if(var2 != null && var2.size > this.getMaxStackSize()) {
+ 			var2.size = this.getMaxStackSize();
+ 		}
+@@ -83,19 +83,19 @@
+ 	public void readNbt(NbtCompound var1) {
+ 		super.readNbt(var1);
+ 		NbtList var2 = var1.getList("Items");
+-		this.Item = new ItemStack[this.getSize()];
++		this.inventoryItem = new ItemStack[this.getSize()];
+ 
+ 		for(int var3 = 0; var3 < var2.size(); ++var3) {
+ 			NbtCompound var4 = (NbtCompound)var2.get(var3);
+ 			byte var5 = var4.getByte("Slot");
+-			if(var5 >= 0 && var5 < this.Item.length) {
+-				this.Item[var5] = new ItemStack(var4);
++			if(var5 >= 0 && var5 < this.inventoryItem.length) {
++				this.inventoryItem[var5] = new ItemStack(var4);
+ 			}
+ 		}
+ 
+ 		this.field_1_3728 = var1.getShort("CoolTime");
+ 		this.field_1_3727 = var1.getShort("CookTime");
+-		this.field_1_3728 = this.method_1_2483(this.Item[1]);
++		this.field_1_3728 = this.method_1_2483(this.inventoryItem[1]);
+ 	}
+ 
+ 	public void writeNbt(NbtCompound var1) {
+@@ -104,11 +104,11 @@
+ 		var1.putShort("CookTime", (short)this.field_1_3727);
+ 		NbtList var2 = new NbtList();
+ 
+-		for(int var3 = 0; var3 < this.Item.length; ++var3) {
+-			if(this.Item[var3] != null) {
++		for(int var3 = 0; var3 < this.inventoryItem.length; ++var3) {
++			if(this.inventoryItem[var3] != null) {
+ 				NbtCompound var4 = new NbtCompound();
+ 				var4.putByte("Slot", (byte)var3);
+-				this.Item[var3].writeNbt(var4);
++				this.inventoryItem[var3].writeNbt(var4);
+ 				var2.addElement(var4);
+ 			}
+ 		}
+@@ -141,13 +141,13 @@
+ 
+ 		if(!this.world.isMultiplayer) {
+ 			if(this.field_1_3728 == 0 && this.method_1_2482()) {
+-				this.field_1_3726 = this.field_1_3728 = this.method_1_2483(this.Item[1]);
++				this.field_1_3726 = this.field_1_3728 = this.method_1_2483(this.inventoryItem[1]);
+ 				if(this.field_1_3728 > 0) {
+ 					var2 = true;
+-					if(this.Item[1] != null) {
+-						--this.Item[1].size;
+-						if(this.Item[1].size == 0) {
+-							this.Item[1] = null;
++					if(this.inventoryItem[1] != null) {
++						--this.inventoryItem[1].size;
++						if(this.inventoryItem[1].size == 0) {
++							this.inventoryItem[1] = null;
+ 						}
+ 					}
+ 				}
+@@ -177,26 +177,26 @@
+ 	}
+ 
+ 	private boolean method_1_2482() {
+-		if(this.Item[0] == null) {
++		if(this.inventoryItem[0] == null) {
+ 			return false;
+ 		} else {
+-			int var1 = this.method_1_2480(this.Item[0].getItem().id);
+-			return var1 < 0 ? false : (this.Item[2] == null ? true : (this.Item[2].id != var1 ? false : (this.Item[2].size < this.getMaxStackSize() && this.Item[2].size < this.Item[2].getMaxSize() ? true : this.Item[2].size < Item.BY_ID[var1].getMaxStackSize())));
++			int var1 = this.method_1_2480(this.inventoryItem[0].getItem().id);
++			return var1 < 0 ? false : (this.inventoryItem[2] == null ? true : (this.inventoryItem[2].id != var1 ? false : (this.inventoryItem[2].size < this.getMaxStackSize() && this.inventoryItem[2].size < this.inventoryItem[2].getMaxSize() ? true : this.inventoryItem[2].size < Item.BY_ID[var1].getMaxStackSize())));
+ 		}
+ 	}
+ 
+ 	public void method_1_2478() {
+ 		if(this.method_1_2482()) {
+-			int var1 = this.method_1_2480(this.Item[0].getItem().id);
+-			if(this.Item[2] == null) {
+-				this.Item[2] = new ItemStack(var1, 1);
+-			} else if(this.Item[2].id == var1) {
+-				++this.Item[2].size;
++			int var1 = this.method_1_2480(this.inventoryItem[0].getItem().id);
++			if(this.inventoryItem[2] == null) {
++				this.inventoryItem[2] = new ItemStack(var1, 1);
++			} else if(this.inventoryItem[2].id == var1) {
++				++this.inventoryItem[2].size;
+ 			}
+ 
+-			--this.Item[0].size;
+-			if(this.Item[0].size <= 0) {
+-				this.Item[0] = null;
++			--this.inventoryItem[0].size;
++			if(this.inventoryItem[0].size <= 0) {
++				this.inventoryItem[0] = null;
+ 			}
+ 		}
+ 
+--- ext/world/NamedLocation.java
++++ ext/world/NamedLocation.java
+@@ -9,7 +9,7 @@
+ 	public int bx2;
+ 	public int by2;
+ 	public int bz2;
+-	boolean p2Invalid = false;
++	public boolean p2Invalid = false;
+ 	String field_1_1548;
+ 
+ 	public NamedLocation(int var1, int var2, int var3, int var4, int var5, int var6, String var7) {
 --- net/minecraft/crafting/CraftingManager__57536588.java
 +++ net/minecraft/crafting/CraftingManager__57536588.java
-@@ -18,6 +18,6 @@
+@@ -1,5 +1,7 @@
+ package net.minecraft.crafting;
+ 
++import net.minecraft.client.render.world.RenderChunk;
++
+ import java.util.Comparator;
+ 
+ class CraftingManager__57536588 implements Comparator<Recipe> {
+@@ -17,7 +19,8 @@
+ 		return this.method_1_2075(var1, var2);
  	}
  
- 	public int compare(Object var1, Object var2) {
--		return this.8G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6((Recipe)var1, (Recipe)var2);
-+		return this._G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6((Recipe)var1, (Recipe)var2);
+-	public int compare(Object var1, Object var2) {
+-		return this._G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6((Recipe)var1, (Recipe)var2);
++	@Override
++	public int compare(Recipe var1, Recipe var2) {
++		return this._G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6(var1, var2);
  	}
  }
---- net/minecraft/client/resource/ResourceDownloader.java
-+++ net/minecraft/client/resource/ResourceDownloader.java
-@@ -65,15 +65,15 @@
- 			}
+--- net/minecraft/entity/mob/MobEntity.java
++++ net/minecraft/entity/mob/MobEntity.java
+@@ -82,7 +82,7 @@
+ 		return !this.removed;
+ 	}
  
- 			public FileVisitResult postVisitDirectory(Object var1, IOException var2) throws IOException {
--				return this.6Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92((Path)var1, var2);
-+				return this._Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92((Path)var1, var2);
- 			}
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return this.height * 0.85F;
+ 	}
  
- 			public FileVisitResult visitFileFailed(Object var1, IOException var2) throws IOException {
--				return this.23MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6((Path)var1, var2);
-+				return this._3MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6((Path)var1, var2);
- 			}
+--- net/minecraft/entity/Entity.java
++++ net/minecraft/entity/Entity.java
+@@ -505,7 +505,7 @@
+ 		}
+ 	}
  
- 			public FileVisitResult visitFile(Object var1, BasicFileAttributes var2) throws IOException {
--				return this.2rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v((Path)var1, var2);
-+				return this._rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v((Path)var1, var2);
- 			}
- 		};
- 		Files.walkFileTree(var1, var2);
---- ext/emptyclasses/EmptyClass3.java
-+++ /dev/null
-@@ -1,4 +1,0 @@
--package ext.emptyclasses;
--
--public class EmptyClass3 {
--}
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return 0.0F;
+ 	}
+ 
+--- ext/modloader/Modloader.java
++++ ext/modloader/Modloader.java
+@@ -10,13 +10,7 @@
+ import java.nio.IntBuffer;
+ import java.nio.file.Files;
+ import java.nio.file.OpenOption;
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.HashMap;
+-import java.util.Iterator;
+-import java.util.LinkedList;
+-import java.util.List;
+-import java.util.Map;
++import java.util.*;
+ import java.util.AbstractMap.SimpleEntry;
+ import java.util.Map.Entry;
+ import java.util.zip.ZipEntry;
+@@ -165,7 +159,7 @@
+ 	}
+ 
+ 	public static void addOverride(String var0, String var1, int var2) {
+-		Object var3 = (List)overrides.get(var0);
++		List<SimpleEntry<String, Integer>> var3 = (List)overrides.get(var0);
+ 		if(var3 == null) {
+ 			var3 = new LinkedList();
+ 			overrides.put(var0, var3);
+--- /dev/null
++++ net/minecraft/block/RailBlock__RailNode__Normal.java
+@@ -1,0 +1,327 @@
++package net.minecraft.block;
++
++import net.minecraft.util.math.BlockPos;
++import net.minecraft.world.World;
++import net.minecraft.block.RailBlock;
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class RailBlock__RailNode__Normal {
++	private World world;
++	private int x;
++	private int y;
++	private int z;
++	private int metadata;
++	private List<BlockPos> connections;
++	final RailBlock field_1_801;
++
++	public RailBlock__RailNode__Normal(RailBlock var1, World var2, int var3, int var4, int var5) {
++		this.field_1_801 = var1;
++		this.connections = new ArrayList();
++		this.world = var2;
++		this.x = var3;
++		this.y = var4;
++		this.z = var5;
++		this.metadata = var2.getBlockMetadata(var3, var4, var5);
++		this.updateConnections();
++	}
++
++	private void updateConnections() {
++		this.connections.clear();
++		if(this.metadata == 0) {
++			this.connections.add(new BlockPos(this.x, this.y, this.z - 1));
++			this.connections.add(new BlockPos(this.x, this.y, this.z + 1));
++		} else if(this.metadata == 1) {
++			this.connections.add(new BlockPos(this.x - 1, this.y, this.z));
++			this.connections.add(new BlockPos(this.x + 1, this.y, this.z));
++		} else if(this.metadata == 2) {
++			this.connections.add(new BlockPos(this.x - 1, this.y, this.z));
++			this.connections.add(new BlockPos(this.x + 1, this.y + 1, this.z));
++		} else if(this.metadata == 3) {
++			this.connections.add(new BlockPos(this.x - 1, this.y + 1, this.z));
++			this.connections.add(new BlockPos(this.x + 1, this.y, this.z));
++		} else if(this.metadata == 4) {
++			this.connections.add(new BlockPos(this.x, this.y + 1, this.z - 1));
++			this.connections.add(new BlockPos(this.x, this.y, this.z + 1));
++		} else if(this.metadata == 5) {
++			this.connections.add(new BlockPos(this.x, this.y, this.z - 1));
++			this.connections.add(new BlockPos(this.x, this.y + 1, this.z + 1));
++		} else if(this.metadata == 6) {
++			this.connections.add(new BlockPos(this.x + 1, this.y, this.z));
++			this.connections.add(new BlockPos(this.x, this.y, this.z + 1));
++		} else if(this.metadata == 7) {
++			this.connections.add(new BlockPos(this.x - 1, this.y, this.z));
++			this.connections.add(new BlockPos(this.x, this.y, this.z + 1));
++		} else if(this.metadata == 8) {
++			this.connections.add(new BlockPos(this.x - 1, this.y, this.z));
++			this.connections.add(new BlockPos(this.x, this.y, this.z - 1));
++		} else if(this.metadata == 9) {
++			this.connections.add(new BlockPos(this.x + 1, this.y, this.z));
++			this.connections.add(new BlockPos(this.x, this.y, this.z - 1));
++		}
++
++	}
++
++	private void removeSoftConnections() {
++		for(int var1 = 0; var1 < this.connections.size(); ++var1) {
++			RailBlock__RailNode__Normal var2 = this.getNeighborRail((BlockPos)this.connections.get(var1));
++			if(var2 != null && var2.connectsTo(this)) {
++				this.connections.set(var1, new BlockPos(var2.x, var2.y, var2.z));
++			} else {
++				this.connections.remove(var1--);
++			}
++		}
++
++	}
++
++	private boolean couldConnectTo(int var1, int var2, int var3) {
++		return this.world.getBlock(var1, var2, var3) == this.field_1_801.id ? true : (this.world.getBlock(var1, var2 + 1, var3) == this.field_1_801.id ? true : this.world.getBlock(var1, var2 - 1, var3) == this.field_1_801.id);
++	}
++
++	private RailBlock__RailNode__Normal getNeighborRail(BlockPos var1) {
++		return this.world.getBlock(var1.x, var1.y, var1.z) == this.field_1_801.id ? new RailBlock__RailNode__Normal(this.field_1_801, this.world, var1.x, var1.y, var1.z) : (this.world.getBlock(var1.x, var1.y + 1, var1.z) == this.field_1_801.id ? new RailBlock__RailNode__Normal(this.field_1_801, this.world, var1.x, var1.y + 1, var1.z) : (this.world.getBlock(var1.x, var1.y - 1, var1.z) == this.field_1_801.id ? new RailBlock__RailNode__Normal(this.field_1_801, this.world, var1.x, var1.y - 1, var1.z) : null));
++	}
++
++	private boolean connectsTo(RailBlock__RailNode__Normal var1) {
++		for(int var2 = 0; var2 < this.connections.size(); ++var2) {
++			BlockPos var3 = (BlockPos)this.connections.get(var2);
++			if(var3.x == var1.x && var3.z == var1.z) {
++				return true;
++			}
++		}
++
++		return false;
++	}
++
++	private boolean hasConnection(int var1, int var2, int var3) {
++		for(int var4 = 0; var4 < this.connections.size(); ++var4) {
++			BlockPos var5 = (BlockPos)this.connections.get(var4);
++			if(var5.x == var1 && var5.z == var3) {
++				return true;
++			}
++		}
++
++		return false;
++	}
++
++	private int countConnections() {
++		int var1 = 0;
++		if(this.couldConnectTo(this.x, this.y, this.z - 1)) {
++			++var1;
++		}
++
++		if(this.couldConnectTo(this.x, this.y, this.z + 1)) {
++			++var1;
++		}
++
++		if(this.couldConnectTo(this.x - 1, this.y, this.z)) {
++			++var1;
++		}
++
++		if(this.couldConnectTo(this.x + 1, this.y, this.z)) {
++			++var1;
++		}
++
++		return var1;
++	}
++
++	private boolean canConnectTo(RailBlock__RailNode__Normal var1) {
++		if(this.connectsTo(var1)) {
++			return true;
++		} else if(this.connections.size() == 2) {
++			return false;
++		} else if(this.connections.size() == 0) {
++			return true;
++		} else {
++			BlockPos var2 = (BlockPos)this.connections.get(0);
++			return var1.y == this.y && var2.y == this.y ? true : true;
++		}
++	}
++
++	private void addConnection(RailBlock__RailNode__Normal var1) {
++		this.connections.add(new BlockPos(var1.x, var1.y, var1.z));
++		boolean var2 = this.hasConnection(this.x, this.y, this.z - 1);
++		boolean var3 = this.hasConnection(this.x, this.y, this.z + 1);
++		boolean var4 = this.hasConnection(this.x - 1, this.y, this.z);
++		boolean var5 = this.hasConnection(this.x + 1, this.y, this.z);
++		byte var6 = -1;
++		if(var2 || var3) {
++			var6 = 0;
++		}
++
++		if(var4 || var5) {
++			var6 = 1;
++		}
++
++		if(var3 && var5 && !var2 && !var4) {
++			var6 = 6;
++		}
++
++		if(var3 && var4 && !var2 && !var5) {
++			var6 = 7;
++		}
++
++		if(var2 && var4 && !var3 && !var5) {
++			var6 = 8;
++		}
++
++		if(var2 && var5 && !var3 && !var4) {
++			var6 = 9;
++		}
++
++		if(var6 == 0) {
++			if(this.world.getBlock(this.x, this.y + 1, this.z - 1) == this.field_1_801.id) {
++				var6 = 4;
++			}
++
++			if(this.world.getBlock(this.x, this.y + 1, this.z + 1) == this.field_1_801.id) {
++				var6 = 5;
++			}
++		}
++
++		if(var6 == 1) {
++			if(this.world.getBlock(this.x + 1, this.y + 1, this.z) == this.field_1_801.id) {
++				var6 = 2;
++			}
++
++			if(this.world.getBlock(this.x - 1, this.y + 1, this.z) == this.field_1_801.id) {
++				var6 = 3;
++			}
++		}
++
++		if(var6 < 0) {
++			var6 = 0;
++		}
++
++		this.world.setBlockMetadata(this.x, this.y, this.z, var6);
++	}
++
++	private boolean hasNeighborRail(int var1, int var2, int var3) {
++		RailBlock__RailNode__Normal var4 = this.getNeighborRail(new BlockPos(var1, var2, var3));
++		if(var4 == null) {
++			return false;
++		} else {
++			var4.removeSoftConnections();
++			return var4.canConnectTo(this);
++		}
++	}
++
++	public void updateState(boolean var1) {
++		boolean var2 = this.hasNeighborRail(this.x, this.y, this.z - 1);
++		boolean var3 = this.hasNeighborRail(this.x, this.y, this.z + 1);
++		boolean var4 = this.hasNeighborRail(this.x - 1, this.y, this.z);
++		boolean var5 = this.hasNeighborRail(this.x + 1, this.y, this.z);
++		byte var6 = -1;
++		if((var2 || var3) && !var4 && !var5) {
++			var6 = 0;
++		}
++
++		if((var4 || var5) && !var2 && !var3) {
++			var6 = 1;
++		}
++
++		if(var3 && var5 && !var2 && !var4) {
++			var6 = 6;
++		}
++
++		if(var3 && var4 && !var2 && !var5) {
++			var6 = 7;
++		}
++
++		if(var2 && var4 && !var3 && !var5) {
++			var6 = 8;
++		}
++
++		if(var2 && var5 && !var3 && !var4) {
++			var6 = 9;
++		}
++
++		if(var6 == -1) {
++			if(var2 || var3) {
++				var6 = 0;
++			}
++
++			if(var4 || var5) {
++				var6 = 1;
++			}
++
++			if(var1) {
++				if(var3 && var5) {
++					var6 = 6;
++				}
++
++				if(var4 && var3) {
++					var6 = 7;
++				}
++
++				if(var5 && var2) {
++					var6 = 9;
++				}
++
++				if(var2 && var4) {
++					var6 = 8;
++				}
++			} else {
++				if(var2 && var4) {
++					var6 = 8;
++				}
++
++				if(var5 && var2) {
++					var6 = 9;
++				}
++
++				if(var4 && var3) {
++					var6 = 7;
++				}
++
++				if(var3 && var5) {
++					var6 = 6;
++				}
++			}
++		}
++
++		if(var6 == 0) {
++			if(this.world.getBlock(this.x, this.y + 1, this.z - 1) == this.field_1_801.id) {
++				var6 = 4;
++			}
++
++			if(this.world.getBlock(this.x, this.y + 1, this.z + 1) == this.field_1_801.id) {
++				var6 = 5;
++			}
++		}
++
++		if(var6 == 1) {
++			if(this.world.getBlock(this.x + 1, this.y + 1, this.z) == this.field_1_801.id) {
++				var6 = 2;
++			}
++
++			if(this.world.getBlock(this.x - 1, this.y + 1, this.z) == this.field_1_801.id) {
++				var6 = 3;
++			}
++		}
++
++		if(var6 < 0) {
++			var6 = 0;
++		}
++
++		this.metadata = var6;
++		this.updateConnections();
++		this.world.setBlockMetadata(this.x, this.y, this.z, var6);
++
++		for(int var7 = 0; var7 < this.connections.size(); ++var7) {
++			RailBlock__RailNode__Normal var8 = this.getNeighborRail((BlockPos)this.connections.get(var7));
++			if(var8 != null) {
++				var8.removeSoftConnections();
++				if(var8.canConnectTo(this)) {
++					var8.addConnection(this);
++				}
++			}
++		}
++
++	}
++
++	public static int method_1_712(RailBlock__RailNode__Normal var0) {
++		return var0.countConnections();
++	}
++}
 --- ext/entity/EntityUnknownClass2.java
 +++ ext/entity/EntityUnknownClass2.java
-@@ -13,7 +13,7 @@
- import ext.util.ResourceLocation;
- import net.minecraft.entity.Entity;
- 
--public class EntityUnknownClass2<T extends 4GWFbOIMR3rg69M1Tw7AsIuO5A54yNk6ixz2D7h14bcq6qKB3v03aoGd8614DGBeJF7H1Bel756g1YCxyfkR0pQsk5P6wYjVNy> extends EntityModel<T> {
-+public class EntityUnknownClass2<T extends Entity> extends EntityModel<T> {
- 	public static final ModelLayerLocation field_1_1428 = new ModelLayerLocation(new ResourceLocation("modid", "observer"), "main");
- 	private final ModelPart model;
- 
-@@ -36,6 +36,6 @@
+@@ -35,7 +35,8 @@
+ 		this.model.render(var1, var2, var3, var4, var5, var6, var7, var8);
  	}
  
- 	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.5u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((Entity)var1, var2, var3, var4, var5, var6);
-+		this._u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((Entity)var1, var2, var3, var4, var5, var6);
+-	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
+-		this._u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((Entity)var1, var2, var3, var4, var5, var6);
++	@Override
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
++		this._u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((T) var1, var2, var3, var4, var5, var6);
  	}
  }
---- ext/emptyclasses/EmptyClass1.java
-+++ /dev/null
-@@ -1,4 +1,0 @@
--package ext.emptyclasses;
--
--public class EmptyClass1 {
--}
