@@ -14640,7 +14640,7 @@ c	net/minecraft/class_1_881	net/minecraft/block/entity/ChestBlockEntity
 		p	1		nbt
 c	net/minecraft/class_1_882	ext/block/InventoryBlockEntity
 	f	Z	field_1_3724	playerWeezed
-	f	[Lnet/minecraft/class_1_263;	field_1_3725	Item
+	f	[Lnet/minecraft/class_1_263;	field_1_3725	inventoryItem
 	f	I	field_1_3727	cookTime
 	f	I	field_1_3728	coolTime
 	m	()Ljava/lang/String;	method_1_1317	getInventoryName
