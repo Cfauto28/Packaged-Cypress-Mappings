@@ -19,10 +19,8 @@ java -jar stitch-0.6.4+local-all.jar reorderTinyV2 mappings-merged.tiny mapping-
 
 6. Copy all the files in the rmcp-config folder in this repo to the RetroMCP conf folder
 
-7. In RetroMCP go to Options->Side->Client, then go Options->Recompile->Set a specific source version and change it from -1 to 7, do the same for Options->Recompile->Set a specific target version
+7. In RetroMCP go to Options->Side->Client, then go Options->Recompile->Set a specific source version and change it from -1 to 7, do the same for Options->Recompile->Set a specific target version, go to Options->Decompile->Keep Resources (The last one allows you to edit the textures, sounds, ect)
 
 8. Download the cypress client copy it to the RetroMCP jars folder and rename it to minecraft.jar 
 
 9. Click decompile
-
-10. Sometimes RetroMCP just feaks out and doesn't apply the patches correctily check the patches file for the patch that didn't apply and apply it yourself
