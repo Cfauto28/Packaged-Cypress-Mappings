@@ -9,3 +9,13 @@ Mappings based on [feather](https://github.com/OrnitheMC/feather) and [FMG793's 
 
 ## Caveats
 - No server mappings (I'm working on them)
+
+## Ext1605 Classes
+<picture>
+    <img alt="Ext1605 classes" src="/img/ext_stat.png">
+</picture>
+
+## Minecraft Classes
+<picture>
+    <img alt="Minecraft classes" src="/img/net_stat.png">
+</picture>
