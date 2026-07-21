@@ -22,14 +22,18 @@
  }
 --- net/minecraft/client/render/world/DirtyChunkSorter.java
 +++ net/minecraft/client/render/world/DirtyChunkSorter.java
-@@ -19,8 +19,4 @@
- 	public int compare(RenderChunk var1, RenderChunk var2) {
- 		return this.method_1_1383(var1, var2);
+@@ -16,11 +16,7 @@
+ 		return var3 && !var4 ? 1 : (var4 && !var3 ? -1 : (var1.squaredDistanceToCenter(this.camera) < var2.squaredDistanceToCenter(this.camera) ? 1 : -1));
  	}
+ 
+-	public int _23jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N/* $FF was: 423jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N*/(RenderChunk var1, RenderChunk var2) {
++	public int compare(RenderChunk var1, RenderChunk var2) {
+ 		return this.method_1_1383(var1, var2);
+-	}
 -
 -	public int compare(Object var1, Object var2) {
--		return this.compare((RenderChunk)var1, (RenderChunk)var2);
--	}
+-		return this.423jUv2mCWNLqN9aM21K4tdzk250uS6p6u269SeaR118Ru5PNZ8sYufbxG0N((RenderChunk)var1, (RenderChunk)var2);
+ 	}
  }
 --- net/minecraft/block/RailBlock.java
 +++ net/minecraft/block/RailBlock.java
@@ -60,14 +64,20 @@
  	public static final ModelLayerLocation field_1_1713 = new ModelLayerLocation(new ResourceLocation("modid", "kill_squid"), "main");
  	private final ModelPart bb_main;
  
-@@ -33,9 +33,5 @@
+@@ -28,14 +28,10 @@
+ 		return LayerDefinition.create(var0, 64, 64);
+ 	}
+ 
+-	public void _jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q/* $FF was: 2jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q*/(T var1, float var2, float var3, float var4, float var5, float var6) {
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
+ 	}
  
  	public void renderToBuffer(PoseStack var1, VertexConsume var2, int var3, int var4, float var5, float var6, float var7, float var8) {
  		this.bb_main.render(var1, var2, var3, var4, var5, var6, var7, var8);
 -	}
 -
 -	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.method_1_2206((Entity)var1, var2, var3, var4, var5, var6);
+-		this.2jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((Entity)var1, var2, var3, var4, var5, var6);
  	}
  }
 --- ext/client/MCPStart.java
@@ -103,14 +113,20 @@
  	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "catbomb"), "main");
  	private final ModelPart bb_main;
  
-@@ -34,9 +34,5 @@
+@@ -29,14 +29,10 @@
+ 		return LayerDefinition.create(var0, 16, 16);
+ 	}
+ 
+-	public void _7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8/* $FF was: 07lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8*/(T var1, float var2, float var3, float var4, float var5, float var6) {
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
+ 	}
  
  	public void renderToBuffer(PoseStack var1, VertexConsume var2, int var3, int var4, float var5, float var6, float var7, float var8) {
  		this.bb_main.render(var1, var2, var3, var4, var5, var6, var7, var8);
 -	}
 -
 -	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.method_1_2206((Entity)var1, var2, var3, var4, var5, var6);
+-		this.07lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((Entity)var1, var2, var3, var4, var5, var6);
  	}
  }
 --- ext/newblock/EnumVendingMachine.java
@@ -244,7 +260,26 @@
  			return -1;
 --- ext/world/zm/ZMWorld.java
 +++ ext/world/zm/ZMWorld.java
-@@ -157,14 +157,14 @@
+@@ -108,16 +108,12 @@
+ 			double var8;
+ 			do {
+ 				if(!var5.hasNext()) {
+-					Collections.sort(var2, new Comparator() {
+-						public int _5J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p/* $FF was: 65J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p*/(WorldZMSpawn var1, WorldZMSpawn var2) {
++					Collections.sort(var2, new Comparator<WorldZMSpawn>() {
++						public int compare(WorldZMSpawn var1, WorldZMSpawn var2) {
+ 							HandlerSetCheckpointUnknownClass2 var3 = var1.location.method_1_1185();
+ 							HandlerSetCheckpointUnknownClass2 var4x = var2.location.method_1_1185();
+ 							return Double.valueOf(var4.method_1_948(var3.field_1_1065, var3.field_1_1066)).compareTo(Double.valueOf(var4.method_1_948(var4x.field_1_1065, var4x.field_1_1066)));
+ 						}
+-
+-						public int compare(Object var1, Object var2) {
+-							return this.65J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p((WorldZMSpawn)var1, (WorldZMSpawn)var2);
+-						}
+ 					});
+ 					return var2.size() == 0 ? null : (var2.size() == 1 ? (WorldZMSpawn)var2.get(0) : (WorldZMSpawn)var2.get(this.random.nextInt(Math.min(var2.size(), 3))));
+ 				}
+@@ -157,14 +153,14 @@
  	}
  
  	public int method_1_875(EnumVendingMachine var1) {
@@ -319,6 +354,15 @@
  	public static final ModelLayerLocation field_1_834 = new ModelLayerLocation(new ResourceLocation("modid", "custom_model"), "main");
  	private final ModelPart modelHead;
  	private final ModelPart modelBody;
+@@ -43,7 +43,7 @@
+ 		return LayerDefinition.create(var0, 128, 128);
+ 	}
+ 
+-	public void _6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom/* $FF was: 16PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom*/(T var1, float var2, float var3, float var4, float var5, float var6) {
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
+ 	}
+ 
+ 	public void renderToBuffer(PoseStack var1, VertexConsume var2, int var3, int var4, float var5, float var6, float var7, float var8) {
 @@ -53,9 +53,5 @@
  		this.modelLeftArm.render(var1, var2, var3, var4, var5, var6, var7, var8);
  		this.modelRightLeg.render(var1, var2, var3, var4, var5, var6, var7, var8);
@@ -326,7 +370,7 @@
 -	}
 -
 -	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.method_1_2206((Entity)var1, var2, var3, var4, var5, var6);
+-		this.16PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((Entity)var1, var2, var3, var4, var5, var6);
  	}
  }
 --- ext/inventory/InventoryVendingMachine.java
@@ -429,14 +473,18 @@
  }
 --- net/minecraft/client/render/world/DistanceChunkSorter.java
 +++ net/minecraft/client/render/world/DistanceChunkSorter.java
-@@ -17,8 +17,4 @@
- 	public int compare(RenderChunk var1, RenderChunk var2) {
- 		return this.method_1_1270(var1, var2);
+@@ -14,11 +14,7 @@
+ 		return var1.squaredDistanceToCenter(this.camera) < var2.squaredDistanceToCenter(this.camera) ? -1 : 1;
  	}
+ 
+-	public int _9t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL/* $FF was: 09t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL*/(RenderChunk var1, RenderChunk var2) {
++	public int compare(RenderChunk var1, RenderChunk var2) {
+ 		return this.method_1_1270(var1, var2);
+-	}
 -
 -	public int compare(Object var1, Object var2) {
--		return this.compare((RenderChunk)var1, (RenderChunk)var2);
--	}
+-		return this.09t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL((RenderChunk)var1, (RenderChunk)var2);
+ 	}
  }
 --- ext/phys/Direction.java
 +++ ext/phys/Direction.java
@@ -473,14 +521,18 @@
  	public NamedLocation(int var1, int var2, int var3, int var4, int var5, int var6, String var7) {
 --- net/minecraft/crafting/CraftingManager__57536588.java
 +++ net/minecraft/crafting/CraftingManager__57536588.java
-@@ -16,8 +16,4 @@
- 	public int compare(Recipe var1, Recipe var2) {
- 		return this.method_1_2075(var1, var2);
+@@ -13,11 +13,7 @@
+ 		return var2.size() < var1.size() ? -1 : (var2.size() > var1.size() ? 1 : 0);
  	}
+ 
+-	public int _G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6/* $FF was: 8G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6*/(Recipe var1, Recipe var2) {
++	public int compare(Recipe var1, Recipe var2) {
+ 		return this.method_1_2075(var1, var2);
+-	}
 -
 -	public int compare(Object var1, Object var2) {
--		return this.compare((Recipe)var1, (Recipe)var2);
--	}
+-		return this.8G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6((Recipe)var1, (Recipe)var2);
+ 	}
  }
 --- net/minecraft/block/PressurePlateBlock__ActivationRule.java
 +++ net/minecraft/block/PressurePlateBlock__ActivationRule.java
@@ -500,6 +552,55 @@
 -		return new PressurePlateBlock__ActivationRule[]{EVERYTHING, MOBS, PLAYERS};
  	}
  }
+--- net/minecraft/client/resource/ResourceDownloader.java
++++ net/minecraft/client/resource/ResourceDownloader.java
+@@ -45,35 +45,23 @@
+ 
+ 	void method_1_2275(Path var1) throws IOException {
+ 		SimpleFileVisitor var2 = new SimpleFileVisitor() {
+-			public FileVisitResult _rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v/* $FF was: 2rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v*/(Path var1, BasicFileAttributes var2) throws IOException {
+-				Files.delete(var1);
+-				return FileVisitResult.CONTINUE;
+-			}
+-
+-			public FileVisitResult _3MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6/* $FF was: 23MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6*/(Path var1, IOException var2) throws IOException {
+-				Files.delete(var1);
+-				return FileVisitResult.CONTINUE;
+-			}
+-
+-			public FileVisitResult _Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92/* $FF was: 6Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92*/(Path var1, IOException var2) throws IOException {
++			public FileVisitResult visitFile(Path var1, BasicFileAttributes var2) throws IOException {
++				Files.delete(var1);
++				return FileVisitResult.CONTINUE;
++			}
++
++			public FileVisitResult visitFileFailed(Path var1, IOException var2) throws IOException {
++				Files.delete(var1);
++				return FileVisitResult.CONTINUE;
++			}
++
++			public FileVisitResult postVisitDirectory(Path var1, IOException var2) throws IOException {
+ 				if(var2 != null) {
+ 					throw var2;
+ 				} else {
+ 					Files.delete(var1);
+ 					return FileVisitResult.CONTINUE;
+ 				}
+-			}
+-
+-			public FileVisitResult postVisitDirectory(Object var1, IOException var2) throws IOException {
+-				return this.6Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92((Path)var1, var2);
+-			}
+-
+-			public FileVisitResult visitFileFailed(Object var1, IOException var2) throws IOException {
+-				return this.23MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6((Path)var1, var2);
+-			}
+-
+-			public FileVisitResult visitFile(Object var1, BasicFileAttributes var2) throws IOException {
+-				return this.2rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v((Path)var1, var2);
+ 			}
+ 		};
+ 		Files.walkFileTree(var1, var2);
 --- net/minecraft/entity/mob/MobEntity.java
 +++ net/minecraft/entity/mob/MobEntity.java
 @@ -82,7 +82,7 @@
@@ -705,14 +806,20 @@
  	public static final ModelLayerLocation field_1_1428 = new ModelLayerLocation(new ResourceLocation("modid", "observer"), "main");
  	private final ModelPart model;
  
-@@ -33,9 +33,5 @@
+@@ -28,14 +28,10 @@
+ 		return LayerDefinition.create(var0, 64, 64);
+ 	}
+ 
+-	public void _u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl/* $FF was: 5u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl*/(T var1, float var2, float var3, float var4, float var5, float var6) {
++	public void setupAnim(T var1, float var2, float var3, float var4, float var5, float var6) {
+ 	}
  
  	public void renderToBuffer(PoseStack var1, VertexConsume var2, int var3, int var4, float var5, float var6, float var7, float var8) {
  		this.model.render(var1, var2, var3, var4, var5, var6, var7, var8);
 -	}
 -
 -	public void setupAnim(Object var1, float var2, float var3, float var4, float var5, float var6) {
--		this.method_1_2206((Entity)var1, var2, var3, var4, var5, var6);
+-		this.5u9iRyfW4CjyP115I6aD5UN5KOFCIx98GeMk50Lbn16CK14CUJj8Og4n71Sl((Entity)var1, var2, var3, var4, var5, var6);
  	}
  }
 --- ext/world/gen/WorldGenHouseBig.java
