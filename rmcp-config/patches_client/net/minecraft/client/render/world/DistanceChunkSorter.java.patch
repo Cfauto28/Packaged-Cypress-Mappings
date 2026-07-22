@@ -1,0 +1,24 @@
+--- a/net/minecraft/client/render/world/DistanceChunkSorter.java
++++ b/net/minecraft/client/render/world/DistanceChunkSorter.java
+@@ -4,7 +4,7 @@
+ 
+ import net.minecraft.entity.Entity;
+ 
+-public class DistanceChunkSorter implements Comparator {
++public class DistanceChunkSorter implements Comparator<RenderChunk> {
+ 	private Entity camera;
+ 
+ 	public DistanceChunkSorter(Entity camera) {
+@@ -15,11 +15,7 @@
+ 		return renderChunk1.squaredDistanceToCenter(this.camera) < renderChunk2.squaredDistanceToCenter(this.camera) ? -1 : 1;
+ 	}
+ 
+-	public int _9t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL/* $FF was: 09t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL*/(RenderChunk renderChunk1, RenderChunk renderChunk2) {
++	public int compare(RenderChunk renderChunk1, RenderChunk renderChunk2) {
+ 		return this.method_1_1270(renderChunk1, renderChunk2);
+-	}
+-
+-	public int compare(Object object1, Object object2) {
+-		return this.09t8zMS9yrC79Db6494p93jjD4H1QX7P3t710r95O3cClfkpQuZo8To95RiL((RenderChunk)object1, (RenderChunk)object2);
+ 	}
+ }

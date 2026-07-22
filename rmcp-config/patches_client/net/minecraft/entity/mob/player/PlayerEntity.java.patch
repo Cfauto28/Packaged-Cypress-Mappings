@@ -1,0 +1,20 @@
+--- a/net/minecraft/entity/mob/player/PlayerEntity.java
++++ b/net/minecraft/entity/mob/player/PlayerEntity.java
+@@ -37,7 +37,7 @@
+ 	public int field_1_1764 = 0;
+ 	public ImageHolder field_1_1755 = null;
+ 	public boolean flying = false;
+-	boolean field_1_1758 = false;
++	public boolean field_1_1758 = false;
+ 
+ 	public PlayerEntity(World world) {
+ 		super(world);
+@@ -274,7 +274,7 @@
+ 	public void pickUp(Entity item, int count) {
+ 	}
+ 
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return this.field_1_1758 ? -0.1F : 0.12F;
+ 	}
+ 

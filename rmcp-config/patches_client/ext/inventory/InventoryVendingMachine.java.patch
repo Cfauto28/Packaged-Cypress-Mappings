@@ -1,0 +1,22 @@
+--- a/ext/inventory/InventoryVendingMachine.java
++++ b/ext/inventory/InventoryVendingMachine.java
+@@ -60,14 +60,14 @@
+ 	}
+ 
+ 	public boolean method_1_1511(EnumVendingMachine vendingMachineEnum) {
+-		switch(null.field_1_1865[vendingMachineEnum.ordinal()]) {
+-		case 1:
++		switch(vendingMachineEnum) {
++		case Armor:
+ 			return this.field_1_1993;
+-		case 2:
++		case Dash:
+ 			return this.field_1_1996;
+-		case 3:
++		case HealthBoost:
+ 			return this.field_1_1992;
+-		case 4:
++		case QuickRevive:
+ 			return this.field_1_1994;
+ 		default:
+ 			return false;

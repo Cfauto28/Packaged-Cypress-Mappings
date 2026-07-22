@@ -1,0 +1,11 @@
+--- a/net/minecraft/isom/IsomPreviewCanvas__34055559.java
++++ b/net/minecraft/isom/IsomPreviewCanvas__34055559.java
+@@ -1,7 +1,7 @@
+ package net.minecraft.isom;
+ 
+ class IsomPreviewCanvas__34055559 {
+-	static final int[] field_1_2224 = new int[IsomPreviewCanvas__OS.valueOf().length];
++	static final int[] field_1_2224 = new int[IsomPreviewCanvas__OS.values().length];
+ 
+ 	static {
+ 		try {

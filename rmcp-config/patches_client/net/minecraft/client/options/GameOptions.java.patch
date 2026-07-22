@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/options/GameOptions.java
++++ b/net/minecraft/client/options/GameOptions.java
+@@ -41,7 +41,7 @@
+ 	public KeyBinding dashKey = new KeyBinding("Dash", Keyboard.KEY_LSHIFT);
+ 	public KeyBinding consoleKey = new KeyBinding("Open console", Keyboard.KEY_GRAVE);
+ 	public KeyBinding[] keyBindings = new KeyBinding[]{this.forwardKey, this.leftKey, this.backKey, this.rightKey, this.jumpKey, this.sneakKey, this.dropKey, this.inventoryKey, this.chatKey, this.fogKey, this.dashKey, this.consoleKey};
+-	protected Minecraft minecraft;
++	public Minecraft minecraft;
+ 	private File file;
+ 	public int count = 12;
+ 	public int difficulty = 2;

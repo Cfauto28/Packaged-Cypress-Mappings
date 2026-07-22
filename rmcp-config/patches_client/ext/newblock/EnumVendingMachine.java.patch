@@ -1,0 +1,17 @@
+--- a/ext/newblock/EnumVendingMachine.java
++++ b/ext/newblock/EnumVendingMachine.java
+@@ -4,13 +4,5 @@
+ 	HealthBoost,
+ 	Armor,
+ 	Dash,
+-	QuickRevive;
+-
+-	public static EnumVendingMachine[] method_1_1443() {
+-		return (EnumVendingMachine[])field_1_1903.clone();
+-	}
+-
+-	private static EnumVendingMachine[] method_1_1441() {
+-		return new EnumVendingMachine[]{HealthBoost, Armor, Dash, QuickRevive};
+-	}
++	QuickRevive
+ }

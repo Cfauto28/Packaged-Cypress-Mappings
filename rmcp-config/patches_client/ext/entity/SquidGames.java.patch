@@ -1,0 +1,19 @@
+--- a/ext/entity/SquidGames.java
++++ b/ext/entity/SquidGames.java
+@@ -29,7 +29,7 @@
+ 		return LayerDefinition.create(meshDefinition0, 64, 64);
+ 	}
+ 
+-	public void _jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q/* $FF was: 2jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q*/(Entity entity1, float f2, float f3, float f4, float f5, float f6) {
++	public void setupAnim(Entity entity1, float f2, float f3, float f4, float f5, float f6) {
+ 	}
+ 
+ 	public void renderToBuffer(PoseStack poseStack1, VertexConsume vertexConsume2, int i3, int i4, float f5, float f6, float f7, float f8) {
+@@ -37,6 +37,6 @@
+ 	}
+ 
+ 	public void setupAnim(Object object1, float f2, float f3, float f4, float f5, float f6) {
+-		this.2jXl38P4PmpdrRVSHS75EFrT141VO1F9V1Br9d1g60xH89Dyc0l9QeIIZP6q((Entity)object1, f2, f3, f4, f5, f6);
++		this.setupAnim((Entity)object1, f2, f3, f4, f5, f6);
+ 	}
+ }

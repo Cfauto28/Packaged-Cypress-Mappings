@@ -1,0 +1,49 @@
+--- a/net/minecraft/client/resource/ResourceDownloader.java
++++ b/net/minecraft/client/resource/ResourceDownloader.java
+@@ -47,35 +47,23 @@
+ 
+ 	void method_1_2275(Path path1) throws IOException {
+ 		SimpleFileVisitor simpleFileVisitor2 = new SimpleFileVisitor() {
+-			public FileVisitResult _rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v/* $FF was: 2rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v*/(Path path1, BasicFileAttributes basicFileAttributes2) throws IOException {
+-				Files.delete(path1);
+-				return FileVisitResult.CONTINUE;
+-			}
+-
+-			public FileVisitResult _3MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6/* $FF was: 23MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6*/(Path path1, IOException iOException2) throws IOException {
+-				Files.delete(path1);
+-				return FileVisitResult.CONTINUE;
+-			}
+-
+-			public FileVisitResult _Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92/* $FF was: 6Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92*/(Path path1, IOException iOException2) throws IOException {
++			public FileVisitResult visitFile(Path path1, BasicFileAttributes basicFileAttributes2) throws IOException {
++				Files.delete(path1);
++				return FileVisitResult.CONTINUE;
++			}
++
++			public FileVisitResult visitFileFailed(Path path1, IOException iOException2) throws IOException {
++				Files.delete(path1);
++				return FileVisitResult.CONTINUE;
++			}
++
++			public FileVisitResult postVisitDirectory(Path path1, IOException iOException2) throws IOException {
+ 				if(iOException2 != null) {
+ 					throw iOException2;
+ 				} else {
+ 					Files.delete(path1);
+ 					return FileVisitResult.CONTINUE;
+ 				}
+-			}
+-
+-			public FileVisitResult postVisitDirectory(Object filePath, IOException iOException) throws IOException {
+-				return this.6Y066QkhR7VJ68J5178YcHIRIq6YMqDPYIin6Vv049v71311GMTvI0DN2U92((Path)filePath, iOException);
+-			}
+-
+-			public FileVisitResult visitFileFailed(Object filePath, IOException iOException) throws IOException {
+-				return this.23MZBIGCTSC3NUicInCEvwRdy4FAJix3YthzrA5QlBOEkmlz7Sg7u66bTfh6((Path)filePath, iOException);
+-			}
+-
+-			public FileVisitResult visitFile(Object filePath, BasicFileAttributes fileAttributes) throws IOException {
+-				return this.2rJuaeK1zQ1N7IGF5Go9hj61bHOKKocGJwAenj466SVemdP80Nt2ZlEB7B1v((Path)filePath, fileAttributes);
+ 			}
+ 		};
+ 		Files.walkFileTree(path1, simpleFileVisitor2);

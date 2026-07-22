@@ -1,0 +1,18 @@
+--- a/ext/world/gen/WorldGenUnknownClass1.java
++++ b/ext/world/gen/WorldGenUnknownClass1.java
+@@ -72,14 +72,6 @@
+ 	public static enum Layer {
+ 		SURFACE,
+ 		UNDERGROUND,
+-		LOW_RIVER;
+-
+-		public static WorldGenUnknownClass1.Layer[] method_1_1557() {
+-			return (WorldGenUnknownClass1.Layer[])field_1_2227.clone();
+-		}
+-
+-		private static WorldGenUnknownClass1.Layer[] method_1_1558() {
+-			return new WorldGenUnknownClass1.Layer[]{SURFACE, UNDERGROUND, LOW_RIVER};
+-		}
++		LOW_RIVER
+ 	}
+ }

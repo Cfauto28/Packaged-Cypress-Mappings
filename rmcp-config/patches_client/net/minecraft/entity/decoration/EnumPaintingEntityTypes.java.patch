@@ -1,0 +1,23 @@
+--- a/net/minecraft/entity/decoration/EnumPaintingEntityTypes.java
++++ b/net/minecraft/entity/decoration/EnumPaintingEntityTypes.java
+@@ -141,10 +141,6 @@
+ 	public final int u;
+ 	public final int v;
+ 
+-	public static EnumPaintingEntityTypes[] method_1_1786() {
+-		return (EnumPaintingEntityTypes[])field_1_2584.clone();
+-	}
+-
+ 	public static EnumPaintingEntityTypes method_1_1785(String string0) {
+ 		return (EnumPaintingEntityTypes)Enum.valueOf(EnumPaintingEntityTypes.class, string0);
+ 	}
+@@ -155,9 +151,5 @@
+ 		this.height = height;
+ 		this.u = u;
+ 		this.v = v;
+-	}
+-
+-	private static EnumPaintingEntityTypes[] method_1_1784() {
+-		return new EnumPaintingEntityTypes[]{Rock, Phoenix, Hue, Nebula, HellAspect, Duality, Smother, WastelandNight, Silentio, NightGarden, Demo, Reptile, Seek, Town, AutumnSun, SunRiver, Poet, Gradient, Seas, Bird, Cave, Cube, Fog, Quartet, Bull, Shack, DoorsToNexi, FloodedDuality, Sorrow, Yggdrasil, Parallax, DigitalMan, LightBeam, Shrine, Galaxy, DeepseaCoral, Landscape, Fragments, StoneTroll, NightLight, Snow, Salt, Fate, BigSalt, Maze, Darkness, CatOne, Parrot, Hill, HandGuy, Fucker, Bloodfest, Mirror, Atmosphere, Plane, Sky, Apple, Laptop, Plant, Landscaping, BlueShit, RedShit, Ascension, Infiltration, LostParadise, Distant, Smoke, Symbol, BlueGuts, Handdrawn, Blue, Andrei, Distortion, CatBroom, Slain, Galaxia, Hidden, TiledSurface, Sunrise, Cosmos, TreePlain, Shattered, Worrysome, Integrity, Globe, Sailor, Gorey, SeaAnimal, Feline, MonopolyBoard, Moon, Leader, Fighter, Sideview, Hexagon, NightSky, TheTop, DoorThingIdk, Haeven, Jupiter, Weed, Seaside, Stairwell, Event, Erupt, GradedSky, BlackHole, PinkShit, LowRiverSkull, MissingTex, FlippedShape, Company, Game, GayPorn, BigFish, Dreamland, UnseenLand, Fields, Emil, Zombies, Cube2, Cubes, Spirit, Pengo, Rogue, Encounter, FlippedShape2, FlippedShape3, FlippedShape4, CityLicht, waterhall, MirrorMirror, Mall};
+ 	}
+ }

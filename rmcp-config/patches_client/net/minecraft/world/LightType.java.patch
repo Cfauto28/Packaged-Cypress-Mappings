@@ -1,0 +1,22 @@
+--- a/net/minecraft/world/LightType.java
++++ b/net/minecraft/world/LightType.java
+@@ -6,19 +6,11 @@
+ 
+ 	public final int defaultValue;
+ 
+-	public static LightType[] method_1_1742() {
+-		return (LightType[])field_1_2499.clone();
+-	}
+-
+ 	public static LightType method_1_1741(String string0) {
+ 		return (LightType)Enum.valueOf(LightType.class, string0);
+ 	}
+ 
+ 	private LightType(int defaultValue) {
+ 		this.defaultValue = defaultValue;
+-	}
+-
+-	private static LightType[] method_1_1740() {
+-		return new LightType[]{SKY, BLOCK};
+ 	}
+ }

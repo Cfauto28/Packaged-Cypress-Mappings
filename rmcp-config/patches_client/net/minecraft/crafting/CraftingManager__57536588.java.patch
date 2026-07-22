@@ -1,0 +1,24 @@
+--- a/net/minecraft/crafting/CraftingManager__57536588.java
++++ b/net/minecraft/crafting/CraftingManager__57536588.java
+@@ -2,7 +2,7 @@
+ 
+ import java.util.Comparator;
+ 
+-class CraftingManager__57536588 implements Comparator {
++class CraftingManager__57536588 implements Comparator<Recipe> {
+ 	final CraftingManager field_1_3081;
+ 
+ 	CraftingManager__57536588(CraftingManager craftingManager1) {
+@@ -13,11 +13,7 @@
+ 		return recipe2.size() < recipe1.size() ? -1 : (recipe2.size() > recipe1.size() ? 1 : 0);
+ 	}
+ 
+-	public int _G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6/* $FF was: 8G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6*/(Recipe recipe1, Recipe recipe2) {
++	public int compare(Recipe recipe1, Recipe recipe2) {
+ 		return this.method_1_2075(recipe1, recipe2);
+-	}
+-
+-	public int compare(Object object1, Object object2) {
+-		return this.8G5dJ7pdAEvNRP6jYct7bw8mLKn02Ks5P34Q7tGoJaoWCx1lY3Jju44OjKl6((Recipe)object1, (Recipe)object2);
+ 	}
+ }

@@ -1,0 +1,11 @@
+--- a/ext/world/NamedLocation.java
++++ b/ext/world/NamedLocation.java
+@@ -9,7 +9,7 @@
+ 	public int bx2;
+ 	public int by2;
+ 	public int bz2;
+-	boolean p2Invalid = false;
++	public boolean p2Invalid = false;
+ 	String field_1_1548;
+ 
+ 	public NamedLocation(int i1, int i2, int i3, int i4, int i5, int i6, String string7) {

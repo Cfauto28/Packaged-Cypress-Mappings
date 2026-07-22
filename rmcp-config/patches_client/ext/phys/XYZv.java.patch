@@ -1,0 +1,22 @@
+--- a/ext/phys/XYZv.java
++++ b/ext/phys/XYZv.java
+@@ -45,14 +45,14 @@
+ 	}
+ 
+ 	public XYZv rotateAroundXP(Direction dir) {
+-		switch(null.field_1_2732[dir.ordinal()]) {
+-		case 1:
++		switch(dir) {
++		case XM:
+ 			return new XYZv(-this.x, this.y, -this.z, this.dir);
+-		case 2:
++		case XP:
+ 			return new XYZv(this.x, this.y, this.z, this.dir);
+-		case 3:
++		case ZM:
+ 			return new XYZv(-this.z, this.y, -this.x, this.dir);
+-		case 4:
++		case ZP:
+ 			return new XYZv(this.z, this.y, this.x, this.dir);
+ 		default:
+ 			return null;

@@ -1,0 +1,11 @@
+--- a/ext/util/HandlerPlayDemo.java
++++ b/ext/util/HandlerPlayDemo.java
+@@ -12,7 +12,7 @@
+ import java.util.List;
+ 
+ public class HandlerPlayDemo {
+-	List field_1_2370;
++	public List field_1_2370;
+ 	public List field_1_2368;
+ 	public String field_1_2369;
+ 

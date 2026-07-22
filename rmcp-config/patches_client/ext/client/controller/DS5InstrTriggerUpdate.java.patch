@@ -1,0 +1,67 @@
+--- a/ext/client/controller/DS5InstrTriggerUpdate.java
++++ b/ext/client/controller/DS5InstrTriggerUpdate.java
+@@ -31,10 +31,6 @@
+ 
+ 		int index;
+ 
+-		public static DS5InstrTriggerUpdate.TriggerIndex[] method_1_1399() {
+-			return (DS5InstrTriggerUpdate.TriggerIndex[])field_1_1819.clone();
+-		}
+-
+ 		public static DS5InstrTriggerUpdate.TriggerIndex method_1_1397(String string0) {
+ 			return (DS5InstrTriggerUpdate.TriggerIndex)Enum.valueOf(DS5InstrTriggerUpdate.TriggerIndex.class, string0);
+ 		}
+@@ -42,10 +38,6 @@
+ 		private TriggerIndex(int i3) {
+ 			this.index = i3;
+ 		}
+-
+-		private static DS5InstrTriggerUpdate.TriggerIndex[] method_1_1398() {
+-			return new DS5InstrTriggerUpdate.TriggerIndex[]{Invalid, Left, Right};
+-		}
+ 	}
+ 
+ 	public static enum TriggerMode {
+@@ -71,10 +63,6 @@
+ 
+ 		int index;
+ 
+-		public static DS5InstrTriggerUpdate.TriggerMode[] method_1_1803() {
+-			return (DS5InstrTriggerUpdate.TriggerMode[])field_1_2692.clone();
+-		}
+-
+ 		public static DS5InstrTriggerUpdate.TriggerMode method_1_1802(String string0) {
+ 			return (DS5InstrTriggerUpdate.TriggerMode)Enum.valueOf(DS5InstrTriggerUpdate.TriggerMode.class, string0);
+ 		}
+@@ -82,10 +70,6 @@
+ 		private TriggerMode(int i3) {
+ 			this.index = i3;
+ 		}
+-
+-		private static DS5InstrTriggerUpdate.TriggerMode[] method_1_1801() {
+-			return new DS5InstrTriggerUpdate.TriggerMode[]{Normal, GameCube, VerySoft, Soft, Hard, VeryHard, Hardest, Rigid, VibrateTrigger, Choppy, Medium, VibrateTriggerPulse, CustomTriggerValue, Resistance, Bow, Galloping, SemiAutomaticGun, AutomaticGun, Machine};
+-		}
+ 	}
+ 
+ 	public static enum CustomTriggerValueMode {
+@@ -109,20 +93,12 @@
+ 
+ 		int index;
+ 
+-		public static DS5InstrTriggerUpdate.CustomTriggerValueMode[] method_1_925() {
+-			return (DS5InstrTriggerUpdate.CustomTriggerValueMode[])field_1_1026.clone();
+-		}
+-
+ 		public static DS5InstrTriggerUpdate.CustomTriggerValueMode method_1_924(String string0) {
+ 			return (DS5InstrTriggerUpdate.CustomTriggerValueMode)Enum.valueOf(DS5InstrTriggerUpdate.CustomTriggerValueMode.class, string0);
+ 		}
+ 
+ 		private CustomTriggerValueMode(int i3) {
+ 			this.index = i3;
+-		}
+-
+-		private static DS5InstrTriggerUpdate.CustomTriggerValueMode[] method_1_926() {
+-			return new DS5InstrTriggerUpdate.CustomTriggerValueMode[]{OFF, Rigid, RigidA, RigidB, RigidAB, Pulse, PulseA, PulseB, PulseAB, VibrateResistance, VibrateResistanceA, VibrateResistanceB, VibrateResistanceAB, VibratePulse, VibratePulseA, VibratePulsB, VibratePulseAB};
+ 		}
+ 	}
+ }

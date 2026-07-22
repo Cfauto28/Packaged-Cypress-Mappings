@@ -1,0 +1,25 @@
+--- a/ext/util/HandlerPlayDemoUnknownClass2.java
++++ b/ext/util/HandlerPlayDemoUnknownClass2.java
+@@ -2,14 +2,14 @@
+ 
+ public class HandlerPlayDemoUnknownClass2 {
+ 	long field_1_1612;
+-	double field_1_1608;
+-	double field_1_1610;
+-	double field_1_1613;
+-	double field_1_1609;
+-	double field_1_1611;
+-	double field_1_1616;
+-	double field_1_1615;
+-	double field_1_1614;
++	public double field_1_1608;
++	public double field_1_1610;
++	public double field_1_1613;
++	public double field_1_1609;
++	public double field_1_1611;
++	public double field_1_1616;
++	public double field_1_1615;
++	public double field_1_1614;
+ 
+ 	public HandlerPlayDemoUnknownClass2(long j1, double d3, double d5, double d7, double d9, double d11, double d13, double d15, double d17) {
+ 		this.field_1_1612 = j1;

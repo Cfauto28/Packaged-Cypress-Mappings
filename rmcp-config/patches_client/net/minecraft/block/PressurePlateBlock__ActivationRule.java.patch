@@ -1,0 +1,18 @@
+--- a/net/minecraft/block/PressurePlateBlock__ActivationRule.java
++++ b/net/minecraft/block/PressurePlateBlock__ActivationRule.java
+@@ -5,15 +5,7 @@
+ 	MOBS,
+ 	PLAYERS;
+ 
+-	public static PressurePlateBlock__ActivationRule[] method_1_1989() {
+-		return (PressurePlateBlock__ActivationRule[])field_1_3020.clone();
+-	}
+-
+ 	public static PressurePlateBlock__ActivationRule method_1_1988(String string0) {
+ 		return (PressurePlateBlock__ActivationRule)Enum.valueOf(PressurePlateBlock__ActivationRule.class, string0);
+-	}
+-
+-	private static PressurePlateBlock__ActivationRule[] method_1_1987() {
+-		return new PressurePlateBlock__ActivationRule[]{EVERYTHING, MOBS, PLAYERS};
+ 	}
+ }

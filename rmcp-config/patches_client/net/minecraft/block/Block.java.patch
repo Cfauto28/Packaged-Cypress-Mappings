@@ -1,0 +1,14 @@
+--- a/net/minecraft/block/Block.java
++++ b/net/minecraft/block/Block.java
+@@ -349,9 +349,9 @@
+ 		return this.id;
+ 	}
+ 
+-	public float method_1_1952(PlayerEntity player) {
++	/*public float method_1_1952(PlayerEntity player) {
+ 		return this.miningTime < 0.0F ? 0.0F : (!player.b(this) ? 1.0F / this.miningTime / 100.0F : player.a(this) / this.miningTime / 30.0F);
+-	}
++	}*/
+ 
+ 	public void dropItems(World world, int x, int y, int z, int metadata) {
+ 		this.dropItems(world, x, y, z, metadata, 1.0F);

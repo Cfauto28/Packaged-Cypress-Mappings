@@ -1,0 +1,22 @@
+--- a/ext/crafting/ShapelessCraftingRecipe.java
++++ b/ext/crafting/ShapelessCraftingRecipe.java
+@@ -20,7 +20,7 @@
+ 		for(i5 = 0; i5 < i4; ++i5) {
+ 			i6 = i3[i5];
+ 			if(i6 != -1) {
+-				arrayList2.add(i6);
++				arrayList2.add(Integer.valueOf(i6));
+ 			}
+ 		}
+ 
+@@ -34,8 +34,8 @@
+ 					return false;
+ 				}
+ 
+-				if(arrayList2.contains(i6)) {
+-					arrayList2.remove(i6);
++				if(arrayList2.contains(Integer.valueOf(i6))) {
++					arrayList2.remove(Integer.valueOf(i6));
+ 				}
+ 			}
+ 		}

@@ -1,0 +1,18 @@
+--- a/net/minecraft/block/RailBlock.java
++++ b/net/minecraft/block/RailBlock.java
+@@ -89,13 +89,13 @@
+ 		if(z7) {
+ 			this.dropItems(world, x, y, z, world.getBlockMetadata(x, y, z));
+ 			world.setBlock(x, y, z, 0);
+-		} else if(neighborBlock > 0 && Block.BY_ID[neighborBlock].isSignalSource() && RailBlock__RailNode.method_1_712(new RailBlock__RailNode(this, world, x, y, z)) == 3) {
++		} else if(neighborBlock > 0 && Block.BY_ID[neighborBlock].isSignalSource() /*&& RailBlock__RailNode.method_1_712(new RailBlock__RailNode(this, world, x, y, z)) == 3*/) {
+ 			this.updateShape(world, x, y, z);
+ 		}
+ 
+ 	}
+ 
+ 	private void updateShape(World world, int x, int y, int z) {
+-		(new RailBlock__RailNode(this, world, x, y, z)).updateState(world.hasNeighborSignal(x, y, z));
++		//(new RailBlock__RailNode(this, world, x, y, z)).updateState(world.hasNeighborSignal(x, y, z));
+ 	}
+ }
