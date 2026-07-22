@@ -1,0 +1,18 @@
+--- a/ext/world/gen/WorldGenHouseSmall.java
++++ b/ext/world/gen/WorldGenHouseSmall.java
+@@ -389,14 +389,6 @@
+ 	private static enum BuiltWallKind {
+ 		NORMAL,
+ 		WINDOW,
+-		DOOR;
+-
+-		public static WorldGenHouseSmall.BuiltWallKind[] method_1_2027() {
+-			return (WorldGenHouseSmall.BuiltWallKind[])field_1_3043.clone();
+-		}
+-
+-		private static WorldGenHouseSmall.BuiltWallKind[] method_1_2026() {
+-			return new WorldGenHouseSmall.BuiltWallKind[]{NORMAL, WINDOW, DOOR};
+-		}
++		DOOR
+ 	}
+ }

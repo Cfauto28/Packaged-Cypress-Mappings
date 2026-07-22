@@ -1,0 +1,19 @@
+--- a/ext/entity/EntityUnknownClass1.java
++++ b/ext/entity/EntityUnknownClass1.java
+@@ -44,7 +44,7 @@
+ 		return LayerDefinition.create(meshDefinition0, 128, 128);
+ 	}
+ 
+-	public void _6PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom/* $FF was: 16PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom*/(Entity entity1, float f2, float f3, float f4, float f5, float f6) {
++	public void setupAnim(Entity entity1, float f2, float f3, float f4, float f5, float f6) {
+ 	}
+ 
+ 	public void renderToBuffer(PoseStack poseStack1, VertexConsume vertexConsume2, int i3, int i4, float f5, float f6, float f7, float f8) {
+@@ -57,6 +57,6 @@
+ 	}
+ 
+ 	public void setupAnim(Object object1, float f2, float f3, float f4, float f5, float f6) {
+-		this.16PQb7B3oaJk6gI741J6hEWDKMl5ptux02FhX8e0iDi934fKn0uQ89vZiRom((Entity)object1, f2, f3, f4, f5, f6);
++		this.setupAnim((Entity)object1, f2, f3, f4, f5, f6);
+ 	}
+ }

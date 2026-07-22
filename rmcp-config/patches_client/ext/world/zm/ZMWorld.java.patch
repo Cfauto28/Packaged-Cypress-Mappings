@@ -1,0 +1,41 @@
+--- a/ext/world/zm/ZMWorld.java
++++ b/ext/world/zm/ZMWorld.java
+@@ -110,15 +110,11 @@
+ 			double d8;
+ 			do {
+ 				if(!iterator5.hasNext()) {
+-					Collections.sort(arrayList2, new Comparator() {
+-						public int _5J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p/* $FF was: 65J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p*/(WorldZMSpawn worldZMSpawn1, WorldZMSpawn worldZMSpawn2) {
++					Collections.sort(arrayList2, new Comparator<WorldZMSpawn>() {
++						public int compare(WorldZMSpawn worldZMSpawn1, WorldZMSpawn worldZMSpawn2) {
+ 							HandlerSetCheckpointUnknownClass2 handlerSetCheckpointUnknownClass23 = worldZMSpawn1.location.method_1_1185();
+ 							HandlerSetCheckpointUnknownClass2 handlerSetCheckpointUnknownClass24x = worldZMSpawn2.location.method_1_1185();
+-							return handlerSetCheckpointUnknownClass24.method_1_948(handlerSetCheckpointUnknownClass23.field_1_1065, handlerSetCheckpointUnknownClass23.field_1_1066).compareTo(handlerSetCheckpointUnknownClass24.method_1_948(handlerSetCheckpointUnknownClass24x.field_1_1065, handlerSetCheckpointUnknownClass24x.field_1_1066));
+-						}
+-
+-						public int compare(Object worldSpawn1, Object worldSpawn2) {
+-							return this.65J8FrMXEvjjmSrGPd004RF9bPBQ25mQnZNsbDLRwV9Ny1Pr5XTIvmLF571p((WorldZMSpawn)worldSpawn1, (WorldZMSpawn)worldSpawn2);
++							return new Double(handlerSetCheckpointUnknownClass24.method_1_948(handlerSetCheckpointUnknownClass23.field_1_1065, handlerSetCheckpointUnknownClass23.field_1_1066)).compareTo(handlerSetCheckpointUnknownClass24.method_1_948(handlerSetCheckpointUnknownClass24x.field_1_1065, handlerSetCheckpointUnknownClass24x.field_1_1066));
+ 						}
+ 					});
+ 					return arrayList2.size() == 0 ? null : (arrayList2.size() == 1 ? (WorldZMSpawn)arrayList2.get(0) : (WorldZMSpawn)arrayList2.get(this.random.nextInt(Math.min(arrayList2.size(), 3))));
+@@ -159,14 +155,14 @@
+ 	}
+ 
+ 	public int method_1_875(EnumVendingMachine enumVendingMachine1) {
+-		switch(null.field_1_1572[enumVendingMachine1.ordinal()]) {
+-		case 1:
++		switch(enumVendingMachine1) {
++		case Armor:
+ 			return 1500;
+-		case 2:
++		case Dash:
+ 			return 7500;
+-		case 3:
++		case HealthBoost:
+ 			return 2500;
+-		case 4:
++		case QuickRevive:
+ 			return 600;
+ 		default:
+ 			return 1;

@@ -1,0 +1,18 @@
+--- a/net/minecraft/isom/IsomPreviewCanvas__OS.java
++++ b/net/minecraft/isom/IsomPreviewCanvas__OS.java
+@@ -7,15 +7,7 @@
+ 	MACOS,
+ 	UNKNOWN;
+ 
+-	public static IsomPreviewCanvas__OS[] valueOf() {
+-		return (IsomPreviewCanvas__OS[])field_1_2453.clone();
+-	}
+-
+ 	public static IsomPreviewCanvas__OS method_1_1717(String string0) {
+ 		return (IsomPreviewCanvas__OS)Enum.valueOf(IsomPreviewCanvas__OS.class, string0);
+-	}
+-
+-	private static IsomPreviewCanvas__OS[] method_1_1716() {
+-		return new IsomPreviewCanvas__OS[]{LINUX, SOLARIS, WINDOWS, MACOS, UNKNOWN};
+ 	}
+ }

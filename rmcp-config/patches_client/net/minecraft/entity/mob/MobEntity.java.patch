@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/mob/MobEntity.java
++++ b/net/minecraft/entity/mob/MobEntity.java
+@@ -97,7 +97,7 @@
+ 		return !this.removed;
+ 	}
+ 
+-	protected float getEyeHeight() {
++	public float getEyeHeight() {
+ 		return this.height * 0.85F;
+ 	}
+ 

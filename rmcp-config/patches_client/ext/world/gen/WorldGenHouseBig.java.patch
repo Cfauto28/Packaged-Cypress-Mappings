@@ -1,0 +1,92 @@
+--- a/ext/world/gen/WorldGenHouseBig.java
++++ b/ext/world/gen/WorldGenHouseBig.java
+@@ -276,8 +276,8 @@
+ 		for(i10 = 0; i10 < 4; ++i10) {
+ 			int i11;
+ 			int i12;
+-			switch(null.field_1_921[enumHouseBig13[i10].ordinal()]) {
+-			case 1:
++			switch(enumHouseBig13[i10]) {
++			case WhiteGlass:
+ 				this.method_1_1435(world, i6, y, i7, 0, 1, 0, ExtBlock.GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 2, 0, ExtBlock.GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 3, 0, ExtBlock.GLASS, i10);
+@@ -301,7 +301,7 @@
+ 				this.method_1_1435(world, i6, y, i7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				this.method_1_1435(world, i6, y, i7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				break;
+-			case 2:
++			case BlueGlass:
+ 				this.method_1_1435(world, i6, y, i7, 0, 1, 0, ExtNewBlock.BLUE_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 2, 0, ExtNewBlock.BLUE_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 3, 0, ExtNewBlock.BLUE_GLASS, i10);
+@@ -325,7 +325,7 @@
+ 				this.method_1_1435(world, i6, y, i7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				this.method_1_1435(world, i6, y, i7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				break;
+-			case 3:
++			case PinkGlass:
+ 				this.method_1_1435(world, i6, y, i7, 0, 1, 0, ExtNewBlock.MAGENTA_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 2, 0, ExtNewBlock.MAGENTA_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 3, 0, ExtNewBlock.MAGENTA_GLASS, i10);
+@@ -349,7 +349,7 @@
+ 				this.method_1_1435(world, i6, y, i7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				this.method_1_1435(world, i6, y, i7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				break;
+-			case 4:
++			case PlateDecor:
+ 				this.method_1_1435(world, i6, y, i7, 0, 1, 0, ExtNewBlock.SMOOTH_STONE, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 2, 0, ExtNewBlock.SMOOTH_STONE, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 3, 0, ExtNewBlock.SMOOTH_STONE, i10);
+@@ -379,7 +379,7 @@
+ 				this.method_1_1435(world, i6, y, i7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				this.method_1_1435(world, i6, y, i7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				break;
+-			case 5:
++			case LimeGlass:
+ 				this.method_1_1435(world, i6, y, i7, 0, 1, 0, ExtNewBlock.GREEN_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 2, 0, ExtNewBlock.GREEN_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 3, 0, ExtNewBlock.GREEN_GLASS, i10);
+@@ -403,7 +403,7 @@
+ 				this.method_1_1435(world, i6, y, i7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				this.method_1_1435(world, i6, y, i7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				break;
+-			case 6:
++			case BlackGlass:
+ 				this.method_1_1435(world, i6, y, i7, 0, 1, 0, ExtNewBlock.BLACK_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 2, 0, ExtNewBlock.BLACK_GLASS, i10);
+ 				this.method_1_1435(world, i6, y, i7, 0, 3, 0, ExtNewBlock.BLACK_GLASS, i10);
+@@ -427,7 +427,7 @@
+ 				this.method_1_1435(world, i6, y, i7, 2, 2, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				this.method_1_1435(world, i6, y, i7, 2, 3, -2, ExtNewBlock.FLAMEWOOD_PILLAR, i10);
+ 				break;
+-			case 7:
++			case Door:
+ 				i11 = i10 == 0 ? 1 : (i10 == 2 ? -1 : 0);
+ 				i12 = i10 == 1 ? 1 : (i10 == 3 ? -1 : 0);
+ 				i11 += x;
+@@ -442,7 +442,7 @@
+ 					this.method_1_1435(world, i6, y, i7, 4, -1, 0, ExtNewBlock.SMOOTH_STONE, i10);
+ 					this.method_1_1435(world, i6, y, i7, 4, -1, 1, ExtNewBlock.SMOOTH_STONE, i10);
+ 				}
+-			case 8:
++			case Doorless:
+ 				i11 = i10 == 0 ? 1 : (i10 == 2 ? -1 : 0);
+ 				i12 = i10 == 1 ? 1 : (i10 == 3 ? -1 : 0);
+ 				i11 += x;
+@@ -540,14 +540,6 @@
+ 		BlackGlass,
+ 		WhiteGlass,
+ 		Doorless,
+-		PlateDecor;
+-
+-		public static WorldGenHouseBig.WallDecor[] method_1_756() {
+-			return (WorldGenHouseBig.WallDecor[])field_1_847.clone();
+-		}
+-
+-		private static WorldGenHouseBig.WallDecor[] method_1_755() {
+-			return new WorldGenHouseBig.WallDecor[]{None, Door, PinkGlass, BlueGlass, LimeGlass, BlackGlass, WhiteGlass, Doorless, PlateDecor};
+-		}
++		PlateDecor
+ 	}
+ }

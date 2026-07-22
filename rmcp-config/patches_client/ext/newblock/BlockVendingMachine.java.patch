@@ -1,0 +1,65 @@
+--- a/ext/newblock/BlockVendingMachine.java
++++ b/ext/newblock/BlockVendingMachine.java
+@@ -22,17 +22,17 @@
+ 			int i3 = player.field_1_1783.method_1_875(this.field_1_795);
+ 			if(player.vendingMachine.method_1_1513() >= (long)i3) {
+ 				player.vendingMachine.method_1_1514((long)(-i3));
+-				switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-				case 1:
++				switch(this.field_1_795) {
++				case Armor:
+ 					player.vendingMachine.field_1_1993 = true;
+ 					break;
+-				case 2:
++				case Dash:
+ 					player.vendingMachine.field_1_1996 = true;
+ 					break;
+-				case 3:
++				case HealthBoost:
+ 					player.vendingMachine.field_1_1992 = true;
+ 					break;
+-				case 4:
++				case QuickRevive:
+ 					player.vendingMachine.field_1_1994 = true;
+ 				}
+ 			} else {
+@@ -47,14 +47,14 @@
+ 		if(player.vendingMachine.method_1_1511(this.field_1_795)) {
+ 			return "You already have this perk.";
+ 		} else {
+-			switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-			case 1:
++			switch(this.field_1_795) {
++			case Armor:
+ 				return "[" + string3 + "] buy Armor [" + player.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 2:
++			case Dash:
+ 				return "[" + string3 + "] buy Dash [" + player.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 3:
++			case HealthBoost:
+ 				return "[" + string3 + "] buy Berzerkola [" + player.field_1_1783.method_1_875(this.field_1_795) + " points]";
+-			case 4:
++			case QuickRevive:
+ 				return "[" + string3 + "] buy Revive [" + player.field_1_1783.method_1_875(this.field_1_795) + " points]";
+ 			default:
+ 				return "--";
+@@ -63,14 +63,14 @@
+ 	}
+ 
+ 	public int method_1_2461() {
+-		switch(null.field_1_1118[this.field_1_795.ordinal()]) {
+-		case 1:
++		switch(this.field_1_795) {
++		case Armor:
+ 			return 2;
+-		case 2:
++		case Dash:
+ 			return 3;
+-		case 3:
++		case HealthBoost:
+ 			return 1;
+-		case 4:
++		case QuickRevive:
+ 			return 4;
+ 		default:
+ 			return -1;

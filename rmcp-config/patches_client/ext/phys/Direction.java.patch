@@ -1,0 +1,22 @@
+--- a/ext/phys/Direction.java
++++ b/ext/phys/Direction.java
+@@ -8,10 +8,6 @@
+ 
+ 	public final int direction;
+ 
+-	public static Direction[] method_1_2185() {
+-		return (Direction[])field_1_3249.clone();
+-	}
+-
+ 	public static Direction method_1_2186(String string0) {
+ 		return (Direction)Enum.valueOf(Direction.class, string0);
+ 	}
+@@ -25,7 +21,7 @@
+ 		for(i2 = (direction.direction + i1) % 4; i2 < 0; i2 += 4) {
+ 		}
+ 
+-		return method_1_2185()[i2];
++		return method_1_2184()[i2];
+ 	}
+ 
+ 	private static Direction[] method_1_2184() {

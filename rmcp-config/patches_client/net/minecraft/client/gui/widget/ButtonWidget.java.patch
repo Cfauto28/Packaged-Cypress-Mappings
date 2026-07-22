@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/widget/ButtonWidget.java
++++ b/net/minecraft/client/gui/widget/ButtonWidget.java
+@@ -10,7 +10,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ public class ButtonWidget extends GuiElement {
+-	protected int width;
++	public int width;
+ 	protected int height;
+ 	public int x;
+ 	public int y;

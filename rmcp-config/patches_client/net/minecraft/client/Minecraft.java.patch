@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/Minecraft.java
++++ b/net/minecraft/client/Minecraft.java
+@@ -168,7 +168,7 @@
+ 	public String field_1_553 = "";
+ 	public static boolean conf_bannedPlayer = false;
+ 	public static String field_1_551 = WorldUnknownClass2.method_1_1562(WorldUnknownClass2.field_1_2243);
+-	private final String startupVersionString = "11(NtBreak)/11-023-ship " + (MinecraftUnknownClass1.class.getSimpleName().contains("MinecraftImpl") ? "(non-obf.)" : (MinecraftUnknownClass1.class.getSimpleName().length() < 3 ? "(lv1obf.)" : "(lv2obf.)"));
++	private final String startupVersionString = "11(NtBreak)/11-023-ship " + (MinecraftUnknownClass1.class.getSimpleName().contains("MinecraftUnknownClass1") ? "(non-obf.)" : (MinecraftUnknownClass1.class.getSimpleName().length() < 3 ? "(lv1obf.)" : "(lv2obf.)"));
+ 	public static int field_1_546 = 0;
+ 	public int field_1_532 = 0;
+ 	public VisualsManager visualsManager = new VisualsManager();

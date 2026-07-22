@@ -1,0 +1,19 @@
+--- a/ext/client/renderer/model/ModelCatBomb.java
++++ b/ext/client/renderer/model/ModelCatBomb.java
+@@ -30,7 +30,7 @@
+ 		return LayerDefinition.create(meshDefinition0, 16, 16);
+ 	}
+ 
+-	public void _7lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8/* $FF was: 07lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8*/(Entity entity1, float f2, float f3, float f4, float f5, float f6) {
++	public void setupAnim(Entity entity1, float f2, float f3, float f4, float f5, float f6) {
+ 	}
+ 
+ 	public void renderToBuffer(PoseStack poseStack1, VertexConsume vertexConsume2, int i3, int i4, float f5, float f6, float f7, float f8) {
+@@ -38,6 +38,6 @@
+ 	}
+ 
+ 	public void setupAnim(Object object1, float f2, float f3, float f4, float f5, float f6) {
+-		this.07lo0Fq87IJA4mAYHw7xp5FVy3jZ5U6aoXY1czpa96akSwZO48eUwpsWeNE8((Entity)object1, f2, f3, f4, f5, f6);
++		this.setupAnim((Entity)object1, f2, f3, f4, f5, f6);
+ 	}
+ }

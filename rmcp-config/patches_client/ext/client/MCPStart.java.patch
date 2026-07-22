@@ -1,0 +1,11 @@
+--- a/ext/client/MCPStart.java
++++ b/ext/client/MCPStart.java
+@@ -8,7 +8,7 @@
+ public class MCPStart {
+ 	public static void main(String[] string0) {
+ 		try {
+-			Field field1 = Minecraft.class.getDeclaredField("minecraftDir");
++			Field field1 = Minecraft.class.getDeclaredField("workingDirectory");
+ 			Field.setAccessible(new Field[]{field1}, true);
+ 			field1.set((Object)null, new File("."));
+ 		} catch (Exception exception2) {

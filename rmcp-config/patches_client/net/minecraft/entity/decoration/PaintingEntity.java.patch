@@ -1,0 +1,20 @@
+--- a/net/minecraft/entity/decoration/PaintingEntity.java
++++ b/net/minecraft/entity/decoration/PaintingEntity.java
+@@ -39,7 +39,7 @@
+ 		this.blockZ = z;
+ 		this.field_1_1736 = dir;
+ 		ArrayList arrayList6 = new ArrayList();
+-		EnumPaintingEntityTypes[] enumPaintingEntityTypes7 = EnumPaintingEntityTypes.method_1_1786();
++		EnumPaintingEntityTypes[] enumPaintingEntityTypes7 = EnumPaintingEntityTypes.values();
+ 		int i8 = enumPaintingEntityTypes7.length;
+ 
+ 		for(int i9 = 0; i9 < i8; ++i9) {
+@@ -213,7 +213,7 @@
+ 		this.blockY = nbt.getInt("TileY");
+ 		this.blockZ = nbt.getInt("TileZ");
+ 		String string2 = nbt.getString("Motive");
+-		EnumPaintingEntityTypes[] enumPaintingEntityTypes3 = EnumPaintingEntityTypes.method_1_1786();
++		EnumPaintingEntityTypes[] enumPaintingEntityTypes3 = EnumPaintingEntityTypes.values();
+ 		int i4 = enumPaintingEntityTypes3.length;
+ 
+ 		for(int i5 = 0; i5 < i4; ++i5) {
