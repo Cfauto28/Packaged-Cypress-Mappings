@@ -112,21 +112,26 @@ c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
 	f	Z	field_1_529	fullscreen
 	f	I	field_1_530	ticks
 	f	Lnet/minecraft/class_1_781;	field_1_531	shaders
+	f	[Ljava/lang/String;	field_1_533	ShaSums
+		c	No clue what the sums are for but they are sums
 	f	Lnet/minecraft/class_1_225;	field_1_534	soundEngine
 	f	Lnet/minecraft/class_1_353;	field_1_535	lavaSprite
 	f	Ljava/lang/String;	field_1_536	hostAddress
 	f	J	field_1_537	lastTickTime
 	f	Z	field_1_538	running
+	f	Z	field_1_539	cloudsEnabled
 	f	I	field_1_540	lastClickTicks
 	f	Lnet/minecraft/class_1_801;	field_1_541	visualsManager
 	f	Lnet/minecraft/class_1_730;	field_1_542	humanoidModel
 	f	Lnet/minecraft/class_1_509;	field_1_543	waterSprite
 	f	I	field_1_544	frameTimeIndex
 	f	Lnet/minecraft/class_1_267;	field_1_545	crosshairTarget
-	f	Z	field_1_547	loadCerts
+	f	Z	field_1_547	conf_loadCerts
 	f	Lnet/minecraft/class_1_699;	field_1_548	gui
+	f	[Ljava/lang/String;	field_1_549	MD5Sums
 	f	I	field_1_550	joinPlayerCounter
 	f	Ljava/lang/String;	field_1_552	startupVersionString
+		c	This tell us that {@link MinecraftImplUnknownClass1} contained the name MinecraftImpl
 	f	Lnet/minecraft/class_1_563;	field_1_554	worldRenderer
 	f	Ljava/awt/Component;	field_1_555	component
 	f	Z	field_1_556	conf_ideLaunch
@@ -155,6 +160,7 @@ c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
 	f	I	field_1_581	width
 	f	Ljava/lang/String;	field_1_582	startupServerAddress
 	f	Lnet/minecraft/class_1_440;	field_1_583	progressRenderer
+	f	Z	field_1_584	extendedTextureAtlas
 	f	Lnet/minecraft/class_1_134;	field_1_585	world
 	f	Lnet/minecraft/class_1_482;	field_1_586	mouse
 	f	Lnet/minecraft/class_1_898;	field_1_587	particleManager
@@ -178,18 +184,22 @@ c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
 	m	(Ljava/lang/String;)Ljava/io/File;	method_1_508	getWorkingDirectory
 		p	0		name
 	m	()V	method_1_509	tl2Detector
+	m	()V	method_1_511	banPlayer
 	m	()V	method_1_512	init
 	m	(I)V	method_1_513	handleMouseClick
 		p	1		button
 	m	(IZ)V	method_1_514	handleMouseDown
 		p	1		button
 		p	2		holdingAttack
+	m	()Ljava/lang/String;	method_1_516	getGPUInfo
 	m	()V	method_1_517	stop
 	m	(Lnet/minecraft/class_1_134;Ljava/lang/String;Z)V	method_1_518	
 		p	1	class_1_134	world
 	m	(Ljava/lang/String;)V	method_1_519	prepareWorld
 		p	1		saveName
 	m	()Ljava/lang/String;	method_1_521	getRenderEntityDebugInfo
+	m	(Ljava/lang/String;)V	method_1_522	loadBannedWorld
+		p	1	string	world
 	m	()V	method_1_523	lockMouse
 	m	(Ljava/lang/String;Ljava/lang/String;)V	method_1_524	start
 		p	0		username
@@ -233,6 +243,7 @@ c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
 	m	(Ljava/lang/String;)V	method_1_544	openURL
 		p	0	string	url
 	m	()V	method_1_545	pauseGame
+	m	()V	method_1_546	printFirstlaunchSpecialUsernamesMessages
 	m	()V	method_1_547	forceReload
 	m	(Lnet/minecraft/class_1_134;)V	method_1_548	setWorld
 		p	1		world
@@ -251,9 +262,13 @@ c	net/minecraft/class_1_65	net/minecraft/client/MinecraftApplet
 	f	Ljava/lang/Thread;	field_1_666	thread
 	f	Lnet/minecraft/class_1_58;	field_1_667	minecraft
 	f	Ljava/awt/Canvas;	field_1_668	canvas
+	m	()V	destroy	destroy
+	m	()V	init	init
 	m	()V	method_1_624	stopThread
 	m	()V	method_1_625	clearMemory
 	m	()V	method_1_626	startThread
+	m	()V	start	start
+	m	()V	stop	stop
 c	net/minecraft/class_1_66	net/minecraft/isom/IsomPreviewApplet
 	f	Lnet/minecraft/class_1_439;	field_1_669	canvas
 c	net/minecraft/class_1_67	net/minecraft/class_1_67
@@ -330,6 +345,13 @@ c	net/minecraft/class_1_77	ext/network/packet/Packet210RemoteEntityData
 	f	D	field_1_725	rx
 	f	D	field_1_726	pz
 	f	D	field_1_727	ry
+	m	(IDDDDD)V	<init>	
+		p	1	integer	id
+		p	2	double2	px
+		p	4	double3	py
+		p	6	double4	pz
+		p	8	double5	rx
+		p	10	double6	ry
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -544,7 +566,7 @@ c	net/minecraft/class_1_93	net/minecraft/inventory/slot/InventorySlot
 		p	1		item
 	m	()Lnet/minecraft/class_1_263;	method_1_663	getItem
 	m	()V	method_1_664	onItemRemoved
-c	net/minecraft/class_1_94	net/minecraft/network/packet/AddPlayerPacket
+c	net/minecraft/class_1_94	net/minecraft/network/packet/Packet20AddPlayer
 	f	I	field_1_756	y
 	f	B	field_1_757	pitch
 	f	Ljava/lang/String;	field_1_758	name
@@ -765,7 +787,7 @@ c	net/minecraft/class_1_108	net/minecraft/block/FireBlock
 		p	3		y
 		p	4		z
 c	net/minecraft/class_1_109	ext/util/command/CommandRTexFilter
-c	net/minecraft/class_1_110	net/minecraft/network/packet/EntityMovePacket__PositionAndAngles
+c	net/minecraft/class_1_110	net/minecraft/network/packet/Packet33EntityMovePositionAndAngles
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -845,7 +867,7 @@ c	net/minecraft/class_1_113	ext/newblock/BlockVendingMachine
 		p	1	integer1	id
 		p	3	integer3	metadata
 		p	4		material
-c	net/minecraft/class_1_114	net/minecraft/block/RailBlock__RailNode
+c	net/minecraft/class_1_114	net/minecraft/block/RailNode
 	f	I	field_1_796	y
 	f	I	field_1_797	x
 	f	Lnet/minecraft/class_1_134;	field_1_798	world
@@ -1043,6 +1065,12 @@ c	net/minecraft/class_1_121	net/minecraft/nbt/NbtByteArray
 	m	(Ljava/io/DataInput;)V	method_1_1267	read
 		p	1		input
 c	net/minecraft/class_1_122	ext/util/command/Command
+	c	Wrapper around CommandClass
+	f	Ljava/lang/String;	field_1_825	commandName
+	f	Lnet/minecraft/class_1_437;	field_1_826	commandClass
+	m	(Ljava/lang/String;[Ljava/lang/Class;Lnet/minecraft/class_1_437;)V	<init>	
+		p	1	string	commandName
+		p	3	class_1_437	commandClass
 c	net/minecraft/class_1_123	ext/world/WorldUnknownClass4
 c	net/minecraft/class_1_124	ext/entity/EntityUnknownClass1
 	f	Lnet/minecraft/class_1_349;	field_1_828	modelHead
@@ -1706,7 +1734,7 @@ c	net/minecraft/class_1_139	net/minecraft/entity/vehicle/MinecartEntity
 	m	()D	method_1_1889	getMountHeight
 	m	(Lnet/minecraft/class_1_635;)V	method_1_1893	push
 		p	1		entity
-c	net/minecraft/class_1_140	ext/world/EnumHouseBigUnknownClass1
+c	net/minecraft/class_1_140	ext/world/SyntheticEnumHouseBig
 c	net/minecraft/class_1_141	ext/world/zm/ZMWorld
 	f	Z	field_1_924	timeStop
 	f	[Lnet/minecraft/class_1_263;	field_1_925	startingItems
@@ -1733,8 +1761,8 @@ c	net/minecraft/class_1_142	net/minecraft/item/FoodItem
 		p	1		stack
 		p	2		world
 		p	3		player
-c	net/minecraft/class_1_143	ext/util/HandlerPlayDemoUnknownClass3
-c	net/minecraft/class_1_144	net/minecraft/isom/IsomPreviewCanvas__35616119
+c	net/minecraft/class_1_143	ext/util/HandlerDemoPlayerUnknownClass3
+c	net/minecraft/class_1_144	net/minecraft/isom/ThreadIsomPreviewCanvasUnknownClass1
 c	net/minecraft/class_1_145	net/minecraft/client/render/block/entity/BlockEntityRenderer
 	f	Lnet/minecraft/class_1_849;	field_1_937	dispatcher
 	m	()Lnet/minecraft/class_1_501;	method_1_884	getTextRenderer
@@ -1858,7 +1886,7 @@ c	net/minecraft/class_1_152	net/minecraft/client/options/GameOptions
 	f	Lnet/minecraft/class_1_296;	field_1_962	sneakKey
 	f	Lnet/minecraft/class_1_296;	field_1_963	leftKey
 	f	Z	field_1_964	shadersBloom
-	f	Ljava/lang/String;	field_1_965	skin
+	f	Ljava/lang/String;	field_1_965	texturePackName
 	f	F	field_1_966	musicVolume
 	f	Z	field_1_967	perspective
 	f	Ljava/io/File;	field_1_968	file
@@ -1922,10 +1950,22 @@ c	net/minecraft/class_1_154	ext/world/QueuedChange
 		p	2		y
 		p	3		z
 		p	4		id
-c	net/minecraft/class_1_155	net/minecraft/client/render/texture/HttpTexture__34366662
+c	net/minecraft/class_1_155	net/minecraft/client/render/texture/ThreadHttpTexture
+	f	Lnet/minecraft/class_1_163;	field_1_983	imageProcessor
+	f	Ljava/lang/String;	field_1_984	url
+	f	Lnet/minecraft/class_1_809;	field_1_985	texture
+	m	(Lnet/minecraft/class_1_809;Ljava/lang/String;Lnet/minecraft/class_1_163;)V	<init>	
+		p	1	class_1_809	texture
+		p	2	string	url
+		p	3	class_1_163	imageProcessor
+	m	()V	run	run
 c	net/minecraft/class_1_156	ext/util/MinecraftException1
 c	net/minecraft/class_1_157	ext/util/command/CommandPass
-c	net/minecraft/class_1_158	net/minecraft/client/MinecraftApplet__71402804
+c	net/minecraft/class_1_158	net/minecraft/client/MinecraftAppletImplUnknownClass1
+	f	Lnet/minecraft/class_1_65;	field_1_987	mcApplet
+	m	(Lnet/minecraft/class_1_65;Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/class_1_65;IIZ)V	<init>	
+		p	1	class_1_651	mcApplet
+		p	4	class_1_654	mcApplet2
 	m	(Lnet/minecraft/class_1_587;)V	method_1_528	handleCrash
 		p	1		report
 c	net/minecraft/class_1_159	ext/util/Ext1605Utils
@@ -1936,7 +1976,7 @@ c	net/minecraft/class_1_159	ext/util/Ext1605Utils
 		p	3	l2	y
 		p	5	l3	z
 		p	7	n	id
-	m	(I)Z	method_1_905	NotFullBlock
+	m	(I)Z	method_1_905	notFullBlock
 		p	0		id
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_290;II)V	method_1_906	
 		p	0		world
@@ -1951,21 +1991,23 @@ c	net/minecraft/class_1_159	ext/util/Ext1605Utils
 	m	(Ljava/io/InputStream;[BII)I	method_1_909	readNBytesJ9
 		p	0		inputStream
 		p	1		byArray
-	m	(FFFF)[F	method_1_910	BlendColor
-	m	(DD)D	method_1_911	AngleDistance
+	m	(FFFF)[F	method_1_910	blendColor
+	m	(DD)D	method_1_911	angleDistance
 	m	(Ljava/lang/String;)Ljava/io/InputStream;	method_1_912	readFile
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_290;II)V	method_1_913	fillBlock
 		p	0		world
 		p	1		xYZv
 		p	2		xYZv2
-	m	(FFFFFFF)[F	method_1_914	BlendColorA
+	m	(FFFFFFF)[F	method_1_914	blendColorA
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_749;I)Z	method_1_915	RTForBlocks
 		p	0		world
 		p	1		xYZv
 		p	2		direction
-	m	()V	method_1_918	printStackTrack
-	m	(Lnet/minecraft/class_1_134;IDDDDDD)Z	method_1_919	RayCastBlock
+	m	()V	method_1_918	printStackTrace
+	m	(Lnet/minecraft/class_1_134;IDDDDDD)Z	method_1_919	rayCastBlock
 		p	0		world
+	m	(Ljava/lang/String;)Ljava/net/URL;	method_1_920	getResourcePathAsURL
+		p	0	string	resourcePath
 c	net/minecraft/class_1_160	ext/util/command/CommandRNoBiome
 c	net/minecraft/class_1_161	ext/phys/CubeListElement
 	f	I	field_1_990	widthZ
@@ -2071,7 +2113,7 @@ c	net/minecraft/class_1_166	ext/entity/EntityPlayerBanned
 		p	1		source
 		p	2		amount
 c	net/minecraft/class_1_167	net/minecraft/client/render/model/entity/SheepModel
-c	net/minecraft/class_1_168	net/minecraft/network/packet/ChatMessagePacket
+c	net/minecraft/class_1_168	net/minecraft/network/packet/Packet3ChatMessage
 	f	Ljava/lang/String;	field_1_1007	message
 	m	(Ljava/lang/String;)V	<init>	
 		p	1		message
@@ -2157,7 +2199,7 @@ c	net/minecraft/class_1_173	net/minecraft/world/gen/feature/VeinFeature
 		p	3		x
 		p	4		y
 		p	5		z
-c	net/minecraft/class_1_174	net/minecraft/network/packet/DisconnectPacket
+c	net/minecraft/class_1_174	net/minecraft/network/packet/Packet255Disconnect
 	f	Ljava/lang/String;	field_1_1018	reason
 	m	(Ljava/lang/String;)V	<init>	
 		p	1		reason
@@ -2237,12 +2279,12 @@ c	net/minecraft/class_1_181	net/minecraft/client/network/handler/ClientNetworkHa
 		p	1		minecraft
 		p	2		address
 		p	3		port
-	m	(Lnet/minecraft/class_1_683;)V	method_1_930	
+	m	(Lnet/minecraft/class_1_683;)V	method_1_930	remoteSystemMessageOverlay
 		p	1	class_1_683	packet
 	m	()V	method_1_931	tick
 	m	(Lnet/minecraft/class_1_716;)V	method_1_932	sendPacket
 		p	1		packet
-	m	(Lnet/minecraft/class_1_662;)V	method_1_933	
+	m	(Lnet/minecraft/class_1_662;)V	method_1_933	remoteSoundPlay
 		p	1	class_1_662	packet
 	m	()V	method_1_934	disconnect
 	m	(Lnet/minecraft/class_1_706;)V	method_1_2034	handleEntityMove
@@ -2581,9 +2623,9 @@ c	net/minecraft/class_1_200	net/minecraft/client/render/platform/Lighting
 c	net/minecraft/class_1_201	ext/crafting/ExtCraftingRecipes
 	m	(Lnet/minecraft/class_1_571;)V	method_1_970	RegisterCrafing
 		p	0		craftingManager
-	m	(I)I	method_1_971	GetFreezingRecipe
+	m	(I)I	method_1_971	getFreezingRecipe
 		p	0		id
-	m	(I)I	method_1_972	GetSmeltingRecipe
+	m	(I)I	method_1_972	getSmeltingRecipe
 		p	0		id
 c	net/minecraft/class_1_202	ext/world/gen/WorldGenHouseBigExterior
 	m	(Ljava/util/Random;)V	<init>	
@@ -2597,6 +2639,10 @@ c	net/minecraft/class_1_203	ext/network/packet/Packet202SecureChatEcho
 	f	Ljava/lang/String;	field_1_1109	signature
 	f	I	field_1_1110	offset
 	f	Z	field_1_1111	verified
+	m	(Ljava/lang/String;IILjava/lang/String;)V	<init>	
+		p	1	string1	message
+		p	3	integer3	offset
+		p	4	string4	signature
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -2676,7 +2722,7 @@ c	net/minecraft/class_1_206	ext/inventory/EssenceClonerInventoryCB
 		p	1		player
 	m	(Lnet/minecraft/class_1_344;)V	method_1_2077	onContentsChanged
 		p	1		inventory
-c	net/minecraft/class_1_207	ext/newblock/EnumVendingMachineUnknownClass2
+c	net/minecraft/class_1_207	ext/newblock/SyntheticEnumVendingMachine2
 c	net/minecraft/class_1_208	net/minecraft/client/entity/mob/player/RemoteClientPlayerEntity
 	f	D	field_1_1120	lerpZ
 	f	D	field_1_1121	lerpYaw
@@ -2929,7 +2975,7 @@ c	net/minecraft/class_1_216	net/minecraft/item/Item
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_820;)V	method_1_1007	attack
 		p	1		stack
 		p	2		target
-c	net/minecraft/class_1_217	ext/modloader/Modloader
+c	net/minecraft/class_1_217	ext/modloader/ModLoader
 	f	I	field_1_1256	itemSpriteIndex
 	f	[Z	field_1_1257	usedTerrainSprites
 	f	Ljava/lang/String;	field_1_1258	version
@@ -2941,22 +2987,22 @@ c	net/minecraft/class_1_217	ext/modloader/Modloader
 	f	Z	field_1_1264	hasInit
 	f	I	field_1_1265	terrainSpriteIndex
 	f	Ljava/util/List;	field_1_1266	modList
-	m	(Lnet/minecraft/class_1_484;Ljava/lang/Object;)Lnet/minecraft/class_1_443;	method_1_1008	OpenModGUI
+	m	(Lnet/minecraft/class_1_484;Ljava/lang/Object;)Lnet/minecraft/class_1_443;	method_1_1008	openModGUI
 		p	0		player
 	m	()V	method_1_1009	AddAllEntityIDs
 	m	(I)I	method_1_1010	AddAllFuel
-	m	(Lnet/minecraft/class_1_602;IILnet/minecraft/class_1_134;)V	method_1_1011	PopulateChunk
+	m	(Lnet/minecraft/class_1_602;IILnet/minecraft/class_1_134;)V	method_1_1011	populateChunk
 		p	0		chunk
 		p	3		world
 	m	(Lnet/minecraft/class_1_277;Ljava/lang/String;)Ljava/awt/image/BufferedImage;	method_1_1012	loadImage
 		p	0		textureManager
 		p	1		texture
-	m	(Lnet/minecraft/class_1_571;)V	method_1_1013	AddAllRecipes
+	m	(Lnet/minecraft/class_1_571;)V	method_1_1013	addAllRecipes
 		p	0		craftingManager
-	m	(I)I	method_1_1014	AddAllSmelting
+	m	(I)I	method_1_1014	addAllSmeltingRecipes
 	m	()I	method_1_1015	getUniqueItemSpriteIndex
-	m	()V	method_1_1017	RegisterAllTileEntities
-	m	(Ljava/util/Map;)V	method_1_1018	AddAllRenderers
+	m	()V	method_1_1017	registerAllTileEntities
+	m	(Ljava/util/Map;)V	method_1_1018	addAllRenderers
 	m	()I	method_1_1019	getUniqueEntityId
 	m	(Ljava/io/File;)V	method_1_1020	readFromClassPath
 		p	0		mod
@@ -2965,17 +3011,17 @@ c	net/minecraft/class_1_217	ext/modloader/Modloader
 	m	(Lnet/minecraft/class_1_111;)V	method_1_1024	addAnimation
 		p	0		anim
 	m	()V	method_1_1025	init
-	m	(Lnet/minecraft/class_1_58;)V	method_1_1026	RunOSDHooks
+	m	(Lnet/minecraft/class_1_58;)V	method_1_1026	runOSDHooks
 		p	0		minecraft
 	m	()I	method_1_1027	getUniqueTerrainSpriteIndex
 	m	(Ljava/lang/String;)I	method_1_1028	getUniqueSpriteIndex
 		p	0		texture
-	m	(Lnet/minecraft/class_1_277;)V	method_1_1029	RegisterAllTextureOverrides
+	m	(Lnet/minecraft/class_1_277;)V	method_1_1029	registerAllTextureOverrides
 		p	0		textureManager
 	m	(Ljava/lang/String;)Z	method_1_1030	isModLoaded
 		p	0		mod
 	m	(Ljava/lang/String;Ljava/lang/String;I)V	method_1_1031	addOverride
-	m	(Ljava/util/List;)V	method_1_1032	RegisterAllBlocks
+	m	(Ljava/util/List;)V	method_1_1032	registerAllBlocks
 		p	0		block
 c	net/minecraft/class_1_218	net/minecraft/crafting/FoodRecipes
 	m	(Lnet/minecraft/class_1_571;)V	method_1_1033	register
@@ -2985,7 +3031,7 @@ c	net/minecraft/class_1_219	net/minecraft/block/material/LiquidMaterial
 	m	()Z	method_1_1073	blocksMovement
 	m	()Z	method_1_1076	isSolid
 c	net/minecraft/class_1_220	ext/network/packet/Packet70PlayGlobalMusic
-	f	Ljava/lang/String;	field_1_1267	audioName
+	f	Ljava/lang/String;	field_1_1267	musicName
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -3036,6 +3082,7 @@ c	net/minecraft/class_1_221	net/minecraft/client/entity/particle/Particle
 c	net/minecraft/class_1_222	ext/util/command/CommandMCSandLevel
 c	net/minecraft/class_1_223	ext/util/command/CommandSummonSpaceMan1
 c	net/minecraft/class_1_224	ext/newitem/ExtNewItem
+	c	Instead of using the vanilla class, Cypress has it's own item declaration class\nspecifically for the items that were added, works the same as the vanilla class
 	f	Lnet/minecraft/class_1_216;	field_1_1283	MUSIC_DISC_DOWNBEAT_UPLINK
 	f	Lnet/minecraft/class_1_216;	field_1_1284	ESSENCE_RIFLE
 	f	Lnet/minecraft/class_1_216;	field_1_1285	OBSIDAIN_LEGGINGS
@@ -3106,11 +3153,13 @@ c	net/minecraft/class_1_224	ext/newitem/ExtNewItem
 	m	()V	method_1_1038	Register
 c	net/minecraft/class_1_225	net/minecraft/client/sound/SoundEngine
 	f	Lnet/minecraft/class_1_152;	field_1_1351	options
+	f	Z	field_1_1352	stopped
 	f	Lnet/minecraft/class_1_359;	field_1_1353	records
 	f	I	field_1_1355	nextSoundEventIndex
 	f	Lnet/minecraft/class_1_359;	field_1_1357	music
 	f	Lnet/minecraft/class_1_359;	field_1_1358	sounds
 	f	Lnet/minecraft/class_1_50;	field_1_1359	system
+	f	Lpaulscode/sound/SoundSystem;	field_1_1359	soundSystem
 	f	I	field_1_1360	musicCooldown
 	f	Ljava/util/Random;	field_1_1364	random
 	f	Z	field_1_1365	started
@@ -3396,6 +3445,7 @@ c	net/minecraft/class_1_241	net/minecraft/client/render/FrustumData
 		p	9		maxY
 		p	11		maxZ
 c	net/minecraft/class_1_242	ext/world/freerun/FreerunMap4
+	c	Each Freerun map has it's own class for stuff \nlike checkpoints locations, this is for the fifth world.
 	f	[Lnet/minecraft/class_1_276;	field_1_1386	checkpoints
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
@@ -3580,6 +3630,8 @@ c	net/minecraft/class_1_252	net/minecraft/client/world/MultiplayerWorld
 	f	Lnet/minecraft/class_1_181;	field_1_1439	networkHandler
 	f	Ljava/util/Set;	field_1_1441	pendingEntities
 	f	Ljava/util/LinkedList;	field_1_1442	blockResets
+	m	(Lnet/minecraft/class_1_181;)V	<init>	
+		p	1	class_1_181	networkHandler
 	m	(IIILnet/minecraft/class_1_544;)V	method_1_769	notifyBlockEntityChanged
 		p	1		x
 		p	2		y
@@ -3635,6 +3687,9 @@ c	net/minecraft/class_1_252	net/minecraft/client/world/MultiplayerWorld
 		p	5		metadata
 	m	(I)Lnet/minecraft/class_1_635;	method_1_1100	getEntity
 		p	1		networkId
+	m	(IIZ[F)V	method_1_1102	
+		p	1	integer1	chunkX
+		p	2	integer2	chunkZ
 	m	(IIIIII)V	method_1_1103	clearBlockResets
 		p	1		minX
 		p	2		minY
@@ -3702,6 +3757,7 @@ c	net/minecraft/class_1_255	net/minecraft/client/render/model/ModelPart
 	m	(F)V	method_1_1111	compile
 		p	1		scale
 c	net/minecraft/class_1_256	ext/client/visuals/VisualsClass
+	f	Ljava/lang/String;	field_1_1458	texturePackName
 	f	Lnet/minecraft/class_1_546;	field_1_1461	options
 	m	(Lnet/minecraft/class_1_58;)V	method_1_1112	
 		p	1		minecraft
@@ -3980,7 +4036,7 @@ c	net/minecraft/class_1_270	net/minecraft/client/gui/screen/TitleScreen
 		p	1		mouseX
 		p	2		mouseY
 		p	3		tickDelta
-c	net/minecraft/class_1_271	net/minecraft/network/Connection__99036743
+c	net/minecraft/class_1_271	net/minecraft/network/ThreadConnectionReader
 c	net/minecraft/class_1_272	net/minecraft/client/gui/screen/DisconnectedScreen
 	f	Ljava/lang/String;	field_1_1522	reason
 	f	Ljava/lang/String;	field_1_1523	title
@@ -4116,7 +4172,8 @@ c	net/minecraft/class_1_277	net/minecraft/client/render/texture/TextureManager
 	m	(II)I	method_1_1193	smoothBlend
 		p	1		color1
 		p	2		color2
-	m	(Ljava/lang/String;Lnet/minecraft/class_1_163;)Lnet/minecraft/class_1_796;	method_1_1194	
+	m	(Ljava/lang/String;Lnet/minecraft/class_1_163;)Lnet/minecraft/class_1_796;	method_1_1194	getOnlineSkin
+		p	1	string	skin
 		p	2	class_1_1632	httpImageProcessor
 	m	(Ljava/lang/String;)V	method_1_1195	removeHttpTexture
 		p	1		url
@@ -4217,7 +4274,7 @@ c	net/minecraft/class_1_284	ext/inventory/EssenceInventoryBlockEntity
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1667	writeNbt
 		p	1		nbt
 c	net/minecraft/class_1_285	ext/world/biome/BiomeUnknownClass1
-c	net/minecraft/class_1_286	ext/newblock/EnumVendingMachineUnknownClass1
+c	net/minecraft/class_1_286	ext/newblock/SyntheticEnumVendingMachine1
 c	net/minecraft/class_1_287	net/minecraft/entity/FallingBlockEntity
 	f	I	field_1_1573	fallingTicks
 	f	I	field_1_1574	block
@@ -4256,6 +4313,7 @@ c	net/minecraft/class_1_289	net/minecraft/item/BucketItem
 		p	2		world
 		p	3		player
 c	net/minecraft/class_1_290	ext/phys/XYZv
+	c	Named location but not named
 	f	J	field_1_1577	y
 	f	J	field_1_1578	x
 	f	Lnet/minecraft/class_1_749;	field_1_1579	dir
@@ -4269,11 +4327,11 @@ c	net/minecraft/class_1_290	ext/phys/XYZv
 		p	3	long2	y
 		p	5	long3	z
 		p	7		dir
-	m	(Ljava/io/DataOutputStream;)V	method_1_1214	method_1_1214
+	m	(Ljava/io/DataOutputStream;)V	method_1_1214	
 		p	1		outputStream
 	m	(Lnet/minecraft/class_1_290;)Lnet/minecraft/class_1_290;	method_1_1215	add
 		p	1		xYZv
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/class_1_290;	method_1_1216	method_1_1216
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/class_1_290;	method_1_1216	
 		p	0		inputStream
 	m	(Lnet/minecraft/class_1_290;)Z	method_1_1218	
 		p	1		xYZv
@@ -4401,23 +4459,23 @@ c	net/minecraft/class_1_299	paulscode/sound/codecs/CodecMus
 	m	()Ljava/io/InputStream;	method_1_619	openInputStream
 c	net/minecraft/class_1_300	ext/util/ExtLogger
 	f	Ljava/io/FileWriter;	field_1_1594	fw
-	m	(Ljava/lang/String;)V	method_1_1229	Warn
+	m	(Ljava/lang/String;)V	method_1_1229	warn
 		p	0		warn
-	m	()V	method_1_1230	InitLogger
-	m	(Ljava/lang/String;)V	method_1_1231	Info
+	m	()V	method_1_1230	initLogger
+	m	(Ljava/lang/String;)V	method_1_1231	info
 		p	0		info
-	m	(Ljava/lang/String;)V	method_1_1232	Log
+	m	(Ljava/lang/String;)V	method_1_1232	log
 		p	0		log
 c	net/minecraft/class_1_301	ext/network/RPacket
-	m	(Ljava/io/DataInputStream;)V	method_1_1233	Receive
+	m	(Ljava/io/DataInputStream;)V	method_1_1233	receive
 		p	1		dataInputStream
-	m	()B	method_1_1234	GetPacketID
-	m	()I	method_1_1235	GetResponseSize
-	m	(Ljava/io/DataOutputStream;)V	method_1_1236	Send
+	m	()B	method_1_1234	getPacketID
+	m	()I	method_1_1235	getResponseSize
+	m	(Ljava/io/DataOutputStream;)V	method_1_1236	send
 		p	1		dataOutputStream
-	m	(Ljava/io/DataOutputStream;)V	method_1_1237	Respond
+	m	(Ljava/io/DataOutputStream;)V	method_1_1237	respond
 		p	1		dataOutputStream
-c	net/minecraft/class_1_302	net/minecraft/network/packet/LoadWorldChunkPacket
+c	net/minecraft/class_1_302	net/minecraft/network/packet/Packet50LoadWorldChunk
 	f	I	field_1_1595	chunkX
 	f	Z	field_1_1596	load
 	f	I	field_1_1597	chunkZ
@@ -4514,7 +4572,7 @@ c	net/minecraft/class_1_307	net/minecraft/block/ChestBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_308	ext/util/HandlerPlayDemoUnknownClass2
+c	net/minecraft/class_1_308	ext/util/HandlerDemoPlayerUnknownClass2
 c	net/minecraft/class_1_309	ext/world/freerun/HandlerSetCheckpointUnknownClass1
 	m	(Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_189;	method_1_1241	
 		p	1		player
@@ -4557,7 +4615,7 @@ c	net/minecraft/class_1_310	ext/newblock/BlockGlowingCube
 		p	4		z
 		p	5		random
 	m	()I	method_1_2336	getRenderType
-c	net/minecraft/class_1_311	net/minecraft/network/packet/SpawnPointPacket
+c	net/minecraft/class_1_311	net/minecraft/network/packet/Packet6SpawnPoint
 	f	I	field_1_1623	z
 	f	I	field_1_1625	x
 	f	I	field_1_1626	y
@@ -4593,6 +4651,7 @@ c	net/minecraft/class_1_313	ext/entity/EntitySnowflakeFX
 	m	(F)F	method_1_1839	getBrightness
 		p	1		tickDelta
 c	net/minecraft/class_1_314	ext/client/visuals/VisualsReader
+	f	Ljava/awt/image/BufferedImage;	field_1_1629	packPng
 c	net/minecraft/class_1_315	net/minecraft/util/Int2ObjectHashMap
 	f	F	field_1_1632	loadFactor
 	f	[Lnet/minecraft/class_1_197;	field_1_1633	nodes
@@ -4659,6 +4718,7 @@ c	net/minecraft/class_1_319	net/minecraft/nbt/NbtElement
 	m	(Ljava/io/DataInput;)V	method_1_1267	read
 		p	1		input
 c	net/minecraft/class_1_320	ext/world/zm/ZMWorld2
+	c	Each Zombie Mode world has it's own class for stuff \nlike enemy spawn locations, this is for the second world.
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
 		p	2		saveName
@@ -4724,8 +4784,13 @@ c	net/minecraft/class_1_323	net/minecraft/client/render/world/DistanceChunkSorte
 	m	(Lnet/minecraft/class_1_635;)V	<init>	
 		p	1		camera
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
+		p	1	class_1_3951	chunk1
+		p	2	class_1_3952	chunk2
 	m	(Lnet/minecraft/class_1_395;Lnet/minecraft/class_1_395;)I	compare	compare
 	m	(Lnet/minecraft/class_1_395;Lnet/minecraft/class_1_395;)I	method_1_1269	compare
+	m	(Lnet/minecraft/class_1_395;Lnet/minecraft/class_1_395;)I	method_1_1270	compareImpl
+		p	1	class_1_3951	chunk1
+		p	2	class_1_3952	chunk2
 c	net/minecraft/class_1_324	net/minecraft/client/gui/screen/inventory/menu/CraftingResultSlot
 	f	Lnet/minecraft/class_1_344;	field_1_1652	craftingInventory
 	m	(Lnet/minecraft/class_1_709;Lnet/minecraft/class_1_344;Lnet/minecraft/class_1_344;III)V	<init>	
@@ -4738,7 +4803,7 @@ c	net/minecraft/class_1_324	net/minecraft/client/gui/screen/inventory/menu/Craft
 	m	(Lnet/minecraft/class_1_263;)Z	method_1_660	isItemAllowed
 		p	1		item
 	m	()V	method_1_664	onItemRemoved
-c	net/minecraft/class_1_325	net/minecraft/client/world/MultiplayerWorld__BlockReset
+c	net/minecraft/class_1_325	net/minecraft/client/world/MultiplayerWorldBlockResets
 	f	I	field_1_1653	z
 	f	Lnet/minecraft/class_1_252;	field_1_1654	world
 	f	I	field_1_1655	delay
@@ -4906,12 +4971,12 @@ c	net/minecraft/class_1_332	net/minecraft/entity/mob/animal/CowEntity
 c	net/minecraft/class_1_333	ext/client/InputHandler
 	f	F	field_1_1670	lastRotX
 	f	D	field_1_1671	lastY
-	f	Z	field_1_1673	LastL1Press
-	f	Z	field_1_1674	LastL2Press
+	f	Z	field_1_1673	lastL1Press
+	f	Z	field_1_1674	lastL2Press
 	f	D	field_1_1675	lastX
-	f	Z	field_1_1676	LastR1Press
-	f	Z	field_1_1677	LastAPress
-	f	I	field_1_1678	EventDY
+	f	Z	field_1_1676	lastR1Press
+	f	Z	field_1_1677	lastAPress
+	f	I	field_1_1678	eventDY
 	f	Lnet/minecraft/class_1_643;	field_1_1679	console
 	f	[Lorg/lwjgl/input/Controller;	field_1_1680	gamepads
 	f	D	field_1_1681	lastZ
@@ -4919,50 +4984,55 @@ c	net/minecraft/class_1_333	ext/client/InputHandler
 	f	Z	field_1_1683	pushedGamepadEvent
 	f	I	field_1_1684	KBEventKey
 	f	Lnet/minecraft/class_1_191;	field_1_1685	hubGenerator
-	f	Z	field_1_1686	LastR2Press
+	f	Z	field_1_1686	lastR2Press
 	f	Z	field_1_1687	KBEventKeyState
-	f	I	field_1_1690	EventDWheel
+	f	I	field_1_1690	eventDWheel
 	f	Lnet/minecraft/class_1_58;	field_1_1694	minecraft
-	f	I	field_1_1696	EventButton
-	f	I	field_1_1698	EventX
-	f	I	field_1_1699	EventDX
+	f	I	field_1_1696	eventButton
+	f	Z	field_1_1697	clickedConsoleKey
+	f	I	field_1_1698	eventX
+	f	I	field_1_1699	eventDX
 	f	Z	field_1_1700	axis4isMinusOne
-	f	I	field_1_1701	EventY
-	f	Z	field_1_1702	LastStartPress
-	f	Z	field_1_1703	EventButtonState
+	f	I	field_1_1701	eventY
+	f	Z	field_1_1702	lastStartPress
+	f	Z	field_1_1703	eventButtonState
 	f	F	field_1_1704	lastRotZ
 	f	Lorg/lwjgl/input/Controller;	field_1_1705	activeGamepad
 	f	F	field_1_1706	lastPovX
-	m	()I	method_1_1276	GetEventButton
-	m	()V	method_1_1277	InputL2
-	m	()V	method_1_1278	InputL1
-	m	(F)V	method_1_1280	InputPOV
-	m	()V	method_1_1281	InputR2
-	m	(I)Z	method_1_1282	InputMouseAction
+	m	()I	method_1_1276	getEventButton
+	m	()V	method_1_1277	inputL2
+	m	()V	method_1_1278	inputL1
+	m	(F)V	method_1_1280	inputPOV
+		p	0	float1	pov
+	m	()V	method_1_1281	inputR2
+	m	(I)Z	method_1_1282	inputMouseAction
 	m	()V	method_1_1284	KBEventInject
-	m	()Z	method_1_1285	GetKBEventKeyState
-	m	()V	method_1_1286	InputR1
-	m	()I	method_1_1287	GetEventX
-	m	(I)Z	method_1_1288	IsKeyDown
-	m	(Lnet/minecraft/class_1_58;)V	method_1_1289	Initialize
+	m	()Z	method_1_1285	getKBEventKeyState
+	m	()V	method_1_1286	inputR1
+	m	()I	method_1_1287	getEventX
+	m	(I)Z	method_1_1288	isKeyDown
+	m	(Lnet/minecraft/class_1_58;)V	method_1_1289	initialize
 		p	0		minecraft
-	m	()V	method_1_1290	UpdateAxis3
-	m	()I	method_1_1291	GetDWheel
-	m	()I	method_1_1292	GetEventY
-	m	()I	method_1_1293	GetEventDY
-	m	()Z	method_1_1294	GetEventButtonState
-	m	()I	method_1_1296	GetEventDX
-	m	()I	method_1_1297	GetKBEventKey
-	m	()V	method_1_1298	InputDebug
-	m	()V	method_1_1299	InputLongJump
-	m	(DD)D	method_1_1300	AngleFromXY
-	m	()V	method_1_1302	InputA
-	m	()V	method_1_1303	InputDash
-	m	()V	method_1_1304	InputOpenMinimap
-	m	()V	method_1_1305	CaptureGamepad
-	m	()Z	method_1_1306	NextKBEvent
-	m	()V	method_1_1307	InputStart
-	m	()Z	method_1_1309	NextEvent
+	m	()V	method_1_1290	updateAxis3
+	m	()I	method_1_1291	getDWheel
+	m	()I	method_1_1292	getEventY
+	m	()I	method_1_1293	getEventDY
+	m	()Z	method_1_1294	getEventButtonState
+	m	()I	method_1_1296	getEventDX
+	m	()I	method_1_1297	getKBEventKey
+	m	()V	method_1_1298	inputDebug
+	m	()V	method_1_1299	inputLongJump
+	m	(DD)D	method_1_1300	angleFromXY
+	m	()V	method_1_1302	inputA
+	m	()V	method_1_1303	inputDash
+	m	()V	method_1_1304	inputOpenMinimap
+	m	()V	method_1_1305	captureGamepad
+	m	()Z	method_1_1306	nextKBEvent
+	m	()V	method_1_1307	inputStart
+	m	(II)V	method_1_1308	createConsole
+		p	0	integer1	windowWidth
+		p	1	integer2	windowHeight
+	m	()Z	method_1_1309	nextEvent
 c	net/minecraft/class_1_334	ext/client/renderer/LayerDefinition
 	f	Lnet/minecraft/class_1_507;	field_1_1707	mesh
 	m	(Lnet/minecraft/class_1_507;II)Lnet/minecraft/class_1_334;	method_1_1310	create
@@ -5279,7 +5349,7 @@ c	net/minecraft/class_1_359	net/minecraft/client/sound/Sounds
 	m	(Ljava/lang/String;Ljava/io/File;)Lnet/minecraft/class_1_667;	method_1_1345	load
 		p	1		path
 		p	2		file
-c	net/minecraft/class_1_360	net/minecraft/client/Minecraft__35989700
+c	net/minecraft/class_1_360	net/minecraft/client/ThreadWindowListener
 	f	Ljava/lang/Thread;	field_1_1747	thread
 	f	Lnet/minecraft/class_1_58;	field_1_1748	minecraft
 	m	(Lnet/minecraft/class_1_58;Ljava/lang/Thread;)V	<init>	
@@ -5467,7 +5537,7 @@ c	net/minecraft/class_1_370	net/minecraft/client/gui/screen/inventory/menu/Survi
 	m	()V	method_1_2101	renderLabels
 	m	(F)V	method_1_2102	renderMenuBackground
 		p	1		tickDelta
-c	net/minecraft/class_1_371	net/minecraft/network/packet/PingHostPacket
+c	net/minecraft/class_1_371	net/minecraft/network/packet/Packet0PingHost
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -5500,11 +5570,12 @@ c	net/minecraft/class_1_373	ext/newblock/BlockMyconCap
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_374	ext/client/entity/EntityPlayerZombieModeClient
+c	net/minecraft/class_1_374	ext/client/entity/player/EntityPlayerZombieModeClient
+	f	Lnet/minecraft/class_1_141;	field_1_1783	zmWorld
 	f	Lnet/minecraft/class_1_451;	field_1_1786	vendingMachine
 	m	(Lnet/minecraft/class_1_58;Lnet/minecraft/class_1_141;Lnet/minecraft/class_1_446;)V	<init>	
 		p	1		minecraft
-		p	2		zMWorld
+		p	2		zmWorld
 	m	()V	method_1_1364	openCraftingMenu
 	m	(Lnet/minecraft/class_1_169;)V	method_1_1365	openSignEditor
 		p	1		sign
@@ -5526,6 +5597,7 @@ c	net/minecraft/class_1_375	ext/newitem/ExtMirrorItem
 		p	2		world
 		p	3		player
 c	net/minecraft/class_1_376	ext/world/zm/ZMWorld1
+	c	Each Zombie Mode world has it's own class for stuff \nlike enemy spawn locations, this is for the first world.
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
 		p	2		saveName
@@ -5574,8 +5646,13 @@ c	net/minecraft/class_1_379	net/minecraft/client/render/world/DirtyChunkSorter
 	m	(Lnet/minecraft/class_1_365;)V	<init>	
 		p	1		camera
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
+		p	1	class_1_3951	chunk1
+		p	2	class_1_3952	chunk2
 	m	(Lnet/minecraft/class_1_395;Lnet/minecraft/class_1_395;)I	compare	compare
 	m	(Lnet/minecraft/class_1_395;Lnet/minecraft/class_1_395;)I	method_1_1382	compare
+	m	(Lnet/minecraft/class_1_395;Lnet/minecraft/class_1_395;)I	method_1_1383	compareImpl
+		p	1	class_1_3951	chunk1
+		p	2	class_1_3952	chunk2
 c	net/minecraft/class_1_380	ext/network/EncOutputStream
 	f	Z	field_1_1803	closed
 	f	I	field_1_1804	linepos
@@ -5647,7 +5724,7 @@ c	net/minecraft/class_1_382	net/minecraft/client/render/entity/EntityRenderer
 	m	()Lnet/minecraft/class_1_501;	method_1_1395	getTextRenderer
 	m	(Lnet/minecraft/class_1_195;)V	method_1_1396	init
 		p	1		dispatcher
-c	net/minecraft/class_1_383	net/minecraft/network/packet/PlayerMovePacket__PositionAndAngles
+c	net/minecraft/class_1_383	net/minecraft/network/packet/Packet13PlayerMovePositionAndAngles
 	m	(DDDDFFZ)V	<init>	
 		p	1		x
 		p	3		minY
@@ -5936,7 +6013,7 @@ c	net/minecraft/class_1_398	net/minecraft/client/render/entity/CowRenderer
 		p	9		tickDelta
 	m	(Lnet/minecraft/class_1_332;DDDFF)V	method_1_1421	render
 	m	(Lnet/minecraft/class_1_820;DDDFF)V	method_1_2152	render
-c	net/minecraft/class_1_399	net/minecraft/network/packet/PlayerMovePacket__Angles
+c	net/minecraft/class_1_399	net/minecraft/network/packet/Packet12PlayerMoveAngles
 	m	(FFZ)V	<init>	
 		p	1		yaw
 		p	2		pitch
@@ -5952,7 +6029,7 @@ c	net/minecraft/class_1_400	ext/client/gui/screen/GuiPlayer
 		p	1		tickDelta
 c	net/minecraft/class_1_401	ext/util/command/CommandPlaceOnMe
 c	net/minecraft/class_1_402	ext/util/command/CommandWorldEditAccept
-c	net/minecraft/class_1_403	ext/newblock/EnumVendingMachineUnknownClass3
+c	net/minecraft/class_1_403	ext/newblock/SyntheticEnumVendingMachine3
 c	net/minecraft/class_1_404	ext/client/gui/screen/GuiFrail
 	m	(CI)V	method_1_1474	keyPressed
 		p	1		chr
@@ -6141,7 +6218,7 @@ c	net/minecraft/class_1_415	ext/world/zm/WorldZMSpawnComparator
 	m	(Lnet/minecraft/class_1_863;Lnet/minecraft/class_1_863;)I	compare	compare
 	m	(Lnet/minecraft/class_1_863;Lnet/minecraft/class_1_863;)I	method_1_1428	compare
 c	net/minecraft/class_1_416	ext/util/ResourceLocation
-c	net/minecraft/class_1_417	ext/world/biome/BiomeUnknown2
+c	net/minecraft/class_1_417	ext/world/biome/BiomeUnknownClass2
 c	net/minecraft/class_1_418	ext/world/gen/WorldGenHouseBig
 	f	Lnet/minecraft/class_1_235;	field_1_1895	noiseMap1
 	f	Lnet/minecraft/class_1_235;	field_1_1896	noiseMap2
@@ -6341,7 +6418,7 @@ c	net/minecraft/class_1_423	ext/newblock/BlockPillar
 		p	4		z
 		p	5		shape
 		p	6		collisions
-c	net/minecraft/class_1_424	net/minecraft/network/Connection__62556030
+c	net/minecraft/class_1_424	net/minecraft/network/ThreadConnectionWriter
 c	net/minecraft/class_1_425	ext/newblock/BlockGlowingFlower
 	m	()Z	method_1_2282	isSolid
 	m	(Lnet/minecraft/class_1_134;III)Z	method_1_2290	canBePlaced
@@ -6460,7 +6537,7 @@ c	net/minecraft/class_1_434	net/minecraft/client/render/block/entity/MobSpawnerR
 		p	8		tickDelta
 	m	(Lnet/minecraft/class_1_652;DDDF)V	method_1_1452	render
 		p	1		x
-c	net/minecraft/class_1_435	net/minecraft/client/Minecraft__32171470
+c	net/minecraft/class_1_435	net/minecraft/client/ThreadTimerHack
 	f	Lnet/minecraft/class_1_58;	field_1_1941	minecraft
 	m	(Lnet/minecraft/class_1_58;Ljava/lang/String;)V	<init>	
 		p	1	class_1_58	minecraft
@@ -6498,8 +6575,14 @@ c	net/minecraft/class_1_436	net/minecraft/block/WheatBlock
 	m	(I)Z	method_1_2490	canBePlacedOn
 		p	1		block
 c	net/minecraft/class_1_437	ext/util/CommandClass
-	m	([Ljava/lang/Object;)V	method_1_1456	
+	m	()Ljava/lang/String;	method_1_1454	
+		c	Seems to be unused
+	m	()Ljava/lang/String;	method_1_1455	commandType
+		c	Type of the command, example ~exec = executable command
+	m	([Ljava/lang/Object;)V	method_1_1456	onCommandRun
 		p	1	objectArray	objectArray
+	m	()Z	method_1_1457	isShown
+		c	If the command is shown in the console
 c	net/minecraft/class_1_438	ext/util/command/CommandTitle
 c	net/minecraft/class_1_439	net/minecraft/isom/IsomPreviewCanvas
 	f	I	field_1_1943	mouseX
@@ -6653,10 +6736,10 @@ c	net/minecraft/class_1_443	net/minecraft/client/gui/screen/Screen
 		p	2		mouseY
 		p	3		tickDelta
 c	net/minecraft/class_1_444	ext/modloader/BaseMod
-	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;II)V	method_1_1491	GenerateSurface
+	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;II)V	method_1_1491	generateSurface
 		p	1		world
 		p	2		random
-	m	(Lnet/minecraft/class_1_58;)V	method_1_1492	RegisterAnimation
+	m	(Lnet/minecraft/class_1_58;)V	method_1_1492	registerAnimation
 		p	1		minecraft
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;II)V	method_1_1493	
 		p	1		world
@@ -6664,22 +6747,22 @@ c	net/minecraft/class_1_444	ext/modloader/BaseMod
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;II)V	method_1_1494	
 		p	1		world
 		p	2		random
-	m	()V	method_1_1495	AddEntityID
-	m	()Ljava/lang/String;	method_1_1496	Version
-	m	(Lnet/minecraft/class_1_571;)V	method_1_1497	AddRecipes
+	m	()V	method_1_1495	addEntityID
+	m	()Ljava/lang/String;	method_1_1496	version
+	m	(Lnet/minecraft/class_1_571;)V	method_1_1497	addRecipes
 		p	1	class_1_5712	craftingManager
-	m	(I)I	method_1_1499	AddFuel
-	m	(Ljava/util/List;)V	method_1_1500	RegisterBlocks
-	m	(Ljava/util/Map;)V	method_1_1501	AddRenderer
+	m	(I)I	method_1_1499	addFuel
+	m	(Ljava/util/List;)V	method_1_1500	registerBlocks
+	m	(Ljava/util/Map;)V	method_1_1501	addRenderer
 		p	1		map
-	m	()V	method_1_1502	RegisterTileEntity
-	m	(Lnet/minecraft/class_1_484;Ljava/lang/Object;)Lnet/minecraft/class_1_443;	method_1_1503	OpenModGUI
+	m	()V	method_1_1502	registerTileEntity
+	m	(Lnet/minecraft/class_1_484;Ljava/lang/Object;)Lnet/minecraft/class_1_443;	method_1_1503	openModGUI
 		p	1		player
-	m	(I)I	method_1_1505	AddSmelting
+	m	(I)I	method_1_1505	addSmelting
 	m	(Lnet/minecraft/class_1_58;)V	method_1_1506	OSDHook
 		p	1		minecraft
-	m	()V	method_1_1507	RegisterTextureOverrides
-c	net/minecraft/class_1_445	net/minecraft/network/packet/AddItemPacket
+	m	()V	method_1_1507	registerTextureOverrides
+c	net/minecraft/class_1_445	net/minecraft/network/packet/Packet21AddItem
 	f	I	field_1_1967	z
 	f	B	field_1_1968	velocityY
 	f	B	field_1_1969	velocityX
@@ -6722,7 +6805,7 @@ c	net/minecraft/class_1_447	net/minecraft/client/render/model/entity/BoatModel
 		p	4		yaw
 		p	5		pitch
 		p	6		scale
-c	net/minecraft/class_1_448	net/minecraft/network/packet/PlayerMovePacket
+c	net/minecraft/class_1_448	net/minecraft/network/packet/Packet10PlayerMove
 	f	F	field_1_1981	pitch
 	f	Z	field_1_1982	hasAngles
 	f	D	field_1_1983	z
@@ -6761,6 +6844,8 @@ c	net/minecraft/class_1_451	ext/inventory/InventoryVendingMachine
 		p	1		amount
 	m	(Lnet/minecraft/class_1_421;)Z	method_1_1511	
 		p	1	class_1_421	vendingMachineEnum
+	m	(J)Z	method_1_1514	givePoints
+		p	1	long1	points
 c	net/minecraft/class_1_452	ext/block/ExtLeavesTypeBlock
 	m	(IILnet/minecraft/class_1_243;Z)V	<init>	
 		p	1		id
@@ -6825,6 +6910,7 @@ c	net/minecraft/class_1_458	ext/world/gen/WorldGenHouseBigUnknownClass1
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 c	net/minecraft/class_1_459	ext/newblock/ExtNewBlock
+	c	Instead of using the vanilla class, Cypress has it's own block declaration class\nspecifically for the blocks that were added, works the same as the vanilla class
 	f	Lnet/minecraft/class_1_803;	field_1_2001	SOLAR_PLATE
 	f	Lnet/minecraft/class_1_803;	field_1_2002	SYLLABLES_PLATE
 	f	Lnet/minecraft/class_1_803;	field_1_2003	SLATE_PILLAR
@@ -6867,7 +6953,7 @@ c	net/minecraft/class_1_459	ext/newblock/ExtNewBlock
 	f	Lnet/minecraft/class_1_803;	field_1_2040	TILE
 	f	Lnet/minecraft/class_1_803;	field_1_2041	GRASS
 	f	Lnet/minecraft/class_1_803;	field_1_2042	SAFE
-	f	Lnet/minecraft/class_1_803;	field_1_2043	unusedBlock1
+	f	Lnet/minecraft/class_1_803;	field_1_2043	UNUSED_BLOCK_1
 	f	Lnet/minecraft/class_1_803;	field_1_2044	ESSENCE_CLONER
 	f	Lnet/minecraft/class_1_803;	field_1_2045	DEBUG_BLOCK_2
 	f	Lnet/minecraft/class_1_803;	field_1_2046	OBSIDAIN_BRICK
@@ -6903,7 +6989,7 @@ c	net/minecraft/class_1_459	ext/newblock/ExtNewBlock
 	f	Lnet/minecraft/class_1_803;	field_1_2076	EMPTY_BOOKSHELF
 	f	Lnet/minecraft/class_1_803;	field_1_2077	FORTIFIED_BLACK_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2078	MYCON_PLANK
-	f	Lnet/minecraft/class_1_803;	field_1_2079	unusedBlock2
+	f	Lnet/minecraft/class_1_803;	field_1_2079	UNUSED_BLOCK_2
 	f	Lnet/minecraft/class_1_803;	field_1_2080	DENIAL_PLATE
 	f	Lnet/minecraft/class_1_803;	field_1_2081	FORTIFIED_BLUE_GLASS
 	f	Lnet/minecraft/class_1_803;	field_1_2082	FAKE_GRASS
@@ -7283,7 +7369,7 @@ c	net/minecraft/class_1_484	net/minecraft/client/entity/mob/player/ClientPlayerE
 		p	1		nbt
 	m	()V	method_1_2364	mobTick
 	m	()V	method_1_2380	aiTick
-c	net/minecraft/class_1_485	ext/world/biome/BiomeUnknown3
+c	net/minecraft/class_1_485	ext/world/biome/BiomeUnknownClass3
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 c	net/minecraft/class_1_486	ext/world/gen/hub/HubFragment4WayCross
@@ -7310,7 +7396,7 @@ c	net/minecraft/class_1_487	net/minecraft/client/gui/screen/ChatScreen
 		p	1		mouseX
 		p	2		mouseY
 		p	3		tickDelta
-c	net/minecraft/class_1_488	net/minecraft/network/packet/PlayerHeldItemPacket
+c	net/minecraft/class_1_488	net/minecraft/network/packet/Packet16PlayerHeldItem
 	f	I	field_1_2222	id
 	f	I	field_1_2223	item
 	m	(II)V	<init>	
@@ -7323,7 +7409,7 @@ c	net/minecraft/class_1_488	net/minecraft/network/packet/PlayerHeldItemPacket
 	m	()I	method_1_2113	getSize
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
-c	net/minecraft/class_1_489	net/minecraft/isom/IsomPreviewCanvas__34055559
+c	net/minecraft/class_1_489	net/minecraft/isom/SyntheticEnumIsomPreviewCanvasOS
 c	net/minecraft/class_1_490	ext/world/gen/WorldGenUnknown1
 	f	I	field_1_2225	id
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
@@ -7337,7 +7423,7 @@ c	net/minecraft/class_1_491	ext/world/gen/EnumWorldGenerator
 	f	Lnet/minecraft/class_1_491;	field_1_2228	UNDERGROUND
 	f	Lnet/minecraft/class_1_491;	field_1_2229	SURFACE
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_491;	method_1_1556	valueOf
-c	net/minecraft/class_1_492	ext/network/packet/Packet211
+c	net/minecraft/class_1_492	ext/network/packet/Packet211FillBlock
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -7382,6 +7468,7 @@ c	net/minecraft/class_1_499	ext/block/ExtObsidanBlock
 		p	1		metadata
 		p	2		random
 c	net/minecraft/class_1_500	ext/world/freerun/FreerunMap2
+	c	Each Freerun map has it's own class for stuff \nlike checkpoints locations, this is for the third world.
 	f	[Lnet/minecraft/class_1_276;	field_1_2250	checkpoints
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
@@ -7481,6 +7568,7 @@ c	net/minecraft/class_1_505	ext/world/IHouseBig
 		p	1		world
 c	net/minecraft/class_1_506	ext/network/hub/HubServerDetector
 	f	Ljava/net/InetAddress;	field_1_2259	hubServerAddr
+		c	Did you know that the hub server in the videos was hosted at 244.0.2.60?
 	m	()V	run	run
 c	net/minecraft/class_1_507	ext/client/renderer/MeshDefinition
 	f	Lnet/minecraft/class_1_524;	field_1_2262	rootElem
@@ -7647,25 +7735,25 @@ c	net/minecraft/class_1_516	ext/util/ExtEvents
 	f	Ljava/util/Random;	field_1_2278	random
 	f	Ljava/lang/String;	field_1_2279	bossName
 	f	Z	field_1_2280	bossfightInProgress
-	m	(Lnet/minecraft/class_1_127;)V	method_1_1585	GiantBossKilled
+	m	(Lnet/minecraft/class_1_127;)V	method_1_1585	giantBossKilled
 		p	0	class_1_127	giantBoss
-	m	(Lnet/minecraft/class_1_134;)V	method_1_1586	method_1_1586
+	m	(Lnet/minecraft/class_1_134;)V	method_1_1586	
 		p	0	class_1_134	world
-	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1587	method_1_1587
+	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1587	spawnRecruiterOnTopOfPlayer
 		p	0	class_1_365	player
 		p	1	class_1_134	world
-	m	(DDDLnet/minecraft/class_1_134;)Lnet/minecraft/class_1_127;	method_1_1588	method_1_1588
+	m	(DDDLnet/minecraft/class_1_134;)Lnet/minecraft/class_1_127;	method_1_1588	
 		p	6	class_1_134	world
-	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1589	method_1_1589
+	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1589	
 		p	0	class_1_365	player
 		p	1	class_1_134	world
-	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1590	method_1_1590
+	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1590	spawnRecruiterNearPlayer
 		p	0	class_1_365	player
 		p	1	class_1_134	world
 	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1591	
 		p	0		player
 		p	1		world
-	m	(IILnet/minecraft/class_1_134;)V	method_1_1592	method_1_1592
+	m	(IILnet/minecraft/class_1_134;)V	method_1_1592	
 		p	2	class_1_134	world
 c	net/minecraft/class_1_517	net/minecraft/block/LiquidSourceBlock
 	m	(ILnet/minecraft/class_1_243;)V	<init>	
@@ -7921,7 +8009,7 @@ c	net/minecraft/class_1_526	net/minecraft/block/entity/FurnaceBlockEntity
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1667	writeNbt
 		p	1		nbt
 c	net/minecraft/class_1_527	ext/util/command/CommandNoClip
-c	net/minecraft/class_1_528	ext/client/MinecraftUnknownClass1
+c	net/minecraft/class_1_528	ext/client/MinecraftImplUnknownClass1
 	f	Ljava/awt/Frame;	field_1_2318	frame
 	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/class_1_65;IIZLjava/awt/Frame;)V	<init>	
 		p	2		canvas
@@ -8103,7 +8191,7 @@ c	net/minecraft/class_1_536	net/minecraft/block/SnowLayerBlock
 		p	3		y
 		p	4		z
 		p	5		face
-c	net/minecraft/class_1_537	net/minecraft/isom/IsomPreviewCanvas__37986924
+c	net/minecraft/class_1_537	net/minecraft/isom/IsomPreviewCanvasUnknownClass1
 	m	(Ljava/io/File;)Lnet/minecraft/class_1_602;	method_1_819	createChunkCache
 		p	1		dir
 c	net/minecraft/class_1_538	ext/newblock/BlockEssenceTransformer
@@ -8242,6 +8330,7 @@ c	net/minecraft/class_1_544	net/minecraft/block/entity/BlockEntity
 		p	3		y
 		p	5		z
 c	net/minecraft/class_1_545	ext/world/freerun/FreerunMap1
+	c	Each Freerun map has it's own class for stuff \nlike checkpoints locations, this is for the second world.
 	f	[Lnet/minecraft/class_1_276;	field_1_2362	checkpoints
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
@@ -8250,7 +8339,7 @@ c	net/minecraft/class_1_546	ext/client/visuals/VisualsOptions
 	f	Z	field_1_2363	disableBiomes
 	f	Z	field_1_2364	disableBilinearFiltering
 	f	I	field_1_2365	skyNightColor
-	f	Z	field_1_2366	extTexFx
+	f	Z	field_1_2366	extendedTextureAtlas
 	f	I	field_1_2367	skyDayColor
 	m	(Lnet/minecraft/class_1_58;)V	method_1_1670	setVisualsOptions
 		p	1		minecraft
@@ -8312,7 +8401,11 @@ c	net/minecraft/class_1_548	ext/block/ExtOreBlock
 	m	(ILjava/util/Random;)I	method_1_2337	getDropItem
 		p	1		metadata
 		p	2		random
-c	net/minecraft/class_1_549	ext/util/HandlerPlayDemo
+c	net/minecraft/class_1_549	ext/util/HandlerDemoPlayer
+	m	(Ljava/lang/String;)V	method_1_1673	writeDemoFile
+		p	1	string	demoFile
+	m	(Ljava/lang/String;)Lnet/minecraft/class_1_549;	method_1_1674	readDemoFile
+		p	0	string	demoFile
 c	net/minecraft/class_1_550	ext/newblock/BlockMultiSided
 	f	I	field_1_2373	sprite
 	m	(IIII)V	<init>	
@@ -8333,7 +8426,7 @@ c	net/minecraft/class_1_550	ext/newblock/BlockMultiSided
 	m	(ILjava/util/Random;)I	method_1_2337	getDropItem
 		p	1		metadata
 		p	2		random
-c	net/minecraft/class_1_551	net/minecraft/network/packet/EntityAnimationPacket
+c	net/minecraft/class_1_551	net/minecraft/network/packet/Packet18EntityAnimation
 	f	I	field_1_2375	id
 	f	I	field_1_2376	action
 	m	(Lnet/minecraft/class_1_635;I)V	<init>	
@@ -8688,14 +8781,14 @@ c	net/minecraft/class_1_565	ext/client/gui/overlay/OverlayZMWaves
 		p	1		minecraft
 	m	(Lnet/minecraft/class_1_699;II)V	method_1_1714	RenderOverlay
 		p	1		gameGui
-c	net/minecraft/class_1_566	net/minecraft/isom/IsomPreviewCanvas__OS
+c	net/minecraft/class_1_566	net/minecraft/isom/EnumIsomPreviewCanvasOS
 	f	Lnet/minecraft/class_1_566;	field_1_2452	LINUX
 	f	Lnet/minecraft/class_1_566;	field_1_2454	UNKNOWN
 	f	Lnet/minecraft/class_1_566;	field_1_2455	SOLARIS
 	f	Lnet/minecraft/class_1_566;	field_1_2456	MACOS
 	f	Lnet/minecraft/class_1_566;	field_1_2457	WINDOWS
 	m	()[Lnet/minecraft/class_1_566;	method_1_1718	valueOf
-c	net/minecraft/class_1_567	net/minecraft/network/packet/WorldChunkPacket
+c	net/minecraft/class_1_567	net/minecraft/network/packet/Packet51WorldChunk
 	f	I	field_1_2458	sizeX
 	f	I	field_1_2459	y
 	f	I	field_1_2460	sizeZ
@@ -8796,7 +8889,7 @@ c	net/minecraft/class_1_577	ext/inventory/EssenceTransformerInventoryCB
 	m	(Lnet/minecraft/class_1_344;)V	method_1_2077	onContentsChanged
 		p	1		inventory
 c	net/minecraft/class_1_578	ext/entity/projectile/EntityExplosiveEssenceProjectile
-c	net/minecraft/class_1_579	net/minecraft/client/EnumMinecraftOs
+c	net/minecraft/class_1_579	net/minecraft/client/EnumMinecraftOS
 	f	Lnet/minecraft/class_1_579;	field_1_2480	MACOS
 	f	Lnet/minecraft/class_1_579;	field_1_2482	SOLARIS
 	f	Lnet/minecraft/class_1_579;	field_1_2483	UNKNOWN
@@ -8804,7 +8897,7 @@ c	net/minecraft/class_1_579	net/minecraft/client/EnumMinecraftOs
 	f	Lnet/minecraft/class_1_579;	field_1_2485	WINDOWS
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_579;	method_1_1731	valueOf
 	m	()[Lnet/minecraft/class_1_579;	method_1_1732	values
-c	net/minecraft/class_1_580	net/minecraft/network/packet/PlayerUsePacket
+c	net/minecraft/class_1_580	net/minecraft/network/packet/Packet15PlayerUse
 	f	I	field_1_2486	x
 	f	I	field_1_2487	item
 	f	I	field_1_2488	face
@@ -8894,7 +8987,7 @@ c	net/minecraft/class_1_582	ext/block/ExtFireBlockOld
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_583	net/minecraft/client/world/chunk/MultiplayerChunkCache__ChunkPos
+c	net/minecraft/class_1_583	net/minecraft/client/world/chunk/MultiplayerChunkCacheChunkPos
 	f	I	field_1_2494	x
 	f	I	field_1_2495	z
 	m	(II)V	<init>	
@@ -9428,7 +9521,7 @@ c	net/minecraft/class_1_612	net/minecraft/client/render/entity/CreeperRenderer
 	m	(Lnet/minecraft/class_1_820;F)V	method_1_2146	applyScale
 		p	1		entity
 		p	2		scale
-c	net/minecraft/class_1_613	ext/network/EntityOtherPlayerMPUnknownClass1
+c	net/minecraft/class_1_613	ext/network/EntityDemoPlayerUnknownClass1
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_549;)V	<init>	
 		p	1		world
 	m	(Lnet/minecraft/class_1_635;I)Z	method_1_1851	takeDamage
@@ -9437,7 +9530,7 @@ c	net/minecraft/class_1_613	ext/network/EntityOtherPlayerMPUnknownClass1
 	m	(Lnet/minecraft/class_1_635;)V	method_1_1893	push
 		p	1		entity
 	m	()V	method_1_2364	mobTick
-c	net/minecraft/class_1_614	net/minecraft/network/packet/BlockEntityUpdatePacket
+c	net/minecraft/class_1_614	net/minecraft/network/packet/Packet59BlockEntityUpdate
 	f	[B	field_1_2707	data
 	f	I	field_1_2708	y
 	f	I	field_1_2709	z
@@ -9464,7 +9557,7 @@ c	net/minecraft/class_1_615	net/minecraft/nbt/NbtDouble
 		p	1		output
 	m	(Ljava/io/DataInput;)V	method_1_1267	read
 		p	1		input
-c	net/minecraft/class_1_616	net/minecraft/client/Minecraft__47397631
+c	net/minecraft/class_1_616	net/minecraft/client/SyntheticEnumMinecraftOs
 c	net/minecraft/class_1_617	ext/network/Base64
 	m	()Lnet/minecraft/class_1_210;	method_1_1814	getEncoder
 	m	()Lnet/minecraft/class_1_210;	method_1_1815	getMimeEncoder
@@ -9527,7 +9620,7 @@ c	net/minecraft/class_1_622	ext/client/controller/DS5Connection
 		p	1		packet
 	m	()V	method_1_1833	Disconnect
 	m	()Z	method_1_1834	Connect
-c	net/minecraft/class_1_623	net/minecraft/network/packet/HandshakePacket
+c	net/minecraft/class_1_623	net/minecraft/network/packet/Packet2Handshake
 	f	Ljava/lang/String;	field_1_2723	key
 	m	(Ljava/lang/String;)V	<init>	
 		p	1		key
@@ -9543,7 +9636,7 @@ c	net/minecraft/class_1_624	ext/newblock/BlockWeaponGiver
 		p	1	integer1	id
 		p	3	integer3	metadata
 		p	4	class_1_243	material
-c	net/minecraft/class_1_625	net/minecraft/network/packet/BlockUpdatePacket
+c	net/minecraft/class_1_625	net/minecraft/network/packet/Packet53BlockUpdate
 	f	I	field_1_2724	x
 	f	I	field_1_2725	block
 	f	I	field_1_2726	metadata
@@ -9592,7 +9685,7 @@ c	net/minecraft/class_1_626	ext/newblock/BlockLadder
 		p	4		z
 		p	5		face
 	m	()I	method_1_2336	getRenderType
-c	net/minecraft/class_1_627	net/minecraft/network/packet/EntityMovePacket__Position
+c	net/minecraft/class_1_627	net/minecraft/network/packet/Packet31EntityMovePosition
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -9619,7 +9712,7 @@ c	net/minecraft/class_1_630	net/minecraft/block/MineralBlock
 	m	(I)I	method_1_1917	getSprite
 		p	1		face
 c	net/minecraft/class_1_631	ext/util/command/CommandRReModel
-c	net/minecraft/class_1_632	ext/phys/EnumCoordinatesUnknownClass1
+c	net/minecraft/class_1_632	ext/phys/SyntheticEnumCoordinates
 c	net/minecraft/class_1_633	net/minecraft/client/gui/screen/ConfirmScreen
 	f	Lnet/minecraft/class_1_443;	field_1_2733	listener
 	f	I	field_1_2734	id
@@ -9895,7 +9988,7 @@ c	net/minecraft/class_1_636	net/minecraft/block/RedstoneOreBlock
 		p	3		y
 		p	4		z
 		p	5		entity
-c	net/minecraft/class_1_637	net/minecraft/network/packet/PlayerHandActionPacket
+c	net/minecraft/class_1_637	net/minecraft/network/packet/Packet14PlayerHandAction
 	f	I	field_1_2801	action
 		c	The type of interaction. This can be one of the following:\n<br> 0: start mining block\n<br> 1: continue mining block\n<br> 2: stop mining block\n<br> 3: finish mining block\n<br> 4: drop item
 	f	I	field_1_2802	y
@@ -9966,6 +10059,11 @@ c	net/minecraft/class_1_640	ext/network/packet/Packet200SecureLogin
 	f	Ljava/lang/String;	field_1_2814	playerPassword
 	f	Z	field_1_2815	verifyPassed
 	f	I	field_1_2816	playerMode
+	m	(Ljava/lang/String;Ljava/lang/String;II)V	<init>	
+		p	1	string1	username
+		p	2	string2	password
+		p	3	integer3	protocolVersion
+		p	4	integer4	playerMode
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -10395,6 +10493,9 @@ c	net/minecraft/class_1_643	ext/util/command/CommandConsole
 	f	Lnet/minecraft/class_1_58;	field_1_2959	minecraft
 	m	(Lnet/minecraft/class_1_58;)V	<init>	
 		p	1		minecraft
+	m	(II)V	method_1_1961	createConsole
+		p	1	integer1	windowWidth
+		p	2	integer2	windowHeight
 c	net/minecraft/class_1_644	net/minecraft/client/gui/widget/ButtonWidget
 	f	Z	field_1_2960	active
 	f	I	field_1_2962	width
@@ -10434,7 +10535,7 @@ c	net/minecraft/class_1_644	net/minecraft/client/gui/widget/ButtonWidget
 		p	2		mouseX
 		p	3		mouseY
 c	net/minecraft/class_1_645	ext/util/command/CommandName
-c	net/minecraft/class_1_646	net/minecraft/block/RedstoneTorchBlock__ToggleEntry
+c	net/minecraft/class_1_646	net/minecraft/block/RedstoneTorchToggleEntry
 	f	J	field_1_2974	time
 	f	I	field_1_2975	x
 	f	I	field_1_2976	z
@@ -10444,7 +10545,7 @@ c	net/minecraft/class_1_646	net/minecraft/block/RedstoneTorchBlock__ToggleEntry
 		p	2		y
 		p	3		z
 		p	4		time
-c	net/minecraft/class_1_647	net/minecraft/network/Connection__42766668
+c	net/minecraft/class_1_647	net/minecraft/network/ThreadConnectionCloser
 c	net/minecraft/class_1_648	net/minecraft/entity/mob/PathFinderMobEntity
 	f	Lnet/minecraft/class_1_658;	field_1_2979	path
 	f	Lnet/minecraft/class_1_635;	field_1_2981	walkTarget
@@ -10650,7 +10751,20 @@ c	net/minecraft/class_1_661	ext/block/ExtDoorBlock
 	m	(ILjava/util/Random;)I	method_1_2337	getDropItem
 		p	1		metadata
 		p	2		random
-c	net/minecraft/class_1_662	ext/network/packet/Packet71
+c	net/minecraft/class_1_662	ext/network/packet/Packet71PlaySound
+	f	F	field_1_3011	volume
+	f	D	field_1_3012	x
+	f	Ljava/lang/String;	field_1_3013	sound
+	f	D	field_1_3014	z
+	f	F	field_1_3015	pitch
+	f	D	field_1_3016	y
+	m	(Ljava/lang/String;DDDFF)V	<init>	
+		p	1	string	sound
+		p	2	double2	x
+		p	4	double3	y
+		p	6	double4	z
+		p	8	float5	volume
+		p	9	float6	pitch
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -10658,11 +10772,12 @@ c	net/minecraft/class_1_662	ext/network/packet/Packet71
 	m	()I	method_1_2113	getSize
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
-c	net/minecraft/class_1_663	net/minecraft/block/PressurePlateBlock__ActivationRule
+c	net/minecraft/class_1_663	net/minecraft/block/EnumPressurePlateActivationRule
 	f	Lnet/minecraft/class_1_663;	field_1_3017	MOBS
 	f	Lnet/minecraft/class_1_663;	field_1_3018	PLAYERS
 	f	Lnet/minecraft/class_1_663;	field_1_3019	EVERYTHING
 c	net/minecraft/class_1_664	ext/world/freerun/FreerunMap5
+	c	Each Freerun map has it's own class for stuff \nlike checkpoints locations, this is for the last world.
 	f	[Lnet/minecraft/class_1_276;	field_1_3021	checkpoints
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
@@ -10722,6 +10837,7 @@ c	net/minecraft/class_1_668	net/minecraft/client/gui/screen/JoinMultiplayerScree
 c	net/minecraft/class_1_669	ext/world/gen/hub/HubWorldUnknownClass4
 c	net/minecraft/class_1_670	ext/util/command/CommandPerfClass
 c	net/minecraft/class_1_671	ext/world/freerun/FreerunMap0
+	c	Each Freerun map has it's own class for stuff \nlike checkpoints locations, this is for the first world.
 	f	[Lnet/minecraft/class_1_276;	field_1_3038	checkpoints
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
@@ -10842,7 +10958,7 @@ c	net/minecraft/class_1_679	net/minecraft/network/PacketHandler
 		p	1		packet
 	m	(Lnet/minecraft/class_1_551;)V	method_1_2041	handleEntityAnimation
 		p	1		packet
-	m	(Lnet/minecraft/class_1_492;)V	method_1_2042	
+	m	(Lnet/minecraft/class_1_492;)V	method_1_2042	remoteFillBlock
 		p	1	class_1_492	packet
 	m	(Lnet/minecraft/class_1_788;)V	method_1_2043	handleAddEntity
 		p	1		packet
@@ -10898,6 +11014,9 @@ c	net/minecraft/class_1_680	ext/client/renderer/model/ModelBlockBenchImport
 c	net/minecraft/class_1_681	ext/client/visuals/VisualsIrrigant
 c	net/minecraft/class_1_682	ext/util/command/CommandSaveDemo
 c	net/minecraft/class_1_683	ext/network/packet/Packet72RemoteMessageOverlay
+	f	Ljava/lang/String;	field_1_3067	message
+	m	(Ljava/lang/String;I)V	<init>	
+		p	1	string	message
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -10905,7 +11024,7 @@ c	net/minecraft/class_1_683	ext/network/packet/Packet72RemoteMessageOverlay
 	m	()I	method_1_2113	getSize
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
-c	net/minecraft/class_1_684	net/minecraft/network/packet/PlayerMovePacket__Position
+c	net/minecraft/class_1_684	net/minecraft/network/packet/Packet11PlayerMovePosition
 	m	(DDDDZ)V	<init>	
 		p	1		x
 		p	3		minY
@@ -10939,18 +11058,35 @@ c	net/minecraft/class_1_685	net/minecraft/client/render/model/entity/CreeperMode
 		p	4		yaw
 		p	5		pitch
 		p	6		scale
-c	net/minecraft/class_1_686	ext/util/HandlerPlayDemoUnknownClass1
+c	net/minecraft/class_1_686	ext/util/HandlerDemoPlayerUnknownClass1
+	f	Z	field_1_3077	recording
 	f	Lnet/minecraft/class_1_365;	field_1_3079	player
 	m	(Lnet/minecraft/class_1_365;)V	<init>	
 		p	1		player
-	m	(Lnet/minecraft/class_1_365;)V	method_1_2066	
+	m	(Ljava/lang/String;)V	method_1_2065	saveDemo
+		p	1	string	path
+	m	(Lnet/minecraft/class_1_365;)V	method_1_2066	startDemoRecording
 		p	1		player
+	m	(Lnet/minecraft/class_1_549;)V	method_1_2067	
+		p	1	class_1_549	demoPlayer
+	m	()V	method_1_2068	playDemo
 	m	(Lnet/minecraft/class_1_134;)V	method_1_2069	
 		p	1		world
+	m	(Ljava/lang/String;)V	method_1_2070	playDemoFile
+		p	1	string	demoFile
+	m	()V	method_1_2073	stopDemoRecording
 c	net/minecraft/class_1_687	ext/util/command/CommandBind
-c	net/minecraft/class_1_688	net/minecraft/crafting/CraftingManager__57536588
+c	net/minecraft/class_1_688	net/minecraft/crafting/CraftingManagerComparator
+	f	Lnet/minecraft/class_1_571;	field_1_3081	craftingManager
+	m	(Lnet/minecraft/class_1_571;)V	<init>	
+		p	1	class_1_571	craftingManager
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
+		p	1	class_1_8521	recipe1
+		p	2	class_1_8522	recipe2
 	m	(Lnet/minecraft/class_1_852;Lnet/minecraft/class_1_852;)I	compare	compare
+	m	(Lnet/minecraft/class_1_852;Lnet/minecraft/class_1_852;)I	method_1_2075	compareImpl
+		p	1	class_1_8521	recipe1
+		p	2	class_1_8522	recipe2
 	m	(Lnet/minecraft/class_1_852;Lnet/minecraft/class_1_852;)I	method_1_2076	compare
 c	net/minecraft/class_1_689	ext/util/command/CommandSummonSpaceMan2
 c	net/minecraft/class_1_690	net/minecraft/client/render/texture/CompassSprite
@@ -11056,11 +11192,12 @@ c	net/minecraft/class_1_696	ext/world/gen/WorldGenFrigidHighwood
 		p	1		world
 		p	2		random
 c	net/minecraft/class_1_697	ext/network/SkinManager
-	f	Z	field_1_3094	conf_cache_skins
+	f	Z	field_1_3094	conf_cacheSkins
 	f	Ljava/util/HashMap;	field_1_3095	skins
 	m	(Ljava/lang/String;Lnet/minecraft/class_1_796;)V	method_1_2086	addSkin
+		p	0	string	playerName
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_796;	method_1_2087	getSkin
-c	net/minecraft/class_1_698	net/minecraft/network/packet/PlayerInventoryPacket
+c	net/minecraft/class_1_698	net/minecraft/network/packet/Packet5PlayerInventory
 	f	I	field_1_3096	type
 	f	[Lnet/minecraft/class_1_263;	field_1_3097	items
 	m	(I[Lnet/minecraft/class_1_263;)V	<init>	
@@ -11077,7 +11214,7 @@ c	net/minecraft/class_1_699	net/minecraft/client/gui/GameGui
 	f	Ljava/lang/String;	field_1_3098	overlayMessage
 	f	Lnet/minecraft/class_1_565;	field_1_3100	ZMWavesOverlay
 	f	J	field_1_3101	seed
-	f	Lnet/minecraft/class_1_883;	field_1_3102	systemMessageOverlay
+	f	Lnet/minecraft/class_1_883;	field_1_3102	systemMessageBuilder
 	f	I	field_1_3103	chunkRegionX
 	f	F	field_1_3104	progress
 	f	I	field_1_3105	overlayMessageCooldown
@@ -11115,8 +11252,9 @@ c	net/minecraft/class_1_699	net/minecraft/client/gui/GameGui
 		p	2		x
 		p	3		z
 		p	4		tickDelta
-	m	(Ljava/lang/String;)V	method_1_2095	addChatMessage
-		p	1		text
+	m	()V	method_1_2094	logChunkRegionName
+	m	(Ljava/lang/String;)V	method_1_2095	printChatMessage
+		p	1		message
 	m	(JII)Ljava/lang/String;	method_1_2096	getChunkRegionName
 		p	0	l	seed
 		p	2	n	chunkRegionX
@@ -11148,7 +11286,7 @@ c	net/minecraft/class_1_702	ext/block/ExtClothPanel
 		p	1		random
 	m	(I)I	method_1_2333	getSprite
 		p	1		face
-c	net/minecraft/class_1_703	net/minecraft/network/packet/BlocksUpdatePacket
+c	net/minecraft/class_1_703	net/minecraft/network/packet/Packet52BlocksUpdate
 	f	[S	field_1_3127	positions
 	f	[B	field_1_3128	blockMetadata
 	f	I	field_1_3129	chunkX
@@ -11188,7 +11326,7 @@ c	net/minecraft/class_1_705	net/minecraft/inventory/CraftingInventory
 	m	(I)Lnet/minecraft/class_1_263;	method_1_1321	getItem
 		p	1		slot
 	m	()I	method_1_1322	getSize
-c	net/minecraft/class_1_706	net/minecraft/network/packet/EntityMovePacket
+c	net/minecraft/class_1_706	net/minecraft/network/packet/Packet30EntityMove
 	f	Z	field_1_3136	hasAngles
 	f	B	field_1_3137	pitch
 	f	B	field_1_3138	dx
@@ -11204,10 +11342,16 @@ c	net/minecraft/class_1_706	net/minecraft/network/packet/EntityMovePacket
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
 c	net/minecraft/class_1_707	ext/client/visuals/VisualsUnknownClass1
+	f	Ljava/lang/String;	field_1_3143	texturePackName
 	f	Ljava/io/File;	field_1_3144	texturepackDir
+	f	Lnet/minecraft/class_1_256;	field_1_3145	visualClass
+	f	Lnet/minecraft/class_1_256;	field_1_3146	visualsStandard
+	f	Ljava/util/List;	field_1_3147	visuals
 	f	Lnet/minecraft/class_1_58;	field_1_3149	minecraft
 	m	(Lnet/minecraft/class_1_58;Ljava/io/File;)V	<init>	
 		p	1		minecraft
+	m	(Lnet/minecraft/class_1_256;)Z	method_1_2100	
+		p	1	class_1_256	visualClass
 c	net/minecraft/class_1_708	ext/util/command/CommandSVCheats
 c	net/minecraft/class_1_709	net/minecraft/client/gui/screen/inventory/menu/InventoryMenuScreen
 	f	I	field_1_3151	backgroundHeight
@@ -11342,7 +11486,7 @@ c	net/minecraft/class_1_714	paulscode/sound/codecs/CodecMus__MusInputStream
 	f	[B	field_1_3158	buffer
 	m	(Lnet/minecraft/class_1_299;Ljava/net/URL;Ljava/io/InputStream;)V	<init>	
 		p	2		fileURL
-c	net/minecraft/class_1_715	net/minecraft/network/packet/EntityMovePacket__Angles
+c	net/minecraft/class_1_715	net/minecraft/network/packet/Packet32EntityMoveAngles
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -11351,7 +11495,7 @@ c	net/minecraft/class_1_715	net/minecraft/network/packet/EntityMovePacket__Angle
 c	net/minecraft/class_1_716	net/minecraft/network/packet/Packet
 	f	Ljava/util/Map;	field_1_3160	TYPE_TO_ID
 	f	Z	field_1_3161	shouldDelay
-		c	True if this packet contains block (entity) data.\n<br>\nNote: this field is unused since 1.4.3.
+		c	True if this packet contains block (entity) data.\n
 	f	Ljava/util/Map;	field_1_3162	ID_TO_TYPE
 	m	(Lnet/minecraft/class_1_716;Ljava/io/DataOutputStream;)V	method_1_2106	serialize
 		p	0		packet
@@ -11430,7 +11574,7 @@ c	net/minecraft/class_1_721	ext/world/gen/hub/SchemaExterior
 	m	(Lnet/minecraft/class_1_393;III)V	<init>	
 		p	1		hub
 c	net/minecraft/class_1_722	ext/world/freerun/HandlerSetCheckpoint
-c	net/minecraft/class_1_723	net/minecraft/network/packet/ItemPickupPacket
+c	net/minecraft/class_1_723	net/minecraft/network/packet/Packet17ItemPickup
 	f	I	field_1_3171	count
 	f	I	field_1_3172	id
 	f	I	field_1_3173	metadata
@@ -11765,7 +11909,7 @@ c	net/minecraft/class_1_740	net/minecraft/client/ClientPlayerInteractionManager
 		p	5		y
 		p	6		z
 		p	7		face
-c	net/minecraft/class_1_741	ext/client/SoundEngineThread
+c	net/minecraft/class_1_741	ext/client/ThreadSoundEngine
 	f	Lnet/minecraft/class_1_58;	field_1_3228	minecraft
 	m	(Lnet/minecraft/class_1_58;)V	<init>	
 		p	1		minecraft
@@ -11863,7 +12007,7 @@ c	net/minecraft/class_1_743	ext/block/ExtSignBlock
 c	net/minecraft/class_1_744	ext/block/ExtGlassBlock
 	m	(Ljava/util/Random;)I	method_1_2315	getBaseDropCount
 		p	1		random
-c	net/minecraft/class_1_745	net/minecraft/network/packet/EntityTeleportPacket
+c	net/minecraft/class_1_745	net/minecraft/network/packet/Packet34EntityTeleport
 	f	I	field_1_3232	z
 	f	I	field_1_3233	x
 	f	B	field_1_3234	yaw
@@ -12092,7 +12236,7 @@ c	net/minecraft/class_1_761	net/minecraft/entity/vehicle/BoatEntity
 	m	()V	method_1_1886	updateRiderPositon
 	m	()D	method_1_1889	getMountHeight
 c	net/minecraft/class_1_762	ext/client/gui/screen/cheat/ScreenDebugMenu
-	f	Z	field_1_3278	dbg_disable_worldgen
+	f	Z	field_1_3278	dbg_conf_disableWorldgen
 	f	Z	field_1_3279	dbg_conf_enabledFight
 	f	Z	field_1_3280	dbg_conf_forceFracturedWorld
 	f	Z	field_1_3281	conf_fullbright
@@ -12420,9 +12564,9 @@ c	net/minecraft/class_1_781	ext/client/Shaders
 	f	Lnet/minecraft/class_1_58;	field_1_3324	minecraft
 	m	(Lnet/minecraft/class_1_58;)V	<init>	
 		p	1		minecraft
-	m	(Ljava/lang/String;)I	method_1_2229	
+	m	(Ljava/lang/String;)I	method_1_2229	readVertexShaderCode
 		p	1		shaderPath
-	m	(Ljava/lang/String;)I	method_1_2230	
+	m	(Ljava/lang/String;)I	method_1_2230	readFragmentShaderCode
 		p	1		shaderPath
 	m	(Lnet/minecraft/class_1_58;)I	method_1_2232	
 		p	1		minecraft
@@ -12435,7 +12579,12 @@ c	net/minecraft/class_1_781	ext/client/Shaders
 	m	(ILnet/minecraft/class_1_58;)V	method_1_2238	
 		p	1		minecraft
 	m	()V	method_1_2239	loadShaders
-c	net/minecraft/class_1_782	net/minecraft/client/MinecraftApplet__72207753
+c	net/minecraft/class_1_782	net/minecraft/client/MinecraftAppletAWTCanvas
+	f	Lnet/minecraft/class_1_65;	field_1_3330	mcApplet
+	m	(Lnet/minecraft/class_1_65;)V	<init>	
+		p	1	class_1_65	mcApplet
+	m	()V	addNotify	addNotify
+	m	()V	removeNotify	removeNotify
 c	net/minecraft/class_1_783	net/minecraft/block/TorchBlock
 	m	(II)V	<init>	
 		p	1		id
@@ -12865,7 +13014,7 @@ c	net/minecraft/class_1_787	net/minecraft/block/StairsBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_788	net/minecraft/network/packet/AddEntityPacket
+c	net/minecraft/class_1_788	net/minecraft/network/packet/Packet23AddEntity
 	f	I	field_1_3340	z
 	f	I	field_1_3341	id
 	f	I	field_1_3342	type
@@ -12880,7 +13029,13 @@ c	net/minecraft/class_1_788	net/minecraft/network/packet/AddEntityPacket
 		p	1		handler
 c	net/minecraft/class_1_789	ext/util/command/CommandManager
 	f	Ljava/util/ArrayList;	field_1_3345	command
-	m	()V	method_1_2251	RegisterCommands
+	f	Ljava/util/HashMap;	field_1_3347	bindCommands
+		c	Commands that have been binded to a key
+	f	Ljava/lang/String;	field_1_3348	typedString
+		c	A string value that contains what has been typed in the console
+	m	()V	method_1_2251	registerCommands
+	m	()V	method_1_2254	bindCommandsToKey
+	m	()V	method_1_2256	readAutoexecCfg
 c	net/minecraft/class_1_790	net/minecraft/item/RedstoneItem
 	m	(I)V	<init>	
 		p	1		id
@@ -12988,7 +13143,8 @@ c	net/minecraft/class_1_799	net/minecraft/client/resource/ResourceDownloader
 		p	3		size
 		p	5		pass
 	m	()V	method_1_2276	shutdown
-c	net/minecraft/class_1_800	net/minecraft/network/packet/AddMobPacket
+	m	()V	run	run
+c	net/minecraft/class_1_800	net/minecraft/network/packet/Packet24AddMob
 	f	I	field_1_3381	z
 	f	I	field_1_3382	id
 	f	B	field_1_3383	pitch
@@ -13029,6 +13185,7 @@ c	net/minecraft/class_1_802	ext/client/gui/screen/GuiPickPainting
 		p	2		mouseY
 		p	3		tickDelta
 c	net/minecraft/class_1_803	ext/block/ExtBlock
+	c	Instead of using the vanilla class, Cypress has it's own block declaration class\nfor blocks that were in the original game, works the same as the vanilla class
 	f	Lnet/minecraft/class_1_803;	field_1_3400	GREENSTONE_ORE
 	f	Lnet/minecraft/class_1_766;	field_1_3402	SPECIAL_SOUNDS
 	f	D	field_1_3403	maxY
@@ -13480,7 +13637,7 @@ c	net/minecraft/class_1_806	ext/network/hub/ThreadHubServerPing
 	m	(Ljava/lang/String;)Ljava/lang/String;	method_1_2350	getAdFromPingResponse
 	m	(Ljava/lang/String;)Ljava/lang/String;	method_1_2352	getMotdFromPingResponse
 	m	()V	run	run
-c	net/minecraft/class_1_807	ext/client/entity/EntityPlayerFreerunClient
+c	net/minecraft/class_1_807	ext/client/entity/player/EntityPlayerFreerunClient
 	f	Z	field_1_3533	reset
 	f	J	field_1_3535	finalTime
 	f	Z	field_1_3536	countingTime
@@ -13504,8 +13661,8 @@ c	net/minecraft/class_1_807	ext/client/entity/EntityPlayerFreerunClient
 	m	(Lnet/minecraft/class_1_635;I)Z	method_1_1851	takeDamage
 		p	1		source
 		p	2		amount
-	m	()V	method_1_2353	ResetToLastCheckpoint
-	m	()V	method_1_2354	ResetRun
+	m	()V	method_1_2353	resetToLastCheckpoint
+	m	()V	method_1_2354	resetRun
 	m	()V	method_1_2364	mobTick
 c	net/minecraft/class_1_808	net/minecraft/block/MobSpawnerBlock
 	m	(II)V	<init>	
@@ -13579,8 +13736,9 @@ c	net/minecraft/class_1_812	ext/world/freerun/FreerunWorld
 		p	2		saveName
 	m	(JJ)I	method_1_2360	getResetY
 	m	()[Lnet/minecraft/class_1_276;	method_1_2361	getCheckpoints
-c	net/minecraft/class_1_813	net/minecraft/client/CrashReportPanel__LogoCanvas
+c	net/minecraft/class_1_813	net/minecraft/client/CrashReportPanelLogoCanvas
 	f	Ljava/awt/image/BufferedImage;	field_1_3545	logo
+	m	(Ljava/awt/Graphics;)V	paint	paint
 c	net/minecraft/class_1_814	ext/util/MinecraftException2
 	m	(Ljava/lang/String;)V	<init>	
 		p	1		message
@@ -13987,7 +14145,7 @@ c	net/minecraft/class_1_832	ext/block/ExtTorchBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_833	net/minecraft/network/packet/WorldTimePacket
+c	net/minecraft/class_1_833	net/minecraft/network/packet/Packet4WorldTime
 	f	J	field_1_3607	time
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
@@ -14162,10 +14320,16 @@ c	net/minecraft/class_1_841	net/minecraft/network/Connection
 	m	(Ljava/lang/Exception;)V	method_1_2414	handleException
 		p	1		exception
 	m	()V	method_1_2415	tick
+	m	(Lnet/minecraft/class_1_841;)V	method_1_2416	read
 	m	(Lnet/minecraft/class_1_716;)V	method_1_2417	send
 		p	1		packet
+	m	(Lnet/minecraft/class_1_841;)Ljava/lang/Thread;	method_1_2418	writer
+	m	(Lnet/minecraft/class_1_841;)Z	method_1_2419	isConnectionOpen
 	m	()V	method_1_2420	write
 	m	()V	method_1_2421	read
+	m	(Lnet/minecraft/class_1_841;)Ljava/lang/Thread;	method_1_2422	reader
+	m	(Lnet/minecraft/class_1_841;)Z	method_1_2423	isConnectionClosed
+	m	(Lnet/minecraft/class_1_841;)V	method_1_2424	write
 c	net/minecraft/class_1_842	net/minecraft/client/render/Window
 	f	I	field_1_3631	height
 	f	I	field_1_3632	width
@@ -14266,7 +14430,7 @@ c	net/minecraft/class_1_846	net/minecraft/block/LeavesBlock
 		p	3		y
 		p	4		z
 c	net/minecraft/class_1_847	net/minecraft/client/gui/screen/ConnectScreen__04471202
-c	net/minecraft/class_1_848	net/minecraft/client/CrashReportPanel__BorderCanvas
+c	net/minecraft/class_1_848	net/minecraft/client/CrashReportPaneBorderCanvas
 	m	(I)V	<init>	
 		p	1		size
 c	net/minecraft/class_1_849	net/minecraft/client/render/block/entity/BlockEntityRenderDispatcher
@@ -14364,6 +14528,8 @@ c	net/minecraft/class_1_854	ext/network/packet/Packet201SecureChat
 	f	Ljava/lang/String;	field_1_3671	signature
 	f	Z	field_1_3672	verified
 	f	I	field_1_3673	secID
+	m	(Ljava/lang/String;I)V	<init>	
+		p	1	string	message
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
 	m	(Ljava/io/DataInputStream;)V	method_1_2110	read
@@ -14475,7 +14641,7 @@ c	net/minecraft/class_1_863	ext/world/zm/WorldZMSpawn
 	m	(Lnet/minecraft/class_1_276;Lnet/minecraft/class_1_290;)V	<init>	
 		p	1		namedLocation
 		p	2		xYZv
-c	net/minecraft/class_1_864	net/minecraft/network/packet/EntityPickupPacket
+c	net/minecraft/class_1_864	net/minecraft/network/packet/Packet22EntityPickup
 	f	I	field_1_3689	id
 	f	I	field_1_3690	collectorId
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
@@ -14671,7 +14837,7 @@ c	net/minecraft/class_1_883	ext/client/gui/overlay/OverlaySystemMessageBuilder
 		p	1	string	message
 	m	(Lnet/minecraft/class_1_699;Ljava/lang/String;)I	method_1_2489	
 		p	0	class_1_6992	gameGui
-c	net/minecraft/class_1_884	net/minecraft/network/packet/LoginPacket
+c	net/minecraft/class_1_884	net/minecraft/network/packet/Packet1Login
 	f	Ljava/lang/String;	field_1_3732	username
 	f	Ljava/lang/String;	field_1_3733	password
 	f	I	field_1_3734	gameVersion
@@ -14687,6 +14853,7 @@ c	net/minecraft/class_1_884	net/minecraft/network/packet/LoginPacket
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
 c	net/minecraft/class_1_885	ext/world/freerun/FreerunMap3
+	c	Each Freerun map has it's own class for stuff \nlike checkpoints locations, this is for the fourth world.
 	f	[Lnet/minecraft/class_1_276;	field_1_3735	checkpoints
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	
 		p	1		dir
@@ -14939,7 +15106,7 @@ c	net/minecraft/class_1_893	net/minecraft/nbt/NbtShort
 	m	(Ljava/io/DataInput;)V	method_1_1267	read
 		p	1		input
 c	net/minecraft/class_1_894	ext/util/command/CommandMCPlayMus
-c	net/minecraft/class_1_895	net/minecraft/client/SurvivalInteractionManager__34191351
+c	net/minecraft/class_1_895	net/minecraft/client/SurvivalInteractionManagerUnknownClass1
 	m	(Lnet/minecraft/class_1_134;II)Lnet/minecraft/class_1_904;	method_1_1273	getRandomPosInChunk
 		p	1		world
 		p	2		chunkX
@@ -15005,7 +15172,7 @@ c	net/minecraft/class_1_898	net/minecraft/client/ParticleManager
 		p	2		y
 		p	3		z
 	m	()Ljava/lang/String;	method_1_2532	getDebugInfo
-c	net/minecraft/class_1_899	net/minecraft/network/packet/RemoveEntityPacket
+c	net/minecraft/class_1_899	net/minecraft/network/packet/Packet29RemoveEntity
 	f	I	field_1_3770	id
 	m	(Ljava/io/DataOutputStream;)V	method_1_2109	write
 		p	1		output
@@ -15148,6 +15315,7 @@ c	paulscode/sound/SoundBuffer	paulscode/sound/SoundBuffer
 	m	()V	cleanup	cleanup
 c	paulscode/sound/SoundSystem	paulscode/sound/SoundSystem
 	m	(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;Z)V	backgroundMusic	backgroundMusic
+	m	()V	cleanup	cleanup
 	m	(Ljava/lang/String;)V	play	play
 	m	(Ljava/lang/String;F)V	setVolume	setVolume
 	m	(Ljava/lang/String;)V	stop	stop
