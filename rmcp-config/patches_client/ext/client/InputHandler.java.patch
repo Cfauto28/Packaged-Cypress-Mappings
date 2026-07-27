@@ -1,0 +1,11 @@
+--- a/ext/client/InputHandler.java
++++ b/ext/client/InputHandler.java
+@@ -69,7 +69,7 @@
+ 	}
+ 
+ 	public static void Initialize(Minecraft minecraft) {
+-		minecraft = minecraft;
++		InputHandler.minecraft = minecraft;
+ 		field_1_1672 = new HandlerPlayDemoUnknownClass1(minecraft.player);
+ 	}
+ 
