@@ -2,10 +2,10 @@
 
 Mappings based on [feather](https://github.com/OrnitheMC/feather) and [FMG793's mappings](https://github.com/FMG793/1.0.16.05_20-Cypress-Mods-And-Deobfuscated-Code)
 
+This mappings are meant to be used in [CypressFabric](https://github.com/Cfauto28/example-mod) but they can be used with [RetroMCP](rmcp-config/SETUP.md)
 ## Features
 - Packaged mappings
 - More deobfuscated than FMG793's mappings
-- Easier [RetroMCP](rmcp-config/SETUP.md) setup 
 
 ## Caveats
 - No server mappings (I'm working on them)
