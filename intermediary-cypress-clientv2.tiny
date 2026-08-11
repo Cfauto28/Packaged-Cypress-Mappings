@@ -5810,7 +5810,7 @@ c	74396401n67rAne2KEaVaEoh9nk1hB9T85P7cKNGObfdpHiKi8Lfd5f6YmBF53y4g331iR60dsRhm5
 	m	([BI)V	9cz7Vn98gE08Y4N68LMaUZqR034r0KI31q3sL1hSrAF18DrcnKIY245062Yk	method_1_1226
 	m	()Z	9O1NrmW1QwxhgB5D7Vd06gSDyvy5p9L7ScBn1nCcKehSekZg3ig5102xlUI3	method_1_1225
 	m	(Ljava/lang/String;I)L74396401n67rAne2KEaVaEoh9nk1hB9T85P7cKNGObfdpHiKi8Lfd5f6YmBF53y4g331iR60dsRhm5zX4cf7RjY4Vu76FX;	186bsEdE0L8avI1T6188HOBkw74Rv2C84f9rbbXELJN9UVCSqDM617l7y7BO	method_1_1224
-c	net/minecraft/client/Minecraft	net/minecraft/class_1_58
+c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	f	L62fL5jCz1A00l5L8bBtAYR9aPPtIl7pJCe874i0hvzA00P5Zzw3X7Eb41gT9j92vK34l8zU3IAkMp9EAO7uJ2yHv5i1acm6Bg041;	0ef1dw6U62P0w8bU619gHGHeA4m17T8k6bnjfEQQwhJz0UwhJ6Kx9rBRdIvo	field_1_531
 	f	I	0WAfkZ20mNdXXn961e937vR85xLvC8U3qIZ2k2StlFD106pr7E9GzkI86c7Q	field_1_530
 	f	Ljava/lang/String;	1bXoyKS4419C0OkBAdgHRIkQ8QoiQoI2YC0H72hV9z1z430OurUT7w57itKv	field_1_536
@@ -5930,7 +5930,7 @@ c	net/minecraft/client/Minecraft	net/minecraft/class_1_58
 	m	()V	807Tz6uiM4g7DKW8lgD2GN6Owv768139T0sdkg4RTPEtzxuQqZAG45Bz6G92	method_1_543
 	m	(Ljava/lang/String;Ljava/lang/Class;)V	29708o9t3Kv11ORjhW6WgtZ1jrShpxII2V33oCWwflopdLkDYzM1ouYGxg87	method_1_515
 	m	()Ljava/io/File;	74365lSUZG8SRi4QcP0LdVO61o0N3570jYi74Tv6MwBh3c90i6CydLQuxD79	method_1_537
-c	net/minecraft/client/MinecraftApplet	net/minecraft/class_1_65
+c	net/minecraft/client/MinecraftApplet	net/minecraft/client/MinecraftApplet
 	f	Ljava/lang/Thread;	1DK74B3G7nfaHNlH7vW5ev70n4RG8570wpAeXi8iufiPh08n58B0cZ9991cO	field_1_666
 	f	Ljava/awt/Canvas;	4zEww6gWc7C6D28EHo1vRPb4cpxi3BHQ42P08V1rn3nc48Sr9NxqrS5TeK07	field_1_668
 	f	Lnet/minecraft/client/Minecraft;	263MnY3KN89zJRjMd4220u00gouyy18m7UD6W6x1e0Y2NOGgaDZ4T3L2KhWS	field_1_667

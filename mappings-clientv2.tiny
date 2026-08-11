@@ -78,7 +78,7 @@ c	com/jcraft/jorbis/Residue2	com/jcraft/jorbis/Residue2
 c	com/jcraft/jorbis/StaticCodeBook	com/jcraft/jorbis/StaticCodeBook
 c	com/jcraft/jorbis/Time0	com/jcraft/jorbis/Time0
 c	com/jcraft/jorbis/Util	com/jcraft/jorbis/Util
-c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
+c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/class_1_414;	field_1_526	timer
 	f	Ljava/lang/String;	field_1_527	fpsDebugInfo
 	f	Ljava/lang/String;	field_1_528	loadmapUser
@@ -234,7 +234,7 @@ c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
 	m	()V	run	run
 c	net/minecraft/class_1_64	net/minecraft/class_1_64
 	m	()Ljava/io/InputStream;	method_1_619	openInputStream
-c	net/minecraft/class_1_65	net/minecraft/client/MinecraftApplet
+c	net/minecraft/client/MinecraftApplet	net/minecraft/client/MinecraftApplet
 	f	Ljava/lang/Thread;	field_1_666	thread
 	f	Lnet/minecraft/class_1_58;	field_1_667	minecraft
 	f	Ljava/awt/Canvas;	field_1_668	canvas
