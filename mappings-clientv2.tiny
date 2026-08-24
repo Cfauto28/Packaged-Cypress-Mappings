@@ -78,7 +78,7 @@ c	com/jcraft/jorbis/Residue2	com/jcraft/jorbis/Residue2
 c	com/jcraft/jorbis/StaticCodeBook	com/jcraft/jorbis/StaticCodeBook
 c	com/jcraft/jorbis/Time0	com/jcraft/jorbis/Time0
 c	com/jcraft/jorbis/Util	com/jcraft/jorbis/Util
-c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
+c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/class_1_414;	field_1_526	timer
 	f	Ljava/lang/String;	field_1_527	fpsDebugInfo
 	f	Ljava/lang/String;	field_1_528	loadmapUser
@@ -234,7 +234,7 @@ c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	m	()V	run	run
 c	net/minecraft/class_1_64	net/minecraft/class_1_64
 	m	()Ljava/io/InputStream;	method_1_619	openInputStream
-c	net/minecraft/client/MinecraftApplet	net/minecraft/client/MinecraftApplet
+c	net/minecraft/class_1_65	net/minecraft/client/MinecraftApplet
 	f	Ljava/lang/Thread;	field_1_666	thread
 	f	Lnet/minecraft/class_1_58;	field_1_667	minecraft
 	f	Ljava/awt/Canvas;	field_1_668	canvas
@@ -1047,7 +1047,9 @@ c	net/minecraft/class_1_122	ext/util/command/Command
 	m	(Ljava/lang/String;[Ljava/lang/Class;Lnet/minecraft/class_1_437;)V	<init>	
 		p	1		commandName
 		p	3		commandClass
-c	net/minecraft/class_1_123	ext/world/WorldUnknownClass4
+c	net/minecraft/class_1_123	ext/client/PathDecryptor
+	m	(Ljava/lang/String;)Ljava/lang/String;	method_1_748	decrypt
+		p	0	string	excryptedText
 c	net/minecraft/class_1_124	ext/entity/EntityUnknownClass1
 	f	Lnet/minecraft/class_1_349;	field_1_828	modelHead
 	f	Lnet/minecraft/class_1_349;	field_1_829	modelBody
@@ -7193,7 +7195,10 @@ c	net/minecraft/class_1_468	ext/world/gen/WorldGenUnknownClass1
 		p	2		world
 	m	(Ljava/util/Random;)V	method_1_1529	
 		p	0		random
-c	net/minecraft/class_1_469	ext/world/WorldUnknownClass3
+c	net/minecraft/class_1_469	ext/client/EncryptedPath
+	f	Ljava/lang/Object;	field_1_2185	data
+	m	(Ljava/lang/Object;)V	<init>	
+		p	1	object	data
 c	net/minecraft/class_1_470	ext/util/command/CommandMap
 c	net/minecraft/class_1_471	ext/newitem/ExtBookItemI
 	m	(I)V	<init>	
@@ -7451,7 +7456,18 @@ c	net/minecraft/class_1_495	ext/client/gui/screen/AltMultiplayerScreen
 		p	1		mouseX
 		p	2		mouseY
 		p	3		tickDelta
-c	net/minecraft/class_1_496	ext/world/WorldUnknownClass2
+c	net/minecraft/class_1_496	ext/client/EncryptedPaths
+	f	Lnet/minecraft/class_1_469;	field_1_2237	Motion
+	f	Lnet/minecraft/class_1_469;	field_1_2238	userhome
+	f	Lnet/minecraft/class_1_469;	field_1_2239	minecraft
+	f	Lnet/minecraft/class_1_469;	field_1_2240	sha256withRSA
+	f	Lnet/minecraft/class_1_469;	field_1_2241	loadingScreen
+	f	Lnet/minecraft/class_1_469;	field_1_2242	Minecraft
+	f	Lnet/minecraft/class_1_469;	field_1_2243	terrain
+	f	Lnet/minecraft/class_1_469;	field_1_2244	Pos
+	f	Lnet/minecraft/class_1_469;	field_1_2245	RSA
+	m	(Lnet/minecraft/class_1_469;)Ljava/lang/String;	method_1_1562	decrypt
+		p	0	class_1_469	path
 c	net/minecraft/class_1_497	ext/client/render/PartDefinitionElement
 	f	Lnet/minecraft/class_1_472;	field_1_2246	offset
 	f	Lnet/minecraft/class_1_733;	field_1_2247	cubeList
