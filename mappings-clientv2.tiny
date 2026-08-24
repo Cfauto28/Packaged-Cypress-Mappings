@@ -78,173 +78,8 @@ c	com/jcraft/jorbis/Residue2	com/jcraft/jorbis/Residue2
 c	com/jcraft/jorbis/StaticCodeBook	com/jcraft/jorbis/StaticCodeBook
 c	com/jcraft/jorbis/Time0	com/jcraft/jorbis/Time0
 c	com/jcraft/jorbis/Util	com/jcraft/jorbis/Util
-c	net/minecraft/class_1_58	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/class_1_414;	field_1_526	timer
-	f	Ljava/lang/String;	field_1_527	fpsDebugInfo
-	f	Ljava/lang/String;	field_1_528	loadmapUser
-	f	Z	field_1_529	fullscreen
-	f	I	field_1_530	ticks
-	f	Lnet/minecraft/class_1_781;	field_1_531	shaders
-	f	[Ljava/lang/String;	field_1_533	SHASums
-		c	No clue what the sums are for but they are sums
-	f	Lnet/minecraft/class_1_225;	field_1_534	soundEngine
-	f	Lnet/minecraft/class_1_353;	field_1_535	lavaSprite
-	f	Ljava/lang/String;	field_1_536	hostAddress
-	f	J	field_1_537	lastTickTime
-	f	Z	field_1_538	running
-	f	Z	field_1_539	cloudsEnabled
-	f	I	field_1_540	lastClickTicks
-	f	Lnet/minecraft/class_1_801;	field_1_541	visualsManager
-	f	Lnet/minecraft/class_1_730;	field_1_542	humanoidModel
-	f	Lnet/minecraft/class_1_509;	field_1_543	waterSprite
-	f	I	field_1_544	frameTimeIndex
-	f	Lnet/minecraft/class_1_267;	field_1_545	crosshairTarget
-	f	Z	field_1_547	conf_loadCerts
-	f	Lnet/minecraft/class_1_699;	field_1_548	gui
-	f	[Ljava/lang/String;	field_1_549	MD5Sums
-	f	I	field_1_550	joinPlayerCounter
-	f	Ljava/lang/String;	field_1_552	startupVersionString
-		c	This tell us that {@link MinecraftImplUnknownClass1} contained the name MinecraftImpl
-	f	Lnet/minecraft/class_1_563;	field_1_554	worldRenderer
-	f	Ljava/awt/Component;	field_1_555	component
-	f	Z	field_1_556	conf_ideLaunch
-	f	Z	field_1_557	raining
-	f	I	field_1_558	loadmapId
-	f	I	field_1_560	initHeight
-	f	Z	field_1_561	focused
-	f	Lnet/minecraft/class_1_274;	field_1_562	gameRenderer
-	f	Z	field_1_563	paused
-	f	Lnet/minecraft/class_1_501;	field_1_564	textRenderer
-	f	Z	field_1_565	conf_bannedPlayer
-	f	Ljava/io/File;	field_1_566	workingDirectory
-	f	Lnet/minecraft/class_1_799;	field_1_568	resourceDownloader
-	f	Lnet/minecraft/class_1_58;	field_1_569	minecraft
-	f	Lnet/minecraft/class_1_152;	field_1_570	options
-	f	Lnet/minecraft/class_1_443;	field_1_571	screen
-	f	Lnet/minecraft/class_1_330;	field_1_572	openGlCapabilities
-	f	Ljava/awt/Canvas;	field_1_573	canvas
-	f	Lnet/minecraft/class_1_65;	field_1_574	applet
-	f	I	field_1_575	initWidth
-	f	Ljava/io/File;	field_1_576	gameDir
-	f	Lnet/minecraft/class_1_277;	field_1_577	textureManager
-	f	Z	field_1_578	skipGameRender
-	f	I	field_1_579	startupServerPort
-	f	I	field_1_580	height
-	f	I	field_1_581	width
-	f	Ljava/lang/String;	field_1_582	startupServerAddress
-	f	Lnet/minecraft/class_1_440;	field_1_583	progressRenderer
-	f	Z	field_1_584	extendedTextureAtlas
-	f	Lnet/minecraft/class_1_134;	field_1_585	world
-	f	Lnet/minecraft/class_1_482;	field_1_586	mouse
-	f	Lnet/minecraft/class_1_898;	field_1_587	particleManager
-	f	J	field_1_588	timeAfterLastTick
-	f	Lnet/minecraft/class_1_484;	field_1_590	player
-	f	I	field_1_591	attackCooldown
-	f	Lnet/minecraft/class_1_446;	field_1_593	session
-	f	[J	field_1_594	frameTimes
-	f	Lnet/minecraft/class_1_740;	field_1_595	interactionManager
-	f	Z	field_1_596	appletMode
-	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/class_1_65;IIZ)V	<init>	
-		p	1		component
-		p	2		canvas
-		p	3		applet
-		p	4		width
-		p	5		height
-		p	6		fullscreen
-	m	([Ljava/lang/String;)V	main	main
-		p	0		args
-	m	()V	method_1_507	respawnPlayer
-	m	(Ljava/lang/String;)Ljava/io/File;	method_1_508	getWorkingDirectory
-		p	0		name
-	m	()V	method_1_509	TL2Detector
-	m	()V	method_1_510	setTitle
-	m	()V	method_1_511	banPlayer
-	m	()V	method_1_512	init
-	m	(I)V	method_1_513	handleMouseClick
-		p	1		button
-	m	(IZ)V	method_1_514	handleMouseDown
-		p	1		button
-		p	2		holdingAttack
-	m	()Ljava/lang/String;	method_1_516	getGPUInfo
-	m	()V	method_1_517	stop
-	m	(Lnet/minecraft/class_1_134;Ljava/lang/String;Z)V	method_1_518	
-		p	1		world
-	m	(Ljava/lang/String;)V	method_1_519	prepareWorld
-		p	1		saveName
-	m	(Ljava/lang/String;)V	method_1_520	setTitle
-	m	()Ljava/lang/String;	method_1_521	getRenderEntityDebugInfo
-	m	(Ljava/lang/String;)V	method_1_522	loadBannedWorld
-		p	1		world
-	m	()V	method_1_523	lockMouse
-	m	(Ljava/lang/String;Ljava/lang/String;)V	method_1_524	start
-		p	0		username
-		p	1		sessionId
-	m	(Ljava/lang/String;)V	method_1_525	startGame
-		p	1		saveName
-	m	(II)V	method_1_526	resize
-		p	1		width
-		p	2		height
-	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	method_1_527	startAndConnect
-		p	0		username
-		p	1		sessionId
-		p	2		server
-	m	(Lnet/minecraft/class_1_587;)V	method_1_528	handleCrash
-		p	1		report
-	m	(Lnet/minecraft/class_1_134;Ljava/lang/String;)V	method_1_530	
-		p	1		world
-	m	()V	method_1_531	toggleFullscreen
-	m	()Z	method_1_532	isMultiplayer
-	m	(Ljava/lang/String;Ljava/io/File;)V	method_1_533	loadResource
-		p	1		path
-		p	2		file
-	m	(Lnet/minecraft/class_1_443;)V	method_1_534	openScreen
-		p	1		screen
-	m	()Ljava/lang/String;	method_1_535	getRenderChunkDebugInfo
-	m	(Ljava/lang/String;Ljava/lang/Class;)V	method_1_536	loadZMWorld
-		p	2		world
-	m	()Ljava/io/File;	method_1_537	getWorkingDirectory
-	m	(IIIIII)V	method_1_538	draw
-		p	1		x
-		p	2		y
-		p	3		u
-		p	4		v
-		p	5		width
-		p	6		height
-	m	()Lnet/minecraft/class_1_579;	method_1_539	getOS
-	m	()Lnet/minecraft/class_1_330;	method_1_540	getOpenGlCapabilities
-	m	()Ljava/lang/String;	method_1_541	getWorldDebugInfo
-	m	()V	method_1_542	renderProfilerChart
-	m	()V	method_1_543	unlockMouse
-	m	(Ljava/lang/String;)V	method_1_544	openURL
-		p	0		url
-	m	()V	method_1_545	pauseGame
-	m	()V	method_1_546	printFirstLaunchSpecialUsernamesMessages
-	m	()V	method_1_547	forceReload
-	m	(Lnet/minecraft/class_1_134;)V	method_1_548	setWorld
-		p	1		world
-	m	()V	method_1_549	tick
-	m	()V	method_1_550	shutdown
-	m	(Ljava/lang/String;I)V	method_1_551	setStartupServer
-		p	1		address
-		p	2		port
-	m	()V	method_1_552	handlePickBlock
-	m	(Ljava/lang/String;)V	method_1_553	logGlError
-		p	1		message
-	m	()V	method_1_554	renderLoadingScreen
-	m	()V	run	run
 c	net/minecraft/class_1_64	net/minecraft/class_1_64
 	m	()Ljava/io/InputStream;	method_1_619	openInputStream
-c	net/minecraft/class_1_65	net/minecraft/client/MinecraftApplet
-	f	Ljava/lang/Thread;	field_1_666	thread
-	f	Lnet/minecraft/class_1_58;	field_1_667	minecraft
-	f	Ljava/awt/Canvas;	field_1_668	canvas
-	m	()V	destroy	destroy
-	m	()V	init	init
-	m	()V	method_1_624	stopThread
-	m	()V	method_1_625	clearMemory
-	m	()V	method_1_626	startThread
-	m	()V	start	start
-	m	()V	stop	stop
 c	net/minecraft/class_1_66	net/minecraft/isom/IsomPreviewApplet
 	f	Lnet/minecraft/class_1_439;	field_1_669	canvas
 c	net/minecraft/class_1_67	net/minecraft/class_1_67
@@ -356,6 +191,10 @@ c	net/minecraft/class_1_83	ext/client/gui/widget/SliderConfirmWidget
 		p	1		minecraft
 		p	2		mouseX
 		p	3		mouseY
+	m	(Lnet/minecraft/client/Minecraft;II)Z	method_1_648	
+		p	1	minecraft	minecraft
+		p	2	integer2	mouseX
+		p	3	integer3	mouseY
 	m	(II)V	method_1_1962	mouseReleased
 		p	1		mouseX
 		p	2		mouseY
@@ -620,6 +459,10 @@ c	net/minecraft/class_1_101	net/minecraft/client/gui/screen/ConnectScreen
 		p	1		minecraft
 		p	2		address
 		p	3		port
+	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V	<init>	
+		p	1	minecraft	minecraft
+		p	2	string	adress
+		p	3	integer	port
 	m	(CI)V	method_1_1474	keyPressed
 		p	1		chr
 		p	2		key
@@ -1104,7 +947,7 @@ c	net/minecraft/class_1_128	net/minecraft/client/entity/particle/WaterBubblePart
 		p	10		velocityY
 		p	12		velocityZ
 	m	()V	method_1_1838	tick
-c	net/minecraft/class_1_129	net/minecraft/client/gui/screen/TitleScreen__LetterBlock
+c	net/minecraft/class_1_129	net/minecraft/client/gui/screen/TitleScreen$LetterBlock
 	f	D	field_1_837	y
 	f	D	field_1_838	lastY
 	f	D	field_1_840	deltaY
@@ -1941,11 +1784,10 @@ c	net/minecraft/class_1_155	net/minecraft/client/render/texture/ThreadHttpTextur
 c	net/minecraft/class_1_156	ext/util/MinecraftException1
 c	net/minecraft/class_1_157	ext/util/command/CommandPass
 c	net/minecraft/class_1_158	net/minecraft/client/MinecraftAppletImplUnknownClass1
-	f	Lnet/minecraft/class_1_65;	field_1_987	mcApplet
-	m	(Lnet/minecraft/class_1_65;Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/class_1_65;IIZ)V	<init>	
-		p	1		mcApplet
-		p	2	component	component
-		p	4		mcApplet2
+	f	Lnet/minecraft/client/MinecraftApplet;	field_1_987	mcApplet
+	m	(Lnet/minecraft/client/MinecraftApplet;Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V	<init>	
+		p	1	minecraftApplet1	applet1
+		p	4	minecraftApplet4	applet2
 	m	(Lnet/minecraft/class_1_587;)V	method_1_528	handleCrash
 		p	1		report
 c	net/minecraft/class_1_159	ext/util/Ext1605Utils
@@ -8026,10 +7868,6 @@ c	net/minecraft/class_1_526	net/minecraft/block/entity/FurnaceBlockEntity
 c	net/minecraft/class_1_527	ext/util/command/CommandNoClip
 c	net/minecraft/class_1_528	ext/client/MinecraftImplUnknownClass1
 	f	Ljava/awt/Frame;	field_1_2318	frame
-	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/class_1_65;IIZLjava/awt/Frame;)V	<init>	
-		p	2		canvas
-		p	3		applet
-		p	7		frame
 	m	(Lnet/minecraft/class_1_587;)V	method_1_528	handleCrash
 		p	1		report
 c	net/minecraft/class_1_529	ext/util/command/CommandMatFullBright
@@ -10549,16 +10387,28 @@ c	net/minecraft/class_1_644	net/minecraft/client/gui/widget/ButtonWidget
 		p	1		minecraft
 		p	2		mouseX
 		p	3		mouseY
+	m	(Lnet/minecraft/client/Minecraft;II)Z	method_1_1963	renderBackground
+		p	1	minecraft	minecraft
+		p	2	integer2	mouseX
+		p	3	integer3	mouseY
 	m	(Lnet/minecraft/class_1_58;II)V	method_1_1964	render
 		p	1		minecraft
 		p	2		mouseX
 		p	3		mouseY
+	m	(Lnet/minecraft/client/Minecraft;II)V	method_1_1964	render
+		p	1	minecraft	minecraft
+		p	2	integer2	mouseX
+		p	3	integer3	mouseY
 	m	(Z)I	method_1_1967	getYImage
 		p	1		hovered
 	m	(Lnet/minecraft/class_1_58;II)V	method_1_1968	renderBackground
 		p	1		minecraft
 		p	2		mouseX
 		p	3		mouseY
+	m	(Lnet/minecraft/client/Minecraft;II)V	method_1_1968	mouseClicked
+		p	1	minecraft	minecraft
+		p	2	integer2	mouseX
+		p	3	integer3	mouseY
 c	net/minecraft/class_1_645	ext/util/command/CommandName
 c	net/minecraft/class_1_646	net/minecraft/block/RedstoneTorchToggleEntry
 	f	J	field_1_2974	time
@@ -12629,9 +12479,9 @@ c	net/minecraft/class_1_781	ext/client/Shaders
 		p	1		minecraft
 	m	()V	method_1_2239	loadShaders
 c	net/minecraft/class_1_782	net/minecraft/client/MinecraftAppletAWTCanvas
-	f	Lnet/minecraft/class_1_65;	field_1_3330	mcApplet
-	m	(Lnet/minecraft/class_1_65;)V	<init>	
-		p	1		mcApplet
+	f	Lnet/minecraft/client/MinecraftApplet;	field_1_3330	applet
+	m	(Lnet/minecraft/client/MinecraftApplet;)V	<init>	
+		p	1	minecraftApplet	applet
 	m	()V	addNotify	addNotify
 	m	()V	removeNotify	removeNotify
 c	net/minecraft/class_1_783	net/minecraft/block/TorchBlock
@@ -14492,7 +14342,7 @@ c	net/minecraft/class_1_846	net/minecraft/block/LeavesBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_847	net/minecraft/client/gui/screen/ConnectScreen__04471202
+c	net/minecraft/class_1_847	net/minecraft/client/gui/screen/ConnectScreen$1
 c	net/minecraft/class_1_848	net/minecraft/client/CrashReportPaneBorderCanvas
 	m	(I)V	<init>	
 		p	1		size
@@ -15290,6 +15140,176 @@ c	net/minecraft/class_1_904	net/minecraft/util/math/BlockPos
 		p	1		x
 		p	2		y
 		p	3		z
+c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
+	f	Lnet/minecraft/class_1_414;	field_1_526	timer
+	f	Ljava/lang/String;	field_1_527	fpsDebugInfo
+	f	Ljava/lang/String;	field_1_528	loadmapUser
+	f	Z	field_1_529	fullscreen
+	f	I	field_1_530	ticks
+	f	Lnet/minecraft/class_1_781;	field_1_531	shaders
+	f	[Ljava/lang/String;	field_1_533	SHASums
+		c	No clue what the sums are for but they are sums
+	f	Lnet/minecraft/class_1_225;	field_1_534	soundEngine
+	f	Lnet/minecraft/class_1_353;	field_1_535	lavaSprite
+	f	Ljava/lang/String;	field_1_536	hostAddress
+	f	J	field_1_537	lastTickTime
+	f	Z	field_1_538	running
+	f	Z	field_1_539	cloudsEnabled
+	f	I	field_1_540	lastClickTicks
+	f	Lnet/minecraft/class_1_801;	field_1_541	visualsManager
+	f	Lnet/minecraft/class_1_730;	field_1_542	humanoidModel
+	f	Lnet/minecraft/class_1_509;	field_1_543	waterSprite
+	f	I	field_1_544	frameTimeIndex
+	f	Lnet/minecraft/class_1_267;	field_1_545	crosshairTarget
+	f	Z	field_1_547	conf_loadCerts
+	f	Lnet/minecraft/class_1_699;	field_1_548	gui
+	f	[Ljava/lang/String;	field_1_549	MD5Sums
+	f	I	field_1_550	joinPlayerCounter
+	f	Ljava/lang/String;	field_1_552	startupVersionString
+		c	This tell us that {@link MinecraftImplUnknownClass1} contained the name MinecraftImpl
+	f	Lnet/minecraft/class_1_563;	field_1_554	worldRenderer
+	f	Ljava/awt/Component;	field_1_555	component
+	f	Z	field_1_556	conf_ideLaunch
+	f	Z	field_1_557	raining
+	f	I	field_1_558	loadmapId
+	f	I	field_1_560	initHeight
+	f	Z	field_1_561	focused
+	f	Lnet/minecraft/class_1_274;	field_1_562	gameRenderer
+	f	Z	field_1_563	paused
+	f	Lnet/minecraft/class_1_501;	field_1_564	textRenderer
+	f	Z	field_1_565	conf_bannedPlayer
+	f	Ljava/io/File;	field_1_566	workingDirectory
+	f	Lnet/minecraft/class_1_799;	field_1_568	resourceDownloader
+	f	Lnet/minecraft/class_1_58;	field_1_569	minecraft
+	f	Lnet/minecraft/class_1_152;	field_1_570	options
+	f	Lnet/minecraft/class_1_443;	field_1_571	screen
+	f	Lnet/minecraft/class_1_330;	field_1_572	openGlCapabilities
+	f	Ljava/awt/Canvas;	field_1_573	canvas
+	f	Lnet/minecraft/client/MinecraftApplet;	field_1_574	applet
+	f	I	field_1_575	initWidth
+	f	Ljava/io/File;	field_1_576	gameDir
+	f	Lnet/minecraft/class_1_277;	field_1_577	textureManager
+	f	Z	field_1_578	skipGameRender
+	f	I	field_1_579	startupServerPort
+	f	I	field_1_580	height
+	f	I	field_1_581	width
+	f	Ljava/lang/String;	field_1_582	startupServerAddress
+	f	Lnet/minecraft/class_1_440;	field_1_583	progressRenderer
+	f	Z	field_1_584	extendedTextureAtlas
+	f	Lnet/minecraft/class_1_134;	field_1_585	world
+	f	Lnet/minecraft/class_1_482;	field_1_586	mouse
+	f	Lnet/minecraft/class_1_898;	field_1_587	particleManager
+	f	J	field_1_588	timeAfterLastTick
+	f	Lnet/minecraft/class_1_484;	field_1_590	player
+	f	I	field_1_591	attackCooldown
+	f	Lnet/minecraft/class_1_446;	field_1_593	session
+	f	[J	field_1_594	frameTimes
+	f	Lnet/minecraft/class_1_740;	field_1_595	interactionManager
+	f	Z	field_1_596	appletMode
+	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/class_1_65;IIZ)V	<init>	
+		p	1		component
+		p	2		canvas
+		p	3		applet
+		p	4		width
+		p	5		height
+		p	6		fullscreen
+	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V	<init>	
+		p	3	minecraftApplet	applet
+		p	4	integer4	width
+		p	5	integer5	height
+		p	6	boolean6	fullscreen
+	m	([Ljava/lang/String;)V	main	main
+		p	0		args
+	m	()V	method_1_507	respawnPlayer
+	m	(Ljava/lang/String;)Ljava/io/File;	method_1_508	getWorkingDirectory
+		p	0		name
+	m	()V	method_1_509	TL2Detector
+	m	()V	method_1_510	setTitle
+	m	()V	method_1_511	banPlayer
+	m	()V	method_1_512	init
+	m	(I)V	method_1_513	handleMouseClick
+		p	1		button
+	m	(IZ)V	method_1_514	handleMouseDown
+		p	1		button
+		p	2		holdingAttack
+	m	()Ljava/lang/String;	method_1_516	getGPUInfo
+	m	()V	method_1_517	stop
+	m	(Lnet/minecraft/class_1_134;Ljava/lang/String;Z)V	method_1_518	
+		p	1		world
+	m	(Ljava/lang/String;)V	method_1_519	prepareWorld
+		p	1		saveName
+	m	(Ljava/lang/String;)V	method_1_520	setTitle
+	m	()Ljava/lang/String;	method_1_521	getRenderEntityDebugInfo
+	m	(Ljava/lang/String;)V	method_1_522	loadBannedWorld
+		p	1		world
+	m	()V	method_1_523	lockMouse
+	m	(Ljava/lang/String;Ljava/lang/String;)V	method_1_524	start
+		p	0		username
+		p	1		sessionId
+	m	(Ljava/lang/String;)V	method_1_525	startGame
+		p	1		saveName
+	m	(II)V	method_1_526	resize
+		p	1		width
+		p	2		height
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	method_1_527	startAndConnect
+		p	0		username
+		p	1		sessionId
+		p	2		server
+	m	(Lnet/minecraft/class_1_587;)V	method_1_528	handleCrash
+		p	1		report
+	m	(Lnet/minecraft/class_1_134;Ljava/lang/String;)V	method_1_530	
+		p	1		world
+	m	()V	method_1_531	toggleFullscreen
+	m	()Z	method_1_532	isMultiplayer
+	m	(Ljava/lang/String;Ljava/io/File;)V	method_1_533	loadResource
+		p	1		path
+		p	2		file
+	m	(Lnet/minecraft/class_1_443;)V	method_1_534	openScreen
+		p	1		screen
+	m	()Ljava/lang/String;	method_1_535	getRenderChunkDebugInfo
+	m	(Ljava/lang/String;Ljava/lang/Class;)V	method_1_536	loadZMWorld
+		p	2		world
+	m	()Ljava/io/File;	method_1_537	getWorkingDirectory
+	m	(IIIIII)V	method_1_538	draw
+		p	1		x
+		p	2		y
+		p	3		u
+		p	4		v
+		p	5		width
+		p	6		height
+	m	()Lnet/minecraft/class_1_579;	method_1_539	getOS
+	m	()Lnet/minecraft/class_1_330;	method_1_540	getOpenGlCapabilities
+	m	()Ljava/lang/String;	method_1_541	getWorldDebugInfo
+	m	()V	method_1_542	renderProfilerChart
+	m	()V	method_1_543	unlockMouse
+	m	(Ljava/lang/String;)V	method_1_544	openURL
+		p	0		url
+	m	()V	method_1_545	pauseGame
+	m	()V	method_1_546	printFirstLaunchSpecialUsernamesMessages
+	m	()V	method_1_547	forceReload
+	m	(Lnet/minecraft/class_1_134;)V	method_1_548	setWorld
+		p	1		world
+	m	()V	method_1_549	tick
+	m	()V	method_1_550	shutdown
+	m	(Ljava/lang/String;I)V	method_1_551	setStartupServer
+		p	1		address
+		p	2		port
+	m	()V	method_1_552	handlePickBlock
+	m	(Ljava/lang/String;)V	method_1_553	logGlError
+		p	1		message
+	m	()V	method_1_554	renderLoadingScreen
+	m	()V	run	run
+c	net/minecraft/client/MinecraftApplet	net/minecraft/client/MinecraftApplet
+	f	Ljava/lang/Thread;	field_1_666	thread
+	f	Lnet/minecraft/class_1_58;	field_1_667	minecraft
+	f	Ljava/awt/Canvas;	field_1_668	canvas
+	m	()V	destroy	destroy
+	m	()V	init	init
+	m	()V	method_1_624	stopThread
+	m	()V	method_1_625	clearMemory
+	m	()V	method_1_626	startThread
+	m	()V	start	start
+	m	()V	stop	stop
 c	paulscode/sound/Channel	paulscode/sound/Channel
 	f	Lpaulscode/sound/Source;	attachedSource	attachedSource
 	f	I	channelType	channelType
