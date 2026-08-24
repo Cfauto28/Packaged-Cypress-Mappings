@@ -947,7 +947,7 @@ c	net/minecraft/class_1_128	net/minecraft/client/entity/particle/WaterBubblePart
 		p	10		velocityY
 		p	12		velocityZ
 	m	()V	method_1_1838	tick
-c	net/minecraft/class_1_129	net/minecraft/client/gui/screen/TitleScreen$LetterBlock
+c	net/minecraft/class_1_129	net/minecraft/client/gui/screen/TitleScreen__LetterBlock
 	f	D	field_1_837	y
 	f	D	field_1_838	lastY
 	f	D	field_1_840	deltaY
@@ -11229,6 +11229,8 @@ c	net/minecraft/class_1_707	ext/client/visuals/VisualsUnknownClass1
 	f	Lnet/minecraft/class_1_58;	field_1_3149	minecraft
 	m	(Lnet/minecraft/class_1_58;Ljava/io/File;)V	<init>	
 		p	1		minecraft
+	m	(Lnet/minecraft/client/Minecraft;Ljava/io/File;)V	<init>	
+		p	1	minecraft	minecraft
 	m	(Lnet/minecraft/class_1_256;)Z	method_1_2100	
 		p	1		visualClass
 c	net/minecraft/class_1_708	ext/util/command/CommandSVCheats
@@ -14342,7 +14344,7 @@ c	net/minecraft/class_1_846	net/minecraft/block/LeavesBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_847	net/minecraft/client/gui/screen/ConnectScreen$1
+c	net/minecraft/class_1_847	net/minecraft/client/gui/screen/ConnectScreen__04471202
 c	net/minecraft/class_1_848	net/minecraft/client/CrashReportPaneBorderCanvas
 	m	(I)V	<init>	
 		p	1		size
@@ -15165,6 +15167,7 @@ c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/class_1_699;	field_1_548	gui
 	f	[Ljava/lang/String;	field_1_549	MD5Sums
 	f	I	field_1_550	joinPlayerCounter
+	f	Ljava/lang/String;	field_1_551	terrainTextureScreen
 	f	Ljava/lang/String;	field_1_552	startupVersionString
 		c	This tell us that {@link MinecraftImplUnknownClass1} contained the name MinecraftImpl
 	f	Lnet/minecraft/class_1_563;	field_1_554	worldRenderer
