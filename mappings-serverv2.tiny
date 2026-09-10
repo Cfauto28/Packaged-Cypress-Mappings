@@ -50,9 +50,6 @@ c	net/minecraft/class_1_4	net/minecraft/block/entity/FurnaceBlockEntity
 	m	(Lnet/minecraft/class_1_128;)V	method_1_979	readNbt
 	m	()V	method_1_980	tick
 	m	(Lnet/minecraft/class_1_128;)V	method_1_981	writeNbt
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_5	ext/newblock/TileEntityEssenceFountain
-=======
 c	net/minecraft/class_1_5	ext/inventory/EssenceInventoryBlockEntity
 	f	I	field_1_25	counter
 	f	Lnet/minecraft/class_1_175;	field_1_26	singularSlot
@@ -60,7 +57,6 @@ c	net/minecraft/class_1_5	ext/inventory/EssenceInventoryBlockEntity
 	m	()Ljava/lang/String;	method_1_27	getInvName
 	m	()I	method_1_28	getInventoryStackLimit
 	m	(II)Lnet/minecraft/class_1_175;	method_1_29	decrStackSize
->>>>>>> Stashed changes
 	m	()I	method_1_81	getSize
 	m	(I)Lnet/minecraft/class_1_175;	method_1_82	getItem
 	m	(Lnet/minecraft/class_1_128;)V	method_1_979	readNbt
@@ -74,10 +70,7 @@ c	net/minecraft/class_1_6	net/minecraft/util/math/BlockPos
 		p	2	arg1	y
 		p	3	arg2	z
 c	net/minecraft/class_1_7	net/minecraft/network/Connection__62556030
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_117;	field_1_30	f_07639014
->>>>>>> Stashed changes
 c	net/minecraft/class_1_8	net/minecraft/entity/mob/player/PlayerInventory
 	f	Lnet/minecraft/class_1_391;	field_1_31	player
 	f	Z	field_1_32	dirty
@@ -96,10 +89,7 @@ c	net/minecraft/class_1_8	net/minecraft/entity/mob/player/PlayerInventory
 	m	(II)I	method_1_34	addItemStack
 		p	1	arg0	item
 		p	2	arg1	amount
-<<<<<<< Updated upstream
-=======
 	m	(ILnet/minecraft/class_1_175;)V	method_1_35	getCurrentItem
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_175;)Z	method_1_36	addItem
 		p	1	arg0	item
 	m	()I	method_1_37	getArmorProtection
@@ -113,17 +103,6 @@ c	net/minecraft/class_1_8	net/minecraft/entity/mob/player/PlayerInventory
 		p	1	arg0	list
 	m	()I	method_1_42	getEmptySlot
 	m	()I	method_1_43	getMaxStackSize
-<<<<<<< Updated upstream
-	m	()V	method_1_45	dropAll
-	m	()I	method_1_81	getSize
-	m	(I)Lnet/minecraft/class_1_175;	method_1_82	getItem
-c	net/minecraft/class_1_9	net/minecraft/class_1_9
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-c	net/minecraft/class_1_10	ext/world/biome/BiomeUnknownClass1
-c	net/minecraft/class_1_11	ext/newblock/IceDoorBlock
-	m	(ILjava/util/Random;)I	method_1_746	getDropItem
-c	net/minecraft/class_1_12	net/minecraft/class_1_12
-=======
 	m	(I)Z	method_1_44	consumeInventoryItem
 	m	()V	method_1_45	dropAll
 	m	()I	method_1_81	getSize
@@ -137,7 +116,6 @@ c	net/minecraft/class_1_10	ext/world/biome/BiomeUnknownClass2
 c	net/minecraft/class_1_11	ext/newblock/IceDoorBlock
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_12	ext/network/packet/Packet72RemoteMessageOverlay
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -166,8 +144,6 @@ c	net/minecraft/class_1_15	net/minecraft/block/SignBlock
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 	m	()Lnet/minecraft/class_1_373;	method_1_775	createBlockEntity
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_16	ext/world/gen/WorldGenHouseBig
 	f	Lnet/minecraft/class_1_314;	field_1_42	noiseMap2
 	f	Lnet/minecraft/class_1_314;	field_1_43	noiseMap3
@@ -190,7 +166,6 @@ c	net/minecraft/class_1_16$net/minecraft/class_1_240	ext/world/gen/WorldGenHouse
 	m	()[Lnet/minecraft/class_1_16$net/minecraft/class_1_240;	method_1_504	func_7882_1251mboaHZ4xKHUK0lF5iBBq7NA874yM27ni02aQ712sSVLdgPFB35KJld3u
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_16$net/minecraft/class_1_240;	method_1_505	func_7883_8x1a8h7WrR5kUb5Xuxqe5irup5ri88h38fv851TH2C3t9W0A3lk3RU7Tw6LY
 	m	()[Lnet/minecraft/class_1_16$net/minecraft/class_1_240;	method_1_506	func_7881_9pHWziE85Yn7v1uc42OeB3pd6s8R2aC4D738N3V9eq2678g7Qe5x7vjiqt3q
->>>>>>> Stashed changes
 c	net/minecraft/class_1_17	net/minecraft/network/packet/WorldTimePacket
 	f	J	field_1_45	time
 	m	()I	method_1_328	getSize
@@ -212,10 +187,6 @@ c	net/minecraft/class_1_19	net/minecraft/block/SnowBlock
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_21	net/minecraft/network/Connection__42766668
-c	net/minecraft/class_1_22	ext/newitem/SpearItem
-=======
 c	net/minecraft/class_1_20	ext/block/BlockUnknownClass2
 c	net/minecraft/class_1_21	net/minecraft/network/Connection__42766668
 	f	Lnet/minecraft/class_1_117;	field_1_46	f_50445497
@@ -224,7 +195,6 @@ c	net/minecraft/class_1_22	ext/newitem/ExtSpearItem
 c	net/minecraft/class_1_23	ext/world/gen/WorldGenHouseBigSpawner
 	m	()F	method_1_152	func_6572_4MbDiJtu6trpae74IapUd09LfEVt0Aru1bX9SAE845fOF7B0JmYIQrXHuHxC
 	m	(Lnet/minecraft/class_1_245;IILnet/minecraft/class_1_325;)V	method_1_153	func_6573_9s8xyF629674iK59W75jxL4IfegOZaukdAavse5BpG78PPgBZ5sG433o01xa
->>>>>>> Stashed changes
 c	net/minecraft/class_1_24	net/minecraft/block/RedstoneTorchBlock__ToggleEntry
 	f	I	field_1_48	x
 	f	I	field_1_49	z
@@ -235,16 +205,11 @@ c	net/minecraft/class_1_24	net/minecraft/block/RedstoneTorchBlock__ToggleEntry
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	time
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_25	ext/newitem/BookIIIItem
-c	net/minecraft/class_1_26	net/minecraft/class_1_26
-=======
 c	net/minecraft/class_1_25	ext/newitem/ExtBookItemIII
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
 c	net/minecraft/class_1_26	ext/entity/AmoungEntity
 	f	Z	field_1_52	unusedBool
 	m	(Lnet/minecraft/class_1_391;)Z	method_1_66	interact
->>>>>>> Stashed changes
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
 	m	()Ljava/lang/String;	method_1_816	getDeathSound
 	m	()F	method_1_819	getSoundVolume
@@ -276,34 +241,22 @@ c	net/minecraft/class_1_27	net/minecraft/server/entity/mob/player/ServerPlayerEn
 	m	()V	method_1_1021	swingArm
 	m	(Lnet/minecraft/class_1_355;I)V	method_1_1030	pickUp
 c	net/minecraft/class_1_28	net/minecraft/network/Connection__99036743
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_117;	field_1_63	f_60832637
->>>>>>> Stashed changes
 c	net/minecraft/class_1_29	net/minecraft/block/MineralBlock
 	m	(II)V	<init>	
 		p	1	arg0	id
 		p	2	arg1	sprite
 	m	(I)I	method_1_715	getSprite
 c	net/minecraft/class_1_30	ext/newblock/LichenBlock
-<<<<<<< Updated upstream
-	m	(I)Z	method_1_430	canBePlacedOn
-	m	(Lnet/minecraft/class_1_245;III)Z	method_1_731	canSurvive
-c	net/minecraft/class_1_31	ext/newblock/WoodSlabBlock
-=======
 	m	(I)Z	method_1_430	getSurvivableBlockId
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_731	canSurvive
 c	net/minecraft/class_1_31	ext/newblock/WoodSlabBlock
 	f	Z	field_1_64	isSolid
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_159;IIII)Z	method_1_708	shouldRenderFace
 	m	(I)I	method_1_715	getSprite
 	m	()Z	method_1_725	isSolid
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_733	neighborChanged
-<<<<<<< Updated upstream
-=======
 	m	()Z	method_1_740	isCube
->>>>>>> Stashed changes
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 c	net/minecraft/class_1_32	net/minecraft/block/LeavesBlock
@@ -347,19 +300,6 @@ c	net/minecraft/class_1_33	net/minecraft/util/ProgressListener
 		p	1	arg0	title
 	m	(I)V	method_1_74	progressStagePercentage
 		p	1	arg0	percentage
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_34	net/minecraft/class_1_34
-	m	(Lnet/minecraft/class_1_128;)V	method_1_905	readCustomNbt
-	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
-c	net/minecraft/class_1_35	net/minecraft/class_1_35
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-c	net/minecraft/class_1_37	ext/newblock/ExtNewBlock
-	f	Lnet/minecraft/class_1_286;	field_1_98	FORTIFIED_GLASS
-	f	Lnet/minecraft/class_1_286;	field_1_120	FRIGID_LEAVES
-	f	Lnet/minecraft/class_1_286;	field_1_135	TILE
-	f	Lnet/minecraft/class_1_286;	field_1_199	PILLAR
-	f	Lnet/minecraft/class_1_286;	field_1_235	STONE_TILE
-=======
 c	net/minecraft/class_1_34	ext/entity/FirableEntity
 	f	F	field_1_67	arrowShake
 	m	(Lnet/minecraft/class_1_128;)V	method_1_905	readCustomNbt
@@ -536,31 +476,22 @@ c	net/minecraft/class_1_37	ext/newblock/ExtNewBlock
 	f	Lnet/minecraft/class_1_286;	field_1_235	TileBlock
 	f	Lnet/minecraft/class_1_286;	field_1_236	woolBlue
 	f	Lnet/minecraft/class_1_286;	field_1_237	LOW_LILY
->>>>>>> Stashed changes
 	m	()V	method_1_80	Register
 c	net/minecraft/class_1_38	net/minecraft/inventory/Inventory
 	m	()I	method_1_81	getSize
 	m	(I)Lnet/minecraft/class_1_175;	method_1_82	getItem
 		p	1	arg0	slot
 c	net/minecraft/class_1_39	net/minecraft/world/gen/feature/VeinFeature
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_238	blockIDBelowY10
->>>>>>> Stashed changes
 	f	I	field_1_239	size
 	f	I	field_1_240	block
 	m	(II)V	<init>	
 		p	1	arg0	block
 		p	2	arg1	size
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_40	net/minecraft/class_1_40
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-=======
 c	net/minecraft/class_1_40	ext/world/gen/WorldGenLichen
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_41	ext/world/freerun/HandlerSetCheckpointUnknownClass1
->>>>>>> Stashed changes
 c	net/minecraft/class_1_42	net/minecraft/network/packet/SpawnPointPacket
 	f	I	field_1_247	z
 	f	I	field_1_248	x
@@ -569,14 +500,10 @@ c	net/minecraft/class_1_42	net/minecraft/network/packet/SpawnPointPacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_43	net/minecraft/class_1_43
-=======
 c	net/minecraft/class_1_43	ext/network/packet/Packet8RespondSkinRequest
 	f	[B	field_1_251	data
 	f	Ljava/lang/String;	field_1_252	pname
 	f	I	field_1_253	rqChunk
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -649,74 +576,6 @@ c	net/minecraft/class_1_48	net/minecraft/block/RailBlock
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 c	net/minecraft/class_1_49	ext/newitem/ExtNewItem
-<<<<<<< Updated upstream
-	f	Lnet/minecraft/class_1_158;	field_1_256	HIGHWOOD_DOOR
-	f	Lnet/minecraft/class_1_158;	field_1_257	ICE_DOOR
-	f	Lnet/minecraft/class_1_158;	field_1_259	STYLISH_SHOES
-	f	Lnet/minecraft/class_1_158;	field_1_260	MYCON_SWORD
-	f	Lnet/minecraft/class_1_158;	field_1_261	MYCON_HOE
-	f	Lnet/minecraft/class_1_158;	field_1_262	OBSIDIAN_SHOVEL
-	f	Lnet/minecraft/class_1_158;	field_1_263	MYCON_PICKAXE
-	f	Lnet/minecraft/class_1_158;	field_1_264	PINK_DYE
-	f	Lnet/minecraft/class_1_158;	field_1_265	HUB_DOOR
-	f	Lnet/minecraft/class_1_158;	field_1_266	BISHMUT_INGOT
-	f	Lnet/minecraft/class_1_158;	field_1_267	OBSIDIAN_CHESTPLATE
-	f	Lnet/minecraft/class_1_158;	field_1_268	FIREWOOD_DOOR
-	f	Lnet/minecraft/class_1_158;	field_1_269	OBSERVER_FUR
-	f	Lnet/minecraft/class_1_158;	field_1_270	OBSIDIAN_SWORD
-	f	Lnet/minecraft/class_1_158;	field_1_271	BOOK_I
-	f	Lnet/minecraft/class_1_158;	field_1_272	SUNGLASSES
-	f	Lnet/minecraft/class_1_158;	field_1_273	FRYSHROOM
-	f	Lnet/minecraft/class_1_158;	field_1_274	FRIGID_BITS
-	f	Lnet/minecraft/class_1_158;	field_1_275	ESSENECE_RIFLE
-	f	Lnet/minecraft/class_1_158;	field_1_276	TEA_DOOR
-	f	Lnet/minecraft/class_1_158;	field_1_277	MYCON_SHOVEL
-	f	Lnet/minecraft/class_1_158;	field_1_278	OBSIDAIN_AXE
-	f	Lnet/minecraft/class_1_158;	field_1_279	MUSIC_DISC_JUHRY
-	f	Lnet/minecraft/class_1_158;	field_1_280	LIQUIFIED_FLAME
-	f	Lnet/minecraft/class_1_158;	field_1_281	TEA_LEAF
-	f	Lnet/minecraft/class_1_158;	field_1_282	BOOK_V
-	f	Lnet/minecraft/class_1_158;	field_1_283	OBSIDIAN_LEGGINGS
-	f	Lnet/minecraft/class_1_158;	field_1_284	MUSIC_DISC_DOWNBEAT_UPLINK
-	f	Lnet/minecraft/class_1_158;	field_1_285	MYCON_DOOR
-	f	Lnet/minecraft/class_1_158;	field_1_286	BOOK_III
-	f	Lnet/minecraft/class_1_158;	field_1_287	MUSIC_DISC_SANDCASTELS
-	f	Lnet/minecraft/class_1_158;	field_1_288	OBSIDAIN_PEAR
-	f	Lnet/minecraft/class_1_158;	field_1_289	BLACK_DYE
-	f	Lnet/minecraft/class_1_158;	field_1_290	OBSIDIAN_PICKAXE
-	f	Lnet/minecraft/class_1_158;	field_1_291	RAIN_CONCH
-	f	Lnet/minecraft/class_1_158;	field_1_292	LACE_AGATE
-	f	Lnet/minecraft/class_1_158;	field_1_293	MUSIC_DISC_DESAMBRIER
-	f	Lnet/minecraft/class_1_158;	field_1_294	BOOK_II
-	f	Lnet/minecraft/class_1_158;	field_1_295	MUSIC_DISC_K2
-	f	Lnet/minecraft/class_1_158;	field_1_296	MUSIC_DISC_GYLDAN_SVERD
-	f	Lnet/minecraft/class_1_158;	field_1_297	PEAR
-	f	Lnet/minecraft/class_1_158;	field_1_298	MUSIC_DISC_ROKKUBITORU_TUNE
-	f	Lnet/minecraft/class_1_158;	field_1_299	MALACHITE
-	f	Lnet/minecraft/class_1_158;	field_1_300	STYLISH_VISOR
-	f	Lnet/minecraft/class_1_158;	field_1_301	OBSIDIAN_HELMET
-	f	Lnet/minecraft/class_1_158;	field_1_302	STYLISH_CHESTPLATE
-	f	Lnet/minecraft/class_1_158;	field_1_303	SPEAR
-	f	Lnet/minecraft/class_1_158;	field_1_304	MYCON_STRAND
-	f	Lnet/minecraft/class_1_158;	field_1_305	OBSIDIAN_BOOTS
-	f	Lnet/minecraft/class_1_158;	field_1_306	BOOK_VI
-	f	Lnet/minecraft/class_1_158;	field_1_307	GREEN_DYE
-	f	Lnet/minecraft/class_1_158;	field_1_308	BLUE_DYE
-	f	Lnet/minecraft/class_1_158;	field_1_309	OBSIDIAN_HOE
-	f	Lnet/minecraft/class_1_158;	field_1_310	HEARTHEN_MIRROR
-	f	Lnet/minecraft/class_1_158;	field_1_311	OBSIDIAN_INGOT
-	f	Lnet/minecraft/class_1_158;	field_1_312	MYCON_AXE
-	f	Lnet/minecraft/class_1_158;	field_1_313	PYRITE
-	f	Lnet/minecraft/class_1_158;	field_1_314	GRANULAR_SALT
-	f	Lnet/minecraft/class_1_158;	field_1_315	STYLISH_SHORTS
-	f	Lnet/minecraft/class_1_158;	field_1_316	GRAY_GUN
-	f	Lnet/minecraft/class_1_158;	field_1_317	ERASER
-	f	Lnet/minecraft/class_1_158;	field_1_318	CANDY_ICE
-	f	Lnet/minecraft/class_1_158;	field_1_319	CLINOHUMITE
-	f	Lnet/minecraft/class_1_158;	field_1_320	ESSENCE
-	f	Lnet/minecraft/class_1_158;	field_1_321	FLAMEBERGE
-	f	Lnet/minecraft/class_1_158;	field_1_322	TEA_BUCKET
-=======
 	f	Lnet/minecraft/class_1_158;	field_1_256	HighwoodDoor
 	f	Lnet/minecraft/class_1_158;	field_1_257	IceDoor
 	f	Lnet/minecraft/class_1_158;	field_1_258	UNUSED_ITEM
@@ -784,7 +643,6 @@ c	net/minecraft/class_1_49	ext/newitem/ExtNewItem
 	f	Lnet/minecraft/class_1_158;	field_1_320	essence
 	f	Lnet/minecraft/class_1_158;	field_1_321	flameberge
 	f	Lnet/minecraft/class_1_158;	field_1_322	TeaBucket
->>>>>>> Stashed changes
 	m	()V	method_1_98	Register
 c	net/minecraft/class_1_50	net/minecraft/server/EntityMap
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_323	server
@@ -808,9 +666,6 @@ c	net/minecraft/class_1_50	net/minecraft/server/EntityMap
 		p	3	arg2	updateInterval
 	m	()V	method_1_103	tick
 c	net/minecraft/class_1_51	net/minecraft/world/gen/feature/TreeFeature
-<<<<<<< Updated upstream
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-=======
 	f	Ljava/lang/Boolean;	field_1_327	generateEpicTrees
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)V	method_1_104	generateDeEpicTreeFoliage
 	m	(Z)Lnet/minecraft/class_1_51;	method_1_105	generateHighwoodTrees
@@ -819,7 +674,6 @@ c	net/minecraft/class_1_51	net/minecraft/world/gen/feature/TreeFeature
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_108	generateNormalTree
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_52	ext/block/ExtBlockUnusedClass1
->>>>>>> Stashed changes
 c	net/minecraft/class_1_53	net/minecraft/item/PaintingItem
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
 c	net/minecraft/class_1_54	net/minecraft/block/entity/MobSpawnerBlockEntity
@@ -839,11 +693,6 @@ c	net/minecraft/class_1_55	net/minecraft/server/gui/LogHandler
 	f	Ljava/util/logging/Formatter;	field_1_335	formatter
 	m	(Ljavax/swing/JTextArea;)V	<init>	
 		p	1	arg0	textArea
-<<<<<<< Updated upstream
-	m	(Ljava/util/logging/LogRecord;)V	publish	
-		p	1	arg0	logRecord
-=======
->>>>>>> Stashed changes
 c	net/minecraft/class_1_56	net/minecraft/server/PendingCommand
 	f	Ljava/lang/String;	field_1_336	command
 	f	Lnet/minecraft/class_1_369;	field_1_337	source
@@ -858,18 +707,6 @@ c	net/minecraft/class_1_57	net/minecraft/block/Block__Sounds
 		p	1	arg0	key
 		p	2	arg1	volume
 		p	3	arg2	pitch
-<<<<<<< Updated upstream
-	m	()Ljava/lang/String;	method_1_111	getStepping
-	m	()F	method_1_112	getVolume
-	m	()F	method_1_113	getPitch
-c	net/minecraft/class_1_58	net/minecraft/server/gui/LogHandler__42279890
-	m	(Ljava/util/logging/LogRecord;)Ljava/lang/String;	format	
-		p	1	arg0	logRecord
-c	net/minecraft/class_1_59	ext/network/Decoder
-	f	Lnet/minecraft/class_1_59;	field_1_342	RFC2045
-	f	Lnet/minecraft/class_1_59;	field_1_344	RFC4648
-	f	Lnet/minecraft/class_1_59;	field_1_346	RFC4648_URLSAFE
-=======
 	m	()Ljava/lang/String;	method_1_111	getStepSound
 	m	()F	method_1_112	getVolume
 	m	()F	method_1_113	getPitch
@@ -891,7 +728,6 @@ c	net/minecraft/class_1_59	ext/network/Decoder
 	m	([B)[B	method_1_119	decode
 	m	()[I	method_1_120	fromBase64
 	m	(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;	method_1_121	decode
->>>>>>> Stashed changes
 c	net/minecraft/class_1_60	net/minecraft/world/NaturalSpawner
 	f	I	field_1_349	cap
 	f	[Ljava/lang/Class;	field_1_350	types
@@ -940,14 +776,6 @@ c	net/minecraft/class_1_63	net/minecraft/world/ScheduledTick
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	block
-<<<<<<< Updated upstream
-	m	(Ljava/lang/Object;)I	compareTo	
-		p	1	arg0	o
-	m	(J)Lnet/minecraft/class_1_63;	method_1_127	setTime
-		p	1	arg0	time
-	m	(Lnet/minecraft/class_1_63;)I	method_1_128	compareTo
-c	net/minecraft/class_1_65	net/minecraft/class_1_65
-=======
 	m	(J)Lnet/minecraft/class_1_63;	method_1_127	setTime
 		p	1	arg0	time
 	m	(Lnet/minecraft/class_1_63;)I	method_1_128	compareTo
@@ -957,7 +785,6 @@ c	net/minecraft/class_1_65	ext/entity/ShadowPlayerEntity
 	f	Z	field_1_366	getOut
 	f	Z	field_1_367	spawnedThisCycle
 	m	()V	method_1_129	Gone
->>>>>>> Stashed changes
 	m	()V	method_1_823	mobTick
 c	net/minecraft/class_1_66	net/minecraft/block/LadderBlock
 	m	(II)V	<init>	
@@ -971,10 +798,7 @@ c	net/minecraft/class_1_66	net/minecraft/block/LadderBlock
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 c	net/minecraft/class_1_67	net/minecraft/entity/mob/animal/CowEntity
-<<<<<<< Updated upstream
-=======
 	f	Z	field_1_368	f_12501010
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;)V	<init>	
 		p	1	arg0	world
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
@@ -1018,12 +842,6 @@ c	net/minecraft/class_1_69	net/minecraft/server/gui/PlayerStatsGui
 	f	[I	field_1_375	memoryUsePercentage
 	f	I	field_1_376	memoryUsage
 	m	()V	method_1_141	update
-<<<<<<< Updated upstream
-	m	(Ljava/awt/Graphics;)V	paint	
-		p	1	arg0	graphics
-c	net/minecraft/class_1_71	ext/newblock/BlockEssenceCloneer
-	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
-=======
 c	net/minecraft/class_1_70	ext/emptyclasses/EmptyClass2
 c	net/minecraft/class_1_71	ext/newblock/EssenceClonerBlock
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
@@ -1031,7 +849,6 @@ c	net/minecraft/class_1_72	ext/util/ExtLogger
 	m	(Ljava/lang/String;)V	method_1_143	r
 	m	(Ljava/lang/String;)V	method_1_144	w
 	m	(Ljava/lang/String;)V	method_1_145	i
->>>>>>> Stashed changes
 c	net/minecraft/class_1_73	net/minecraft/block/LeverBlock
 	m	(II)V	<init>	
 		p	1	arg0	id
@@ -1055,12 +872,8 @@ c	net/minecraft/class_1_73	net/minecraft/block/LeverBlock
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_74	net/minecraft/class_1_74
-=======
 c	net/minecraft/class_1_74	ext/network/packet/Packet70PlayGlobalMusic
 	f	Ljava/lang/String;	field_1_377	musicName
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -1087,15 +900,6 @@ c	net/minecraft/class_1_77	net/minecraft/block/SpongeBlock
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_732	onRemoved
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 c	net/minecraft/class_1_78	net/minecraft/world/LightType
-<<<<<<< Updated upstream
-	f	Lnet/minecraft/class_1_78;	field_1_387	SKY
-	f	I	field_1_388	defaultValue
-	f	Lnet/minecraft/class_1_78;	field_1_390	BLOCK
-	m	(Ljava/lang/String;II)V	<init>	
-		p	3	arg2	defaultValue
-	m	()[Lnet/minecraft/class_1_78;	method_1_147	values
-	m	(Ljava/lang/String;)Lnet/minecraft/class_1_78;	method_1_149	valueOf
-=======
 	f	I	field_1_388	defaultValue
 	m	(Ljava/lang/String;II)V	<init>	
 		p	3	arg2	defaultValue
@@ -1103,7 +907,6 @@ c	net/minecraft/class_1_78	net/minecraft/world/LightType
 c	net/minecraft/class_1_79	ext/world/gen/WorldGenHouseBigUnknownClass1
 	m	()F	method_1_152	func_6572_4MbDiJtu6trpae74IapUd09LfEVt0Aru1bX9SAE845fOF7B0JmYIQrXHuHxC
 	m	(Lnet/minecraft/class_1_245;IILnet/minecraft/class_1_325;)V	method_1_153	func_6573_9s8xyF629674iK59W75jxL4IfegOZaukdAavse5BpG78PPgBZ5sG433o01xa
->>>>>>> Stashed changes
 c	net/minecraft/class_1_80	net/minecraft/network/packet/BlockUpdatePacket
 	f	I	field_1_391	block
 	f	I	field_1_392	y
@@ -1186,27 +989,19 @@ c	net/minecraft/class_1_84	net/minecraft/world/HitResult
 		p	5	arg4	facePos
 	m	(Lnet/minecraft/class_1_355;)V	<init>	
 		p	1	arg0	entity
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_86	ext/newblock/PlaneBlock
-=======
 c	net/minecraft/class_1_85	ext/world/IHouseBig
 	m	()F	method_1_152	func_6572_4MbDiJtu6trpae74IapUd09LfEVt0Aru1bX9SAE845fOF7B0JmYIQrXHuHxC
 	m	(Lnet/minecraft/class_1_245;IILnet/minecraft/class_1_325;)V	method_1_153	func_6573_9s8xyF629674iK59W75jxL4IfegOZaukdAavse5BpG78PPgBZ5sG433o01xa
 c	net/minecraft/class_1_86	ext/newblock/SlatePillarBlock
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_706	updateMetadataOnPlaced
 	m	()I	method_1_710	getRenderType
 	m	()Z	method_1_725	isSolid
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_733	neighborChanged
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
-<<<<<<< Updated upstream
-	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
-=======
 	m	()Z	method_1_740	isCube
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_751	getOutlineShape
->>>>>>> Stashed changes
 c	net/minecraft/class_1_87	net/minecraft/item/MinecartItem
 	f	I	field_1_417	type
 	m	(II)V	<init>	
@@ -1231,10 +1026,7 @@ c	net/minecraft/class_1_89	net/minecraft/block/SnowLayerBlock
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 c	net/minecraft/class_1_90	net/minecraft/block/StoneBlock
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_418	dropID
->>>>>>> Stashed changes
 	m	(II)V	<init>	
 		p	1	arg0	id
 		p	2	arg1	sprite
@@ -1269,16 +1061,10 @@ c	net/minecraft/class_1_94	net/minecraft/nbt/NbtByte
 	m	(Ljava/io/DataInput;)V	method_1_999	read
 	m	(Ljava/io/DataOutput;)V	method_1_1000	write
 	m	()B	method_1_1006	getType
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_95	ext/world/biome/BiomeUnknownClass2
-	m	(Ljava/util/Random;)V	<init>	
-		p	1	random	random
-=======
 c	net/minecraft/class_1_95	ext/world/biome/BiomeUnknownClass3
 	m	(IILnet/minecraft/class_1_323$net/minecraft/class_1_277;)D	method_1_192	func_7867_0Sa7i8e9X8bsz8C7O3N9m408fK504rj6Qa96Vx186O3yrGFTvF7EiwNd1HjI
 	m	(IILnet/minecraft/class_1_323$net/minecraft/class_1_277;)D	method_1_193	func_7868_3g5835mGclzJIUDU5ZIWPtb1qUR2uFgUHLXK977f463W9MS7Iu5T5QHfh5EH
 	m	(IILnet/minecraft/class_1_323$net/minecraft/class_1_277;)Lnet/minecraft/class_1_323;	method_1_194	func_7869_3p0BQzmK4Mr6H1J26hjJ42W7ny9waN9zTOZAf655888Q468O9Gr48qka17hw
->>>>>>> Stashed changes
 c	net/minecraft/class_1_96	net/minecraft/network/packet/PingHostPacket
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
@@ -1333,10 +1119,7 @@ c	net/minecraft/class_1_97	net/minecraft/network/PacketHandler
 		p	1	arg0	packet
 	m	(Lnet/minecraft/class_1_115;)V	method_1_179	handleRemoveEntity
 		p	1	arg0	packet
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_307;)V	method_1_180	func_6028_84mzYZR4RZ06rHsfcZ0KP1l2c7K3NAX02a44e8pG40f8j1ymynF1zR45OMVK
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_224;)V	method_1_181	handleBlocksUpdate
 		p	1	arg0	packet
 	m	(Lnet/minecraft/class_1_119;)V	method_1_182	handleBlockEntityUpdate
@@ -1345,26 +1128,15 @@ c	net/minecraft/class_1_97	net/minecraft/network/PacketHandler
 		p	1	arg0	packet
 	m	(Lnet/minecraft/class_1_258;)V	method_1_184	handleWorldChunk
 		p	1	arg0	packet
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_257;)V	method_1_185	handleLogin
->>>>>>> Stashed changes
 c	net/minecraft/class_1_98	net/minecraft/block/material/AirMaterial
 	m	()Z	method_1_390	isOpaque
 	m	()Z	method_1_392	isSolid
 	m	()Z	method_1_393	blocksMovement
 c	net/minecraft/class_1_99	net/minecraft/block/PressurePlateBlock__ActivationRule
-<<<<<<< Updated upstream
-	f	Lnet/minecraft/class_1_99;	field_1_432	PLAYERS
-	f	Lnet/minecraft/class_1_99;	field_1_433	EVERYTHING
-	f	Lnet/minecraft/class_1_99;	field_1_435	MOBS
-	m	(Ljava/lang/String;)Lnet/minecraft/class_1_99;	method_1_187	valueOf
-c	net/minecraft/class_1_100	net/minecraft/network/packet/EntityPickupPacket
-=======
 	m	()[Lnet/minecraft/class_1_99;	method_1_188	func_7558_9Lr38Geh8JRWU5lkET6P8iCz5C8x0W1uzu3U35ui72p27mh6DC04xbCB1Bz1
 c	net/minecraft/class_1_100	net/minecraft/network/packet/EntityPickupPacket
 	f	I	field_1_436	collectorEntityID
->>>>>>> Stashed changes
 	f	I	field_1_437	id
 	m	(II)V	<init>	
 		p	1	arg0	id
@@ -1373,15 +1145,6 @@ c	net/minecraft/class_1_100	net/minecraft/network/packet/EntityPickupPacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_101	ext/newblock/LowWartBlock
-	m	()I	method_1_710	getRenderType
-	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
-	m	()Z	method_1_725	isSolid
-	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_733	neighborChanged
-	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
-c	net/minecraft/class_1_103	ext/world/biome/BiomeInterface
-=======
 c	net/minecraft/class_1_101	ext/newblock/GlowingCubeBlock
 	f	I	field_1_438	renderType
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_189	h
@@ -1404,7 +1167,6 @@ c	net/minecraft/class_1_103$net/minecraft/class_1_138	ext/world/biome/IBiome$net
 	f	Lnet/minecraft/class_1_103;	field_1_561	field_7197_3wqiDB0Br9mxtXo6hsFCIa33m3jtY6MWy12bt3ipyFSP4RGR811UEqMVPmn6
 	m	(Lnet/minecraft/class_1_103;)Lnet/minecraft/class_1_103$net/minecraft/class_1_138;	method_1_294	func_7194_6eoIT0F2pQe4A56YL8B07HvC6yMDml8s5Hvu214208q3eG0ibKdP3ab4Jwrt
 	m	(IILnet/minecraft/class_1_323$net/minecraft/class_1_277;)Lnet/minecraft/class_1_323;	method_1_295	func_7195_86G7qeg6J4gyyZLl06wPTw8w8PEzJ2S0jk6zSveM1R7dJHl056Vhge5m9Hew
->>>>>>> Stashed changes
 c	net/minecraft/class_1_104	net/minecraft/nbt/NbtByteArray
 	f	[B	field_1_440	value
 	m	([B)V	<init>	
@@ -1446,19 +1208,11 @@ c	net/minecraft/class_1_105	net/minecraft/server/world/chunk/ServerChunkCache
 	m	(Lnet/minecraft/class_1_354;)V	method_1_199	saveEntities
 		p	1	arg0	chunk
 	m	(II)Z	method_1_468	hasChunk
-<<<<<<< Updated upstream
-		c	@return whether the world chunk at the given chunk coordinates is loaded.
-=======
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_213;II)V	method_1_469	populateChunk
 	m	(ZLnet/minecraft/class_1_33;)Z	method_1_470	save
 	m	()Z	method_1_471	tick
 	m	()Z	method_1_472	shouldSave
 	m	(II)Lnet/minecraft/class_1_354;	method_1_473	getChunk
-<<<<<<< Updated upstream
-		c	@return the world chunk at the given chunk coordinates, or an empty chunk if it is not loaded.
-=======
->>>>>>> Stashed changes
 c	net/minecraft/class_1_106	net/minecraft/entity/mob/monster/SlimeEntity
 	f	I	field_1_448	size
 	f	F	field_1_449	stretch
@@ -1477,12 +1231,8 @@ c	net/minecraft/class_1_106	net/minecraft/entity/mob/monster/SlimeEntity
 	m	()V	method_1_922	tick
 	m	(Lnet/minecraft/class_1_391;)V	method_1_933	onPlayerCollision
 	m	()V	method_1_936	remove
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_107	net/minecraft/class_1_107
-=======
 c	net/minecraft/class_1_107	ext/world/gen/GenPillar
 	f	I	field_1_452	a
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_108	net/minecraft/block/TranslucentBlock
 	f	Z	field_1_453	culling
@@ -1552,10 +1302,7 @@ c	net/minecraft/class_1_114	net/minecraft/world/gen/chunk/OverworldChunkGenerato
 	f	Lnet/minecraft/class_1_327;	field_1_474	perlinNoise2
 	f	[D	field_1_475	sandBuffer
 	f	[D	field_1_476	depthNoiseBuffer
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_477	time_hr
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_245;	field_1_478	world
 	f	Lnet/minecraft/class_1_327;	field_1_479	minLimitPerlinNoise
 	f	[D	field_1_480	maxLimitPerlinNoiseBuffer
@@ -1564,10 +1311,7 @@ c	net/minecraft/class_1_114	net/minecraft/world/gen/chunk/OverworldChunkGenerato
 	f	[[I	field_1_485	waterDepths
 	f	Lnet/minecraft/class_1_327;	field_1_486	forestNoise
 	f	[D	field_1_487	heightMap
-<<<<<<< Updated upstream
-=======
 	f	J	field_1_488	lastUpdate
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_327;	field_1_489	maxLimitPerlinNoise
 	m	(Lnet/minecraft/class_1_245;J)V	<init>	
 		p	1	arg0	world
@@ -1577,10 +1321,7 @@ c	net/minecraft/class_1_114	net/minecraft/world/gen/chunk/OverworldChunkGenerato
 		p	1	arg0	chunkX
 		p	2	arg1	chunkZ
 		p	3	arg2	blocks
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_213;II)V	method_1_205	actualPopulate
->>>>>>> Stashed changes
 	m	([DIIIIII)[D	method_1_206	generateHeightMap
 		p	1	arg0	heightMap
 		p	2	arg1	x
@@ -1646,44 +1387,31 @@ c	net/minecraft/class_1_117	net/minecraft/network/Connection
 		p	3	arg2	listener
 	m	()V	method_1_208	tick
 	m	()I	method_1_209	getDelayedSendQueueSize
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_117;)Ljava/lang/Thread;	method_1_210	readThread
 	m	(Lnet/minecraft/class_1_117;)Z	method_1_211	m_25456175
->>>>>>> Stashed changes
 	m	()V	method_1_212	read
 	m	(Lnet/minecraft/class_1_151;)V	method_1_213	send
 		p	1	arg0	packet
 	m	(Ljava/lang/Exception;)V	method_1_214	handleException
 		p	1	arg0	exception
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_117;)V	method_1_215	sendPacket
 	m	(Lnet/minecraft/class_1_117;)Z	method_1_216	m_39452111
->>>>>>> Stashed changes
 	m	()V	method_1_217	write
 	m	()Ljava/net/SocketAddress;	method_1_218	getAddress
 	m	(Lnet/minecraft/class_1_97;)V	method_1_219	setListener
 		p	1	arg0	listener
 	m	(Ljava/lang/String;)V	method_1_220	close
 		p	1	arg0	reason
-<<<<<<< Updated upstream
-	m	()V	method_1_222	close
-=======
 	m	(Lnet/minecraft/class_1_117;)V	method_1_221	readPacket
 	m	()V	method_1_222	close
 	m	(Lnet/minecraft/class_1_117;)Ljava/lang/Thread;	method_1_223	writeThread
->>>>>>> Stashed changes
 c	net/minecraft/class_1_118	net/minecraft/block/StoneSlabBlock
 	f	Z	field_1_511	doubleSlab
 	m	(Lnet/minecraft/class_1_159;IIII)Z	method_1_708	shouldRenderFace
 	m	(I)I	method_1_715	getSprite
 	m	()Z	method_1_725	isSolid
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_733	neighborChanged
-<<<<<<< Updated upstream
-=======
 	m	()Z	method_1_740	isCube
->>>>>>> Stashed changes
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 c	net/minecraft/class_1_119	net/minecraft/network/packet/BlockEntityUpdatePacket
@@ -1713,15 +1441,11 @@ c	net/minecraft/class_1_120	net/minecraft/item/ToolItem
 		p	4	arg3	effectiveBlocks
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_286;)F	method_1_354	getMiningSpeed
 	m	(Lnet/minecraft/class_1_175;IIII)V	method_1_355	mineBlock
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_121	net/minecraft/class_1_121
-=======
 c	net/minecraft/class_1_121	ext/network/packet/Packet202SecureChatEcho
 	f	Ljava/lang/String;	field_1_521	signature
 	f	I	field_1_522	offset
 	f	Z	field_1_523	verified
 	f	I	field_1_524	secID
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -1749,16 +1473,11 @@ c	net/minecraft/class_1_124	net/minecraft/block/ChestBlock
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
 	m	()Lnet/minecraft/class_1_373;	method_1_775	createBlockEntity
 c	net/minecraft/class_1_125	net/minecraft/server/gui/MinecraftServerGui__02519014
-<<<<<<< Updated upstream
-	m	(Ljava/awt/event/WindowEvent;)V	windowClosing	
-		p	1	arg0	e
-=======
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_526	f_66262917
 c	net/minecraft/class_1_126	ext/world/gen/WorldGenHouseSmallUnknownClass5
 c	net/minecraft/class_1_127	ext/world/gen/WorldGenMyconLayer
 	m	(Ljava/util/Random;)V	method_1_802	func_6105_81hMTC5FoM6v920z1cx6O635T6Awu9Y40ealKHkVig8X477d9SlXh3yS17Y3
 	m	(Ljava/util/Random;Lnet/minecraft/class_1_245;II)Z	method_1_803	func_6106_89178IPx36Pz8I0tikD07m8tZIpV1sbMp38yAtni7c93aR76eIXb747sm4eZ
->>>>>>> Stashed changes
 c	net/minecraft/class_1_128	net/minecraft/nbt/NbtCompound
 	f	Ljava/util/Map;	field_1_534	elements
 	m	(Ljava/lang/String;)[B	method_1_227	getByteArray
@@ -1823,15 +1542,6 @@ c	net/minecraft/class_1_128	net/minecraft/nbt/NbtCompound
 	m	()B	method_1_1006	getType
 c	net/minecraft/class_1_129	ext/network/Base64
 	m	()Lnet/minecraft/class_1_59;	method_1_251	getUrlDecoder
-<<<<<<< Updated upstream
-	m	()Lnet/minecraft/class_1_320;	method_1_252	getMimeEncoder
-	m	()Lnet/minecraft/class_1_320;	method_1_253	getEncoder
-	m	()Lnet/minecraft/class_1_59;	method_1_254	getMimeDecoder
-	m	()Lnet/minecraft/class_1_320;	method_1_255	getUrlEncoder
-	m	(I[B)Lnet/minecraft/class_1_320;	method_1_256	getMimeEncoder
-	m	()Lnet/minecraft/class_1_59;	method_1_257	getDecoder
-c	net/minecraft/class_1_130	net/minecraft/item/DoorItem
-=======
 	m	()Lnet/minecraft/class_1_129$net/minecraft/class_1_59;	method_1_251	getUrlDecoder
 	m	()Lnet/minecraft/class_1_129$net/minecraft/class_1_320;	method_1_252	getMimeEncoder
 	m	()Lnet/minecraft/class_1_320;	method_1_252	getMimeEncoder
@@ -1907,7 +1617,6 @@ c	net/minecraft/class_1_129$net/minecraft/class_1_320	ext/network/Base64$net/min
 	m	([B[B)I	method_1_790	encode
 c	net/minecraft/class_1_130	net/minecraft/item/DoorItem
 	f	Lnet/minecraft/class_1_363;	field_1_535	target
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_172;	field_1_536	material
 	m	(ILnet/minecraft/class_1_172;)V	<init>	
 		p	1	arg0	id
@@ -1921,10 +1630,7 @@ c	net/minecraft/class_1_131	net/minecraft/server/network/handler/ServerPlayNetwo
 	f	I	field_1_543	ticks
 	f	Z	field_1_544	teleported
 	f	Z	field_1_545	disconnected
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_175;	field_1_546	f_33399967
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_117;	field_1_547	connection
 	f	D	field_1_548	teleportTargetY
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_1_117;Lnet/minecraft/class_1_27;)V	<init>	
@@ -1942,10 +1648,7 @@ c	net/minecraft/class_1_131	net/minecraft/server/network/handler/ServerPlayNetwo
 	m	(Lnet/minecraft/class_1_324;)V	method_1_174	handleAddItem
 	m	(Lnet/minecraft/class_1_193;)V	method_1_175	handlePlayerInventory
 	m	(Lnet/minecraft/class_1_211;)V	method_1_178	handleEntityAnimation
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_307;)V	method_1_180	func_6028_84mzYZR4RZ06rHsfcZ0KP1l2c7K3NAX02a44e8pG40f8j1ymynF1zR45OMVK
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_119;)V	method_1_182	handleBlockEntityUpdate
 	m	(Ljava/lang/String;)V	method_1_258	disconnect
 		p	1	arg0	reason
@@ -1977,14 +1680,11 @@ c	net/minecraft/class_1_132	net/minecraft/util/Long2ObjectHashMap__Node
 	m	()J	method_1_265	getKey
 	m	()Ljava/lang/Object;	method_1_266	getValue
 c	net/minecraft/class_1_133	ext/newblock/VendingMachineBlock
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_134	net/minecraft/client/gui/GameGui
 	f	[Ljava/lang/String;	field_1_554	syllab
 	m	(DD)D	method_1_267	AngleDistance
 	m	(Lnet/minecraft/class_1_245;IDDDDDD)Z	method_1_270	RayCastBlock
 	m	(JII)Ljava/lang/String;	method_1_271	Namegen2
->>>>>>> Stashed changes
 c	net/minecraft/class_1_135	net/minecraft/server/ChunkMap
 	f	Ljava/util/List;	field_1_555	players
 		c	All players in this world.
@@ -1999,20 +1699,14 @@ c	net/minecraft/class_1_135	net/minecraft/server/ChunkMap
 		p	1	arg0	chunkX
 		p	2	arg1	chunkZ
 		p	3	arg2	add
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_135;)Lnet/minecraft/class_1_68;	method_1_277	playerInstances
 	m	(Lnet/minecraft/class_1_135;)Ljava/util/List;	method_1_278	playerInstancesToUpdate
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_151;III)V	method_1_279	sendPacket
 		p	1	arg0	packet
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_135;)Lnet/minecraft/server/MinecraftServer;	method_1_280	mcServer
->>>>>>> Stashed changes
 	m	(IIII)Z	method_1_281	isChunkWithinView
 		p	1	arg0	chunkX
 		p	2	arg1	chunkZ
@@ -2033,10 +1727,7 @@ c	net/minecraft/class_1_135	net/minecraft/server/ChunkMap
 c	net/minecraft/class_1_136	ext/newblock/MyconCapBlock
 	m	(Lnet/minecraft/class_1_159;IIII)Z	method_1_708	shouldRenderFace
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
-<<<<<<< Updated upstream
-=======
 	m	()I	method_1_721	getRenderLayer
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_732	onRemoved
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
 c	net/minecraft/class_1_137	net/minecraft/block/LiquidBlock
@@ -2088,12 +1779,6 @@ c	net/minecraft/class_1_137	net/minecraft/block/LiquidBlock
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 c	net/minecraft/class_1_138	ext/world/biome/Biome
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_139	ext/newitem/BookVIItem
-c	net/minecraft/class_1_140	net/minecraft/world/gen/noise/Noise
-c	net/minecraft/class_1_141	ext/newitem/ConchItem
-c	net/minecraft/class_1_142	net/minecraft/class_1_142
-=======
 	f	Lnet/minecraft/class_1_103;	field_1_561	biomeInterface
 c	net/minecraft/class_1_139	ext/newitem/ExtBookItemIV
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
@@ -2101,18 +1786,13 @@ c	net/minecraft/class_1_140	net/minecraft/world/gen/noise/Noise
 c	net/minecraft/class_1_141	ext/newitem/ExtConchItem
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
 c	net/minecraft/class_1_142	ext/network/packet/Packet71PlaySound
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
 c	net/minecraft/class_1_143	ext/newblock/PillarBlock
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_144	ext/newitem/BookIItem
-=======
 c	net/minecraft/class_1_144	ext/newitem/ExtBookItemI
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
->>>>>>> Stashed changes
 c	net/minecraft/class_1_145	net/minecraft/world/gen/feature/LiquidFallFeature
 	f	I	field_1_569	liquid
 	m	(I)V	<init>	
@@ -2125,13 +1805,8 @@ c	net/minecraft/class_1_146	net/minecraft/block/OreBlock
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_147	net/minecraft/server/gui/MinecraftServerGui__59009041
-<<<<<<< Updated upstream
-	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	
-		p	1	arg0	e
-=======
 	f	Ljavax/swing/JTextField;	field_1_570	f_17501648
 	f	Lnet/minecraft/class_1_353;	field_1_571	f_70176043
->>>>>>> Stashed changes
 c	net/minecraft/class_1_148	net/minecraft/entity/SpawnableEntity
 	c	An entity that spawns naturally.
 c	net/minecraft/class_1_149	net/minecraft/server/PlayerManager
@@ -2350,10 +2025,7 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 	f	Lnet/minecraft/class_1_158;	field_1_627	GOLDEN_APPLE
 	f	Lnet/minecraft/class_1_158;	field_1_628	MUSHROOM_STEW
 	f	Lnet/minecraft/class_1_158;	field_1_629	GOLDEN_SHOVEL
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_630	ITEM_LIST_SIZE
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_158;	field_1_631	LEATHER_HELMET
 	f	Lnet/minecraft/class_1_158;	field_1_632	WOODEN_DOOR
 	f	Lnet/minecraft/class_1_158;	field_1_633	FURNACE_MINECART
@@ -2364,10 +2036,7 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 	f	Lnet/minecraft/class_1_158;	field_1_638	LEATHER_CHESTPLATE
 	f	Lnet/minecraft/class_1_158;	field_1_639	STONE_SWORD
 	f	Lnet/minecraft/class_1_158;	field_1_640	IRON_AXE
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_641	essenceValue
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_158;	field_1_642	BOAT
 	f	Lnet/minecraft/class_1_158;	field_1_643	WOODEN_SHOVEL
 	f	Lnet/minecraft/class_1_158;	field_1_644	IRON_INGOT
@@ -2390,11 +2059,7 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 	f	Lnet/minecraft/class_1_158;	field_1_661	WHEAT
 	f	Ljava/util/Random;	field_1_662	random
 	f	Lnet/minecraft/class_1_158;	field_1_663	BOWL
-<<<<<<< Updated upstream
-	f	Z	field_1_664	handheld
-=======
 	f	Z	field_1_664	wielded
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_158;	field_1_665	PAINTING
 	f	Lnet/minecraft/class_1_158;	field_1_666	MINECART
 	f	Lnet/minecraft/class_1_158;	field_1_667	STICK
@@ -2406,10 +2071,7 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 	f	Lnet/minecraft/class_1_158;	field_1_673	GOLDEN_BOOTS
 	f	Lnet/minecraft/class_1_158;	field_1_674	GUNPOWDER
 	f	Lnet/minecraft/class_1_158;	field_1_675	ARROW
-<<<<<<< Updated upstream
-=======
 	f	Ljava/lang/String;	field_1_676	itemName
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_158;	field_1_677	IRON_DOOR
 	f	Lnet/minecraft/class_1_158;	field_1_678	DIAMOND
 	f	Lnet/minecraft/class_1_158;	field_1_679	DIAMOND_BOOTS
@@ -2433,10 +2095,7 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 	m	(I)V	<init>	
 		p	1	arg0	id
 	m	()I	method_1_350	getMaxDamage
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_355;)I	method_1_351	getAttackDamage
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
 		p	1	arg0	stack
 		p	2	arg1	player
@@ -2454,16 +2113,6 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 		p	3	arg2	y
 		p	4	arg3	z
 		p	5	arg4	face
-<<<<<<< Updated upstream
-	m	(Lnet/minecraft/class_1_286;)Z	method_1_358	canMineBlock
-		p	1	arg0	block
-	m	()Lnet/minecraft/class_1_158;	method_1_360	setHandheld
-	m	(I)Lnet/minecraft/class_1_158;	method_1_361	setSprite
-		p	1	arg0	sprite
-	m	()I	method_1_362	getMaxStackSize
-	m	(Ljava/lang/String;)Lnet/minecraft/class_1_158;	method_1_364	setName
-	m	(I)Lnet/minecraft/class_1_158;	method_1_367	setEssenceValue
-=======
 	m	()Ljava/lang/String;	method_1_356	itemName
 	m	()Z	method_1_357	isHandheld
 	m	(Lnet/minecraft/class_1_286;)Z	method_1_358	canMineBlock
@@ -2477,7 +2126,6 @@ c	net/minecraft/class_1_158	net/minecraft/item/Item
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_158;	method_1_364	setName
 	m	(Lnet/minecraft/class_1_175;)I	method_1_365	getIconIndex
 	m	(I)Lnet/minecraft/class_1_158;	method_1_367	setEssValue
->>>>>>> Stashed changes
 c	net/minecraft/class_1_159	net/minecraft/world/WorldView
 	m	(III)Lnet/minecraft/class_1_172;	method_1_368	getMaterial
 		p	1	arg0	x
@@ -2487,10 +2135,7 @@ c	net/minecraft/class_1_159	net/minecraft/world/WorldView
 		p	1	arg0	x
 		p	2	arg1	y
 		p	3	arg2	z
-<<<<<<< Updated upstream
-=======
 	m	()Lnet/minecraft/class_1_103;	method_1_370	func_7689_6C9H19c7YerVndE5i8yC8Ig4845UHLtkUSjAGU517V812e99T2r6TlW67Z0B
->>>>>>> Stashed changes
 	m	(III)I	method_1_371	getBlock
 		p	1	arg0	x
 		p	2	arg1	y
@@ -2506,10 +2151,7 @@ c	net/minecraft/class_1_160	net/minecraft/server/ChunkMap__ChunkHolder
 	f	I	field_1_700	chunkZ
 	f	Ljava/util/List;	field_1_701	players
 		c	Players within view distance of this chunk.
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_135;	field_1_702	f_46746473
->>>>>>> Stashed changes
 	f	I	field_1_703	dirtyLocalMaxZ
 	f	I	field_1_704	blocksChanged
 	f	I	field_1_705	dirtyLocalMaxX
@@ -2529,10 +2171,7 @@ c	net/minecraft/class_1_160	net/minecraft/server/ChunkMap__ChunkHolder
 		p	3	arg2	localZ
 	m	(Lnet/minecraft/class_1_27;)V	method_1_376	removePlayer
 		p	1	arg0	player
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_151;)V	method_1_377	markBlockNeedsUpdate
->>>>>>> Stashed changes
 c	net/minecraft/class_1_161	net/minecraft/block/FlowingLiquidBlock
 	f	I	field_1_710	adjacentSources
 		c	The number of adjacent source liquids.
@@ -2562,11 +2201,7 @@ c	net/minecraft/class_1_163	net/minecraft/world/gen/feature/Feature
 c	net/minecraft/class_1_164	ext/newblock/MyconDoorBlock
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_165	net/minecraft/block/MushroomPlantBlock
-<<<<<<< Updated upstream
-	m	(I)Z	method_1_430	canBePlacedOn
-=======
 	m	(I)Z	method_1_430	getSurvivableBlockId
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_731	canSurvive
 c	net/minecraft/class_1_166	net/minecraft/block/ClayBlock
 	m	(II)V	<init>	
@@ -2574,15 +2209,6 @@ c	net/minecraft/class_1_166	net/minecraft/block/ClayBlock
 		p	2	arg1	sprite
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_168	ext/newitem/EraserItem
-	m	()I	method_1_350	getMaxDamage
-	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_286;)F	method_1_354	getMiningSpeed
-	m	(Lnet/minecraft/class_1_286;)Z	method_1_358	canMineBlock
-c	net/minecraft/class_1_169	net/minecraft/class_1_169
-	m	(Lnet/minecraft/class_1_175;)Z	method_1_36	addItem
-c	net/minecraft/class_1_170	ext/newitem/RokkubitoruTuneItem
-=======
 c	net/minecraft/class_1_167	ext/world/SyntheticEnumHouseBig
 c	net/minecraft/class_1_168	ext/newitem/ExtEraserItem
 	m	()I	method_1_350	getMaxDamage
@@ -2593,7 +2219,6 @@ c	net/minecraft/class_1_168	ext/newitem/ExtEraserItem
 c	net/minecraft/class_1_169	ext/inventory/InventoryVendingMachine
 	m	(Lnet/minecraft/class_1_175;)Z	method_1_36	addItem
 c	net/minecraft/class_1_170	ext/newitem/ExtRokkubitoruTuneItem
->>>>>>> Stashed changes
 c	net/minecraft/class_1_171	net/minecraft/network/packet/EntityMovePacket__Position
 	m	(IBBB)V	<init>	
 		p	1	arg0	id
@@ -2683,16 +2308,11 @@ c	net/minecraft/class_1_175	net/minecraft/item/ItemStack
 	m	()Lnet/minecraft/class_1_175;	method_1_398	copy
 	m	(Lnet/minecraft/class_1_128;)Lnet/minecraft/class_1_128;	method_1_399	writeNbt
 		p	1	arg0	nbt
-<<<<<<< Updated upstream
-	m	(Lnet/minecraft/class_1_128;)V	method_1_402	readNbt
-		p	1	arg0	nbt
-=======
 	m	(Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_400	useItemRightClick
 	m	(I)Lnet/minecraft/class_1_175;	method_1_401	splitStack
 	m	(Lnet/minecraft/class_1_128;)V	method_1_402	readNbt
 		p	1	arg0	nbt
 	m	(Lnet/minecraft/class_1_355;)I	method_1_403	getDamageVsEntity
->>>>>>> Stashed changes
 	m	()Lnet/minecraft/class_1_158;	method_1_405	getItem
 	m	(Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_407	useOn
 		p	1	arg0	player
@@ -2703,11 +2323,8 @@ c	net/minecraft/class_1_175	net/minecraft/item/ItemStack
 		p	6	arg5	face
 	m	(Lnet/minecraft/class_1_391;)V	method_1_408	onRemoved
 		p	1	arg0	player
-<<<<<<< Updated upstream
-=======
 	m	()I	method_1_409	getIconIndex
 	m	()I	method_1_410	getEssenceValue
->>>>>>> Stashed changes
 	m	(IIII)V	method_1_411	mineBlock
 		p	1	arg0	x
 		p	2	arg1	y
@@ -2742,11 +2359,7 @@ c	net/minecraft/class_1_176	net/minecraft/entity/projectile/ArrowEntity
 	m	()V	method_1_922	tick
 	m	(Lnet/minecraft/class_1_391;)V	method_1_933	onPlayerCollision
 c	net/minecraft/class_1_177	net/minecraft/item/BowItem
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_178	ext/newitem/ObsidianPickaxeItem
-=======
 c	net/minecraft/class_1_178	ext/newitem/ExtObsidianPickaxeItem
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_286;)Z	method_1_358	canMineBlock
 c	net/minecraft/class_1_179	net/minecraft/entity/vehicle/MinecartEntity
 	f	Z	field_1_764	flipped
@@ -2788,13 +2401,6 @@ c	net/minecraft/class_1_179	net/minecraft/entity/vehicle/MinecartEntity
 	m	()D	method_1_939	getMountHeight
 	m	(Lnet/minecraft/class_1_355;)Lnet/minecraft/class_1_264;	method_1_941	getCollisionAgainstShape
 	m	()Z	method_1_947	hasCollision
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_180	net/minecraft/class_1_180
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-c	net/minecraft/class_1_181	ext/newblock/HighwoodDoorBlock
-	m	(ILjava/util/Random;)I	method_1_746	getDropItem
-c	net/minecraft/class_1_182	net/minecraft/class_1_182
-=======
 c	net/minecraft/class_1_180	ext/world/gen/WorldGenSmoothStone
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_181	ext/newblock/HighwoodDoorBlock
@@ -2810,17 +2416,12 @@ c	net/minecraft/class_1_182	ext/entity/projectile/EntityEssenceProjectile
 	f	I	field_1_787	ticksInGround
 	f	I	field_1_788	ticksInAir
 	m	(DDDFF)V	method_1_420	setArrowHeading
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_128;)V	method_1_905	readCustomNbt
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
 	m	()V	method_1_922	tick
 	m	(Lnet/minecraft/class_1_391;)V	method_1_933	onPlayerCollision
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_183	ext/newitem/GrayGunItem
-=======
 c	net/minecraft/class_1_183	ext/newitem/ExtGrayGunItem
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
->>>>>>> Stashed changes
 c	net/minecraft/class_1_184	net/minecraft/entity/mob/animal/ChickenEntity
 	f	F	field_1_789	lastFlapSpeed
 	f	Z	field_1_790	sheared
@@ -2852,14 +2453,7 @@ c	net/minecraft/class_1_185	net/minecraft/world/chunk/storage/ChunkStorage
 		p	1	arg0	world
 		p	2	arg1	chunkX
 		p	3	arg2	chunkZ
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_186	ext/block/BlockDoorUnknownClass1
-	m	(III)V	<init>	
-		p	1	n	id
-		p	2	n2	sprite
-=======
 c	net/minecraft/class_1_186	ext/block/ExtDoorBlockUnknownClass1
->>>>>>> Stashed changes
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_187	net/minecraft/block/TntBlock
 	m	(II)V	<init>	
@@ -2909,14 +2503,10 @@ c	net/minecraft/class_1_189	net/minecraft/network/packet/PlayerMovePacket__Posit
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_190	net/minecraft/class_1_190
-=======
 c	net/minecraft/class_1_190	ext/network/packet/Packet201SecureChat
 	f	I	field_1_799	secID
 	f	Z	field_1_800	verified
 	f	Ljava/lang/String;	field_1_801	signature
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -2946,10 +2536,6 @@ c	net/minecraft/class_1_193	net/minecraft/network/packet/PlayerInventoryPacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_194	net/minecraft/class_1_194
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-=======
 c	net/minecraft/class_1_194	ext/world/gen/GenLowRiver
 	f	I	field_1_805	chunkBeginZ
 	f	I	field_1_806	chunkCoordX
@@ -2959,7 +2545,6 @@ c	net/minecraft/class_1_194	ext/world/gen/GenLowRiver
 	f	I	field_1_810	chunkBeginX
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_428	DigSphere
->>>>>>> Stashed changes
 c	net/minecraft/class_1_195	net/minecraft/block/PlantBlock
 	m	(II)V	<init>	
 		p	1	arg0	id
@@ -2969,11 +2554,7 @@ c	net/minecraft/class_1_195	net/minecraft/block/PlantBlock
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-	m	(I)Z	method_1_430	canBePlacedOn
-=======
 	m	(I)Z	method_1_430	getSurvivableBlockId
->>>>>>> Stashed changes
 		p	1	arg0	block
 	m	()I	method_1_710	getRenderType
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
@@ -3027,14 +2608,6 @@ c	net/minecraft/class_1_199	net/minecraft/network/packet/ItemPickupPacket
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
 c	net/minecraft/class_1_200	ext/newblock/FrigidTrunkBlock
-<<<<<<< Updated upstream
-	m	()I	method_1_710	getRenderType
-	m	()Z	method_1_725	isSolid
-	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
-	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
-c	net/minecraft/class_1_204	net/minecraft/block/WheatBlock
-	m	(I)Z	method_1_430	canBePlacedOn
-=======
 	m	(I)Z	method_1_434	getPlacebleBlocks
 	m	()I	method_1_710	getRenderType
 	m	()Z	method_1_725	isSolid
@@ -3057,7 +2630,6 @@ c	net/minecraft/class_1_203	ext/world/gen/WorldGenHouseSmallUnknownClass4
 	m	(Lnet/minecraft/class_1_245;II)Z	method_1_447	func_7952_7Xu3W9Y012Z47lG36iry0n5a339b3Up3MYVi24623ZUogs6SE9LV8t5Xy0cd
 c	net/minecraft/class_1_204	net/minecraft/block/WheatBlock
 	m	(I)Z	method_1_430	getSurvivableBlockId
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;III)F	method_1_448	getGrowthSpeed
 		p	1	arg0	world
 		p	2	arg1	x
@@ -3129,24 +2701,16 @@ c	net/minecraft/class_1_206	net/minecraft/util/Int2ObjectHashMap__Node
 		p	4	arg3	next
 	m	()Ljava/lang/Object;	method_1_462	getValue
 	m	()I	method_1_463	getKey
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_207	net/minecraft/class_1_207
-=======
 c	net/minecraft/class_1_207	ext/entity/SaltSvenEntity
 	f	Z	field_1_836	unusedBool
 	m	(Lnet/minecraft/class_1_391;)Z	method_1_464	interact
->>>>>>> Stashed changes
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
 	m	()Ljava/lang/String;	method_1_816	getDeathSound
 	m	()F	method_1_819	getSoundVolume
 	m	(Lnet/minecraft/class_1_128;)V	method_1_905	readCustomNbt
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_208	net/minecraft/class_1_208
-=======
 c	net/minecraft/class_1_208	ext/world/gen/GenSky
 	f	I	field_1_837	a
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_209	net/minecraft/block/StairsBlock
 	f	Lnet/minecraft/class_1_286;	field_1_838	baseBlock
@@ -3228,10 +2792,7 @@ c	net/minecraft/class_1_213	net/minecraft/world/chunk/ChunkSource
 		c	@return the world chunk at the given chunk coordinates.
 		p	1	arg0	chunkX
 		p	2	arg1	chunkZ
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_214	ext/newblock/SyntheticEnumVendingMachine2
->>>>>>> Stashed changes
 c	net/minecraft/class_1_215	net/minecraft/entity/mob/animal/AnimalEntity
 	m	()Z	method_1_812	canSpawn
 	m	()I	method_1_829	getAmbientSoundInterval
@@ -3242,13 +2803,9 @@ c	net/minecraft/class_1_216	net/minecraft/block/SaplingBlock
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
 c	net/minecraft/class_1_217	net/minecraft/util/Tickable
 	m	()V	method_1_474	tick
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_218	net/minecraft/class_1_218
-=======
 c	net/minecraft/class_1_218	ext/entity/KillSquidEntity
 	f	Z	field_1_842	unusedBool
 	m	(Lnet/minecraft/class_1_391;)Z	method_1_475	interact
->>>>>>> Stashed changes
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
 	m	()Ljava/lang/String;	method_1_816	getDeathSound
 	m	()F	method_1_819	getSoundVolume
@@ -3268,11 +2825,7 @@ c	net/minecraft/class_1_219	net/minecraft/network/packet/AddMobPacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_220	ext/newblock/FlamewoodDoorBlock
-=======
 c	net/minecraft/class_1_220	ext/newblock/FlameWoodDoorBlock
->>>>>>> Stashed changes
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_221	net/minecraft/world/gen/Generator
 	f	Ljava/util/Random;	field_1_850	random
@@ -3291,19 +2844,12 @@ c	net/minecraft/class_1_221	net/minecraft/world/gen/Generator
 		p	5	arg4	chunkZ
 		p	6	arg5	blocks
 c	net/minecraft/class_1_222	net/minecraft/server/MinecraftServer__98761130
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_223	ext/newblock/MultiSidedBlock
-	m	(IIII)V	<init>	
-		p	1	n	id
-		p	2	n2	metadat
-=======
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_852	f_42442871
 c	net/minecraft/class_1_223	ext/newblock/MultiSidedBlock
 	f	I	field_1_853	sprite
 	f	I	field_1_854	id
 	f	I	field_1_855	texBottom
 	f	I	field_1_856	texTop
->>>>>>> Stashed changes
 	m	(I)I	method_1_715	getSprite
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
@@ -3325,10 +2871,7 @@ c	net/minecraft/class_1_224	net/minecraft/network/packet/BlocksUpdatePacket
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
 c	net/minecraft/class_1_225	net/minecraft/network/Connection__52522387
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_117;	field_1_863	f_05565496
->>>>>>> Stashed changes
 c	net/minecraft/class_1_226	net/minecraft/entity/vehicle/BoatEntity
 	f	I	field_1_864	damagedTimer
 	f	I	field_1_865	damage
@@ -3367,17 +2910,11 @@ c	net/minecraft/class_1_228	net/minecraft/block/TransparentBlock
 	m	()Z	method_1_725	isSolid
 c	net/minecraft/class_1_229	net/minecraft/server/gui/PlayerStatsGui__94457548
 	f	Lnet/minecraft/class_1_69;	field_1_869	playerStatsGui
-<<<<<<< Updated upstream
-	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	
-		p	1	arg0	e
-c	net/minecraft/class_1_231	net/minecraft/class_1_231
-=======
 c	net/minecraft/class_1_230	ext/entity/projectile/EntityExplosiveEssenceProjectile
 c	net/minecraft/class_1_231	ext/world/HouseSmall
 	f	Lnet/minecraft/class_1_231;	field_1_870	NORMAL
 	f	Lnet/minecraft/class_1_231;	field_1_871	WINDOW
 	f	Lnet/minecraft/class_1_231;	field_1_872	DOOR
->>>>>>> Stashed changes
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_231;	method_1_478	valueOf
 c	net/minecraft/class_1_232	net/minecraft/entity/mob/monster/ZombieEntity
 	m	(Lnet/minecraft/class_1_245;)V	<init>	
@@ -3391,14 +2928,7 @@ c	net/minecraft/class_1_233	net/minecraft/network/packet/PlayerMovePacket__Angle
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_234	ext/block/BlockDoorUnknownClass2
-	m	(II)V	<init>	
-		p	1	n	id
-		p	2	n2	sprite
-=======
 c	net/minecraft/class_1_234	ext/block/ExtDoorBlockUnknownClass2
->>>>>>> Stashed changes
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_235	net/minecraft/block/FallingBlock
 	f	Z	field_1_874	fallImmediately
@@ -3407,12 +2937,6 @@ c	net/minecraft/class_1_235	net/minecraft/block/FallingBlock
 		p	2	arg1	sprite
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_481	tryFall
 		p	1	arg0	world
-<<<<<<< Updated upstream
-		p	2	arg1	x
-		p	3	arg2	y
-		p	4	arg3	z
-=======
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_482	canFallThrough
 		p	0	arg0	world
 		p	1	arg1	x
@@ -3477,10 +3001,7 @@ c	net/minecraft/class_1_237	net/minecraft/entity/decoration/PaintingEntity__Moti
 		p	5	arg4	height
 		p	6	arg5	u
 		p	7	arg6	v
-<<<<<<< Updated upstream
-=======
 	m	()[Lnet/minecraft/class_1_237;	method_1_485	func_8090_3424Ob9OSD43dONV326nFaq2Kx8Y10WwM3sIS20n3MjkB41ju1j1R2lffokh
->>>>>>> Stashed changes
 c	net/minecraft/class_1_238	net/minecraft/block/GrassBlock
 	m	(I)V	<init>	
 		p	1	arg0	id
@@ -3491,11 +3012,8 @@ c	net/minecraft/class_1_239	net/minecraft/world/gen/feature/LargeOakTreeFeature
 	f	I	field_1_906	foliageClusterHeight
 	f	[[I	field_1_907	branches
 		c	Base and tip coordinates for each branch in the tree. The base of a branch is\nplaced at some height on the trunk, so the base x- and z-coordinates match\nthose of the trunk, and do not need to be stored. The remaining coordinates\nare stored in int arrays of length 4:\n\n<br> {\n<br> &nbsp; tip x-coordinate,\n<br> &nbsp; tip y-coordinate,\n<br> &nbsp; tip z-coordinate,\n<br> &nbsp; base y-coordinate\n<br> }
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_908	mainWoodID
 	f	I	field_1_909	mainLeavesID
->>>>>>> Stashed changes
 	f	Ljava/util/Random;	field_1_910	random
 	f	D	field_1_911	branchLengthScale
 	f	Lnet/minecraft/class_1_245;	field_1_912	world
@@ -3514,20 +3032,14 @@ c	net/minecraft/class_1_239	net/minecraft/world/gen/feature/LargeOakTreeFeature
 	f	D	field_1_920	foliageDensity
 	f	[I	field_1_921	origin
 		c	The position of the base of the tree.
-<<<<<<< Updated upstream
-=======
 	f	Ljava/lang/Boolean;	field_1_922	generateEpicTrees
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 	m	(DDD)V	method_1_386	prepare
 	m	([I[II)V	method_1_488	placeBranch
 		p	1	arg0	from
 		p	2	arg1	to
 		p	3	arg2	log
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)V	method_1_489	generateDeEpicRoots
->>>>>>> Stashed changes
 	m	(IIIFBI)V	method_1_490	placeCluster
 		c	Place a cluster layer centered at the given coordinates, perpendicular to the\ngiven major axis.
 		p	1	arg0	x
@@ -3543,17 +3055,11 @@ c	net/minecraft/class_1_239	net/minecraft/world/gen/feature/LargeOakTreeFeature
 		p	2	arg1	to
 	m	()V	method_1_493	makeBranches
 		c	Compile an array of branches to place for this tree.
-<<<<<<< Updated upstream
-	m	(I)F	method_1_495	getTreeShape
-		c	Returns the shape of the tree at the given height. The shape controls the\nsize of branches at that height.
-		p	1	arg0	height
-=======
 	m	(Z)Lnet/minecraft/class_1_239;	method_1_494	generateHighwoodTrees
 	m	(I)F	method_1_495	getTreeShape
 		c	Returns the shape of the tree at the given height. The shape controls the\nsize of branches at that height.
 		p	1	arg0	height
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)V	method_1_496	generateDeEpicTreeFoliage
->>>>>>> Stashed changes
 	m	()Z	method_1_497	canPlace
 	m	()V	method_1_498	placeFoliage
 	m	(I)Z	method_1_499	shouldPlaceBranch
@@ -3562,28 +3068,13 @@ c	net/minecraft/class_1_239	net/minecraft/world/gen/feature/LargeOakTreeFeature
 	m	(I)F	method_1_500	getClusterShape
 		c	Returns the shape of the cluster at the given layer. The shape controls the\nsize and roundness of the layer.
 		p	1	arg0	layer
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_501	generateDeEpicTree
->>>>>>> Stashed changes
 	m	(III)V	method_1_502	placeFoliageCluster
 		c	Place a foliage cluster above the given coordinates.
 		p	1	arg0	x
 		p	2	arg1	baseY
 		p	3	arg2	z
 	m	()V	method_1_503	placeBranches
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_240	net/minecraft/class_1_240
-	m	(Ljava/lang/String;)Lnet/minecraft/class_1_240;	method_1_505	valueOf
-c	net/minecraft/class_1_241	ext/newblock/DebugBlock
-	m	()I	method_1_710	getRenderType
-	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
-	m	()Z	method_1_725	isSolid
-	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_733	neighborChanged
-	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
-	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
-c	net/minecraft/class_1_242	ext/newitem/BookVItem
-=======
 c	net/minecraft/class_1_240	ext/world/HouseBig
 	f	Lnet/minecraft/class_1_240;	field_1_923	WhiteGlass
 	f	Lnet/minecraft/class_1_240;	field_1_924	BlueGlass
@@ -3608,7 +3099,6 @@ c	net/minecraft/class_1_241	ext/newblock/GlowingBlock
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 c	net/minecraft/class_1_242	ext/newitem/ExtBookItemV
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
->>>>>>> Stashed changes
 c	net/minecraft/class_1_243	net/minecraft/network/packet/AddEntityPacket
 	f	I	field_1_934	y
 	f	I	field_1_935	z
@@ -3664,10 +3154,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 	f	J	field_1_941	fogColor
 	f	Lnet/minecraft/class_1_213;	field_1_942	chunkSource
 	f	Ljava/io/File;	field_1_943	saveDir
-<<<<<<< Updated upstream
-=======
 	f	Z	field_1_944	exclFrailMode
->>>>>>> Stashed changes
 	f	J	field_1_945	initTimeMillis
 	f	J	field_1_946	ticks
 	f	J	field_1_947	cloudColor
@@ -3687,28 +3174,19 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 	f	Ljava/util/Set;	field_1_963	tickingChunks
 	f	Lnet/minecraft/class_1_128;	field_1_964	playerData
 	f	Ljava/util/List;	field_1_965	blockEntities
-<<<<<<< Updated upstream
-	f	Z	field_1_968	isMultiplayer
-	f	I	field_1_969	spawnPointX
-	f	Z	field_1_970	searchingSpawnPoint
-=======
 	f	Z	field_1_967	sandCovered
 	f	Z	field_1_968	isMultiplayer
 	f	I	field_1_969	spawnPointX
 	f	Z	field_1_970	findingSpawnPoint
 	f	Z	field_1_971	listBeingWritten
->>>>>>> Stashed changes
 	f	Z	field_1_972	snowCovered
 	f	Ljava/util/List;	field_1_973	eventListeners
 	f	J	field_1_974	sizeOnDisk
 	f	J	field_1_975	skyColor
 	f	Ljava/util/List;	field_1_976	entitiesInArea
 	f	I	field_1_978	randomTickLCGIncrement
-<<<<<<< Updated upstream
-=======
 	f	Ljava/util/Set;	field_1_979	scheduledTickTreeSet
 	f	Ljava/lang/Object;	field_1_980	fontRenderer
->>>>>>> Stashed changes
 	f	I	field_1_981	spawnPointZ
 	f	I	field_1_982	difficulty
 		c	This world's difficulty setting. The possible values are as follows:\n<br>0: peaceful\n<br>1: easy\n<br>2: normal\n<br>3: hard
@@ -3726,16 +3204,11 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	1	arg0	saveName
 	m	(III)Lnet/minecraft/class_1_172;	method_1_368	getMaterial
 	m	(III)Z	method_1_369	isSolidBlock
-<<<<<<< Updated upstream
-	m	(III)I	method_1_371	getBlock
-	m	(III)I	method_1_372	getBlockMetadata
-=======
 	m	()Lnet/minecraft/class_1_103;	method_1_370	func_7689_6C9H19c7YerVndE5i8yC8Ig4845UHLtkUSjAGU517V812e99T2r6TlW67Z0B
 	m	(III)I	method_1_371	getBlock
 	m	(III)I	method_1_372	getBlockMetadata
 	m	(Lnet/minecraft/class_1_33;)V	method_1_512	saveWorldIndirectly
 	m	(III)F	method_1_513	getRenderSideBrightness
->>>>>>> Stashed changes
 	m	()Z	method_1_514	doLightUpdates
 	m	(Lnet/minecraft/class_1_264;)Z	method_1_515	isUnobstructed
 		p	1	arg0	bounds
@@ -3795,19 +3268,13 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	1	arg0	from
 		p	2	arg1	to
 		p	3	arg2	allowLiquids
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_355;)V	method_1_533	joinEntityInSurroundings
->>>>>>> Stashed changes
 	m	(IIII)Z	method_1_534	setBlock
 		p	1	arg0	x
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	block
-<<<<<<< Updated upstream
-=======
 	m	(F)F	method_1_535	getStarBrightness
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_355;)Z	method_1_536	addEntity
 		p	1	arg0	entity
 	m	(III)Z	method_1_537	hasDirectNeighborSignal
@@ -3828,10 +3295,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 	m	(Lnet/minecraft/class_1_264;Lnet/minecraft/class_1_172;)Z	method_1_540	containsMaterial
 		p	1	arg0	bounds
 		p	2	arg1	material
-<<<<<<< Updated upstream
-=======
 	m	()V	method_1_541	dropOldChunks
->>>>>>> Stashed changes
 	m	(Ljava/lang/String;III)V	method_1_542	playRecordMusic
 		p	1	arg0	record
 		p	2	arg1	x
@@ -3853,11 +3317,8 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-=======
 	m	(II)I	method_1_547	getPrecipitationHeight
 	m	(III)V	method_1_548	randomDisplayUpdates
->>>>>>> Stashed changes
 	m	(IIIIZ)Z	method_1_549	canPlace
 		p	1	arg0	block
 		p	2	arg1	x
@@ -3884,27 +3345,18 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	3	arg2	y
 		p	4	arg3	z
 		p	5	arg4	light
-<<<<<<< Updated upstream
-	m	(II)Lnet/minecraft/class_1_354;	method_1_557	getChunk
-		p	1	arg0	x
-		p	2	arg1	z
-=======
 	m	(J)V	method_1_555	setWorldTime
 	m	(IIIZZ)I	method_1_556	getBlockLightValue_do
 	m	(II)Lnet/minecraft/class_1_354;	method_1_557	getChunk
 		p	1	arg0	x
 		p	2	arg1	z
 	m	(Ljava/io/File;Ljava/lang/String;)Lnet/minecraft/class_1_128;	method_1_558	getLevelData
->>>>>>> Stashed changes
 	m	(IIIZ)I	method_1_559	getRawBrightness
 		p	1	arg0	x
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	useNeighborLight
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_259;)V	method_1_560	removeWorldAccess
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_78;IIIIII)V	method_1_561	updateLight
 		p	1	arg0	type
 		p	2	arg1	minX
@@ -3913,10 +3365,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	5	arg4	maxX
 		p	6	arg5	maxY
 		p	7	arg6	maxZ
-<<<<<<< Updated upstream
-=======
 	m	()Ljava/util/List;	method_1_562	getLoadedEntityList
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_355;IIIF)Lnet/minecraft/class_1_2;	method_1_563	findPath
 		p	1	arg0	entity
 		p	2	arg1	x
@@ -3936,10 +3385,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 	m	(Ljava/lang/Class;Lnet/minecraft/class_1_264;)Ljava/util/List;	method_1_567	getEntitiesOfType
 		p	1	arg0	type
 		p	2	arg1	bounds
-<<<<<<< Updated upstream
-=======
 	m	()J	method_1_568	GetMilestone
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_205;Lnet/minecraft/class_1_205;)Lnet/minecraft/class_1_84;	method_1_569	rayTrace
 		p	1	arg0	from
 		p	2	arg1	to
@@ -3952,10 +3398,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	6	arg5	maxY
 		p	7	arg6	maxZ
 		p	8	arg7	expand
-<<<<<<< Updated upstream
-=======
 	m	([Ljava/io/File;)V	method_1_571	deleteWorldFiles
->>>>>>> Stashed changes
 	m	(IIII)Z	method_1_572	setBlockMetadataQuietly
 		p	1	arg0	x
 		p	2	arg1	y
@@ -3969,10 +3412,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	blockEntity
-<<<<<<< Updated upstream
-=======
 	m	(IIIZ)I	method_1_575	getBlockLightValue
->>>>>>> Stashed changes
 	m	()V	method_1_576	tickEntities
 	m	(II)Z	method_1_577	isChunkLoadedAt
 		p	1	arg0	chunkX
@@ -3983,10 +3423,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	dir
-<<<<<<< Updated upstream
-=======
 	m	(Ljava/io/File;Ljava/lang/String;)V	method_1_579	deleteWorld
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_355;)V	method_1_580	notifyEntityRemoved
 		p	1	arg0	entity
 	m	(DDDLjava/lang/String;FF)V	method_1_581	playSound
@@ -4039,10 +3476,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	2	arg1	z
 	m	(Lnet/minecraft/class_1_264;)Z	method_1_594	containsLiquid
 		p	1	arg0	bounds
-<<<<<<< Updated upstream
-=======
 	m	(I)Z	method_1_595	saveWorld
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_355;Lnet/minecraft/class_1_355;F)Lnet/minecraft/class_1_2;	method_1_596	findPath
 		p	1	arg0	entity
 		p	2	arg1	target
@@ -4090,10 +3524,7 @@ c	net/minecraft/class_1_245	net/minecraft/world/World
 		p	2	arg1	y
 		p	3	arg2	z
 		p	4	arg3	block
-<<<<<<< Updated upstream
-=======
 	m	()V	method_1_608	sendQuittingDisconnectingPacket
->>>>>>> Stashed changes
 	m	()V	method_1_609	saveData
 	m	(III)V	method_1_610	removeBlockEntity
 		p	1	arg0	x
@@ -4144,12 +3575,8 @@ c	net/minecraft/class_1_247	net/minecraft/util/math/ChunkPos
 		p	2	arg1	z
 	m	(Lnet/minecraft/class_1_355;)D	method_1_616	squaredDistanceToCenter
 		p	1	arg0	entity
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_248	ext/newblock/FlameInfusedLilyBlock
-=======
 c	net/minecraft/class_1_248	ext/newblock/GlowingFlowerInfusedBlock
 	f	I	field_1_988	power
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_355;)V	method_1_738	onEntityCollision
 c	net/minecraft/class_1_249	net/minecraft/entity/mob/monster/Monster
 c	net/minecraft/class_1_250	net/minecraft/block/SugarCaneBlock
@@ -4174,10 +3601,7 @@ c	net/minecraft/class_1_251	net/minecraft/server/ServerPlayerInteractionManager
 	f	F	field_1_990	miningTime
 	f	I	field_1_991	targetX
 	f	I	field_1_992	targetY
-<<<<<<< Updated upstream
-=======
 	f	F	field_1_993	f_65209988
->>>>>>> Stashed changes
 	f	I	field_1_994	miningCooldown
 	f	I	field_1_995	targetZ
 	f	F	field_1_996	miningProgress
@@ -4214,11 +3638,7 @@ c	net/minecraft/class_1_252	net/minecraft/network/packet/PlayerMovePacket__Posit
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_253	net/minecraft/class_1_253
-=======
 c	net/minecraft/class_1_253	ext/world/gen/WorldGenBlockGoldBlockSteel
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_254	net/minecraft/network/packet/PlayerHeldItemPacket
 	f	I	field_1_999	item
@@ -4237,15 +3657,11 @@ c	net/minecraft/class_1_255	net/minecraft/nbt/NbtInt
 	m	(Ljava/io/DataOutput;)V	method_1_1000	write
 	m	()B	method_1_1006	getType
 c	net/minecraft/class_1_256	ext/newblock/WireframeBlock2
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_257	net/minecraft/class_1_257
-=======
 c	net/minecraft/class_1_257	ext/network/packet/Packet200SecureLogin
 	f	Z	field_1_1001	verifyPassed
 	f	Ljava/lang/String;	field_1_1002	signature
 	f	I	field_1_1003	protocolVersion
 	f	I	field_1_1004	playerMode
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -4331,15 +3747,10 @@ c	net/minecraft/class_1_260	net/minecraft/server/network/handler/ServerLoginNetw
 	m	(Lnet/minecraft/class_1_272;)V	method_1_162	handleLogin
 	m	(Lnet/minecraft/class_1_268;)V	method_1_165	handleHandshake
 	m	(Lnet/minecraft/class_1_151;)V	method_1_172	handleUnknownPacket
-<<<<<<< Updated upstream
-	m	()Ljava/lang/String;	method_1_635	getConnectionInfo
-	m	()V	method_1_636	tick
-=======
 	m	(Lnet/minecraft/class_1_257;)V	method_1_185	handleLogin
 	m	()Ljava/lang/String;	method_1_635	getConnectionInfo
 	m	()V	method_1_636	tick
 	m	(Lnet/minecraft/class_1_260;Lnet/minecraft/class_1_272;)Lnet/minecraft/class_1_272;	method_1_637	packet1login
->>>>>>> Stashed changes
 	m	(Ljava/lang/String;)V	method_1_638	disconnect
 		p	1	arg0	reason
 	m	(Lnet/minecraft/class_1_272;)V	method_1_639	acceptLogin
@@ -4350,19 +3761,12 @@ c	net/minecraft/class_1_261	net/minecraft/world/gen/feature/ClayPatchFeature
 	m	(I)V	<init>	
 		p	1	arg0	size
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_262	net/minecraft/class_1_262
-	m	()I	method_1_81	getSize
-	m	(I)Lnet/minecraft/class_1_175;	method_1_82	getItem
-c	net/minecraft/class_1_263	net/minecraft/server/network/handler/ServerLoginNetworkHandler__15575233
-=======
 c	net/minecraft/class_1_262	ext/block/InventoryBlockEntity
 	m	()I	method_1_81	getSize
 	m	(I)Lnet/minecraft/class_1_175;	method_1_82	getItem
 c	net/minecraft/class_1_263	net/minecraft/server/network/handler/ServerLoginNetworkHandler__15575233
 	f	Lnet/minecraft/class_1_272;	field_1_1029	f_12137288
 	f	Lnet/minecraft/class_1_260;	field_1_1030	f_55814992
->>>>>>> Stashed changes
 c	net/minecraft/class_1_264	net/minecraft/util/math/Box
 	f	I	field_1_1031	poolIndex
 	f	D	field_1_1032	maxX
@@ -4447,10 +3851,6 @@ c	net/minecraft/class_1_264	net/minecraft/util/math/Box
 		p	10	arg5	maxZ
 	m	(Lnet/minecraft/class_1_205;)Z	method_1_661	containsYZ
 		p	1	arg0	vec
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_265	net/minecraft/class_1_265
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-=======
 c	net/minecraft/class_1_265	ext/world/gen/WorldGenHouseSmall
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;IIILnet/minecraft/class_1_343;ILnet/minecraft/class_1_337;)Lnet/minecraft/class_1_265$net/minecraft/class_1_126;	method_1_662	func_7485_0Klkg2DTtukztLh1mPKoZ0xXcoHAqrwG2r6356tSd2sflT3g45K81MNQORzx
@@ -4470,7 +3870,6 @@ c	net/minecraft/class_1_265$net/minecraft/class_1_231	ext/world/gen/WorldGenHous
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_265$net/minecraft/class_1_231;	method_1_478	func_7875_4DE8K943tnZ4mU298E0bJ3nXEW3iZ87ZD6eBk5Mim8vytXU7x9PW557Rg3Fp
 	m	()[Lnet/minecraft/class_1_265$net/minecraft/class_1_231;	method_1_479	func_7876_4Jmu72okoXZK77Fn7N5dPqJ7I61Z0rUf5rXf020DjH00U9ph6OIsYif2WG0s
 	m	()[Lnet/minecraft/class_1_265$net/minecraft/class_1_231;	method_1_480	func_7874_5tXS5sS5c4qgbUlvozc1od6AGt1r1ELDa25UX8BHEa719mE06fLO68XBg2Mg
->>>>>>> Stashed changes
 c	net/minecraft/class_1_266	net/minecraft/block/JukeboxBlock
 	m	(II)V	<init>	
 		p	1	arg0	id
@@ -4484,13 +3883,10 @@ c	net/minecraft/class_1_266	net/minecraft/block/JukeboxBlock
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
 	m	(I)I	method_1_715	getSprite
 	m	(Lnet/minecraft/class_1_245;IIIIF)V	method_1_743	dropItems
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_267	ext/world/gen/WorldGenHouseSmallUnknownClass3
 	m	()Lnet/minecraft/class_1_343;	method_1_444	func_7953_2R38M2O6566x2pen53vJb71a4871DZeTgLLz2piGfBjTn4JTalO4b0mdIdRI
 	m	()Lnet/minecraft/class_1_343;	method_1_446	func_7951_6155zZR8t2Cbq0I65w3T2P9frJ393hs90A6vhvVPoxH61BPyWNHJn7M4bf16
 	m	(Lnet/minecraft/class_1_245;II)Z	method_1_447	func_7952_7Xu3W9Y012Z47lG36iry0n5a339b3Up3MYVi24623ZUogs6SE9LV8t5Xy0cd
->>>>>>> Stashed changes
 c	net/minecraft/class_1_268	net/minecraft/network/packet/HandshakePacket
 	f	Ljava/lang/String;	field_1_1043	key
 	m	(Ljava/lang/String;)V	<init>	
@@ -4513,8 +3909,6 @@ c	net/minecraft/class_1_269	net/minecraft/network/packet/EntityMovePacket__Posit
 c	net/minecraft/class_1_270	net/minecraft/item/BlockItem
 	f	I	field_1_1044	block
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_271	ext/network/DecInputStream
 	f	Z	field_1_1045	closed
 	f	Z	field_1_1046	isMIME
@@ -4525,7 +3919,6 @@ c	net/minecraft/class_1_271	ext/network/DecInputStream
 	f	I	field_1_1051	nextin
 	f	[B	field_1_1052	sbBuf
 	f	I	field_1_1053	bits
->>>>>>> Stashed changes
 c	net/minecraft/class_1_272	net/minecraft/network/packet/LoginPacket
 	f	Ljava/lang/String;	field_1_1054	username
 	f	I	field_1_1055	gameVersion
@@ -4543,10 +3936,7 @@ c	net/minecraft/class_1_273	net/minecraft/block/RailBlock__RailNode
 	f	Lnet/minecraft/class_1_245;	field_1_1058	world
 	f	I	field_1_1059	metadata
 	f	I	field_1_1060	x
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_48;	field_1_1061	f_43951729
->>>>>>> Stashed changes
 	f	I	field_1_1062	y
 	f	Ljava/util/List;	field_1_1063	connections
 	m	(Lnet/minecraft/class_1_48;Lnet/minecraft/class_1_245;III)V	<init>	
@@ -4578,10 +3968,7 @@ c	net/minecraft/class_1_273	net/minecraft/block/RailBlock__RailNode
 		p	1	arg0	x
 		p	2	arg1	y
 		p	3	arg2	z
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_273;)I	method_1_677	m_40175913
->>>>>>> Stashed changes
 	m	()V	method_1_678	removeSoftConnections
 c	net/minecraft/class_1_274	net/minecraft/server/network/ConnectionListener
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_1064	server
@@ -4601,12 +3988,8 @@ c	net/minecraft/class_1_274	net/minecraft/server/network/ConnectionListener
 		p	1	arg0	connection
 	m	(Lnet/minecraft/class_1_260;)V	method_1_684	addPendingConnection
 		p	1	arg0	connection
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_275	net/minecraft/class_1_275
-=======
 c	net/minecraft/class_1_275	ext/entity/GiantBossEntity
 	f	I	field_1_1072	maxHP
->>>>>>> Stashed changes
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
 	m	()Ljava/lang/String;	method_1_811	getAmbientSound
 	m	()Ljava/lang/String;	method_1_816	getDeathSound
@@ -4615,10 +3998,7 @@ c	net/minecraft/class_1_275	ext/entity/GiantBossEntity
 	m	(F)V	method_1_916	takeFallDamage
 	m	()V	method_1_936	remove
 	m	(III)F	method_1_996	getPathfindingFavor
-<<<<<<< Updated upstream
-=======
 	m	()I	method_1_1016	getEssenceDroppedOnKill
->>>>>>> Stashed changes
 c	net/minecraft/class_1_276	net/minecraft/network/packet/EntityMovePacket
 	f	B	field_1_1073	dx
 	f	I	field_1_1074	id
@@ -4633,21 +4013,12 @@ c	net/minecraft/class_1_276	net/minecraft/network/packet/EntityMovePacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_277	net/minecraft/class_1_277
-	f	Lnet/minecraft/class_1_277;	field_1_1080	UNDERGROUND
-	f	Lnet/minecraft/class_1_277;	field_1_1081	SURFACE
-	f	Lnet/minecraft/class_1_277;	field_1_1082	LOW_RIVER
-	m	(Ljava/lang/String;)Lnet/minecraft/class_1_277;	method_1_687	valueOf
-c	net/minecraft/class_1_278	net/minecraft/class_1_278
-=======
 c	net/minecraft/class_1_277	ext/world/gen/WorldGeneratorLayer
 	f	Lnet/minecraft/class_1_277;	field_1_1080	UNDERGROUND
 	f	Lnet/minecraft/class_1_277;	field_1_1082	LOW_RIVER
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_277;	method_1_687	valueOf
 c	net/minecraft/class_1_278	ext/world/gen/GenOnWater
 	f	I	field_1_1084	a
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_279	net/minecraft/nbt/NbtList
 	f	B	field_1_1085	type
@@ -4660,15 +4031,11 @@ c	net/minecraft/class_1_279	net/minecraft/nbt/NbtList
 	m	(Ljava/io/DataInput;)V	method_1_999	read
 	m	(Ljava/io/DataOutput;)V	method_1_1000	write
 	m	()B	method_1_1006	getType
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_280	ext/newitem/FlamebergeItem
-=======
 c	net/minecraft/class_1_280	ext/newitem/ExtFlamebergeItem
 	f	[I	field_1_1087	v2s
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
 	m	(I)Z	method_1_691	BlockIDFirable
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_692	SetBlockFire
->>>>>>> Stashed changes
 c	net/minecraft/class_1_281	net/minecraft/server/world/ServerWorld
 	f	Lnet/minecraft/class_1_105;	field_1_1088	chunkCache
 	f	Z	field_1_1089	savingDisabled
@@ -4690,13 +4057,6 @@ c	net/minecraft/class_1_281	net/minecraft/server/world/ServerWorld
 		p	5	arg4	maxY
 		p	6	arg5	maxZ
 c	net/minecraft/class_1_282	net/minecraft/server/network/ConnectionListener__84711441
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_283	net/minecraft/world/gen/feature/CactusFeature
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-c	net/minecraft/class_1_284	net/minecraft/class_1_284
-	m	(Ljava/lang/String;)Lnet/minecraft/class_1_284;	method_1_696	valueOf
-c	net/minecraft/class_1_285	ext/newblock/ExtWorkbenchBlock
-=======
 	f	Lnet/minecraft/class_1_274;	field_1_1094	f_37709214
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_1095	f_73272640
 c	net/minecraft/class_1_283	net/minecraft/world/gen/feature/CactusFeature
@@ -4711,7 +4071,6 @@ c	net/minecraft/class_1_284	ext/newblock/VendingMachine
 c	net/minecraft/class_1_285	ext/newblock/MyconWorkbenchBlock
 	f	I	field_1_1101	id
 	f	I	field_1_1103	sprite
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
 	m	(I)I	method_1_715	getSprite
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
@@ -4719,10 +4078,7 @@ c	net/minecraft/class_1_285	ext/newblock/MyconWorkbenchBlock
 c	net/minecraft/class_1_286	net/minecraft/block/Block
 	f	Lnet/minecraft/class_1_286;	field_1_1105	WOODEN_DOOR
 	f	Lnet/minecraft/class_1_286;	field_1_1106	NOTEBLOCK
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_1107	BLOCK_LIST_SIZE
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_286;	field_1_1108	UNLIT_REDSTONE_TORCH
 	f	D	field_1_1109	minZ
 	f	Lnet/minecraft/class_1_195;	field_1_1110	RED_MUSHROOM
@@ -4733,19 +4089,13 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 	f	Lnet/minecraft/class_1_195;	field_1_1115	YELLOW_FLOWER
 	f	Lnet/minecraft/class_1_286;	field_1_1116	GOLD_BLOCK
 	f	Lnet/minecraft/class_1_286;	field_1_1117	BOOKSHELF
-<<<<<<< Updated upstream
-=======
 	f	Z	field_1_1118	pickaxeEffective
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_286;	field_1_1119	LAPIS_BLOCK
 	f	Lnet/minecraft/class_1_286;	field_1_1120	LOG
 	f	Lnet/minecraft/class_1_286;	field_1_1121	REDSTONE_ORE
 	f	Lnet/minecraft/class_1_57;	field_1_1122	STONE_SOUNDS
 	f	Lnet/minecraft/class_1_286;	field_1_1123	MOB_SPAWNER
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_1124	essenceValue
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_286;	field_1_1125	DOUBLE_STONE_SLAB
 	f	Lnet/minecraft/class_1_286;	field_1_1126	STONE_SLAB
 	f	[Z	field_1_1127	IS_TRANSLUCENT
@@ -4799,10 +4149,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 	f	Lnet/minecraft/class_1_286;	field_1_1175	REEDS
 	f	Lnet/minecraft/class_1_57;	field_1_1176	WOOD_SOUNDS
 	f	Lnet/minecraft/class_1_286;	field_1_1177	DEADBUSH
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_57;	field_1_1178	soundSpecialFootstep
->>>>>>> Stashed changes
 	f	[I	field_1_1179	LIGHT
 	f	Lnet/minecraft/class_1_286;	field_1_1180	PLANKS
 	f	Lnet/minecraft/class_1_286;	field_1_1181	FLOWING_WATER
@@ -4832,10 +4179,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 	f	Lnet/minecraft/class_1_286;	field_1_1205	COAL_ORE
 	f	Lnet/minecraft/class_1_286;	field_1_1206	SNOW
 	f	F	field_1_1207	gravity
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_57;	field_1_1208	soundElderFootstep
->>>>>>> Stashed changes
 	f	I	field_1_1209	id
 	f	Lnet/minecraft/class_1_286;	field_1_1210	STONE_PRESSURE_PLATE
 	f	Lnet/minecraft/class_1_57;	field_1_1211	CLOTH_SOUNDS
@@ -4873,10 +4217,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	3	arg2	y
 		p	4	arg3	z
 		p	5	arg4	metadata
-<<<<<<< Updated upstream
-=======
 	m	(Z)Lnet/minecraft/class_1_286;	method_1_700	setPickaxeEffective
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)V	method_1_701	startMining
 		p	1	arg0	world
 		p	2	arg1	x
@@ -4916,20 +4257,14 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	5	arg4	entity
 	m	()I	method_1_710	getRenderType
 		c	Returns this block's render type. The possible values are as follows:\n<br>-1: none\n<br>1: liquid\n<br>2: animated block entity\n<br>3: block model
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_711	harvestBlock
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
 		p	1	arg0	world
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
 		p	5	arg4	player
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_159;III)I	method_1_713	colorMultiplier
->>>>>>> Stashed changes
 	m	()Z	method_1_714	isTranslucent
 	m	(I)I	method_1_715	getSprite
 		p	1	arg0	face
@@ -4960,10 +4295,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	4	arg3	z
 		p	5	arg4	from
 		p	6	arg5	to
-<<<<<<< Updated upstream
-=======
 	m	()I	method_1_721	getRenderLayer
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_355;)F	method_1_722	getBlastResistance
 		c	Returns this block's blast resistance for the given entity.
 		p	1	arg0	entity
@@ -4975,10 +4307,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	3	arg2	y
 		p	4	arg3	z
 	m	()Z	method_1_725	isSolid
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_726	randomDisplayTick
->>>>>>> Stashed changes
 	m	()Z	method_1_727	isSignalSource
 		c	Returns whether this block is capable of emitting a redstone signal.
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_355;Lnet/minecraft/class_1_205;)V	method_1_728	applyMaterialDrag
@@ -4988,10 +4317,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	4	arg3	z
 		p	5	arg4	entity
 		p	6	arg5	velocity
-<<<<<<< Updated upstream
-=======
 	m	()V	method_1_729	setBlockBoundsForItemRender
->>>>>>> Stashed changes
 	m	(IZ)Z	method_1_730	canRayTrace
 		p	1	arg0	metadata
 		p	2	arg1	allowLiquids
@@ -5038,15 +4364,9 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-	m	()I	method_1_741	getTickRate
-	m	(Lnet/minecraft/class_1_391;)F	method_1_742	getMiningSpeed
-		p	1	arg0	player
-=======
 	m	()Z	method_1_740	isCube
 	m	()I	method_1_741	getTickRate
 	m	(Lnet/minecraft/class_1_391;)F	method_1_742	getMiningSpeed
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIIIF)V	method_1_743	dropItems
 		p	1	arg0	world
 		p	2	arg1	x
@@ -5061,10 +4381,7 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	4	arg3	z
 		p	5	arg4	shape
 		p	6	arg5	collisions
-<<<<<<< Updated upstream
-=======
 	m	(I)Lnet/minecraft/class_1_286;	method_1_745	setEssValue
->>>>>>> Stashed changes
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 		p	1	arg0	metadata
 		p	2	arg1	random
@@ -5075,11 +4392,8 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_159;IIII)I	method_1_749	getSprite
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_751	getOutlineShape
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_57;)Lnet/minecraft/class_1_286;	method_1_752	setSounds
 		c	Sets this block's sound set.\n\n<p>\nNOTE: this method should only be used during the block's creation before it is registered.
 		p	1	arg0	sounds
@@ -5091,9 +4405,6 @@ c	net/minecraft/class_1_286	net/minecraft/block/Block
 	m	(I)Lnet/minecraft/class_1_286;	method_1_754	setOpacity
 		c	Sets this block's light opacity.\n\n<p>\nNOTE: this method should only be used during the block's creation before it is registered.
 		p	1	arg0	opacity
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_288	ext/newblock/HydrangeaBlock
-=======
 c	net/minecraft/class_1_287	ext/network/EncOutputStream
 	f	I	field_1_1225	b0
 	f	I	field_1_1226	bl
@@ -5107,7 +4418,6 @@ c	net/minecraft/class_1_287	ext/network/EncOutputStream
 	f	I	field_1_1234	lineMax
 	m	()V	method_1_755	checkNewLine
 c	net/minecraft/class_1_288	ext/newblock/GrassTallBlock
->>>>>>> Stashed changes
 c	net/minecraft/class_1_289	net/minecraft/world/WorldRegion
 	f	I	field_1_1236	chunkZ
 	f	[[Lnet/minecraft/class_1_354;	field_1_1237	chunks
@@ -5123,10 +4433,7 @@ c	net/minecraft/class_1_289	net/minecraft/world/WorldRegion
 		p	7	arg6	maxZ
 	m	(III)Lnet/minecraft/class_1_172;	method_1_368	getMaterial
 	m	(III)Z	method_1_369	isSolidBlock
-<<<<<<< Updated upstream
-=======
 	m	()Lnet/minecraft/class_1_103;	method_1_370	func_7689_6C9H19c7YerVndE5i8yC8Ig4845UHLtkUSjAGU517V812e99T2r6TlW67Z0B
->>>>>>> Stashed changes
 	m	(III)I	method_1_371	getBlock
 	m	(III)I	method_1_372	getBlockMetadata
 c	net/minecraft/class_1_290	net/minecraft/server/ServerProperties
@@ -5147,13 +4454,9 @@ c	net/minecraft/class_1_290	net/minecraft/server/ServerProperties
 		p	1	arg0	key
 		p	2	arg1	defaultValue
 c	net/minecraft/class_1_291	net/minecraft/item/SaddleItem
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_293	net/minecraft/server/MinecraftServer__05307018
-=======
 c	net/minecraft/class_1_292	ext/phys/SyntheticEnumCoordinates
 c	net/minecraft/class_1_293	net/minecraft/server/MinecraftServer__05307018
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_1244	f_35688957
->>>>>>> Stashed changes
 c	net/minecraft/class_1_294	net/minecraft/item/SwordItem
 	f	I	field_1_1245	attackDamage
 	m	(II)V	<init>	
@@ -5161,20 +4464,12 @@ c	net/minecraft/class_1_294	net/minecraft/item/SwordItem
 		p	2	arg1	tier
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_286;)F	method_1_354	getMiningSpeed
 	m	(Lnet/minecraft/class_1_175;IIII)V	method_1_355	mineBlock
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_295	net/minecraft/class_1_295
-	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
-c	net/minecraft/class_1_296	net/minecraft/item/FlintAndSteelItem
-	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
-c	net/minecraft/class_1_297	ext/newitem/BookIIItem
-=======
 c	net/minecraft/class_1_295	ext/world/gen/WorldGenGrass
 	m	(Lnet/minecraft/class_1_245;Ljava/util/Random;III)Z	method_1_385	place
 c	net/minecraft/class_1_296	net/minecraft/item/FlintAndSteelItem
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
 c	net/minecraft/class_1_297	ext/newitem/ExtBookItemII
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
->>>>>>> Stashed changes
 c	net/minecraft/class_1_298	ext/newblock/TeaDoorBlock
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 c	net/minecraft/class_1_299	net/minecraft/inventory/DoubleInventory
@@ -5189,11 +4484,6 @@ c	net/minecraft/class_1_299	net/minecraft/inventory/DoubleInventory
 	m	(I)Lnet/minecraft/class_1_175;	method_1_82	getItem
 c	net/minecraft/class_1_300	net/minecraft/server/ServerLog__ConsoleFormatter
 	f	Ljava/text/SimpleDateFormat;	field_1_1249	dateFormat
-<<<<<<< Updated upstream
-	m	(Ljava/util/logging/LogRecord;)Ljava/lang/String;	format	
-		p	1	arg0	logRecord
-=======
->>>>>>> Stashed changes
 c	net/minecraft/class_1_301	net/minecraft/nbt/NbtDouble
 	f	D	field_1_1250	value
 	m	(D)V	<init>	
@@ -5201,13 +4491,9 @@ c	net/minecraft/class_1_301	net/minecraft/nbt/NbtDouble
 	m	(Ljava/io/DataInput;)V	method_1_999	read
 	m	(Ljava/io/DataOutput;)V	method_1_1000	write
 	m	()B	method_1_1006	getType
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_302	net/minecraft/class_1_302
-=======
 c	net/minecraft/class_1_302	ext/entity/PongormatronEntity
 	f	Z	field_1_1251	unusedBool
 	m	(Lnet/minecraft/class_1_391;)Z	method_1_763	interact
->>>>>>> Stashed changes
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
 	m	()Ljava/lang/String;	method_1_816	getDeathSound
 	m	()F	method_1_819	getSoundVolume
@@ -5244,8 +4530,6 @@ c	net/minecraft/class_1_303	net/minecraft/server/TrackedEntity
 	m	()V	method_1_768	onRemoved
 		c	Called when this entity is removed from the world.
 	m	()Lnet/minecraft/class_1_151;	method_1_769	createAddEntityPacket
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_304	ext/world/gen/ChunkPopulatorThread
 	f	Z	field_1_1267	useAsyncGen
 	f	Ljava/util/List;	field_1_1268	queuedPopulateOperations
@@ -5254,7 +4538,6 @@ c	net/minecraft/class_1_304	ext/world/gen/ChunkPopulatorThread
 	f	Z	field_1_1271	writingToList
 	m	(Lnet/minecraft/class_1_334;Lnet/minecraft/class_1_114;)V	method_1_770	addPopulateOperation
 	m	(Lnet/minecraft/class_1_334;)Z	method_1_771	OpListHasOperation
->>>>>>> Stashed changes
 c	net/minecraft/class_1_305	net/minecraft/network/packet/ChatMessagePacket
 	f	Ljava/lang/String;	field_1_1272	message
 	m	(Ljava/lang/String;)V	<init>	
@@ -5263,12 +4546,8 @@ c	net/minecraft/class_1_305	net/minecraft/network/packet/ChatMessagePacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_307	net/minecraft/class_1_307
-=======
 c	net/minecraft/class_1_306	ext/world/freerun/HandlerSetCheckpointUnknownClass2
 c	net/minecraft/class_1_307	ext/network/packet/Packet211FillBlock
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
@@ -5309,32 +4588,21 @@ c	net/minecraft/class_1_309	net/minecraft/block/RedstoneOreBlock
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_310	ext/world/gen/WorldGenLayer
 	m	()I	method_1_799	func_6110_142sM02McyR17iadQt66osR8Q21rhzZ9eM76zgU9m4wlfML0dJ2394XB8k38
 	m	(Ljava/util/Random;)V	method_1_802	func_6105_81hMTC5FoM6v920z1cx6O635T6Awu9Y40ealKHkVig8X477d9SlXh3yS17Y3
 	m	(Ljava/util/Random;Lnet/minecraft/class_1_245;II)Z	method_1_803	func_6106_89178IPx36Pz8I0tikD07m8tZIpV1sbMp38yAtni7c93aR76eIXb747sm4eZ
->>>>>>> Stashed changes
 c	net/minecraft/class_1_311	net/minecraft/block/BlockWithBlockEntity
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_732	onRemoved
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 	m	()Lnet/minecraft/class_1_373;	method_1_775	createBlockEntity
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_312	net/minecraft/class_1_312
-=======
 c	net/minecraft/class_1_312	ext/network/packet/Packet7SendSkinRequest
 	f	Ljava/lang/String;	field_1_1285	targetName
->>>>>>> Stashed changes
 	m	()I	method_1_328	getSize
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_313	ext/newblock/BookshelfBlock
-=======
 c	net/minecraft/class_1_313	ext/newblock/EmptyBookshelfBlock
->>>>>>> Stashed changes
 	m	(I)I	method_1_715	getSprite
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
 c	net/minecraft/class_1_314	net/minecraft/world/gen/noise/ImprovedNoise
@@ -5372,12 +4640,8 @@ c	net/minecraft/class_1_314	net/minecraft/world/gen/noise/ImprovedNoise
 		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, y, z}.\nThe gradient vector is identified by the given hash of the grid point.
 		p	1	arg0	hash
 		p	4	arg2	y
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_315	ext/newitem/GunItem
-=======
 c	net/minecraft/class_1_315	ext/newitem/ExtGunItem
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
->>>>>>> Stashed changes
 c	net/minecraft/class_1_316	net/minecraft/entity/mob/monster/GiantEntity
 	m	(III)F	method_1_996	getPathfindingFavor
 c	net/minecraft/class_1_317	ext/newblock/EssenceTransformerBlock
@@ -5401,11 +4665,6 @@ c	net/minecraft/class_1_319	net/minecraft/item/ArmorItem
 		p	3	arg2	materialId
 		p	4	arg3	slot
 c	net/minecraft/class_1_320	ext/network/Encoder
-<<<<<<< Updated upstream
-	f	Lnet/minecraft/class_1_320;	field_1_1302	RFC4648_URLSAFE
-	f	Lnet/minecraft/class_1_320;	field_1_1304	RFC4648
-	f	Lnet/minecraft/class_1_320;	field_1_1308	RFC2045
-=======
 	f	[C	field_1_1298	toBase64
 	f	[B	field_1_1299	newline
 	f	[C	field_1_1301	toBase64URL
@@ -5434,7 +4693,6 @@ c	net/minecraft/class_1_321	ext/util/ExtEvents
 	m	(IILnet/minecraft/class_1_245;)V	method_1_792	CueSpawnBossFrom
 	m	(DDDLnet/minecraft/class_1_245;)Lnet/minecraft/class_1_275;	method_1_795	SpawnGiant
 	m	(Lnet/minecraft/class_1_275;)V	method_1_796	GiantBossKilled
->>>>>>> Stashed changes
 c	net/minecraft/class_1_322	net/minecraft/entity/ItemEntity
 	f	I	field_1_1313	health
 	f	I	field_1_1314	age
@@ -5460,8 +4718,6 @@ c	net/minecraft/class_1_322	net/minecraft/entity/ItemEntity
 	m	(Lnet/minecraft/class_1_391;)V	method_1_933	onPlayerCollision
 	m	(Lnet/minecraft/class_1_355;I)Z	method_1_934	takeDamage
 c	net/minecraft/class_1_323	ext/world/gen/WorldGenUnknownClass1
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_323$net/minecraft/class_1_277;	field_1_1320	field_6113_5AnPGJjONMxCipFa8Dc15MBKYYgpOHHJw75ztSnA7t14INnQ9jp9ogIbO1Ih
 	m	()I	method_1_799	func_6110_142sM02McyR17iadQt66osR8Q21rhzZ9eM76zgU9m4wlfML0dJ2394XB8k38
 	m	(DDLnet/minecraft/class_1_323$net/minecraft/class_1_277;)Lnet/minecraft/class_1_323;	method_1_801	func_6109_7AFzAIguFPO5wX289OMW9m53m1vke3nWr9FfsLKbAlSQ3xy680ZFc7S6kAPN
@@ -5475,7 +4731,6 @@ c	net/minecraft/class_1_323$net/minecraft/class_1_277	ext/world/gen/WorldGenUnkn
 	m	()[Lnet/minecraft/class_1_323$net/minecraft/class_1_277;	method_1_685	func_8601_1BSarcv0kX3P9t1kPF6202QIF9e71sZGT40CXvBZMcDNgbkrjTV351aCJ4hz
 	m	()[Lnet/minecraft/class_1_323$net/minecraft/class_1_277;	method_1_686	func_8602_1WZ23w5Eo7xzIwM5p9j37UQow8g6H96cXiBpHpfbU1ZOgff3q9gqstvGaA56
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_323$net/minecraft/class_1_277;	method_1_687	func_8600_4l1LH2N0CgB6C4NhM8jmRyphphH8pV341zcuZ8NavIHi3tYycF6y6th94nB3
->>>>>>> Stashed changes
 c	net/minecraft/class_1_324	net/minecraft/network/packet/AddItemPacket
 	f	I	field_1_1325	id
 	f	I	field_1_1326	stackSize
@@ -5492,41 +4747,28 @@ c	net/minecraft/class_1_324	net/minecraft/network/packet/AddItemPacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_325	ext/world/gen/WorldGenHouseBigInterior
->>>>>>> Stashed changes
 c	net/minecraft/class_1_326	net/minecraft/entity/mob/MobEntity
 	f	Z	field_1_1340	jumping
 	f	I	field_1_1341	score
 	f	I	field_1_1342	damagedTime
-<<<<<<< Updated upstream
-=======
 	f	Z	field_1_1343	texture
->>>>>>> Stashed changes
 	f	F	field_1_1344	damagedSwingDir
 	f	F	field_1_1345	lastBodyYaw
 	f	I	field_1_1346	lookTimer
 	f	D	field_1_1347	lerpZ
 	f	F	field_1_1348	forwardSpeed
-<<<<<<< Updated upstream
-	f	F	field_1_1350	totalWalkDistance
-=======
 	f	F	field_1_1349	f_26584770
 	f	F	field_1_1350	totalWalkDistance
 	f	F	field_1_1351	f_26890866
 	f	F	field_1_1352	f_92185951
->>>>>>> Stashed changes
 	f	I	field_1_1353	invulnerableTicks
 		c	The number of ticks after taking damage this mob is invulnerable to more damage.
 	f	D	field_1_1354	lerpY
 	f	F	field_1_1355	walkSpeed
 	f	I	field_1_1356	farFromPlayerTicks
 		c	A timer that keeps track of how long this mob has been far away from any players.\nAfter a long enough time far from any players, this mob could randomly despawn.
-<<<<<<< Updated upstream
-=======
 	f	F	field_1_1357	f_75186175
->>>>>>> Stashed changes
 	f	D	field_1_1358	lerpPitch
 	f	Lnet/minecraft/class_1_355;	field_1_1359	lookTarget
 	f	I	field_1_1360	lerpSteps
@@ -5551,12 +4793,6 @@ c	net/minecraft/class_1_326	net/minecraft/entity/mob/MobEntity
 	f	Ljava/lang/String;	field_1_1378	modelName
 	f	F	field_1_1379	defaultPitch
 	f	F	field_1_1380	lastAttackAnimationProgress
-<<<<<<< Updated upstream
-	f	I	field_1_1382	damagedTimer
-	f	F	field_1_1383	walkAnimationProgress
-	f	F	field_1_1384	lastWalkProgress
-	f	F	field_1_1386	lastDamageTaken
-=======
 	f	F	field_1_1381	f_94758649
 	f	I	field_1_1382	damagedTimer
 	f	F	field_1_1383	walkAnimationProgress
@@ -5565,7 +4801,6 @@ c	net/minecraft/class_1_326	net/minecraft/entity/mob/MobEntity
 	f	F	field_1_1386	lastDamageTaken
 	f	I	field_1_1387	f_08869654
 	f	Z	field_1_1388	f_15736313
->>>>>>> Stashed changes
 	f	I	field_1_1389	deathTicks
 	f	I	field_1_1390	attackTimer
 	f	F	field_1_1391	bodyYaw
@@ -5588,10 +4823,7 @@ c	net/minecraft/class_1_326	net/minecraft/entity/mob/MobEntity
 	m	(FF)V	method_1_821	moveRelative
 		p	1	arg0	sideways
 		p	2	arg1	forwards
-<<<<<<< Updated upstream
-=======
 	m	(DF)Lnet/minecraft/class_1_84;	method_1_822	managedPosY
->>>>>>> Stashed changes
 	m	()V	method_1_823	mobTick
 	m	()I	method_1_824	getDropItem
 	m	()V	method_1_825	animateSpawn
@@ -5657,9 +4889,6 @@ c	net/minecraft/class_1_328	net/minecraft/entity/PrimedTntEntity
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
 	m	()V	method_1_922	tick
 	m	()Z	method_1_947	hasCollision
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_329	net/minecraft/class_1_329
-=======
 c	net/minecraft/class_1_329	ext/entity/projectile/EntitySpear
 	f	I	field_1_1395	zTile
 	f	I	field_1_1396	yTile
@@ -5669,7 +4898,6 @@ c	net/minecraft/class_1_329	ext/entity/projectile/EntitySpear
 	f	I	field_1_1402	xTile
 	f	Z	field_1_1403	inGround
 	m	()F	method_1_835	getShadowSize
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_128;)V	method_1_905	readCustomNbt
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
 	m	()V	method_1_922	tick
@@ -5696,10 +4924,6 @@ c	net/minecraft/class_1_330	net/minecraft/entity/ai/pathing/PathFinder
 		p	6	arg5	neighborBlockingType
 	m	(Lnet/minecraft/class_1_380;Lnet/minecraft/class_1_380;)Lnet/minecraft/class_1_2;	method_1_839	buildPath
 		p	1	arg0	start
-<<<<<<< Updated upstream
-		p	2	arg1	target
-=======
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_355;IIILnet/minecraft/class_1_380;)I	method_1_840	getBlockingType
 		p	1	arg0	entity
 		p	2	arg1	x
@@ -5765,12 +4989,6 @@ c	net/minecraft/class_1_333	net/minecraft/entity/projectile/SnowballEntity
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
 	m	()V	method_1_922	tick
 	m	(Lnet/minecraft/class_1_391;)V	method_1_933	onPlayerCollision
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_335	net/minecraft/item/SignItem
-	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
-c	net/minecraft/class_1_336	ext/newblock/GhostBlock
-	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
-=======
 c	net/minecraft/class_1_334	ext/world/gen/ChunkProviderPopulateOperation
 	f	Lnet/minecraft/class_1_114;	field_1_1417	caller
 	f	Lnet/minecraft/class_1_213;	field_1_1418	a
@@ -5785,7 +5003,6 @@ c	net/minecraft/class_1_336	ext/newblock/HidableBlock
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
 	m	(Lnet/minecraft/class_1_159;IIII)I	method_1_749	getSprite
 c	net/minecraft/class_1_337	ext/client/EncryptedPath
->>>>>>> Stashed changes
 c	net/minecraft/class_1_338	net/minecraft/item/MusicDiscItem
 	f	Ljava/lang/String;	field_1_1425	record
 	m	(ILjava/lang/String;)V	<init>	
@@ -5816,11 +5033,8 @@ c	net/minecraft/class_1_341	net/minecraft/block/LiquidSourceBlock
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_342	ext/world/zm/ZMWorld
 c	net/minecraft/class_1_343	ext/world/gen/WorldGenHouseSmallUnknownClass2
->>>>>>> Stashed changes
 c	net/minecraft/class_1_344	ext/newblock/WeaponGiverBlock
 c	net/minecraft/class_1_345	net/minecraft/network/packet/DisconnectPacket
 	f	Ljava/lang/String;	field_1_1431	reason
@@ -5830,16 +5044,12 @@ c	net/minecraft/class_1_345	net/minecraft/network/packet/DisconnectPacket
 	m	(Ljava/io/DataOutputStream;)V	method_1_330	write
 	m	(Ljava/io/DataInputStream;)V	method_1_335	read
 	m	(Lnet/minecraft/class_1_97;)V	method_1_336	handle
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_347	ext/newitem/MirrorItem
-=======
 c	net/minecraft/class_1_346	ext/phys/Direction
 	f	I	field_1_1433	direction
 	m	()[Lnet/minecraft/class_1_346;	method_1_861	func_8442_5N77WNn4w7mGMBaguaunvrw0N6xUY2Gj0Zk8j75t3hgfvoporDrS8taS7WTV
 	m	(Lnet/minecraft/class_1_346;I)Lnet/minecraft/class_1_346;	method_1_862	rotate
 c	net/minecraft/class_1_347	ext/newitem/ExtMirrorItem
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_245;Lnet/minecraft/class_1_391;)Lnet/minecraft/class_1_175;	method_1_359	startUsing
->>>>>>> Stashed changes
 c	net/minecraft/class_1_348	net/minecraft/block/Block__48198598
 c	net/minecraft/class_1_349	net/minecraft/block/ObsidianBlock
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
@@ -5863,10 +5073,6 @@ c	net/minecraft/class_1_350	net/minecraft/world/chunk/ChunkCache
 	m	()Z	method_1_471	tick
 	m	()Z	method_1_472	shouldSave
 	m	(II)Lnet/minecraft/class_1_354;	method_1_473	getChunk
-<<<<<<< Updated upstream
-		c	@return the world chunk at the given chunk coordinates, loading or generating it if needed
-=======
->>>>>>> Stashed changes
 	m	(II)Lnet/minecraft/class_1_354;	method_1_863	loadChunkFromStorage
 		c	Loads the world chunk at the given chunk coordinates from storage.
 		p	1	arg0	chunkX
@@ -5888,24 +5094,16 @@ c	net/minecraft/class_1_351	net/minecraft/entity/FallingBlockEntity
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeCustomNbt
 	m	()V	method_1_922	tick
 	m	()Z	method_1_947	hasCollision
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_352	net/minecraft/item/WheatSeedsItem
-	f	I	field_1_1448	plantBlock
-=======
 c	net/minecraft/class_1_352	net/minecraft/item/SeedsItem
 	f	I	field_1_1448	plant
->>>>>>> Stashed changes
 	m	(II)V	<init>	
 		p	1	arg0	item
 		p	2	arg1	plantBlock
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
 c	net/minecraft/class_1_353	net/minecraft/server/gui/MinecraftServerGui
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_1449	server
-<<<<<<< Updated upstream
-=======
 	f	Ljava/awt/Font;	field_1_1450	arialFont
 	f	Ljava/awt/Font;	field_1_1451	consolasFont
->>>>>>> Stashed changes
 	f	Ljava/util/logging/Logger;	field_1_1452	LOGGER
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	
 		p	1	arg0	server
@@ -6001,10 +5199,7 @@ c	net/minecraft/class_1_354	net/minecraft/world/chunk/WorldChunk
 		p	1	arg0	localX
 		p	2	arg1	y
 		p	3	arg2	localZ
-<<<<<<< Updated upstream
-=======
 		p	4	arg3	block
->>>>>>> Stashed changes
 		p	5	arg4	metadata
 	m	(J)Ljava/util/Random;	method_1_887	getRandomForSlime
 		p	1	arg0	seed
@@ -6116,10 +5311,7 @@ c	net/minecraft/class_1_355	net/minecraft/entity/Entity
 	f	Z	field_1_1521	firstTick
 		c	True if the entity is in the first tick of its existence.
 	f	Z	field_1_1522	blocksBuilding
-<<<<<<< Updated upstream
-=======
 	f	Z	field_1_1523	f_09841856
->>>>>>> Stashed changes
 	f	D	field_1_1524	z
 	f	D	field_1_1525	x
 	f	F	field_1_1526	pushSpeedReduction
@@ -6243,11 +5435,7 @@ c	net/minecraft/class_1_355	net/minecraft/entity/Entity
 	m	(Lnet/minecraft/class_1_355;I)V	method_1_951	takeKillScore
 		p	1	arg0	victim
 		p	2	arg1	score
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_356	net/minecraft/class_1_356
-=======
 c	net/minecraft/class_1_356	ext/newblock/WifiBlock
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
 c	net/minecraft/class_1_357	net/minecraft/world/chunk/storage/AlphaChunkStorage
 	f	Ljava/io/File;	field_1_1531	dir
@@ -6291,14 +5479,11 @@ c	net/minecraft/class_1_359	net/minecraft/block/BookshelfBlock
 		p	2	arg1	sprite
 	m	(I)I	method_1_715	getSprite
 	m	(Ljava/util/Random;)I	method_1_737	getBaseDropCount
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_360	ext/world/QueuedChange
 	f	I	field_1_1535	y
 	f	I	field_1_1536	x
 	f	I	field_1_1537	z
 	f	I	field_1_1538	id
->>>>>>> Stashed changes
 c	net/minecraft/class_1_361	net/minecraft/entity/mob/animal/PigEntity
 	f	Z	field_1_1539	saddled
 	m	(Lnet/minecraft/class_1_245;)V	<init>	
@@ -6336,13 +5521,6 @@ c	net/minecraft/class_1_364	net/minecraft/server/ServerLog
 	m	()V	method_1_965	init
 c	net/minecraft/class_1_365	net/minecraft/block/GravelBlock
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_366	ext/newblock/WaterLilyBlock
-	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
-	m	()Z	method_1_725	isSolid
-	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_355;)V	method_1_738	onEntityCollision
-	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
-=======
 c	net/minecraft/class_1_366	ext/newblock/GlowingFlowerBlock
 	f	I	field_1_1541	renderMode
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
@@ -6351,7 +5529,6 @@ c	net/minecraft/class_1_366	ext/newblock/GlowingFlowerBlock
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_355;)V	method_1_738	onEntityCollision
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
 	m	()Z	method_1_740	isCube
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 c	net/minecraft/class_1_367	net/minecraft/nbt/NbtLong
 	f	J	field_1_1542	value
@@ -6428,10 +5605,7 @@ c	net/minecraft/class_1_370	net/minecraft/block/CactusBlock
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 c	net/minecraft/class_1_371	net/minecraft/server/MinecraftServer__97965498
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_1545	f_64085925
->>>>>>> Stashed changes
 c	net/minecraft/class_1_372	net/minecraft/entity/decoration/PaintingEntity
 	f	I	field_1_1546	ticksSinceValidation
 	f	I	field_1_1547	blockX
@@ -6473,20 +5647,13 @@ c	net/minecraft/class_1_373	net/minecraft/block/entity/BlockEntity
 	m	(Ljava/lang/Class;Ljava/lang/String;)V	method_1_982	register
 		p	0	arg0	type
 		p	1	arg1	id
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_374	ext/newblock/BlockEssenceFountain
-=======
 c	net/minecraft/class_1_374	ext/newblock/EssenceFountainBlock
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_159;IIII)Z	method_1_708	shouldRenderFace
 	m	()I	method_1_710	getRenderType
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
 	m	()Z	method_1_725	isSolid
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_726	randomDisplayTick
 	m	()Z	method_1_740	isCube
->>>>>>> Stashed changes
 	m	()Lnet/minecraft/class_1_373;	method_1_775	createBlockEntity
 c	net/minecraft/class_1_375	net/minecraft/world/storage/PlayerDataStorage
 	f	Ljava/io/File;	field_1_1558	dir
@@ -6539,16 +5706,6 @@ c	net/minecraft/class_1_378	net/minecraft/block/FurnaceBlock
 		p	2	arg1	x
 		p	3	arg2	y
 		p	4	arg3	z
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_379	ext/newblock/HearterBlock
-	m	()I	method_1_710	getRenderType
-	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_718	tick
-	m	()Z	method_1_725	isSolid
-	m	(Lnet/minecraft/class_1_245;IIII)V	method_1_733	neighborChanged
-	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_355;)V	method_1_738	onEntityCollision
-	m	(Lnet/minecraft/class_1_245;III)Z	method_1_739	canBePlaced
-	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
-=======
 c	net/minecraft/class_1_379	ext/newblock/FlamingCubeBlock
 	f	I	field_1_1565	renderType
 	m	()I	method_1_710	getRenderType
@@ -6562,7 +5719,6 @@ c	net/minecraft/class_1_379	ext/newblock/FlamingCubeBlock
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_748	getCollisionShape
 	m	(Lnet/minecraft/class_1_245;III)Lnet/minecraft/class_1_264;	method_1_751	getOutlineShape
 	m	(Lnet/minecraft/class_1_245;III)Z	method_1_992	removeOccupaingBlock
->>>>>>> Stashed changes
 c	net/minecraft/class_1_380	net/minecraft/entity/ai/pathing/PathNode
 	f	I	field_1_1566	x
 	f	Z	field_1_1567	visited
@@ -6610,10 +5766,7 @@ c	net/minecraft/class_1_383	net/minecraft/item/PlaceableItem
 		p	2	arg1	block
 	m	(Lnet/minecraft/class_1_175;Lnet/minecraft/class_1_391;Lnet/minecraft/class_1_245;IIII)Z	method_1_352	useOn
 c	net/minecraft/class_1_384	net/minecraft/server/world/ServerWorld__78385669
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/class_1_281;	field_1_1580	f_49947220
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;II)Lnet/minecraft/class_1_6;	method_1_123	getRandomPosInChunk
 c	net/minecraft/class_1_385	net/minecraft/nbt/NbtElement
 	f	Ljava/lang/String;	field_1_1581	name
@@ -6634,8 +5787,6 @@ c	net/minecraft/class_1_385	net/minecraft/nbt/NbtElement
 		p	0	arg0	type
 	m	()B	method_1_1006	getType
 	m	()Ljava/lang/String;	method_1_1007	getName
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/class_1_386	ext/network/SkinManager
 c	net/minecraft/class_1_387	ext/network/CertUtils
 	f	Ljava/security/PrivateKey;	field_1_1585	loadedPrivKey
@@ -6647,7 +5798,6 @@ c	net/minecraft/class_1_387	ext/network/CertUtils
 	m	()V	method_1_1013	makeKeyPail
 	m	()V	method_1_1014	LoadKeys
 	m	(Ljava/lang/String;Ljava/lang/String;)Z	method_1_1015	verify
->>>>>>> Stashed changes
 c	net/minecraft/class_1_388	net/minecraft/block/CraftingTableBlock
 	m	(I)V	<init>	
 		p	1	arg0	id
@@ -6664,15 +5814,6 @@ c	net/minecraft/class_1_389	net/minecraft/entity/mob/monster/MonsterEntity
 	m	()Lnet/minecraft/class_1_355;	method_1_995	findTarget
 	m	(III)F	method_1_996	getPathfindingFavor
 	m	(Lnet/minecraft/class_1_355;F)V	method_1_997	targetInSight
-<<<<<<< Updated upstream
-c	net/minecraft/class_1_390	ext/newblock/FreezerBlock
-	m	(IIZ)V	<init>	
-		p	1	n	id
-		p	2	n2	sprite
-	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
-	m	(I)I	method_1_715	getSprite
-	m	(ILjava/util/Random;)I	method_1_746	getDropItem
-=======
 	m	()I	method_1_1016	getEssenceDroppedOnKill
 c	net/minecraft/class_1_390	ext/newblock/FreezerBlock
 	m	(Lnet/minecraft/class_1_245;IIILnet/minecraft/class_1_391;)Z	method_1_712	use
@@ -6680,25 +5821,18 @@ c	net/minecraft/class_1_390	ext/newblock/FreezerBlock
 	m	(Lnet/minecraft/class_1_245;IIILjava/util/Random;)V	method_1_726	randomDisplayTick
 	m	(ILjava/util/Random;)I	method_1_746	getDropItem
 	m	(Lnet/minecraft/class_1_159;IIII)I	method_1_749	getSprite
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_245;III)V	method_1_753	onAdded
 	m	()Lnet/minecraft/class_1_373;	method_1_775	createBlockEntity
 c	net/minecraft/class_1_391	net/minecraft/entity/mob/player/PlayerEntity
 	f	F	field_1_1590	bob
 	f	F	field_1_1591	lastBob
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_1592	lastInWater
->>>>>>> Stashed changes
 	f	B	field_1_1593	userType
 	f	I	field_1_1594	score
 	f	I	field_1_1595	swingArmTicks
 	f	Z	field_1_1596	swingArm
 	f	Lnet/minecraft/class_1_8;	field_1_1597	inventory
-<<<<<<< Updated upstream
-=======
 	f	I	field_1_1598	flying
->>>>>>> Stashed changes
 	f	Ljava/lang/String;	field_1_1599	name
 	m	()V	method_1_818	aiTick
 	m	(Lnet/minecraft/class_1_355;)V	method_1_820	die
@@ -6710,10 +5844,7 @@ c	net/minecraft/class_1_391	net/minecraft/entity/mob/player/PlayerEntity
 	m	()V	method_1_923	rideTick
 	m	(Lnet/minecraft/class_1_355;I)Z	method_1_934	takeDamage
 	m	(Lnet/minecraft/class_1_355;I)V	method_1_951	takeKillScore
-<<<<<<< Updated upstream
-=======
 	m	()Ljava/lang/String;	method_1_1019	username
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_286;)Z	method_1_1020	canMineBlock
 		p	1	arg0	block
 	m	()V	method_1_1021	swingArm
@@ -6724,15 +5855,10 @@ c	net/minecraft/class_1_391	net/minecraft/entity/mob/player/PlayerEntity
 		p	1	arg0	block
 	m	(Lnet/minecraft/class_1_355;)V	method_1_1025	onEntityCollision
 		p	1	arg0	entity
-<<<<<<< Updated upstream
-	m	(Lnet/minecraft/class_1_340;)V	method_1_1027	openSignEditor
-		p	1	arg0	sign
-=======
 	m	()V	method_1_1026	displayEssenceTransformerGUI
 	m	(Lnet/minecraft/class_1_340;)V	method_1_1027	openSignEditor
 		p	1	arg0	sign
 	m	()V	method_1_1028	displayEssenceClonerGUI
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_4;)V	method_1_1029	openFurnaceMenu
 		p	1	arg0	furnace
 	m	(Lnet/minecraft/class_1_355;I)V	method_1_1030	pickUp
@@ -6748,10 +5874,6 @@ c	net/minecraft/class_1_391	net/minecraft/entity/mob/player/PlayerEntity
 	m	(Lnet/minecraft/class_1_38;)V	method_1_1035	openChestMenu
 		p	1	arg0	inventory
 c	net/minecraft/class_1_392	net/minecraft/server/gui/MinecraftServerGui__78250670
-<<<<<<< Updated upstream
-	m	(Ljava/awt/event/FocusEvent;)V	focusGained	
-		p	1	arg0	e
-=======
 	f	Lnet/minecraft/class_1_353;	field_1_1600	f_61544145
 c	net/minecraft/net/minecraft/class_1_70	net/minecraft/src/UnknownClass
 c	net/minecraft/net/minecraft/class_1_167	net/minecraft/src/EnumHouseBigUnknownClass
@@ -6760,7 +5882,6 @@ c	net/minecraft/net/minecraft/class_1_214	net/minecraft/src/EnumVendingMachineUn
 	f	[I	field_1_841	field_7686_0L7OUMe0cBTxO9eQEB22KfMZ2nRWzMx4Dh94mb77xkFU3T3299p1qk5HmAFl
 c	net/minecraft/net/minecraft/class_1_292	net/minecraft/src/EnumCoordinatesUnknownClass
 	f	[I	field_1_1243	field_8449_1veWi2ablcFnXHyl6vSBXA83tTw4d8VW6g0w8nUOd2VTaXae402v86i8Bk91
->>>>>>> Stashed changes
 c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer
 	f	I	field_1_1	ticks
 	f	I	field_1_2	progress
@@ -6768,10 +5889,7 @@ c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer
 	f	Lnet/minecraft/class_1_281;	field_1_4	world
 	f	Lnet/minecraft/class_1_290;	field_1_5	properties
 	f	Ljava/util/logging/Logger;	field_1_6	LOGGER
-<<<<<<< Updated upstream
-=======
 	f	Lnet/minecraft/server/MinecraftServer;	field_1_7	server
->>>>>>> Stashed changes
 	f	Lnet/minecraft/class_1_274;	field_1_8	connections
 	f	Z	field_1_9	stopped
 	f	Ljava/util/List;	field_1_10	tickables
@@ -6796,10 +5914,7 @@ c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer
 		p	1	arg0	player
 		p	2	arg1	message
 	m	()V	method_1_6	saveWorlds
-<<<<<<< Updated upstream
-=======
 	m	(Lnet/minecraft/server/MinecraftServer;)Z	method_1_7	m_34027632
->>>>>>> Stashed changes
 	m	(Lnet/minecraft/class_1_217;)V	method_1_8	addTickable
 		p	1	arg0	tickable
 	m	()V	method_1_9	tick
@@ -6814,8 +5929,6 @@ c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer
 	m	()V	method_1_15	shutdown
 	m	()Ljava/lang/String;	method_1_972	getCommandSourceName
 	m	(Ljava/lang/String;)V	method_1_973	sendMessage
-<<<<<<< Updated upstream
-=======
 c	net/minecraft/src/EntityAnimalUnknownClass	net/minecraft/src/EntityAnimalUnknownClass
 	m	()Ljava/lang/String;	method_1_810	getHurtSound
 	m	()Ljava/lang/String;	method_1_816	getDeathSound
@@ -6834,4 +5947,3 @@ c	net/minecraft/src/EntitySquib	net/minecraft/src/EntitySquib
 	m	()F	method_1_819	getSoundVolume
 	m	(Lnet/minecraft/class_1_128;)V	method_1_905	readEntityFromNBT
 	m	(Lnet/minecraft/class_1_128;)V	method_1_921	writeEntityToNBT
->>>>>>> Stashed changes
