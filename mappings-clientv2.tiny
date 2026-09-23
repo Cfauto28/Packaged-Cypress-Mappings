@@ -377,7 +377,7 @@ c	net/minecraft/class_1_98	ext/newblock/EssenceClonerBlock
 		p	3		y
 		p	4		z
 		p	5		player
-c	net/minecraft/class_1_99	ext/world/gen/WorldGenSmoothStone
+c	net/minecraft/class_1_99	ext/world/gen/SmoothStoneGenerator
 	m	(Ljava/util/Random;)Ljava/lang/String;	method_1_668	
 		p	1		random
 	m	(Ljava/util/Random;)Lnet/minecraft/class_1_263;	method_1_669	
@@ -617,10 +617,12 @@ c	net/minecraft/class_1_112	net/minecraft/util/math/Vec3d
 		p	2		y
 		p	4		z
 c	net/minecraft/class_1_113	ext/newblock/VendingMachineBlock
+	f	Lnet/minecraft/class_1_421;	field_1_795	vendingMachine
 	m	(IIILnet/minecraft/class_1_243;Lnet/minecraft/class_1_421;)V	<init>	
 		p	1		id
 		p	3		metadata
 		p	4		material
+		p	5	class_1_421	vendingMachine
 c	net/minecraft/class_1_114	net/minecraft/block/RailNode
 	f	I	field_1_796	y
 	f	I	field_1_797	x
@@ -1478,6 +1480,7 @@ c	net/minecraft/class_1_141	ext/world/zm/ZMWorld
 		p	1		zombie
 	m	(Lnet/minecraft/class_1_365;)V	method_1_877	
 		p	1		player
+	m	(Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_290;)V	method_1_880	addWireframe
 c	net/minecraft/class_1_142	net/minecraft/item/FoodItem
 	f	I	field_1_933	hungerPoints
 	m	(II)V	<init>	
@@ -1682,7 +1685,7 @@ c	net/minecraft/class_1_158	net/minecraft/client/MinecraftAppletImplUnknownClass
 		p	4	minecraftApplet4	applet2
 	m	(Lnet/minecraft/class_1_587;)V	method_1_528	handleCrash
 		p	1		report
-c	net/minecraft/class_1_159	ext/util/Ext1605Utils
+c	net/minecraft/class_1_159	ext/util/ExtUtils
 	f	Ljava/util/List;	field_1_988	skinUrls
 	m	(Lnet/minecraft/class_1_134;JJJI)V	method_1_902	setBlock
 		p	0		world
@@ -1713,7 +1716,7 @@ c	net/minecraft/class_1_159	ext/util/Ext1605Utils
 		p	1		xYZv
 		p	2		xYZv2
 	m	(FFFFFFF)[F	method_1_914	blendColorA
-	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_749;I)Z	method_1_915	RTForBlocks
+	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;Lnet/minecraft/class_1_749;I)Z	method_1_915	rtForBlocks
 		p	0		world
 		p	1		xYZv
 		p	2		direction
@@ -2271,9 +2274,9 @@ c	net/minecraft/class_1_196	ext/newblock/WeaponUpgraderBlock
 		p	4		material
 	m	(I)I	method_1_961	method_1_961
 		p	1		itemId
-	m	(I)Z	method_1_962	method_1_962
+	m	(I)Z	method_1_962	isValidSwordItem
 		p	1		itemId
-	m	(I)I	method_1_963	method_1_963
+	m	(I)I	method_1_963	getSwordCost
 		p	1		itemId
 c	net/minecraft/class_1_197	net/minecraft/util/Int2ObjectHashMap__Node
 	f	I	field_1_1099	key
@@ -2319,7 +2322,7 @@ c	net/minecraft/class_1_201	ext/crafting/ExtCraftingRecipes
 		p	0		id
 	m	(I)I	method_1_972	getSmeltingRecipe
 		p	0		id
-c	net/minecraft/class_1_202	ext/world/gen/WorldGenHouseBigExterior
+c	net/minecraft/class_1_202	ext/world/gen/HouseBigExteriorGenerator
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_803;II)V	method_1_973	
@@ -3223,6 +3226,9 @@ c	net/minecraft/class_1_246	ext/world/gen/ChunkProviderPopulateOperation
 	f	I	field_1_1431	x
 	f	Lnet/minecraft/class_1_641;	field_1_1432	caller
 	f	Lnet/minecraft/class_1_602;	field_1_1433	a
+	m	(Lnet/minecraft/class_1_641;Lnet/minecraft/class_1_602;II)V	<init>	
+		p	3	integer3	x
+		p	4	integer4	y
 c	net/minecraft/class_1_247	net/minecraft/client/gui/screen/DeathScreen
 	m	(CI)V	method_1_1474	keyPressed
 		p	1		chr
@@ -3696,7 +3702,7 @@ c	net/minecraft/class_1_272	net/minecraft/client/gui/screen/DisconnectedScreen
 		p	1		mouseX
 		p	2		mouseY
 		p	3		tickDelta
-c	net/minecraft/class_1_273	ext/world/gen/WorldGenHouseBigSpawner
+c	net/minecraft/class_1_273	ext/world/gen/HouseBigSpawnerGenerator
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 	m	(Lnet/minecraft/class_1_134;III)Z	method_1_1163	
@@ -5058,7 +5064,7 @@ c	net/minecraft/class_1_365	net/minecraft/entity/mob/player/PlayerEntity
 	m	(Lnet/minecraft/class_1_635;)V	method_1_2368	die
 		p	1		killer
 c	net/minecraft/class_1_366	ext/util/command/CommandMCRedl
-c	net/minecraft/class_1_367	ext/client/gui/overlay/OverlaySystemMessage
+c	net/minecraft/class_1_367	ext/client/gui/overlay/SystemMessageOverlay
 	f	Ljava/lang/String;	field_1_1770	message
 	m	(Ljava/lang/String;II)V	<init>	
 		p	1		message
@@ -5128,15 +5134,20 @@ c	net/minecraft/class_1_373	ext/newblock/MyconCapBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_374	ext/client/entity/player/EntityPlayerZombieModeClient
+c	net/minecraft/class_1_374	ext/client/entity/player/ClientPlayerZombieModeEntity
 	f	Lnet/minecraft/class_1_141;	field_1_1783	zmWorld
 	f	Lnet/minecraft/class_1_451;	field_1_1786	vendingMachine
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/class_1_141;Lnet/minecraft/class_1_446;)V	<init>	
+		p	1	minecraft	minecraft
+		p	2	class_1_141	world
+		p	3	class_1_446	session
 	m	(Lnet/minecraft/class_1_169;)V	method_1_1365	openSignEditor
 		p	1		sign
 	m	(Lnet/minecraft/class_1_344;)V	method_1_1367	openChestMenu
 		p	1		inventory
 	m	(Lnet/minecraft/class_1_526;)V	method_1_1375	openFurnaceMenu
 		p	1		furnace
+	m	()V	method_1_1380	quickRevive
 	m	(Lnet/minecraft/class_1_635;I)Z	method_1_1851	takeDamage
 		p	1		source
 		p	2		amount
@@ -5295,7 +5306,7 @@ c	net/minecraft/class_1_385	ext/client/controller/TriggerIndex
 	f	Lnet/minecraft/class_1_385;	field_1_1820	Invalid
 	f	I	field_1_1821	index
 	f	Lnet/minecraft/class_1_385;	field_1_1822	Left
-c	net/minecraft/class_1_386	ext/world/gen/WorldGenHouseSmallUnknownClass2
+c	net/minecraft/class_1_386	ext/world/gen/HouseSmallGeneratorUnknownClass2
 c	net/minecraft/class_1_387	net/minecraft/block/DoorBlock
 	m	(ILnet/minecraft/class_1_243;)V	<init>	
 		p	1		id
@@ -5705,10 +5716,10 @@ c	net/minecraft/class_1_411	ext/newblock/GrassTallBlock
 		p	2		metadata
 	m	(Lnet/minecraft/class_1_594;IIDDD)I	method_1_2309	
 		p	1		world
-c	net/minecraft/class_1_412	ext/world/gen/WorldGenLayer
+c	net/minecraft/class_1_412	ext/world/gen/LayerGenerator
 	m	(DDLnet/minecraft/class_1_491;I)V	<init>	
 		p	5		worldGenLayer
-c	net/minecraft/class_1_413	ext/client/gui/overlay/OverlayPaintingTitle
+c	net/minecraft/class_1_413	ext/client/gui/overlay/PaintingTitleOverlay
 	m	(Lnet/minecraft/class_1_699;II)V	method_1_1426	RenderOverlay
 		p	1		gameGui
 		p	2		n
@@ -5735,7 +5746,7 @@ c	net/minecraft/class_1_415	ext/world/zm/WorldZMSpawnComparator
 		p	2		worldSpawn2
 c	net/minecraft/class_1_416	ext/util/ResourceLocation
 c	net/minecraft/class_1_417	ext/world/biome/BiomeUnknownClass2
-c	net/minecraft/class_1_418	ext/world/gen/WorldGenHouseBig
+c	net/minecraft/class_1_418	ext/world/gen/HouseBigGenerator
 	f	Lnet/minecraft/class_1_235;	field_1_1895	noiseMap1
 	f	Lnet/minecraft/class_1_235;	field_1_1896	noiseMap2
 	f	Lnet/minecraft/class_1_235;	field_1_1897	noiseMap3
@@ -5971,6 +5982,9 @@ c	net/minecraft/class_1_427	net/minecraft/entity/mob/animal/ChickenEntity
 		p	1		distance
 c	net/minecraft/class_1_428	ext/client/gui/ImageHandler
 	f	Ljava/lang/String;	field_1_1926	pathToPicture
+	f	Lnet/minecraft/client/Minecraft;	field_1_1928	minecraft
+	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;F)V	<init>	
+		p	1	minecraft	minecraft
 	m	(Ljava/lang/String;)V	method_1_1446	
 		p	1		pathToPicture
 c	net/minecraft/class_1_429	ext/newitem/ExtSpearItem
@@ -6177,6 +6191,7 @@ c	net/minecraft/class_1_443	net/minecraft/client/gui/screen/Screen
 	f	I	field_1_1963	width
 	f	Lnet/minecraft/class_1_644;	field_1_1964	lastClickedButton
 	f	Z	field_1_1965	passEvents
+	f	Lnet/minecraft/client/Minecraft;	field_1_1966	minecraft
 	m	()V	method_1_1471	sliderReleasedOn1
 	m	()Ljava/lang/String;	method_1_1472	getClipboard
 	m	(III)V	method_1_1473	mouseClicked
@@ -6299,6 +6314,10 @@ c	net/minecraft/class_1_450	ext/world/gen/hub/IHubFragment
 		p	1		world
 		p	2		xYZv
 c	net/minecraft/class_1_451	ext/inventory/InventoryVendingMachine
+	f	Z	field_1_1992	hasHealthBoostPowerup
+	f	Z	field_1_1993	hasArmorPowerup
+	f	Z	field_1_1994	hasQuickRevivePowerup
+	f	Z	field_1_1996	hasDashPowerup
 	m	(Lnet/minecraft/class_1_365;)V	<init>	
 		p	1		player
 	m	(Lnet/minecraft/class_1_263;)Z	method_1_729	addItem
@@ -6308,8 +6327,9 @@ c	net/minecraft/class_1_451	ext/inventory/InventoryVendingMachine
 		p	2		creative
 	m	(I)V	method_1_738	scrollInHotbar
 		p	1		amount
-	m	(Lnet/minecraft/class_1_421;)Z	method_1_1511	
+	m	(Lnet/minecraft/class_1_421;)Z	method_1_1511	getUpgrade
 		p	1		vendingMachineEnum
+	m	(I)Z	method_1_1512	getUpgrade
 	m	(J)Z	method_1_1514	givePoints
 		p	1		points
 c	net/minecraft/class_1_452	ext/block/LeavesTypeExtBlock
@@ -6368,7 +6388,7 @@ c	net/minecraft/class_1_457	ext/newitem/ExtConchItem
 		p	1		stack
 		p	2		world
 		p	3		player
-c	net/minecraft/class_1_458	ext/world/gen/WorldGenHouseBigUnknownClass1
+c	net/minecraft/class_1_458	ext/world/gen/HouseBigGeneratorUnknownClass1
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 c	net/minecraft/class_1_459	ext/newblock/ExtNewBlock
@@ -6635,14 +6655,18 @@ c	net/minecraft/class_1_467	ext/world/gen/hub/HubFragmentHallwayFwd
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_290;)Ljava/util/List;	method_1_1510	generateAt
 		p	1		world
 		p	2		xYZv
-c	net/minecraft/class_1_468	ext/world/gen/WorldGenUnknownClass1
+c	net/minecraft/class_1_468	ext/world/gen/Layer
+	f	Ljava/util/List;	field_1_2179	layers
 	m	(Ljava/util/Random;)V	method_1_1524	
 		p	1		random
 	m	(Ljava/util/Random;Lnet/minecraft/class_1_134;II)Z	method_1_1526	
 		p	1		random
 		p	2		world
+	m	(Lnet/minecraft/class_1_468;)V	method_1_1528	addLayer
+		p	0	class_1_468	layer
 	m	(Ljava/util/Random;)V	method_1_1529	
 		p	0		random
+	m	()V	method_1_1530	registerLayers
 c	net/minecraft/class_1_469	ext/client/EncryptedPath
 	f	Ljava/lang/Object;	field_1_2185	data
 	m	(Ljava/lang/Object;)V	<init>	
@@ -6660,7 +6684,7 @@ c	net/minecraft/class_1_472	ext/client/render/PartPose
 	f	F	field_1_2189	x
 	f	F	field_1_2190	y
 	m	(FFF)Lnet/minecraft/class_1_472;	method_1_1531	offset
-c	net/minecraft/class_1_473	ext/client/entity/player/PlayerControllerZombieMode
+c	net/minecraft/class_1_473	ext/client/entity/player/ClientZMPlayerInteractionManager
 	f	F	field_1_2191	previousBlockDamage
 	f	F	field_1_2192	blockDestroySoundCounter
 	f	I	field_1_2193	blockHitWait
@@ -6724,7 +6748,7 @@ c	net/minecraft/class_1_477	ext/world/gen/hub/GenHubDoor
 		p	4		y
 		p	5		z
 c	net/minecraft/class_1_478	ext/util/command/CommandFRRNSaveDemo
-c	net/minecraft/class_1_479	ext/world/gen/GenPillar
+c	net/minecraft/class_1_479	ext/world/gen/PillarGenerator
 	f	I	field_1_2202	a
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
@@ -6768,6 +6792,7 @@ c	net/minecraft/class_1_483	ext/newblock/FlameWoodDoorBlock
 c	net/minecraft/class_1_484	net/minecraft/client/entity/mob/player/ClientPlayerEntity
 	f	Lnet/minecraft/class_1_431;	field_1_2211	input
 	f	I	field_1_2212	dashTimer
+	f	Lnet/minecraft/client/Minecraft;	field_1_2214	minecraft
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_446;)V	<init>	
 		p	1	minecraft	minecraft
 		p	2	class_1_1342	world
@@ -6783,6 +6808,8 @@ c	net/minecraft/class_1_484	net/minecraft/client/entity/mob/player/ClientPlayerE
 		p	1		target
 	m	(Lnet/minecraft/class_1_526;)V	method_1_1375	openFurnaceMenu
 		p	1		furnace
+	m	(Lnet/minecraft/client/Minecraft;)V	method_1_1543	openSurvivalInventory
+		p	1	minecraft	minecraft
 	m	()V	method_1_1545	onMobUpdate
 	m	(Ljava/lang/String;)V	method_1_1546	sendChat
 		p	1		content
@@ -6838,7 +6865,7 @@ c	net/minecraft/class_1_488	net/minecraft/network/packet/Packet16PlayerHeldItem
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
 c	net/minecraft/class_1_489	net/minecraft/isom/SyntheticEnumIsomPreviewCanvasOS
-c	net/minecraft/class_1_490	ext/world/gen/WorldGenUnknownClass2
+c	net/minecraft/class_1_490	ext/world/gen/GeneratorUnknownClass2
 	f	I	field_1_2225	id
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
@@ -6846,7 +6873,7 @@ c	net/minecraft/class_1_490	ext/world/gen/WorldGenUnknownClass2
 		p	3		x
 		p	4		y
 		p	5		z
-c	net/minecraft/class_1_491	ext/world/gen/WorldGeneratorLayer
+c	net/minecraft/class_1_491	ext/world/gen/WorldGeneratorLayers
 	f	Lnet/minecraft/class_1_491;	field_1_2226	LOW_RIVER
 	f	Lnet/minecraft/class_1_491;	field_1_2228	UNDERGROUND
 	f	Lnet/minecraft/class_1_491;	field_1_2229	SURFACE
@@ -7164,12 +7191,12 @@ c	net/minecraft/class_1_516	ext/util/ExtEvents
 	f	Z	field_1_2280	bossfightInProgress
 	m	(Lnet/minecraft/class_1_127;)V	method_1_1585	giantBossKilled
 		p	0		giantBoss
-	m	(Lnet/minecraft/class_1_134;)V	method_1_1586	
+	m	(Lnet/minecraft/class_1_134;)V	method_1_1586	stopBossfight
 		p	0		world
 	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1587	spawnRecruiterOnTopOfPlayer
 		p	0		player
 		p	1		world
-	m	(DDDLnet/minecraft/class_1_134;)Lnet/minecraft/class_1_127;	method_1_1588	
+	m	(DDDLnet/minecraft/class_1_134;)Lnet/minecraft/class_1_127;	method_1_1588	spawnGiantBoss
 		p	6		world
 	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1589	
 		p	0		player
@@ -7180,7 +7207,7 @@ c	net/minecraft/class_1_516	ext/util/ExtEvents
 	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1591	
 		p	0		player
 		p	1		world
-	m	(IILnet/minecraft/class_1_134;)V	method_1_1592	
+	m	(IILnet/minecraft/class_1_134;)V	method_1_1592	startBossfight
 		p	2		world
 c	net/minecraft/class_1_517	net/minecraft/block/LiquidSourceBlock
 	m	(ILnet/minecraft/class_1_243;)V	<init>	
@@ -7636,7 +7663,7 @@ c	net/minecraft/class_1_540	ext/entity/ObserverEntity
 	m	(Lnet/minecraft/class_1_635;F)V	method_1_1973	targetInSight
 		p	1		target
 		p	2		distance
-c	net/minecraft/class_1_541	ext/client/gui/overlay/OverlayWorldEdit
+c	net/minecraft/class_1_541	ext/client/gui/overlay/WorldEditOverlay
 	f	I	field_1_2334	z1
 	f	I	field_1_2335	sel3
 	f	I	field_1_2336	sel1
@@ -8152,7 +8179,10 @@ c	net/minecraft/class_1_564	net/minecraft/world/gen/feature/DungeonFeature
 		p	1		random
 	m	(Ljava/util/Random;)Lnet/minecraft/class_1_263;	method_1_1713	pickLoot
 		p	1		random
-c	net/minecraft/class_1_565	ext/client/gui/overlay/OverlayZMWaves
+c	net/minecraft/class_1_565	ext/client/gui/overlay/ZMWavesOverlay
+	f	Lnet/minecraft/client/Minecraft;	field_1_2450	minecraft
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	minecraft	minecraft
 	m	(Lnet/minecraft/class_1_699;II)V	method_1_1714	RenderOverlay
 		p	1		gameGui
 c	net/minecraft/class_1_566	net/minecraft/isom/IsomPreviewCanvasOS
@@ -8850,12 +8880,12 @@ c	net/minecraft/class_1_608	ext/newblock/FrigidTrunkBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_609	ext/world/gen/WorldGenHouseBigInterior
+c	net/minecraft/class_1_609	ext/world/gen/HouseBigInteriorGenerator
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 	m	(Lnet/minecraft/class_1_134;II)V	method_1_1807	
 		p	1		world
-c	net/minecraft/class_1_610	ext/client/gui/GuiOptionsUnknownClass1
+c	net/minecraft/class_1_610	ext/client/gui/widget/OptionsMenuWidget
 c	net/minecraft/class_1_611	ext/world/biome/Biome
 	f	Lnet/minecraft/class_1_574;	field_1_2702	biomeInterface
 	m	(Lnet/minecraft/class_1_574;)V	<init>	
@@ -9900,6 +9930,7 @@ c	net/minecraft/class_1_649	net/minecraft/client/gui/screen/WorldSaveConflictScr
 		p	3		tickDelta
 c	net/minecraft/class_1_650	net/minecraft/client/gui/screen/options/OptionsScreen
 	f	Lnet/minecraft/class_1_443;	field_1_2985	parent
+	f	[Lnet/minecraft/class_1_610;	field_1_2986	optionMenus
 	f	Ljava/lang/String;	field_1_2987	title
 	f	Lnet/minecraft/class_1_152;	field_1_2988	options
 	m	(Lnet/minecraft/class_1_443;Lnet/minecraft/class_1_152;)V	<init>	
@@ -9911,7 +9942,7 @@ c	net/minecraft/class_1_650	net/minecraft/client/gui/screen/options/OptionsScree
 		p	1		mouseX
 		p	2		mouseY
 		p	3		tickDelta
-c	net/minecraft/class_1_651	ext/world/gen/WorldGenHouseSmallUnknownClass1
+c	net/minecraft/class_1_651	ext/world/gen/HouseSmallGeneratorUnknownClass1
 	m	(Ljava/util/Random;Lnet/minecraft/class_1_386;)V	<init>	
 		p	1		random
 	m	(Lnet/minecraft/class_1_134;II)V	method_1_1976	
@@ -10462,7 +10493,7 @@ c	net/minecraft/class_1_695	net/minecraft/world/chunk/ChunkNibbleStorage
 		p	1		x
 		p	2		y
 		p	3		z
-c	net/minecraft/class_1_696	ext/world/gen/WorldGenFrigidHighwood
+c	net/minecraft/class_1_696	ext/world/gen/FrigidHighwoodGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -10518,10 +10549,13 @@ c	net/minecraft/class_1_699	net/minecraft/client/gui/GameGui
 	f	Ljava/lang/String;	field_1_3115	versionString
 	f	F	field_1_3116	vignetteBrightness
 	f	Lnet/minecraft/class_1_541;	field_1_3117	worldEditOverlay
+	f	Lnet/minecraft/client/Minecraft;	field_1_3118	minecraft
 	f	Ljava/lang/String;	field_1_3119	selectedName
 	f	Ljava/lang/String;	field_1_3120	chunkName
 	f	[Ljava/lang/String;	field_1_3121	chunkNames
 	f	Ljava/util/Random;	field_1_3122	random
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	minecraft	minecraft
 	m	(FZII)V	method_1_2088	render
 		p	1		tickDelta
 		p	2		screenOpen
@@ -10794,7 +10828,7 @@ c	net/minecraft/class_1_717	net/minecraft/nbt/NbtInt
 		p	1		output
 	m	(Ljava/io/DataInput;)V	method_1_1267	read
 		p	1		input
-c	net/minecraft/class_1_718	ext/world/gen/WorldGenHouseSmall
+c	net/minecraft/class_1_718	ext/world/gen/HouseSmallGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -10861,7 +10895,7 @@ c	net/minecraft/class_1_724	net/minecraft/block/DirtBlock
 	m	(II)V	<init>	
 		p	1		id
 		p	2		sprite
-c	net/minecraft/class_1_725	ext/world/gen/WorldGenMyconLayer
+c	net/minecraft/class_1_725	ext/world/gen/MyconLayerGenerator
 	m	(Lnet/minecraft/class_1_134;III)V	method_1_2121	
 		p	1		world
 		p	2		x
@@ -11129,7 +11163,7 @@ c	net/minecraft/class_1_736	net/minecraft/client/render/model/entity/SpiderModel
 		p	4		yaw
 		p	5		pitch
 		p	6		scale
-c	net/minecraft/class_1_737	ext/world/gen/WorldGenHouseSmallUnknownClass4
+c	net/minecraft/class_1_737	ext/world/gen/HouseSmallGeneratorUnknownClass4
 	m	(Lnet/minecraft/class_1_134;II)Z	method_1_2156	
 		p	1		world
 c	net/minecraft/class_1_738	ext/network/hub/HubNetworkUnknownClass1
@@ -11138,6 +11172,8 @@ c	net/minecraft/class_1_738	ext/network/hub/HubNetworkUnknownClass1
 c	net/minecraft/class_1_739	ext/util/command/CommandFly
 c	net/minecraft/class_1_740	net/minecraft/client/ClientPlayerInteractionManager
 	f	Z	field_1_3226	creative
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	minecraft	minecraft
 	m	()F	method_1_2162	getReach
 	m	(Lnet/minecraft/class_1_134;)V	method_1_2163	initWorld
 		p	1		world
@@ -11343,7 +11379,7 @@ c	net/minecraft/class_1_750	net/minecraft/block/ClayBlock
 	m	(ILjava/util/Random;)I	method_1_1950	getDropItem
 		p	1		metadata
 		p	2		random
-c	net/minecraft/class_1_751	ext/client/entity/player/PlayerControllerSPUnknownClass1
+c	net/minecraft/class_1_751	ext/client/entity/player/ClientBannedPlayerEntity
 c	net/minecraft/class_1_752	ext/util/command/CommandSVAllowRNet
 c	net/minecraft/class_1_753	ext/util/Refl
 	m	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;	method_1_2187	getField
@@ -11370,7 +11406,7 @@ c	net/minecraft/class_1_754	net/minecraft/inventory/DoubleInventory
 		p	2		item
 	m	(I)Lnet/minecraft/class_1_263;	method_1_1321	getItem
 		p	1		slot
-c	net/minecraft/class_1_755	ext/client/gui/overlay/OverlayFreerunClient
+c	net/minecraft/class_1_755	ext/client/gui/overlay/FreerunClientOverlay
 	m	(Lnet/minecraft/class_1_699;II)V	method_1_2193	RenderOverlay
 		p	1		gameGui
 		p	2		n
@@ -11402,7 +11438,7 @@ c	net/minecraft/class_1_756	net/minecraft/client/render/world/ChunkRenderer
 		p	4		offsetX
 		p	6		offsetY
 		p	8		offsetZ
-c	net/minecraft/class_1_757	ext/world/gen/GenOnWater
+c	net/minecraft/class_1_757	ext/world/gen/OnWaterGenerator
 	f	I	field_1_3269	a
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
@@ -11660,7 +11696,7 @@ c	net/minecraft/class_1_770	ext/inventory/EssenceTransformResult
 	m	(I)Lnet/minecraft/class_1_263;	method_1_1321	getItem
 		p	1		slot
 c	net/minecraft/class_1_771	ext/util/command/CommandConRefresh
-c	net/minecraft/class_1_772	ext/world/gen/WorldGenBlockGoldBlockSteel
+c	net/minecraft/class_1_772	ext/world/gen/BlockGoldBlockSteelGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -12333,7 +12369,7 @@ c	net/minecraft/class_1_797	ext/block/WorkbenchExtBlock
 		p	5		player
 	m	(I)I	method_1_2333	getSprite
 		p	1		face
-c	net/minecraft/class_1_798	ext/world/gen/WorldGenHouseSmallUnknownClass5
+c	net/minecraft/class_1_798	ext/world/gen/HouseSmallGeneratorUnknownClass5
 c	net/minecraft/class_1_799	net/minecraft/client/resource/ResourceDownloader
 	f	Ljava/io/File;	field_1_3377	resourcesDir
 	f	Z	field_1_3379	stopped
@@ -12844,7 +12880,7 @@ c	net/minecraft/class_1_806	ext/network/hub/HubServerPingThread
 	m	(Ljava/lang/String;)Ljava/lang/String;	method_1_2350	getAdFromPingResponse
 	m	(Ljava/lang/String;)Ljava/lang/String;	method_1_2352	getMotdFromPingResponse
 	m	()V	run	run
-c	net/minecraft/class_1_807	ext/client/entity/player/EntityPlayerFreerunClient
+c	net/minecraft/class_1_807	ext/client/entity/player/ClientPlayerEntityFreerun
 	f	Z	field_1_3533	reset
 	f	J	field_1_3535	finalTime
 	f	Z	field_1_3536	countingTime
@@ -12852,6 +12888,10 @@ c	net/minecraft/class_1_807	ext/client/entity/player/EntityPlayerFreerunClient
 	f	I	field_1_3539	currentCheckpoint
 	f	J	field_1_3541	timerStartTicks
 	f	[Lnet/minecraft/class_1_276;	field_1_3542	checkpoints
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/class_1_812;Lnet/minecraft/class_1_446;)V	<init>	
+		p	1	minecraft	minecraft
+		p	2	class_1_812	world
+		p	3	class_1_446	session
 	m	(Lnet/minecraft/class_1_169;)V	method_1_1365	openSignEditor
 		p	1		sign
 	m	(Lnet/minecraft/class_1_344;)V	method_1_1367	openChestMenu
@@ -12955,7 +12995,7 @@ c	net/minecraft/class_1_816	ext/network/EntityOtherPlayerMPUnknownClass2
 		p	1		source
 		p	2		amount
 c	net/minecraft/class_1_817	ext/network/NetworkLocation
-c	net/minecraft/class_1_818	ext/world/gen/WorldGenLichen
+c	net/minecraft/class_1_818	ext/world/gen/LichenGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -13115,7 +13155,7 @@ c	net/minecraft/class_1_824	net/minecraft/crafting/WeaponRecipes
 	f	[[Ljava/lang/String;	field_1_3601	patterns
 	m	(Lnet/minecraft/class_1_571;)V	method_1_2390	register
 		p	1		manager
-c	net/minecraft/class_1_825	ext/world/gen/WorldGenHouseSmallUnknownClass3
+c	net/minecraft/class_1_825	ext/world/gen/HouseSmallGeneratorUnknownClass3
 c	net/minecraft/class_1_826	net/minecraft/entity/ai/pathing/BinaryHeap
 	f	[Lnet/minecraft/class_1_407;	field_1_3603	heap
 	f	I	field_1_3604	size
@@ -13344,7 +13384,7 @@ c	net/minecraft/class_1_834	ext/block/SnowExtBlock
 	m	(ILjava/util/Random;)I	method_1_2337	getDropItem
 		p	1		metadata
 		p	2		random
-c	net/minecraft/class_1_835	ext/world/gen/GenSky
+c	net/minecraft/class_1_835	ext/world/gen/SkyGenerator
 	f	I	field_1_3608	a
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
@@ -13454,7 +13494,7 @@ c	net/minecraft/class_1_839	net/minecraft/block/RedstoneTorchBlock
 		p	2		x
 		p	3		y
 		p	4		z
-c	net/minecraft/class_1_840	ext/world/gen/WorldGenGrass
+c	net/minecraft/class_1_840	ext/world/gen/GrassGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -13765,7 +13805,7 @@ c	net/minecraft/class_1_857	ext/client/gui/BannedGameGui
 		p	2		screenOpen
 		p	3		mouseX
 		p	4		mouseY
-c	net/minecraft/class_1_858	ext/world/gen/GenStonePlatform
+c	net/minecraft/class_1_858	ext/world/gen/StonePlatformGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -13797,9 +13837,9 @@ c	net/minecraft/class_1_860	net/minecraft/world/gen/feature/PlantFeature
 		p	4		y
 		p	5		z
 c	net/minecraft/class_1_861	ext/block/IZMBlock
-	m	(Lnet/minecraft/class_1_374;Lnet/minecraft/class_1_290;)V	method_1_2459	
+	m	(Lnet/minecraft/class_1_374;Lnet/minecraft/class_1_290;)V	method_1_2459	useBlock
 		p	1		player
-	m	(Lnet/minecraft/class_1_374;Lnet/minecraft/class_1_290;)Ljava/lang/String;	method_1_2460	
+	m	(Lnet/minecraft/class_1_374;Lnet/minecraft/class_1_290;)Ljava/lang/String;	method_1_2460	getOveredText
 		p	1		player
 c	net/minecraft/class_1_862	ext/util/command/CommandWorldEditSepPos1
 c	net/minecraft/class_1_863	ext/world/zm/WorldZMSpawn
@@ -13853,7 +13893,7 @@ c	net/minecraft/class_1_868	net/minecraft/item/ShovelItem
 		p	1		id
 		p	2		tier
 c	net/minecraft/class_1_869	ext/util/command/CommandMCTermConn
-c	net/minecraft/class_1_870	ext/world/gen/GenLowRiver
+c	net/minecraft/class_1_870	ext/world/gen/LowRiverGenerator
 	f	I	field_1_3700	chunkBeginX
 	f	Ljava/util/Random;	field_1_3701	rng
 	f	I	field_1_3702	chunkCoordX
@@ -13981,15 +14021,15 @@ c	net/minecraft/class_1_882	ext/block/InventoryBlockEntity
 		p	1		nbt
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1667	writeNbt
 		p	1		nbt
-c	net/minecraft/class_1_883	ext/client/gui/overlay/OverlaySystemMessageBuilder
+c	net/minecraft/class_1_883	ext/client/gui/overlay/SystemMessageOverlayBuilder
 	f	Ljava/util/Queue;	field_1_3729	message
 	m	(Lnet/minecraft/class_1_699;Ljava/lang/String;I)I	method_1_2484	
 		p	0		gameGui
-	m	(Ljava/lang/String;II)V	method_1_2486	setMessageContents
+	m	(Ljava/lang/String;II)V	method_1_2486	createMessage
 		p	1		message
 	m	(Lnet/minecraft/class_1_699;II)V	method_1_2487	
 		p	1		gameGui
-	m	(Ljava/lang/String;I)V	method_1_2488	setMessageContents
+	m	(Ljava/lang/String;I)V	method_1_2488	createMessage
 		p	1		message
 	m	(Lnet/minecraft/class_1_699;Ljava/lang/String;)I	method_1_2489	
 		p	0		gameGui
