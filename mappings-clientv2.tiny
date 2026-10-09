@@ -812,7 +812,6 @@ c	net/minecraft/class_1_121	net/minecraft/nbt/NbtByteArray
 	m	(Ljava/io/DataInput;)V	method_1_1267	read
 		p	1		input
 c	net/minecraft/class_1_122	ext/util/command/Command
-	c	Wrapper around CommandClass
 	f	Ljava/lang/String;	field_1_825	commandName
 	f	Lnet/minecraft/class_1_437;	field_1_826	commandClass
 	m	(Ljava/lang/String;[Ljava/lang/Class;Lnet/minecraft/class_1_437;)V	<init>	
@@ -821,7 +820,7 @@ c	net/minecraft/class_1_122	ext/util/command/Command
 c	net/minecraft/class_1_123	ext/client/PathDecryptor
 	m	(Ljava/lang/String;)Ljava/lang/String;	method_1_748	decrypt
 		p	0	string	excryptedText
-c	net/minecraft/class_1_124	ext/client/render/model/EntityModelUnknownClass1
+c	net/minecraft/class_1_124	ext/client/render/model/pongokilldeathshitmachineModel
 	f	Lnet/minecraft/class_1_349;	field_1_828	modelHead
 	f	Lnet/minecraft/class_1_349;	field_1_829	modelBody
 	f	Lnet/minecraft/class_1_349;	field_1_830	modelLeftLeg
@@ -893,15 +892,15 @@ c	net/minecraft/class_1_132	ext/client/controller/DS5InstrTriggerUpdate
 		p	3		triggerMode
 		p	4		triggerModeVal
 c	net/minecraft/class_1_133	ext/world/HouseBig
-	f	Lnet/minecraft/class_1_133;	field_1_845	Doorless
-	f	Lnet/minecraft/class_1_133;	field_1_846	LimeGlass
-	f	Lnet/minecraft/class_1_133;	field_1_848	BlueGlass
-	f	Lnet/minecraft/class_1_133;	field_1_849	WhiteGlass
-	f	Lnet/minecraft/class_1_133;	field_1_850	BlackGlass
-	f	Lnet/minecraft/class_1_133;	field_1_851	PlateDecor
-	f	Lnet/minecraft/class_1_133;	field_1_852	Door
-	f	Lnet/minecraft/class_1_133;	field_1_853	None
-	f	Lnet/minecraft/class_1_133;	field_1_854	PinkGlass
+	f	Lnet/minecraft/class_1_133;	field_1_845	DOORLESS
+	f	Lnet/minecraft/class_1_133;	field_1_846	LIME_GLASS
+	f	Lnet/minecraft/class_1_133;	field_1_848	BLUE_GLASS
+	f	Lnet/minecraft/class_1_133;	field_1_849	WHITE_GLASS
+	f	Lnet/minecraft/class_1_133;	field_1_850	BLACK_GLASS
+	f	Lnet/minecraft/class_1_133;	field_1_851	PLATE_DECOR
+	f	Lnet/minecraft/class_1_133;	field_1_852	DOOR
+	f	Lnet/minecraft/class_1_133;	field_1_853	NONE
+	f	Lnet/minecraft/class_1_133;	field_1_854	PINK_GLASS
 	m	(Ljava/lang/String;)Lnet/minecraft/class_1_133;	method_1_757	valueOf
 c	net/minecraft/class_1_134	net/minecraft/world/World
 	f	I	field_1_855	spawnPointX
@@ -1565,7 +1564,7 @@ c	net/minecraft/class_1_148	net/minecraft/client/render/texture/FireSprite
 	f	[F	field_1_939	next
 	m	(I)V	<init>	
 		p	1		sprite
-c	net/minecraft/class_1_149	ext/newitem/ExtRokkubitoruTuneItem
+c	net/minecraft/class_1_149	ext/newitem/RokkubitoruTuneItem
 	m	(ILjava/lang/String;)V	<init>	
 		p	1		id
 		p	2		record
@@ -1676,7 +1675,7 @@ c	net/minecraft/class_1_155	net/minecraft/client/render/texture/HTTPTextureThrea
 		p	2		url
 		p	3		imageProcessor
 	m	()V	run	run
-c	net/minecraft/class_1_156	ext/util/MinecraftException1
+c	net/minecraft/class_1_156	ext/util/NotSupposedToHappenMinecraftException
 c	net/minecraft/class_1_157	ext/util/command/CommandPass
 c	net/minecraft/class_1_158	net/minecraft/client/MinecraftAppletImplUnknownClass1
 	f	Lnet/minecraft/client/MinecraftApplet;	field_1_987	mcApplet
@@ -1687,6 +1686,7 @@ c	net/minecraft/class_1_158	net/minecraft/client/MinecraftAppletImplUnknownClass
 		p	1		report
 c	net/minecraft/class_1_159	ext/util/ExtUtils
 	f	Ljava/util/List;	field_1_988	skinUrls
+		c	Want to know how a reference to remade website is in the recomp <br>\nAnyways just where the games checks for skins
 	m	(Lnet/minecraft/class_1_134;JJJI)V	method_1_902	setBlock
 		p	0		world
 		p	1		x
@@ -1920,14 +1920,14 @@ c	net/minecraft/class_1_174	net/minecraft/network/packet/Packet255Disconnect
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
 c	net/minecraft/class_1_175	net/minecraft/client/render/ProgressRenderError
-c	net/minecraft/class_1_176	ext/newitem/ExtBookItemV
+c	net/minecraft/class_1_176	ext/newitem/BookVItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
 		p	1		stack
 		p	2		world
 		p	3		player
-c	net/minecraft/class_1_177	ext/phys/CustomTriggerValueMode
+c	net/minecraft/class_1_177	ext/client/controller/CustomTriggerValueMode
 	f	Lnet/minecraft/class_1_177;	field_1_1020	RigidA
 	f	Lnet/minecraft/class_1_177;	field_1_1021	OFF
 	f	Lnet/minecraft/class_1_177;	field_1_1022	VibratePulseA
@@ -1948,7 +1948,7 @@ c	net/minecraft/class_1_177	ext/phys/CustomTriggerValueMode
 	f	Lnet/minecraft/class_1_177;	field_1_1038	VibratePulseAB
 c	net/minecraft/class_1_178	net/minecraft/block/material/AirMaterial
 c	net/minecraft/class_1_179	ext/util/command/CommandCGFovMod
-c	net/minecraft/class_1_180	ext/entity/projectile/EntityEssenceProjectile
+c	net/minecraft/class_1_180	ext/entity/projectile/EssenceProjectileEntity
 	f	Z	field_1_1040	inData
 	f	I	field_1_1041	ticksInGround
 	f	I	field_1_1042	xTile
@@ -2180,13 +2180,15 @@ c	net/minecraft/class_1_190	ext/client/visuals/VisualsCavestyle
 c	net/minecraft/class_1_191	ext/world/gen/hub/HubGenerator
 	f	Ljava/util/List;	field_1_1069	nxtGen
 	f	Lnet/minecraft/class_1_134;	field_1_1070	target
-	f	Ljava/util/List;	field_1_1071	avail_fragments
-	f	Ljava/util/List;	field_1_1072	next_generation_locs
-	m	(Ljava/util/List;Lnet/minecraft/class_1_290;)Ljava/util/List;	method_1_949	GetApplicableFragments
+	f	Ljava/util/List;	field_1_1071	availFragments
+	f	Ljava/util/List;	field_1_1072	nextGenerationLocations
+	m	(Lnet/minecraft/class_1_134;)V	<init>	
+		p	1	class_1_134	target
+	m	(Ljava/util/List;Lnet/minecraft/class_1_290;)Ljava/util/List;	method_1_949	getApplicableFragments
 		p	1		list
 		p	2		xYZv
-	m	()V	method_1_950	Next
-	m	(Lnet/minecraft/class_1_290;)V	method_1_951	Begin
+	m	()V	method_1_950	next
+	m	(Lnet/minecraft/class_1_290;)V	method_1_951	begin
 		p	1		xYZv
 c	net/minecraft/class_1_192	ext/network/DecInputStream
 	f	I	field_1_1073	nextout
@@ -2315,7 +2317,7 @@ c	net/minecraft/class_1_200	net/minecraft/client/render/platform/Lighting
 		p	4		b
 		p	6		a
 	m	()V	method_1_969	turnOn
-c	net/minecraft/class_1_201	ext/crafting/ExtCraftingRecipes
+c	net/minecraft/class_1_201	ext/crafting/CraftingRecipes
 	m	(Lnet/minecraft/class_1_571;)V	method_1_970	RegisterCrafing
 		p	0		craftingManager
 	m	(I)I	method_1_971	getFreezingRecipe
@@ -2761,7 +2763,7 @@ c	net/minecraft/class_1_221	net/minecraft/client/entity/particle/Particle
 		p	1		nbt
 c	net/minecraft/class_1_222	ext/util/command/CommandMCSandLevel
 c	net/minecraft/class_1_223	ext/util/command/CommandSummonSpaceMan1
-c	net/minecraft/class_1_224	ext/newitem/ExtNewItem
+c	net/minecraft/class_1_224	ext/newitem/NewItems
 	c	Instead of using the vanilla class, Cypress has it's own item declaration class\nspecifically for the items that were added, works the same as the vanilla class
 	f	Lnet/minecraft/class_1_216;	field_1_1283	MUSIC_DISC_DOWNBEAT_UPLINK
 	f	Lnet/minecraft/class_1_216;	field_1_1284	ESSENCE_RIFLE
@@ -2923,7 +2925,7 @@ c	net/minecraft/class_1_232	ext/block/GravelExtBlock
 	m	(ILjava/util/Random;)I	method_1_2337	getDropItem
 		p	1		metadata
 		p	2		random
-c	net/minecraft/class_1_233	ext/newitem/ExtBookItemII
+c	net/minecraft/class_1_233	ext/newitem/BookIIItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -3482,7 +3484,7 @@ c	net/minecraft/class_1_261	net/minecraft/client/gui/widget/OptionButtonWidget
 		p	2		x
 		p	3		y
 		p	4		message
-c	net/minecraft/class_1_262	ext/newitem/ExtGunItem
+c	net/minecraft/class_1_262	ext/newitem/GunItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -3842,7 +3844,7 @@ c	net/minecraft/class_1_278	net/minecraft/client/render/entity/DefaultRenderer
 		p	6		dz
 		p	8		yaw
 		p	9		tickDelta
-c	net/minecraft/class_1_279	ext/inventory/GuiEssenceTransformer
+c	net/minecraft/class_1_279	ext/inventory/EssenceTransformerGui
 	f	Lnet/minecraft/class_1_577;	field_1_1561	craftingInventory
 	m	(Lnet/minecraft/class_1_118;)V	<init>	
 		p	1		inventory
@@ -3898,7 +3900,7 @@ c	net/minecraft/class_1_283	ext/network/packet/Packet8RespondSkinRequest
 		p	1		input
 	m	(Lnet/minecraft/class_1_679;)V	method_1_2114	handle
 		p	1		handler
-c	net/minecraft/class_1_284	ext/inventory/EssenceInventoryBlockEntity
+c	net/minecraft/class_1_284	ext/newblock/entity/EssenceFountainBlockEntity
 	m	(II)Lnet/minecraft/class_1_263;	method_1_1318	removeItem
 		p	1		slot
 		p	2		amount
@@ -3962,11 +3964,11 @@ c	net/minecraft/class_1_290	ext/phys/XYZv
 		p	3		y
 		p	5		z
 		p	7		dir
-	m	(Ljava/io/DataOutputStream;)V	method_1_1214	
+	m	(Ljava/io/DataOutputStream;)V	method_1_1214	writeValuesToStream
 		p	1		outputStream
 	m	(Lnet/minecraft/class_1_290;)Lnet/minecraft/class_1_290;	method_1_1215	add
 		p	1		xYZv
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/class_1_290;	method_1_1216	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/class_1_290;	method_1_1216	readValuesFromStream
 		p	0		inputStream
 	m	(Lnet/minecraft/class_1_290;)Z	method_1_1218	
 		p	1		xYZv
@@ -3977,9 +3979,11 @@ c	net/minecraft/class_1_290	ext/phys/XYZv
 	m	(Lnet/minecraft/class_1_749;)Lnet/minecraft/class_1_290;	method_1_1220	dir
 		p	1		dir
 	m	(Lnet/minecraft/class_1_592;Ljava/lang/String;)Lnet/minecraft/class_1_290;	method_1_1221	getSavedValues
+		p	0	class_1_592	nbt
 	m	(Lnet/minecraft/class_1_749;)Lnet/minecraft/class_1_290;	method_1_1222	rotateAroundXP
 		p	1		dir
 	m	(Lnet/minecraft/class_1_592;Ljava/lang/String;)V	method_1_1223	saveValues
+		p	1	class_1_592	nbt
 c	net/minecraft/class_1_291	ext/newblock/GlowingFlowerInfusedBlock
 	m	(IIII)V	<init>	
 		p	1		id
@@ -4083,10 +4087,12 @@ c	net/minecraft/class_1_298	ext/block/ExtCrops
 		p	2		random
 c	net/minecraft/class_1_299	paulscode/sound/codecs/CodecMus
 c	net/minecraft/class_1_300	ext/util/ExtLogger
+	c	Standard logging helper with all the features you'll ever need
 	f	Ljava/io/FileWriter;	field_1_1594	fw
 	m	(Ljava/lang/String;)V	method_1_1229	warn
 		p	0		warn
 	m	()V	method_1_1230	initLogger
+		c	Prints the hardcoded launch message <br>\nDon't call this
 	m	(Ljava/lang/String;)V	method_1_1231	info
 		p	0		info
 	m	(Ljava/lang/String;)V	method_1_1232	log
@@ -4571,6 +4577,7 @@ c	net/minecraft/class_1_332	net/minecraft/entity/mob/animal/CowEntity
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1876	readCustomNbt
 		p	1		nbt
 c	net/minecraft/class_1_333	ext/client/InputHandler
+	c	The minecraft referencer every call to Minecraft in this fucking mod is ran through this class
 	f	F	field_1_1670	lastRotX
 	f	D	field_1_1671	lastY
 	f	Z	field_1_1673	lastL1Press
@@ -4589,6 +4596,7 @@ c	net/minecraft/class_1_333	ext/client/InputHandler
 	f	Z	field_1_1686	lastR2Press
 	f	Z	field_1_1687	KBEventKeyState
 	f	I	field_1_1690	eventDWheel
+	f	I	field_1_1692	lookSens
 	f	Lnet/minecraft/client/Minecraft;	field_1_1694	minecraft
 	f	I	field_1_1696	eventButton
 	f	Z	field_1_1697	clickedConsoleKey
@@ -4613,6 +4621,8 @@ c	net/minecraft/class_1_333	ext/client/InputHandler
 	m	()V	method_1_1286	inputR1
 	m	()I	method_1_1287	getEventX
 	m	(I)Z	method_1_1288	isKeyDown
+	m	(Lnet/minecraft/client/Minecraft;)V	method_1_1289	initialize
+		p	0	minecraft	minecraft
 	m	()V	method_1_1290	updateAxis3
 	m	()I	method_1_1291	getDWheel
 	m	()I	method_1_1292	getEventY
@@ -4638,7 +4648,7 @@ c	net/minecraft/class_1_334	ext/client/render/LayerDefinition
 	m	(Lnet/minecraft/class_1_507;II)Lnet/minecraft/class_1_334;	method_1_1310	create
 		p	0		mesh
 c	net/minecraft/class_1_335	ext/util/command/CommandSysExec
-c	net/minecraft/class_1_336	ext/newitem/ExtBookItemIV
+c	net/minecraft/class_1_336	ext/newitem/BookIVItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -4896,7 +4906,7 @@ c	net/minecraft/class_1_356	net/minecraft/entity/decoration/PaintingEntity
 		p	1		nbt
 	m	(Lnet/minecraft/class_1_592;)V	method_1_1876	readCustomNbt
 		p	1		nbt
-c	net/minecraft/class_1_357	ext/newitem/ExtEraserItem
+c	net/minecraft/class_1_357	ext/newitem/EraserItem
 	m	(II)V	<init>	
 		p	1		id
 		p	2		tier
@@ -4930,7 +4940,7 @@ c	net/minecraft/class_1_360	net/minecraft/client/WindowListenerThread
 		p	2	thread	thread
 	m	(Ljava/awt/event/WindowEvent;)V	windowClosing	windowClosing
 		p	1		windowEvent
-c	net/minecraft/class_1_361	ext/newitem/ExtFlamebergeItem
+c	net/minecraft/class_1_361	ext/newitem/FlamebergeItem
 	f	[I	field_1_1749	v2s
 	m	(I)V	<init>	
 		p	1		id
@@ -5022,7 +5032,9 @@ c	net/minecraft/class_1_365	net/minecraft/entity/mob/player/PlayerEntity
 		p	1		entity
 	m	(Lnet/minecraft/class_1_803;)F	method_1_1356	
 		p	1		block
+	m	()V	method_1_1357	showEssenceClonerScreen
 	m	()I	method_1_1359	getScore
+	m	()V	method_1_1360	showEssenceTransformerScreen
 	m	(Lnet/minecraft/class_1_843;)V	method_1_1361	spawnItem
 		p	1		item
 	m	()V	method_1_1364	openCraftingMenu
@@ -5151,7 +5163,7 @@ c	net/minecraft/class_1_374	ext/client/entity/player/ClientPlayerZombieModeEntit
 	m	(Lnet/minecraft/class_1_635;I)Z	method_1_1851	takeDamage
 		p	1		source
 		p	2		amount
-c	net/minecraft/class_1_375	ext/newitem/ExtMirrorItem
+c	net/minecraft/class_1_375	ext/newitem/MirrorItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -5408,7 +5420,7 @@ c	net/minecraft/class_1_388	ext/newblock/GlowingBlock
 		p	3		y
 		p	4		z
 		p	5		random
-c	net/minecraft/class_1_389	ext/inventory/GuiFreezer
+c	net/minecraft/class_1_389	ext/inventory/FreezerInventory
 	f	Lnet/minecraft/class_1_882;	field_1_1826	blockEntity
 	m	(Lnet/minecraft/class_1_118;Lnet/minecraft/class_1_882;)V	<init>	
 		p	1		inventory
@@ -5720,7 +5732,10 @@ c	net/minecraft/class_1_412	ext/world/gen/LayerGenerator
 	m	(DDLnet/minecraft/class_1_491;I)V	<init>	
 		p	5		worldGenLayer
 c	net/minecraft/class_1_413	ext/client/gui/overlay/PaintingTitleOverlay
-	m	(Lnet/minecraft/class_1_699;II)V	method_1_1426	RenderOverlay
+	f	Lnet/minecraft/client/Minecraft;	field_1_1883	minecraft
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	minecraft	minecraft
+	m	(Lnet/minecraft/class_1_699;II)V	method_1_1426	renderOverlay
 		p	1		gameGui
 		p	2		n
 		p	3		n2
@@ -5987,7 +6002,7 @@ c	net/minecraft/class_1_428	ext/client/gui/ImageHandler
 		p	1	minecraft	minecraft
 	m	(Ljava/lang/String;)V	method_1_1446	
 		p	1		pathToPicture
-c	net/minecraft/class_1_429	ext/newitem/ExtSpearItem
+c	net/minecraft/class_1_429	ext/newitem/SpearItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -6343,7 +6358,7 @@ c	net/minecraft/class_1_452	ext/block/LeavesTypeExtBlock
 		p	3		y
 		p	4		z
 		p	5		face
-c	net/minecraft/class_1_453	ext/inventory/GuiEssenceCloner
+c	net/minecraft/class_1_453	ext/inventory/EssenceClonerInventory
 	f	Lnet/minecraft/class_1_206;	field_1_1999	craftingInventory
 	m	(Lnet/minecraft/class_1_118;)V	<init>	
 		p	1		inventory
@@ -6381,7 +6396,7 @@ c	net/minecraft/class_1_455	net/minecraft/client/render/entity/ChickenRenderer
 		p	1		entity
 		p	2		tickDelta
 c	net/minecraft/class_1_456	ext/util/command/CommandMCRenderDistance
-c	net/minecraft/class_1_457	ext/newitem/ExtConchItem
+c	net/minecraft/class_1_457	ext/newitem/ConchItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -6672,7 +6687,7 @@ c	net/minecraft/class_1_469	ext/client/EncryptedPath
 	m	(Ljava/lang/Object;)V	<init>	
 		p	1	object	data
 c	net/minecraft/class_1_470	ext/util/command/CommandMap
-c	net/minecraft/class_1_471	ext/newitem/ExtBookItemI
+c	net/minecraft/class_1_471	ext/newitem/BookIItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -6739,7 +6754,7 @@ c	net/minecraft/class_1_476	net/minecraft/client/render/platform/MemoryTracker
 	m	()V	method_1_1536	releaseLists
 	m	(I)Ljava/nio/ByteBuffer;	method_1_1537	createByteBuffer
 		p	0		capacity
-c	net/minecraft/class_1_477	ext/world/gen/hub/GenHubDoor
+c	net/minecraft/class_1_477	ext/world/gen/hub/HubDoorGenerator
 	f	I	field_1_2200	blockId
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
@@ -7198,13 +7213,13 @@ c	net/minecraft/class_1_516	ext/util/ExtEvents
 		p	1		world
 	m	(DDDLnet/minecraft/class_1_134;)Lnet/minecraft/class_1_127;	method_1_1588	spawnGiantBoss
 		p	6		world
-	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1589	
+	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1589	playerMovingChunkGroup
 		p	0		player
 		p	1		world
 	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1590	spawnRecruiterNearPlayer
 		p	0		player
 		p	1		world
-	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1591	
+	m	(Lnet/minecraft/class_1_365;Lnet/minecraft/class_1_134;)V	method_1_1591	playerMoveXYBlock
 		p	0		player
 		p	1		world
 	m	(IILnet/minecraft/class_1_134;)V	method_1_1592	startBossfight
@@ -8289,7 +8304,7 @@ c	net/minecraft/class_1_577	ext/inventory/EssenceTransformerInventoryCB
 		p	1		player
 	m	(Lnet/minecraft/class_1_344;)V	method_1_2077	onContentsChanged
 		p	1		inventory
-c	net/minecraft/class_1_578	ext/entity/projectile/EntityExplosiveEssenceProjectile
+c	net/minecraft/class_1_578	ext/entity/projectile/ExplosiveEssenceProjectileEntity
 c	net/minecraft/class_1_579	net/minecraft/client/MinecraftOS
 	f	Lnet/minecraft/class_1_579;	field_1_2480	MACOS
 	f	Lnet/minecraft/class_1_579;	field_1_2482	SOLARIS
@@ -8577,7 +8592,7 @@ c	net/minecraft/class_1_594	net/minecraft/world/IWorldView
 		p	1		x
 		p	2		y
 		p	3		z
-	m	()Lnet/minecraft/class_1_574;	method_1_1783	biomeInterface
+	m	()Lnet/minecraft/class_1_574;	method_1_1783	biome
 c	net/minecraft/class_1_595	net/minecraft/entity/decoration/PaintingEntityTypes
 	f	Lnet/minecraft/class_1_595;	field_1_2509	Mirror
 	f	Lnet/minecraft/class_1_595;	field_1_2510	FlippedShape2
@@ -8772,14 +8787,14 @@ c	net/minecraft/class_1_598	net/minecraft/block/FenceBlock
 c	net/minecraft/class_1_599	ext/newblock/WireframeBlock
 	m	(Ljava/util/Random;)I	method_1_2315	getBaseDropCount
 		p	1		random
-c	net/minecraft/class_1_600	ext/newitem/ExtGrayGunItem
+c	net/minecraft/class_1_600	ext/newitem/GrayGunItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
 		p	1		stack
 		p	2		world
 		p	3		player
-c	net/minecraft/class_1_601	ext/entity/projectile/EntityArrowToEssence
+c	net/minecraft/class_1_601	ext/entity/projectile/ArrowToEssenceEntity
 	m	(Lnet/minecraft/class_1_134;)V	<init>	
 		p	1		world
 	m	(Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_820;)V	<init>	
@@ -8881,15 +8896,16 @@ c	net/minecraft/class_1_608	ext/newblock/FrigidTrunkBlock
 		p	3		y
 		p	4		z
 c	net/minecraft/class_1_609	ext/world/gen/HouseBigInteriorGenerator
+	f	[Lnet/minecraft/class_1_505;	field_1_2698	bigGenerators
 	m	(Ljava/util/Random;)V	<init>	
 		p	1		random
 	m	(Lnet/minecraft/class_1_134;II)V	method_1_1807	
 		p	1		world
 c	net/minecraft/class_1_610	ext/client/gui/widget/OptionsMenuWidget
 c	net/minecraft/class_1_611	ext/world/biome/Biome
-	f	Lnet/minecraft/class_1_574;	field_1_2702	biomeInterface
+	f	Lnet/minecraft/class_1_574;	field_1_2702	biome
 	m	(Lnet/minecraft/class_1_574;)V	<init>	
-		p	1		biomeInterface
+		p	1		biome
 	m	(Lnet/minecraft/class_1_574;)Lnet/minecraft/class_1_611;	method_1_1810	
 		p	0		biomeInterface
 c	net/minecraft/class_1_612	net/minecraft/client/render/entity/CreeperRenderer
@@ -10338,6 +10354,7 @@ c	net/minecraft/class_1_679	net/minecraft/network/PacketHandler
 		p	1		packet
 c	net/minecraft/class_1_680	ext/client/render/model/BlockBenchImportModel
 	f	Ljava/util/List;	field_1_3062	subMpdels
+	f	Lnet/minecraft/class_1_764;	field_1_3063	BBModel
 	m	(FFFFFF)V	method_1_1063	render
 		p	1		walkAnimationProgress
 		p	2		walkAnimationSpeed
@@ -10470,7 +10487,7 @@ c	net/minecraft/class_1_692	net/minecraft/block/SignBlock
 c	net/minecraft/class_1_693	ext/inventory/InventoryCB
 	m	(Lnet/minecraft/class_1_344;)V	method_1_2077	onContentsChanged
 		p	1		inventory
-c	net/minecraft/class_1_694	ext/newitem/ExtBookItemIII
+c	net/minecraft/class_1_694	ext/newitem/BookIIIItem
 	m	(I)V	<init>	
 		p	1		id
 	m	(Lnet/minecraft/class_1_263;Lnet/minecraft/class_1_134;Lnet/minecraft/class_1_365;)Lnet/minecraft/class_1_263;	method_1_1003	startUsing
@@ -11381,12 +11398,19 @@ c	net/minecraft/class_1_750	net/minecraft/block/ClayBlock
 		p	2		random
 c	net/minecraft/class_1_751	ext/client/entity/player/ClientBannedPlayerEntity
 c	net/minecraft/class_1_752	ext/util/command/CommandSVAllowRNet
-c	net/minecraft/class_1_753	ext/util/Refl
+c	net/minecraft/class_1_753	pl/counter185/komagawa/Refl
+	c	A simple Reflection Helper
 	m	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;	method_1_2187	getField
+		p	0	object	fieldClass
+		p	1	string	fieldName
 	m	(Ljava/lang/Object;)Ljava/lang/String;	method_1_2188	getClassName
+		p	0	object	clazz
 	m	(Ljava/lang/String;)Ljava/lang/Class;	method_1_2189	getClassFromName
 		p	0		className
 	m	(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;	method_1_2190	instantiate
+		p	0	string	className
+		p	1	arr	constructorArgsType
+		p	2	arrx	constructorArgs
 	m	(Ljava/lang/String;)Z	method_1_2191	classExists
 		p	0		className
 	m	(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;	method_1_2192	invoke
@@ -11407,7 +11431,10 @@ c	net/minecraft/class_1_754	net/minecraft/inventory/DoubleInventory
 	m	(I)Lnet/minecraft/class_1_263;	method_1_1321	getItem
 		p	1		slot
 c	net/minecraft/class_1_755	ext/client/gui/overlay/FreerunClientOverlay
-	m	(Lnet/minecraft/class_1_699;II)V	method_1_2193	RenderOverlay
+	f	Lnet/minecraft/client/Minecraft;	field_1_3259	minecraft
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	minecraft	minecraft
+	m	(Lnet/minecraft/class_1_699;II)V	method_1_2193	renderOverlay
 		p	1		gameGui
 		p	2		n
 		p	3		n2
@@ -12335,11 +12362,14 @@ c	net/minecraft/class_1_794	ext/client/gui/screen/cheat/ItemPalletScreen
 	f	Z	field_1_3354	createButtons
 	f	Z	field_1_3355	resetButtons
 	f	J	field_1_3356	rotateTimer
+	f	Lnet/minecraft/client/Minecraft;	field_1_3357	minecraft2
 	f	Lnet/minecraft/class_1_672;	field_1_3358	blockRendererBlurryTroll
 	f	I	field_1_3359	currentPage
 	f	Z	field_1_3360	selectingBlocks
 	f	I	field_1_3361	lastCols
 	f	I	field_1_3362	lastRows
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	
+		p	1	minecraft	minecraft
 	m	(Lnet/minecraft/class_1_644;)V	method_1_1486	buttonClicked
 		p	1		button
 	m	(IIF)V	method_1_1490	render
@@ -12350,9 +12380,11 @@ c	net/minecraft/class_1_794	ext/client/gui/screen/cheat/ItemPalletScreen
 		p	1		item
 	m	(I)I	method_1_2263	nthExistingItem
 	m	(I)I	method_1_2264	nthExistingBlock
-	m	(Lnet/minecraft/class_1_803;)V	method_1_2265	
+	m	(Lnet/minecraft/class_1_803;)V	method_1_2265	renderBlock
 		p	1		block
 	m	()I	method_1_2266	nOfExistingBlocks
+	m	(IIIIIIF)V	method_1_2267	dottyIfYouDontKnowWhatsGoingOnHere_NeitherDoI
+		c	Official name BTW
 	m	()I	method_1_2268	nOfExistingItems
 c	net/minecraft/class_1_795	ext/util/command/CommandMCWinterLevel
 c	net/minecraft/class_1_796	ext/network/ImageHolder
@@ -12974,7 +13006,7 @@ c	net/minecraft/class_1_812	ext/world/freerun/FreerunWorld
 c	net/minecraft/class_1_813	net/minecraft/client/CrashReportPanelLogoCanvas
 	f	Ljava/awt/image/BufferedImage;	field_1_3545	logo
 	m	(Ljava/awt/Graphics;)V	paint	paint
-c	net/minecraft/class_1_814	ext/util/MinecraftException2
+c	net/minecraft/class_1_814	ext/util/VeryDescriptiveMinecraftException
 	m	(Ljava/lang/String;)V	<init>	
 		p	1		message
 c	net/minecraft/class_1_815	net/minecraft/block/TranslucentBlock
@@ -13906,7 +13938,7 @@ c	net/minecraft/class_1_870	ext/world/gen/LowRiverGenerator
 		p	3		x
 		p	4		y
 		p	5		z
-	m	(Lnet/minecraft/class_1_134;IIII)V	method_1_2465	DigSphere
+	m	(Lnet/minecraft/class_1_134;IIII)V	method_1_2465	digSphere
 		p	1		world
 c	net/minecraft/class_1_871	net/minecraft/client/render/ICuller
 	m	(DDD)V	method_1_2466	prepare
@@ -13915,7 +13947,7 @@ c	net/minecraft/class_1_871	net/minecraft/client/render/ICuller
 		p	5		offsetZ
 	m	(Lnet/minecraft/class_1_887;)Z	method_1_2467	isVisible
 		p	1		shape
-c	net/minecraft/class_1_872	ext/world/gen/hub/GenHubWaterPool
+c	net/minecraft/class_1_872	ext/world/gen/hub/HubWaterPoolGenerator
 	m	(Lnet/minecraft/class_1_134;Ljava/util/Random;III)Z	method_1_888	place
 		p	1		world
 		p	2		random
@@ -13965,7 +13997,7 @@ c	net/minecraft/class_1_877	net/minecraft/client/entity/particle/EntityPickupPar
 		p	5		dz
 		p	6		forwards
 		p	7		sideways
-c	net/minecraft/class_1_878	ext/newitem/ExtObsidianPickaxeItem
+c	net/minecraft/class_1_878	ext/newitem/ObsidianPickaxeItem
 	m	(II)V	<init>	
 		p	1		id
 		p	2		tier
@@ -14256,6 +14288,15 @@ c	net/minecraft/class_1_891	net/minecraft/world/WorldRegion
 		p	1		x
 		p	2		y
 		p	3		z
+	m	(IIIZZ)I	method_1_2521	getRawBrightness
+		p	1	integer1	x
+		p	2	integer2	y
+		p	3	integer3	z
+		p	4	boolean4	useNeighborLight
+	m	(IIIZ)I	method_1_2522	
+		p	1	integer1	x
+		p	2	integer2	y
+		p	3	integer3	z
 	m	(IIIZ)I	method_1_2523	getRawBrightness
 		p	1		x
 		p	2		y
